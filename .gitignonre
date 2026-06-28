@@ -1,0 +1,6 @@
+venv/
+logs/
+fix_dirs.sh
+setup.sh
+test_pipeline.py
+**/__pycache__/
