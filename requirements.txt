@@ -1,0 +1,19 @@
+# ─── Core ───────────────────────────────────────────────────────────────────
+faker>=24.0.0            # Synthetic locale-aware data (en_IN)
+aiohttp>=3.9.0           # Async HTTP for Ollama API calls
+
+# ─── Rendering ───────────────────────────────────────────────────────────────
+playwright>=1.43.0       # Headless Chromium → PNG rendering
+
+# ─── Image Processing ────────────────────────────────────────────────────────
+opencv-python-headless>=4.9.0   # OpenCV degradation (headless, no GUI deps)
+numpy>=1.26.0            # Array operations for degradation pipeline
+Pillow>=10.3.0           # Fallback renderer + image I/O
+
+# ─── Utilities ───────────────────────────────────────────────────────────────
+# sqlite3 is stdlib (no install needed)
+# concurrent.futures is stdlib
+# asyncio is stdlib
+scikit-learn>=1.4.0
+joblib>=1.3.0
+openpyxl>=3.1.0

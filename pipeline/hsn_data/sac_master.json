@@ -1,0 +1,3896 @@
+[
+ {
+  "code": "995411",
+  "description": "All Services — Construction services — Construction services of single dwelling or multi dwelling or multi-storied residential buildings",
+  "leaf_description": "Construction services of single dwelling or multi dwelling or multi-storied residential buildings",
+  "gst_rate": 12
+ },
+ {
+  "code": "995412",
+  "description": "All Services — Construction services — Construction services of other residential buildings such as old age homes, homeless shelters, hostels and the like",
+  "leaf_description": "Construction services of other residential buildings such as old age homes, homeless shelters, hostels and the like",
+  "gst_rate": 12
+ },
+ {
+  "code": "995413",
+  "description": "All Services — Construction services — Construction services of industrial buildings such as buildings used for production activities (used for assembly line activities), workshops, storage buildings and other similar industrial buildings",
+  "leaf_description": "Construction services of industrial buildings such as buildings used for production activities (used for assembly line activities), workshops, storage buildings and other similar industrial buildings",
+  "gst_rate": 12
+ },
+ {
+  "code": "995414",
+  "description": "All Services — Construction services — Construction services of commercial buildings such as office buildings, exhibition and marriage halls, malls, hotels, restaurants, airports, rail or road terminals, parking garages, petrol and service stations, theatres and other similar buildings",
+  "leaf_description": "Construction services of commercial buildings such as office buildings, exhibition and marriage halls, malls, hotels, restaurants, airports, rail or road terminals, parking garages, petrol and service stations, theatres and other similar buildings",
+  "gst_rate": 12
+ },
+ {
+  "code": "995415",
+  "description": "All Services — Construction services — Construction services of other non-residential buildings such as educational institutions, hospitals, clinics including veterinary clinics, religious establishments, courts, prisons, museums and other similar buildings",
+  "leaf_description": "Construction services of other non-residential buildings such as educational institutions, hospitals, clinics including veterinary clinics, religious establishments, courts, prisons, museums and other similar buildings",
+  "gst_rate": 12
+ },
+ {
+  "code": "995416",
+  "description": "All Services — Construction services — Construction services of other buildings nowhere else classified",
+  "leaf_description": "Construction services of other buildings nowhere else classified",
+  "gst_rate": 12
+ },
+ {
+  "code": "995417",
+  "description": "All Services — Construction services — (i) Construction services of commercial buildings such as office buildings, exhibition and marriage halls, malls, hotels, restaurants, airports, rail or road terminals, parking garages, petrol and service stations, theatres and other similar buildings (i",
+  "leaf_description": "(i) Construction services of commercial buildings such as office buildings, exhibition and marriage halls, malls, hotels, restaurants, airports, rail or road terminals, parking garages, petrol and service stations, theatres and other similar buildings (i...",
+  "gst_rate": 18
+ },
+ {
+  "code": "995418",
+  "description": "All Services — Construction services — Services by way of house-keeping, such as plumbing, carpentering, etc. where the person supplying such service through electronic commerce operator is not liable for registration under sub-section (1) of section 22 of the Central Goods and Services Tax A",
+  "leaf_description": "Services by way of house-keeping, such as plumbing, carpentering, etc. where the person supplying such service through electronic commerce operator is not liable for registration under sub-section (1) of section 22 of the Central Goods and Services Tax A...",
+  "gst_rate": 18
+ },
+ {
+  "code": "995419",
+  "description": "All Services — Construction services — Services involving repair, alterations, additions, replacements, renovation, maintenance or remodeling of the buildings covered above",
+  "leaf_description": "Services involving repair, alterations, additions, replacements, renovation, maintenance or remodeling of the buildings covered above",
+  "gst_rate": 12
+ },
+ {
+  "code": "995421",
+  "description": "All Services — Construction services — General construction services of highways, streets, roads, railways and airfield runways, bridges and tunnels",
+  "leaf_description": "General construction services of highways, streets, roads, railways and airfield runways, bridges and tunnels",
+  "gst_rate": 18
+ },
+ {
+  "code": "995422",
+  "description": "All Services — Construction services — General construction services of harbours, waterways, dams, water mains and lines, irrigation and other waterworks",
+  "leaf_description": "General construction services of harbours, waterways, dams, water mains and lines, irrigation and other waterworks",
+  "gst_rate": 18
+ },
+ {
+  "code": "995423",
+  "description": "All Services — Construction services — General construction services of long-distance underground/ overland/ submarine pipelines, communication and electric power lines (cables); pumping stations and related works; transformer stations and related works",
+  "leaf_description": "General construction services of long-distance underground/ overland/ submarine pipelines, communication and electric power lines (cables); pumping stations and related works; transformer stations and related works",
+  "gst_rate": 18
+ },
+ {
+  "code": "995424",
+  "description": "All Services — Construction services — General construction services of local water and sewage pipelines, electricity and communication cables and related works",
+  "leaf_description": "General construction services of local water and sewage pipelines, electricity and communication cables and related works",
+  "gst_rate": 18
+ },
+ {
+  "code": "995425",
+  "description": "All Services — Construction services — General construction services of mines and industrial plants",
+  "leaf_description": "General construction services of mines and industrial plants",
+  "gst_rate": 18
+ },
+ {
+  "code": "995426",
+  "description": "All Services — Construction services — General Construction services of Power Plants and its related infrastructure",
+  "leaf_description": "General Construction services of Power Plants and its related infrastructure",
+  "gst_rate": 18
+ },
+ {
+  "code": "995427",
+  "description": "All Services — Construction services — General construction services of outdoor sport and recreation facilities",
+  "leaf_description": "General construction services of outdoor sport and recreation facilities",
+  "gst_rate": 18
+ },
+ {
+  "code": "995428",
+  "description": "All Services — Construction services — General construction services of other civil engineering works nowhere else classified",
+  "leaf_description": "General construction services of other civil engineering works nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "995429",
+  "description": "All Services — Construction services — Services involving repair, alterations, additions, replacements, renovation, maintenance or remodeling of the constructions covered above",
+  "leaf_description": "Services involving repair, alterations, additions, replacements, renovation, maintenance or remodeling of the constructions covered above",
+  "gst_rate": 18
+ },
+ {
+  "code": "995431",
+  "description": "All Services — Construction services — Demolition services",
+  "leaf_description": "Demolition services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995432",
+  "description": "All Services — Construction services — Site formation and clearance services including preparation services to make sites ready for subsequent construction work, test drilling and boring and core extraction, digging of trenches",
+  "leaf_description": "Site formation and clearance services including preparation services to make sites ready for subsequent construction work, test drilling and boring and core extraction, digging of trenches",
+  "gst_rate": 18
+ },
+ {
+  "code": "995433",
+  "description": "All Services — Construction services — Excavating and earthmoving services",
+  "leaf_description": "Excavating and earthmoving services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995434",
+  "description": "All Services — Construction services — Water well drilling services and septic system installation services",
+  "leaf_description": "Water well drilling services and septic system installation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995435",
+  "description": "All Services — Construction services — Other site preparation services nowhere else classified",
+  "leaf_description": "Other site preparation services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "995439",
+  "description": "All Services — Construction services — Services involving repair, alterations, additions, replacements, maintenance of the constructions covered above",
+  "leaf_description": "Services involving repair, alterations, additions, replacements, maintenance of the constructions covered above",
+  "gst_rate": 18
+ },
+ {
+  "code": "995441",
+  "description": "All Services — Construction services — Installation, assembly and erection services of prefabricated buildings",
+  "leaf_description": "Installation, assembly and erection services of prefabricated buildings",
+  "gst_rate": 18
+ },
+ {
+  "code": "995442",
+  "description": "All Services — Construction services — Installation, assembly and erection services of other prefabricated structures and constructions",
+  "leaf_description": "Installation, assembly and erection services of other prefabricated structures and constructions",
+  "gst_rate": 18
+ },
+ {
+  "code": "995443",
+  "description": "All Services — Construction services — Installation services of all types of street furniture (such as bus shelters, benches, telephone booths, public toilets, and the like)",
+  "leaf_description": "Installation services of all types of street furniture (such as bus shelters, benches, telephone booths, public toilets, and the like)",
+  "gst_rate": 18
+ },
+ {
+  "code": "995444",
+  "description": "All Services — Construction services — Other assembly and erection services nowhere else classified",
+  "leaf_description": "Other assembly and erection services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "995449",
+  "description": "All Services — Construction services — Services involving repair, alterations, additions, replacements, maintenance of the constructions covered above",
+  "leaf_description": "Services involving repair, alterations, additions, replacements, maintenance of the constructions covered above",
+  "gst_rate": 18
+ },
+ {
+  "code": "995451",
+  "description": "All Services — Construction services — Pile driving and foundation services",
+  "leaf_description": "Pile driving and foundation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995452",
+  "description": "All Services — Construction services — Building framing and roof framing services",
+  "leaf_description": "Building framing and roof framing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995453",
+  "description": "All Services — Construction services — Roofing and waterproofing services",
+  "leaf_description": "Roofing and waterproofing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995454",
+  "description": "All Services — Construction services — Concrete services",
+  "leaf_description": "Concrete services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995455",
+  "description": "All Services — Construction services — Structural steel erection services",
+  "leaf_description": "Structural steel erection services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995456",
+  "description": "All Services — Construction services — Masonry services",
+  "leaf_description": "Masonry services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995457",
+  "description": "All Services — Construction services — Scaffolding services",
+  "leaf_description": "Scaffolding services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995458",
+  "description": "All Services — Construction services — Other special trade construction services nowhere else classified",
+  "leaf_description": "Other special trade construction services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "995459",
+  "description": "All Services — Construction services — Services involving repair, alterations, additions, replacements, maintenance of the constructions covered above",
+  "leaf_description": "Services involving repair, alterations, additions, replacements, maintenance of the constructions covered above",
+  "gst_rate": 18
+ },
+ {
+  "code": "995461",
+  "description": "All Services — Construction services — Electrical installation services including Electrical wiring and fitting services, fire alarm installation services, burglar alarm system installation services",
+  "leaf_description": "Electrical installation services including Electrical wiring and fitting services, fire alarm installation services, burglar alarm system installation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995462",
+  "description": "All Services — Construction services — Water plumbing and drain laying services",
+  "leaf_description": "Water plumbing and drain laying services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995463",
+  "description": "All Services — Construction services — Heating, ventilation and air conditioning equipment installation services",
+  "leaf_description": "Heating, ventilation and air conditioning equipment installation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995464",
+  "description": "All Services — Construction services — Gas fitting installation services",
+  "leaf_description": "Gas fitting installation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995465",
+  "description": "All Services — Construction services — Insulation services",
+  "leaf_description": "Insulation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995466",
+  "description": "All Services — Construction services — Lift and escalator installation services",
+  "leaf_description": "Lift and escalator installation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995468",
+  "description": "All Services — Construction services — Other installation services nowhere else classified",
+  "leaf_description": "Other installation services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "995469",
+  "description": "All Services — Construction services — Services involving repair, alterations, additions, replacements, maintenance of the installations covered above",
+  "leaf_description": "Services involving repair, alterations, additions, replacements, maintenance of the installations covered above",
+  "gst_rate": 18
+ },
+ {
+  "code": "995471",
+  "description": "All Services — Construction services — Glazing services",
+  "leaf_description": "Glazing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995472",
+  "description": "All Services — Construction services — Plastering services",
+  "leaf_description": "Plastering services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995473",
+  "description": "All Services — Construction services — Painting services",
+  "leaf_description": "Painting services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995474",
+  "description": "All Services — Construction services — Floor and wall tiling services",
+  "leaf_description": "Floor and wall tiling services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995475",
+  "description": "All Services — Construction services — Other floor laying, wall covering and wall papering services",
+  "leaf_description": "Other floor laying, wall covering and wall papering services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995476",
+  "description": "All Services — Construction services — Joinery and carpentry services",
+  "leaf_description": "Joinery and carpentry services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995477",
+  "description": "All Services — Construction services — Fencing and railing services",
+  "leaf_description": "Fencing and railing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "995478",
+  "description": "All Services — Construction services — Other building completion and finishing services nowhere else classified",
+  "leaf_description": "Other building completion and finishing services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "995479",
+  "description": "All Services — Construction services — Services involving repair, alterations, additions, replacements, maintenance of the completion/finishing works covered above",
+  "leaf_description": "Services involving repair, alterations, additions, replacements, maintenance of the completion/finishing works covered above",
+  "gst_rate": 18
+ },
+ {
+  "code": "996111",
+  "description": "All Services — Services in wholesale trade — Services provided for a fee or commission or on contract basis on wholesale trade",
+  "leaf_description": "Services provided for a fee or commission or on contract basis on wholesale trade",
+  "gst_rate": 18
+ },
+ {
+  "code": "996211",
+  "description": "All Services — Services in retail trade — Services provided for a fee or commission or on contract basis on retail trade",
+  "leaf_description": "Services provided for a fee or commission or on contract basis on retail trade",
+  "gst_rate": 18
+ },
+ {
+  "code": "996311",
+  "description": "All Services — Accommodation, food and beverage services — Room or unit accommodation services provided by Hotels, Inn, Guest House, Club and the like",
+  "leaf_description": "Room or unit accommodation services provided by Hotels, Inn, Guest House, Club and the like",
+  "gst_rate": 12
+ },
+ {
+  "code": "996312",
+  "description": "All Services — Accommodation, food and beverage services — Camp site services",
+  "leaf_description": "Camp site services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996313",
+  "description": "All Services — Accommodation, food and beverage services — Recreational and vacation camp services",
+  "leaf_description": "Recreational and vacation camp services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996321",
+  "description": "All Services — Accommodation, food and beverage services — Room or unit accommodation services for students in student residences",
+  "leaf_description": "Room or unit accommodation services for students in student residences",
+  "gst_rate": 18
+ },
+ {
+  "code": "996322",
+  "description": "All Services — Accommodation, food and beverage services — Room or unit accommodation services provided by Hostels, Camps, Paying Guest and the like",
+  "leaf_description": "Room or unit accommodation services provided by Hostels, Camps, Paying Guest and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996329",
+  "description": "All Services — Accommodation, food and beverage services — Other room or unit accommodation services nowhere else classified",
+  "leaf_description": "Other room or unit accommodation services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996331",
+  "description": "All Services — Accommodation, food and beverage services — Services provided by restaurants, cafes and similar eating facilities including takeaway services, room services and door delivery of food",
+  "leaf_description": "Services provided by restaurants, cafes and similar eating facilities including takeaway services, room services and door delivery of food",
+  "gst_rate": 5
+ },
+ {
+  "code": "996332",
+  "description": "All Services — Accommodation, food and beverage services — Services provided by Hotels, Inn, Guest House, Club and the like including room services, takeaway services and door delivery of food",
+  "leaf_description": "Services provided by Hotels, Inn, Guest House, Club and the like including room services, takeaway services and door delivery of food",
+  "gst_rate": 5
+ },
+ {
+  "code": "996333",
+  "description": "All Services — Accommodation, food and beverage services — Services provided in canteen and other similar establishments",
+  "leaf_description": "Services provided in canteen and other similar establishments",
+  "gst_rate": 18
+ },
+ {
+  "code": "996334",
+  "description": "All Services — Accommodation, food and beverage services — Catering Services in exhibition halls, events, marriage halls and other outdoor/indoor functions",
+  "leaf_description": "Catering Services in exhibition halls, events, marriage halls and other outdoor/indoor functions",
+  "gst_rate": 18
+ },
+ {
+  "code": "996335",
+  "description": "All Services — Accommodation, food and beverage services — Catering services in trains, flights and the like",
+  "leaf_description": "Catering services in trains, flights and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996336",
+  "description": "All Services — Accommodation, food and beverage services — Preparation or supply services of food, edible preparations, alcoholic and non-alcoholic beverages to airlines and other transportation operators",
+  "leaf_description": "Preparation or supply services of food, edible preparations, alcoholic and non-alcoholic beverages to airlines and other transportation operators",
+  "gst_rate": 18
+ },
+ {
+  "code": "996337",
+  "description": "All Services — Accommodation, food and beverage services — Other contract food services",
+  "leaf_description": "Other contract food services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996339",
+  "description": "All Services — Accommodation, food and beverage services — Other food, edible preparations, alcoholic and non-alcoholic beverages serving services nowhere else classified",
+  "leaf_description": "Other food, edible preparations, alcoholic and non-alcoholic beverages serving services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996411",
+  "description": "All Services — Passenger transport services — Local land transport services of passengers by railways, metro, monorail, bus, tramway, autos, three wheelers, scooters and other motor vehicles",
+  "leaf_description": "Local land transport services of passengers by railways, metro, monorail, bus, tramway, autos, three wheelers, scooters and other motor vehicles",
+  "gst_rate": 5
+ },
+ {
+  "code": "996412",
+  "description": "All Services — Passenger transport services — Taxi services including radio taxi and other similar services",
+  "leaf_description": "Taxi services including radio taxi and other similar services",
+  "gst_rate": 5
+ },
+ {
+  "code": "996413",
+  "description": "All Services — Passenger transport services — Non-scheduled local bus and coach charter services",
+  "leaf_description": "Non-scheduled local bus and coach charter services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996414",
+  "description": "All Services — Passenger transport services — Other land transportation services of passengers",
+  "leaf_description": "Other land transportation services of passengers",
+  "gst_rate": 18
+ },
+ {
+  "code": "996415",
+  "description": "All Services — Passenger transport services — Local water transport services of passengers by ferries, cruises and the like",
+  "leaf_description": "Local water transport services of passengers by ferries, cruises and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996416",
+  "description": "All Services — Passenger transport services — Sightseeing transportation services by rail, land, water and air",
+  "leaf_description": "Sightseeing transportation services by rail, land, water and air",
+  "gst_rate": 18
+ },
+ {
+  "code": "996417",
+  "description": "All Services — Passenger transport services — Transport services of passengers by ropeways",
+  "leaf_description": "Transport services of passengers by ropeways",
+  "gst_rate": 18
+ },
+ {
+  "code": "996418",
+  "description": "All Services — Passenger transport services — Sightseeing transportation services by rail or road",
+  "leaf_description": "Sightseeing transportation services by rail or road",
+  "gst_rate": 18
+ },
+ {
+  "code": "996419",
+  "description": "All Services — Passenger transport services — Other local transportation services of passengers nowhere else classified",
+  "leaf_description": "Other local transportation services of passengers nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996421",
+  "description": "All Services — Passenger transport services — Long-distance transport services of passengers through rail network by railways, metro and the like",
+  "leaf_description": "Long-distance transport services of passengers through rail network by railways, metro and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996422",
+  "description": "All Services — Passenger transport services — Long-distance transport services of passengers through road by bus, car, non-scheduled long distance bus and coach services, stage carriage and the like",
+  "leaf_description": "Long-distance transport services of passengers through road by bus, car, non-scheduled long distance bus and coach services, stage carriage and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996423",
+  "description": "All Services — Passenger transport services — Taxi services including radio taxi and other similar services",
+  "leaf_description": "Taxi services including radio taxi and other similar services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996424",
+  "description": "All Services — Passenger transport services — Coastal and transoceanic (overseas) water transport services of passengers by Ferries, Cruise Ships and the like",
+  "leaf_description": "Coastal and transoceanic (overseas) water transport services of passengers by Ferries, Cruise Ships and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996425",
+  "description": "All Services — Passenger transport services — Domestic/ international scheduled air transport services of passengers",
+  "leaf_description": "Domestic/ international scheduled air transport services of passengers",
+  "gst_rate": 18
+ },
+ {
+  "code": "996426",
+  "description": "All Services — Passenger transport services — Domestic/ international non-scheduled air transport services of passengers",
+  "leaf_description": "Domestic/ international non-scheduled air transport services of passengers",
+  "gst_rate": 18
+ },
+ {
+  "code": "996427",
+  "description": "All Services — Passenger transport services — Space transport services of passengers",
+  "leaf_description": "Space transport services of passengers",
+  "gst_rate": 18
+ },
+ {
+  "code": "996429",
+  "description": "All Services — Passenger transport services — Other long-distance transportation services of passengers nowhere else classified",
+  "leaf_description": "Other long-distance transportation services of passengers nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996431",
+  "description": "All Services — Passenger transport services — Long-distance transport service of passengers through rail network by railways",
+  "leaf_description": "Long-distance transport service of passengers through rail network by railways",
+  "gst_rate": 18
+ },
+ {
+  "code": "996432",
+  "description": "All Services — Passenger transport services — Scheduled long-distance transport services of passengers through road by bus and coach services including stage carriage, contract carriage and the like",
+  "leaf_description": "Scheduled long-distance transport services of passengers through road by bus and coach services including stage carriage, contract carriage and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996433",
+  "description": "All Services — Passenger transport services — Non-scheduled long-distance transport services of passengers through road by bus and coach services including stage carriage, contract carriage and the like",
+  "leaf_description": "Non-scheduled long-distance transport services of passengers through road by bus and coach services including stage carriage, contract carriage and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996434",
+  "description": "All Services — Passenger transport services — Long-distance transport service of passengers by any motor vehicle other than bus including motorcab, maxicab and radio taxi",
+  "leaf_description": "Long-distance transport service of passengers by any motor vehicle other than bus including motorcab, maxicab and radio taxi",
+  "gst_rate": 18
+ },
+ {
+  "code": "996439",
+  "description": "All Services — Passenger transport services — Other long distance transport service of passengers by land nowhere else specified",
+  "leaf_description": "Other long distance transport service of passengers by land nowhere else specified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996441",
+  "description": "All Services — Passenger transport services — Coastal water transport service of passengers by ferries and the like",
+  "leaf_description": "Coastal water transport service of passengers by ferries and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996442",
+  "description": "All Services — Passenger transport services — Coastal water transport service of passengers by cruise ships and the like",
+  "leaf_description": "Coastal water transport service of passengers by cruise ships and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996443",
+  "description": "All Services — Passenger transport services — Inland water transport service of passengers by ferries and the like",
+  "leaf_description": "Inland water transport service of passengers by ferries and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996444",
+  "description": "All Services — Passenger transport services — Inland water transport service of passengers by cruise ships and the like",
+  "leaf_description": "Inland water transport service of passengers by cruise ships and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996445",
+  "description": "All Services — Passenger transport services — International water transport services of passengers by ferries, cruise ships and the like",
+  "leaf_description": "International water transport services of passengers by ferries, cruise ships and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996449",
+  "description": "All Services — Passenger transport services — Other long distance transport service of passengers by water nowhere else specified",
+  "leaf_description": "Other long distance transport service of passengers by water nowhere else specified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996451",
+  "description": "All Services — Passenger transport services — Domestic scheduled air transport service of passengers in economy class",
+  "leaf_description": "Domestic scheduled air transport service of passengers in economy class",
+  "gst_rate": 18
+ },
+ {
+  "code": "996452",
+  "description": "All Services — Passenger transport services — Domestic scheduled air transport service of passengers in other than economy class",
+  "leaf_description": "Domestic scheduled air transport service of passengers in other than economy class",
+  "gst_rate": 18
+ },
+ {
+  "code": "996453",
+  "description": "All Services — Passenger transport services — Domestic non-scheduled air transport service of passengers",
+  "leaf_description": "Domestic non-scheduled air transport service of passengers",
+  "gst_rate": 18
+ },
+ {
+  "code": "996454",
+  "description": "All Services — Passenger transport services — International scheduled air transport service of passengers in economy class",
+  "leaf_description": "International scheduled air transport service of passengers in economy class",
+  "gst_rate": 18
+ },
+ {
+  "code": "996455",
+  "description": "All Services — Passenger transport services — International scheduled air transport service of passengers in other than economy class",
+  "leaf_description": "International scheduled air transport service of passengers in other than economy class",
+  "gst_rate": 18
+ },
+ {
+  "code": "996456",
+  "description": "All Services — Passenger transport services — International non-scheduled air transport service of passengers",
+  "leaf_description": "International non-scheduled air transport service of passengers",
+  "gst_rate": 18
+ },
+ {
+  "code": "996459",
+  "description": "All Services — Passenger transport services — Other long-distance transportation service of passengers by air nowhere else specified including space transport service of passengers",
+  "leaf_description": "Other long-distance transportation service of passengers by air nowhere else specified including space transport service of passengers",
+  "gst_rate": 18
+ },
+ {
+  "code": "996511",
+  "description": "All Services — Goods Transport Services — Road transport services of Goods including letters, parcels, live animals, household and office furniture, containers and the like by refrigerator vehicles, trucks, trailers, man or animal drawn vehicles or any other vehicles",
+  "leaf_description": "Road transport services of Goods including letters, parcels, live animals, household and office furniture, containers and the like by refrigerator vehicles, trucks, trailers, man or animal drawn vehicles or any other vehicles",
+  "gst_rate": 5
+ },
+ {
+  "code": "996512",
+  "description": "All Services — Goods Transport Services — Railway transport services of Goods including letters, parcels, live animals, household and office furniture, intermodal containers, bulk cargo and the like",
+  "leaf_description": "Railway transport services of Goods including letters, parcels, live animals, household and office furniture, intermodal containers, bulk cargo and the like",
+  "gst_rate": 5
+ },
+ {
+  "code": "996513",
+  "description": "All Services — Goods Transport Services — Transport services of petroleum and natural gas, water, sewerage and other goods via pipeline",
+  "leaf_description": "Transport services of petroleum and natural gas, water, sewerage and other goods via pipeline",
+  "gst_rate": 5
+ },
+ {
+  "code": "996514",
+  "description": "All Services — Goods Transport Services — Transport services via pipeline of other chemicals, coal slurry and of other goods",
+  "leaf_description": "Transport services via pipeline of other chemicals, coal slurry and of other goods",
+  "gst_rate": 18
+ },
+ {
+  "code": "996515",
+  "description": "All Services — Goods Transport Services — Moving services of household goods, office equipment and furniture",
+  "leaf_description": "Moving services of household goods, office equipment and furniture",
+  "gst_rate": 18
+ },
+ {
+  "code": "996516",
+  "description": "All Services — Goods Transport Services — Road transport services of goods including letters, parcels, live animals, containers and the like in referigerated vehicles, trucks, trailers or any other motor vehicle or in man or animal driven vehicles by any person other than a goods transport agency",
+  "leaf_description": "Road transport services of goods including letters, parcels, live animals, containers and the like in referigerated vehicles, trucks, trailers or any other motor vehicle or in man or animal driven vehicles by any person other than a goods transport agency",
+  "gst_rate": 18
+ },
+ {
+  "code": "996517",
+  "description": "All Services — Goods Transport Services — Railway transport services of goods including letters, parcels, live animals, household and office furniture, intermodal containers, bulk cargo and the like by Container Transport Operators (CTOs) other than Railways",
+  "leaf_description": "Railway transport services of goods including letters, parcels, live animals, household and office furniture, intermodal containers, bulk cargo and the like by Container Transport Operators (CTOs) other than Railways",
+  "gst_rate": 18
+ },
+ {
+  "code": "996518",
+  "description": "All Services — Goods Transport Services — Transport of goods by ropeways",
+  "leaf_description": "Transport of goods by ropeways",
+  "gst_rate": 18
+ },
+ {
+  "code": "996519",
+  "description": "All Services — Goods Transport Services — Other land transport services of goods nowhere else classified",
+  "leaf_description": "Other land transport services of goods nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996521",
+  "description": "All Services — Goods Transport Services — Coastal and transoceanic (overseas) water transport services of goods by refrigerator vessels, tankers, bulk cargo vessels, container ships and the like",
+  "leaf_description": "Coastal and transoceanic (overseas) water transport services of goods by refrigerator vessels, tankers, bulk cargo vessels, container ships and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996522",
+  "description": "All Services — Goods Transport Services — Inland water transport services of goods by refrigerator vessels, tankers and other vessels",
+  "leaf_description": "Inland water transport services of goods by refrigerator vessels, tankers and other vessels",
+  "gst_rate": 18
+ },
+ {
+  "code": "996523",
+  "description": "All Services — Goods Transport Services — International water transport services of goods by refrigerated vessels, tankers, bulk cargo vessels, container ships and the like",
+  "leaf_description": "International water transport services of goods by refrigerated vessels, tankers, bulk cargo vessels, container ships and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996531",
+  "description": "All Services — Goods Transport Services — Air transport services of letters and parcels and other goods",
+  "leaf_description": "Air transport services of letters and parcels and other goods",
+  "gst_rate": 18
+ },
+ {
+  "code": "996532",
+  "description": "All Services — Goods Transport Services — Space transport services of freight",
+  "leaf_description": "Space transport services of freight",
+  "gst_rate": 18
+ },
+ {
+  "code": "996540",
+  "description": "All Services — Goods Transport Services — Multimodal Transport of goods from a place in India to another place in India",
+  "leaf_description": "Multimodal Transport of goods from a place in India to another place in India",
+  "gst_rate": 18
+ },
+ {
+  "code": "996601",
+  "description": "All Services — Rental services of transport vehicles with operators — Rental services of road vehicles including buses, coaches, cars, trucks and other motor vehicles, operator",
+  "leaf_description": "Rental services of road vehicles including buses, coaches, cars, trucks and other motor vehicles, operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "996602",
+  "description": "All Services — Rental services of transport vehicles with operators — Rental services of water vessels including passenger vessels, freight vessels and the like operator",
+  "leaf_description": "Rental services of water vessels including passenger vessels, freight vessels and the like operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "996603",
+  "description": "All Services — Rental services of transport vehicles with operators — Rental services of aircraft including passenger aircrafts, freight aircrafts and the like operator",
+  "leaf_description": "Rental services of aircraft including passenger aircrafts, freight aircrafts and the like operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "996604",
+  "description": "All Services — Rental services of transport vehicles with operators — Rental services of passenger vessels with operator",
+  "leaf_description": "Rental services of passenger vessels with operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "996605",
+  "description": "All Services — Rental services of transport vehicles with operators — Rental services of goods vessels with operator",
+  "leaf_description": "Rental services of goods vessels with operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "996606",
+  "description": "All Services — Rental services of transport vehicles with operators — Rental service of passenger aircraft with operator",
+  "leaf_description": "Rental service of passenger aircraft with operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "996607",
+  "description": "All Services — Rental services of transport vehicles with operators — Rental service of goods aircraft with operator",
+  "leaf_description": "Rental service of goods aircraft with operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "996609",
+  "description": "All Services — Rental services of transport vehicles with operators — Rental services of other transport vehicles nowhere else classified operator",
+  "leaf_description": "Rental services of other transport vehicles nowhere else classified operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "996711",
+  "description": "All Services — Supporting services in transport — Container handling services",
+  "leaf_description": "Container handling services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996712",
+  "description": "All Services — Supporting services in transport — Customs House Agent services",
+  "leaf_description": "Customs House Agent services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996713",
+  "description": "All Services — Supporting services in transport — Clearing and forwarding services",
+  "leaf_description": "Clearing and forwarding services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996719",
+  "description": "All Services — Supporting services in transport — Other cargo and baggage handling services",
+  "leaf_description": "Other cargo and baggage handling services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996721",
+  "description": "All Services — Supporting services in transport — Refrigerated storage services",
+  "leaf_description": "Refrigerated storage services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996722",
+  "description": "All Services — Supporting services in transport — Bulk liquid or gas storage services",
+  "leaf_description": "Bulk liquid or gas storage services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996729",
+  "description": "All Services — Supporting services in transport — Other storage and warehousing services",
+  "leaf_description": "Other storage and warehousing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996731",
+  "description": "All Services — Supporting services in transport — Railway pushing or towing services",
+  "leaf_description": "Railway pushing or towing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996739",
+  "description": "All Services — Supporting services in transport — Other supporting services for railway transport nowhere else classified",
+  "leaf_description": "Other supporting services for railway transport nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996741",
+  "description": "All Services — Supporting services in transport — Bus station services",
+  "leaf_description": "Bus station services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996742",
+  "description": "All Services — Supporting services in transport — Operation services of national highways, state highways, expressways, roads and streets; bridges and tunnel operation services",
+  "leaf_description": "Operation services of national highways, state highways, expressways, roads and streets; bridges and tunnel operation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996743",
+  "description": "All Services — Supporting services in transport — Parking lot services",
+  "leaf_description": "Parking lot services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996744",
+  "description": "All Services — Supporting services in transport — Towing services for commercial and private vehicles",
+  "leaf_description": "Towing services for commercial and private vehicles",
+  "gst_rate": 18
+ },
+ {
+  "code": "996749",
+  "description": "All Services — Supporting services in transport — Other supporting services for road transport nowhere else classified",
+  "leaf_description": "Other supporting services for road transport nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996751",
+  "description": "All Services — Supporting services in transport — Port and waterway operation services (excluding cargo handling) such as operation services of ports, docks, light houses, light ships and the like",
+  "leaf_description": "Port and waterway operation services (excluding cargo handling) such as operation services of ports, docks, light houses, light ships and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996752",
+  "description": "All Services — Supporting services in transport — Pilotage and berthing services",
+  "leaf_description": "Pilotage and berthing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996753",
+  "description": "All Services — Supporting services in transport — Vessel salvage and refloating services",
+  "leaf_description": "Vessel salvage and refloating services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996754",
+  "description": "All Services — Supporting services in transport — Maintenance, repair or overhaul services in respect of ships and other vessels, their engines and other components or parts",
+  "leaf_description": "Maintenance, repair or overhaul services in respect of ships and other vessels, their engines and other components or parts",
+  "gst_rate": 18
+ },
+ {
+  "code": "996759",
+  "description": "All Services — Supporting services in transport — Other supporting services for water transport nowhere else classified",
+  "leaf_description": "Other supporting services for water transport nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996761",
+  "description": "All Services — Supporting services in transport — Airport operation services (excluding cargo handling)",
+  "leaf_description": "Airport operation services (excluding cargo handling)",
+  "gst_rate": 18
+ },
+ {
+  "code": "996762",
+  "description": "All Services — Supporting services in transport — Air traffic control services",
+  "leaf_description": "Air traffic control services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996763",
+  "description": "All Services — Supporting services in transport — Other supporting services for air transport",
+  "leaf_description": "Other supporting services for air transport",
+  "gst_rate": 18
+ },
+ {
+  "code": "996764",
+  "description": "All Services — Supporting services in transport — Supporting services for space transport",
+  "leaf_description": "Supporting services for space transport",
+  "gst_rate": 18
+ },
+ {
+  "code": "996768",
+  "description": "All Services — Supporting services in transport — Other supporting services for air transport",
+  "leaf_description": "Other supporting services for air transport",
+  "gst_rate": 18
+ },
+ {
+  "code": "996769",
+  "description": "All Services — Supporting services in transport — Supporting services for space transport",
+  "leaf_description": "Supporting services for space transport",
+  "gst_rate": 18
+ },
+ {
+  "code": "996791",
+  "description": "All Services — Supporting services in transport — Goods transport agency services for road transport",
+  "leaf_description": "Goods transport agency services for road transport",
+  "gst_rate": 18
+ },
+ {
+  "code": "996792",
+  "description": "All Services — Supporting services in transport — Goods transport agency services for other modes of transport",
+  "leaf_description": "Goods transport agency services for other modes of transport",
+  "gst_rate": 18
+ },
+ {
+  "code": "996793",
+  "description": "All Services — Supporting services in transport — Other goods transport services",
+  "leaf_description": "Other goods transport services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996799",
+  "description": "All Services — Supporting services in transport — Other supporting transport services nowhere else classified",
+  "leaf_description": "Other supporting transport services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996811",
+  "description": "All Services — Postal and courier services — Postal services including post office counter services, mail box rental services",
+  "leaf_description": "Postal services including post office counter services, mail box rental services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996812",
+  "description": "All Services — Postal and courier services — Courier services",
+  "leaf_description": "Courier services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996813",
+  "description": "All Services — Postal and courier services — Local delivery services",
+  "leaf_description": "Local delivery services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996819",
+  "description": "All Services — Postal and courier services — Other Delivery Services nowhere else classified",
+  "leaf_description": "Other Delivery Services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "996911",
+  "description": "All Services — Electricity, gas, water and other distribution services — Electricity transmission services",
+  "leaf_description": "Electricity transmission services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996912",
+  "description": "All Services — Electricity, gas, water and other distribution services — Electricity distribution services",
+  "leaf_description": "Electricity distribution services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996913",
+  "description": "All Services — Electricity, gas, water and other distribution services — Gas distribution services",
+  "leaf_description": "Gas distribution services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996921",
+  "description": "All Services — Electricity, gas, water and other distribution services — Water distribution services",
+  "leaf_description": "Water distribution services",
+  "gst_rate": 18
+ },
+ {
+  "code": "996922",
+  "description": "All Services — Electricity, gas, water and other distribution services — Services involving distribution of steam, hot water and air conditioning supply and the like",
+  "leaf_description": "Services involving distribution of steam, hot water and air conditioning supply and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "996929",
+  "description": "All Services — Electricity, gas, water and other distribution services — Other similar services",
+  "leaf_description": "Other similar services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997111",
+  "description": "All Services — Financial and related services — Central banking services",
+  "leaf_description": "Central banking services",
+  "gst_rate": 0
+ },
+ {
+  "code": "997112",
+  "description": "All Services — Financial and related services — Deposit services",
+  "leaf_description": "Deposit services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997113",
+  "description": "All Services — Financial and related services — Credit-granting services including stand-by commitment, guarantees and securities",
+  "leaf_description": "Credit-granting services including stand-by commitment, guarantees and securities",
+  "gst_rate": 0
+ },
+ {
+  "code": "997114",
+  "description": "All Services — Financial and related services — Financial leasing services",
+  "leaf_description": "Financial leasing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997115",
+  "description": "All Services — Financial and related services — Transfer of the right to use any goods for any purpose (whether or not for a specified period) for cash, deferred payment or other valuable consideration",
+  "leaf_description": "Transfer of the right to use any goods for any purpose (whether or not for a specified period) for cash, deferred payment or other valuable consideration.",
+  "gst_rate": 18
+ },
+ {
+  "code": "997116",
+  "description": "All Services — Financial and related services — Any transfer of right in goods or of undivided share in goods without the transfer of title thereof",
+  "leaf_description": "Any transfer of right in goods or of undivided share in goods without the transfer of title thereof.",
+  "gst_rate": 18
+ },
+ {
+  "code": "997119",
+  "description": "All Services — Financial and related services — Other financial services (except investment banking, insurance services and pension services)",
+  "leaf_description": "Other financial services (except investment banking, insurance services and pension services)",
+  "gst_rate": 18
+ },
+ {
+  "code": "997120",
+  "description": "All Services — Financial and related services — Investment banking services",
+  "leaf_description": "Investment banking services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997131",
+  "description": "All Services — Financial and related services — pension services",
+  "leaf_description": "pension services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997132",
+  "description": "All Services — Financial and related services — Life insurance services (excluding reinsurance services)",
+  "leaf_description": "Life insurance services (excluding reinsurance services)",
+  "gst_rate": 18
+ },
+ {
+  "code": "997133",
+  "description": "All Services — Financial and related services — Accident and health insurance services",
+  "leaf_description": "Accident and health insurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997134",
+  "description": "All Services — Financial and related services — Motor vehicle insurance services",
+  "leaf_description": "Motor vehicle insurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997135",
+  "description": "All Services — Financial and related services — Marine, aviation, and other transport insurance services",
+  "leaf_description": "Marine, aviation, and other transport insurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997136",
+  "description": "All Services — Financial and related services — Freight insurance services and travel insurance services",
+  "leaf_description": "Freight insurance services and travel insurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997137",
+  "description": "All Services — Financial and related services — Other property insurance services",
+  "leaf_description": "Other property insurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997138",
+  "description": "All Services — Financial and related services — Freight insurance services and travel insurance services",
+  "leaf_description": "Freight insurance services and travel insurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997139",
+  "description": "All Services — Financial and related services — Other non-life insurance services (excluding reinsurance services)",
+  "leaf_description": "Other non-life insurance services (excluding reinsurance services)",
+  "gst_rate": 18
+ },
+ {
+  "code": "997141",
+  "description": "All Services — Financial and related services — Life reinsurance services",
+  "leaf_description": "Life reinsurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997142",
+  "description": "All Services — Financial and related services — Accident and health reinsurance services",
+  "leaf_description": "Accident and health reinsurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997143",
+  "description": "All Services — Financial and related services — Motor vehicle reinsurance services",
+  "leaf_description": "Motor vehicle reinsurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997144",
+  "description": "All Services — Financial and related services — Marine, aviation and other transport reinsurance services",
+  "leaf_description": "Marine, aviation and other transport reinsurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997145",
+  "description": "All Services — Financial and related services — Freight reinsurance services",
+  "leaf_description": "Freight reinsurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997146",
+  "description": "All Services — Financial and related services — Other property reinsurance services",
+  "leaf_description": "Other property reinsurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997147",
+  "description": "All Services — Financial and related services — Other property reinsurance services",
+  "leaf_description": "Other property reinsurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997149",
+  "description": "All Services — Financial and related services — Other non-life reinsurance services",
+  "leaf_description": "Other non-life reinsurance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997151",
+  "description": "All Services — Financial and related services — Services related to investment banking such as mergers and acquisition services, corporate finance and venture capital services",
+  "leaf_description": "Services related to investment banking such as mergers and acquisition services, corporate finance and venture capital services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997152",
+  "description": "All Services — Financial and related services — Brokerage and related securities and commodities services including commodity exchange services",
+  "leaf_description": "Brokerage and related securities and commodities services including commodity exchange services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997153",
+  "description": "All Services — Financial and related services — Portfolio management services except pension funds",
+  "leaf_description": "Portfolio management services except pension funds",
+  "gst_rate": 18
+ },
+ {
+  "code": "997154",
+  "description": "All Services — Financial and related services — Trust and custody services",
+  "leaf_description": "Trust and custody services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997155",
+  "description": "All Services — Financial and related services — Services related to the administration of financial markets",
+  "leaf_description": "Services related to the administration of financial markets",
+  "gst_rate": 18
+ },
+ {
+  "code": "997156",
+  "description": "All Services — Financial and related services — Financial consultancy services",
+  "leaf_description": "Financial consultancy services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997157",
+  "description": "All Services — Financial and related services — Foreign exchange services",
+  "leaf_description": "Foreign exchange services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997158",
+  "description": "All Services — Financial and related services — Financial transactions processing and clearing house services",
+  "leaf_description": "Financial transactions processing and clearing house services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997159",
+  "description": "All Services — Financial and related services — Other services auxiliary to financial services",
+  "leaf_description": "Other services auxiliary to financial services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997161",
+  "description": "All Services — Financial and related services — Services auxiliary to insurance and pensions",
+  "leaf_description": "Services auxiliary to insurance and pensions",
+  "gst_rate": 18
+ },
+ {
+  "code": "997162",
+  "description": "All Services — Financial and related services — Insurance claims adjustment services",
+  "leaf_description": "Insurance claims adjustment services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997163",
+  "description": "All Services — Financial and related services — Actuarial services",
+  "leaf_description": "Actuarial services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997164",
+  "description": "All Services — Financial and related services — Pension fund management services",
+  "leaf_description": "Pension fund management services",
+  "gst_rate": 18
+ },
+ {
+  "code": "997169",
+  "description": "All Services — Financial and related services — Other services auxiliary to insurance and pensions",
+  "leaf_description": "Other services auxiliary to insurance and pensions",
+  "gst_rate": 18
+ },
+ {
+  "code": "997171",
+  "description": "All Services — Financial and related services — Services of holding equity of subsidiary companies",
+  "leaf_description": "Services of holding equity of subsidiary companies",
+  "gst_rate": 18
+ },
+ {
+  "code": "997172",
+  "description": "All Services — Financial and related services — Services of holding securities and other assets of trusts and funds and similar financial entities",
+  "leaf_description": "Services of holding securities and other assets of trusts and funds and similar financial entities",
+  "gst_rate": 18
+ },
+ {
+  "code": "997211",
+  "description": "All Services — Real estate services — Rental or leasing services involving own or leased residential property",
+  "leaf_description": "Rental or leasing services involving own or leased residential property",
+  "gst_rate": 18
+ },
+ {
+  "code": "997212",
+  "description": "All Services — Real estate services — Rental or leasing services involving own or leased non-residential property",
+  "leaf_description": "Rental or leasing services involving own or leased non-residential property",
+  "gst_rate": 18
+ },
+ {
+  "code": "997213",
+  "description": "All Services — Real estate services — Trade services of buildings",
+  "leaf_description": "Trade services of buildings",
+  "gst_rate": 18
+ },
+ {
+  "code": "997214",
+  "description": "All Services — Real estate services — Trade services of time-share properties",
+  "leaf_description": "Trade services of time-share properties",
+  "gst_rate": 18
+ },
+ {
+  "code": "997215",
+  "description": "All Services — Real estate services — Trade services of vacant and subdivided land",
+  "leaf_description": "Trade services of vacant and subdivided land",
+  "gst_rate": 18
+ },
+ {
+  "code": "997219",
+  "description": "All Services — Real estate services — Other real estate services involving owned or leased property",
+  "leaf_description": "Other real estate services involving owned or leased property",
+  "gst_rate": 18
+ },
+ {
+  "code": "997221",
+  "description": "All Services — Real estate services — Property management services on a fee or commission basis or on contract basis",
+  "leaf_description": "Property management services on a fee or commission basis or on contract basis",
+  "gst_rate": 18
+ },
+ {
+  "code": "997222",
+  "description": "All Services — Real estate services — Building sales on a fee or commission basis or on contract basis",
+  "leaf_description": "Building sales on a fee or commission basis or on contract basis",
+  "gst_rate": 18
+ },
+ {
+  "code": "997223",
+  "description": "All Services — Real estate services — Land sales on a fee or commission basis or on contract basis",
+  "leaf_description": "Land sales on a fee or commission basis or on contract basis",
+  "gst_rate": 18
+ },
+ {
+  "code": "997224",
+  "description": "All Services — Real estate services — Real estate appraisal services on a fee or commission basis or on contract basis",
+  "leaf_description": "Real estate appraisal services on a fee or commission basis or on contract basis",
+  "gst_rate": 18
+ },
+ {
+  "code": "997229",
+  "description": "All Services — Real estate services — Other real estate services on a fee or commission basis or on contract basis",
+  "leaf_description": "Other real estate services on a fee or commission basis or on contract basis",
+  "gst_rate": 18
+ },
+ {
+  "code": "997231",
+  "description": "All Services — Real estate services — Services by way of grant of development rights, FSI or additional FSI",
+  "leaf_description": "Services by way of grant of development rights, FSI or additional FSI",
+  "gst_rate": 18
+ },
+ {
+  "code": "997311",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning transport equipments including containers, without operator",
+  "leaf_description": "Leasing or rental services concerning transport equipments including containers, without operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "997312",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning agricultural machinery and equipment without operator",
+  "leaf_description": "Leasing or rental services concerning agricultural machinery and equipment without operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "997313",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning construction machinery and equipment without operator",
+  "leaf_description": "Leasing or rental services concerning construction machinery and equipment without operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "997314",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning office machinery and equipment (except computers) without operator",
+  "leaf_description": "Leasing or rental services concerning office machinery and equipment (except computers) without operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "997315",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning computers without operators",
+  "leaf_description": "Leasing or rental services concerning computers without operators",
+  "gst_rate": 18
+ },
+ {
+  "code": "997316",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning telecommunications equipment without operator",
+  "leaf_description": "Leasing or rental services concerning telecommunications equipment without operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "997317",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning other machinery and equipment without operator",
+  "leaf_description": "Leasing or rental services concerning other machinery and equipment without operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "997318",
+  "description": "All Services — Leasing or rental services without operator — Transfer of the right to use any goods for any purpose (whether or not for a specified period) for cash, deferred payment or other valuable consideration",
+  "leaf_description": "Transfer of the right to use any goods for any purpose (whether or not for a specified period) for cash, deferred payment or other valuable consideration.",
+  "gst_rate": 18
+ },
+ {
+  "code": "997319",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning other machinery and equipments without operator",
+  "leaf_description": "Leasing or rental services concerning other machinery and equipments without operator",
+  "gst_rate": 18
+ },
+ {
+  "code": "997321",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning televisions, radios, video cassette recorders, projectors, audio systems and related equipment and accessories (home entertainment equipment )",
+  "leaf_description": "Leasing or rental services concerning televisions, radios, video cassette recorders, projectors, audio systems and related equipment and accessories (home entertainment equipment )",
+  "gst_rate": 18
+ },
+ {
+  "code": "997322",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning video tapes and disks (home entertainment equipment )",
+  "leaf_description": "Leasing or rental services concerning video tapes and disks (home entertainment equipment )",
+  "gst_rate": 18
+ },
+ {
+  "code": "997323",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning furniture and other household appliances",
+  "leaf_description": "Leasing or rental services concerning furniture and other household appliances",
+  "gst_rate": 18
+ },
+ {
+  "code": "997324",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning pleasure and leisure equipment",
+  "leaf_description": "Leasing or rental services concerning pleasure and leisure equipment",
+  "gst_rate": 18
+ },
+ {
+  "code": "997325",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning household linen",
+  "leaf_description": "Leasing or rental services concerning household linen",
+  "gst_rate": 18
+ },
+ {
+  "code": "997326",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning textiles, clothing and footwear",
+  "leaf_description": "Leasing or rental services concerning textiles, clothing and footwear",
+  "gst_rate": 18
+ },
+ {
+  "code": "997327",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning do-it-yourself machinery and equipment",
+  "leaf_description": "Leasing or rental services concerning do-it-yourself machinery and equipment",
+  "gst_rate": 18
+ },
+ {
+  "code": "997328",
+  "description": "All Services — Leasing or rental services without operator — Transfer of the right to use any goods for any purpose (whether or not for a specified period) for cash, deferred payment or other valuable consideration",
+  "leaf_description": "Transfer of the right to use any goods for any purpose (whether or not for a specified period) for cash, deferred payment or other valuable consideration.",
+  "gst_rate": 18
+ },
+ {
+  "code": "997329",
+  "description": "All Services — Leasing or rental services without operator — Leasing or rental services concerning other goods",
+  "leaf_description": "Leasing or rental services concerning other goods",
+  "gst_rate": 18
+ },
+ {
+  "code": "997331",
+  "description": "All Services — Leasing or rental services without operator — Licensing services for the right to use computer software and databases",
+  "leaf_description": "Licensing services for the right to use computer software and databases",
+  "gst_rate": 18
+ },
+ {
+  "code": "997332",
+  "description": "All Services — Leasing or rental services without operator — Licensing services for the right to broadcast and show original films, sound recordings, radio and television programme and the like",
+  "leaf_description": "Licensing services for the right to broadcast and show original films, sound recordings, radio and television programme and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "997333",
+  "description": "All Services — Leasing or rental services without operator — Licensing services for the right to reproduce original art works",
+  "leaf_description": "Licensing services for the right to reproduce original art works",
+  "gst_rate": 18
+ },
+ {
+  "code": "997334",
+  "description": "All Services — Leasing or rental services without operator — Licensing services for the right to reprint and copy manuscripts, books, journals and periodicals",
+  "leaf_description": "Licensing services for the right to reprint and copy manuscripts, books, journals and periodicals",
+  "gst_rate": 18
+ },
+ {
+  "code": "997335",
+  "description": "All Services — Leasing or rental services without operator — Licensing services for the right to use research and development products",
+  "leaf_description": "Licensing services for the right to use research and development products",
+  "gst_rate": 18
+ },
+ {
+  "code": "997336",
+  "description": "All Services — Leasing or rental services without operator — Licensing services for the right to use trademarks and franchises",
+  "leaf_description": "Licensing services for the right to use trademarks and franchises",
+  "gst_rate": 18
+ },
+ {
+  "code": "997337",
+  "description": "All Services — Leasing or rental services without operator — Licensing services for the right to use minerals including its exploration and evaluation",
+  "leaf_description": "Licensing services for the right to use minerals including its exploration and evaluation",
+  "gst_rate": 18
+ },
+ {
+  "code": "997338",
+  "description": "All Services — Leasing or rental services without operator — Licensing services for right to use other natural resources including telecommunication spectrum",
+  "leaf_description": "Licensing services for right to use other natural resources including telecommunication spectrum",
+  "gst_rate": 18
+ },
+ {
+  "code": "997339",
+  "description": "All Services — Leasing or rental services without operator — Licensing services for the right to use other intellectual property products and other resources nowhere else classified",
+  "leaf_description": "Licensing services for the right to use other intellectual property products and other resources nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998111",
+  "description": "All Services — Research and development services — Research and experimental development services in natural sciences",
+  "leaf_description": "Research and experimental development services in natural sciences",
+  "gst_rate": 18
+ },
+ {
+  "code": "998112",
+  "description": "All Services — Research and development services — Research and experimental development services in engineering and technology",
+  "leaf_description": "Research and experimental development services in engineering and technology",
+  "gst_rate": 18
+ },
+ {
+  "code": "998113",
+  "description": "All Services — Research and development services — Research and experimental development services in medical sciences and pharmacy",
+  "leaf_description": "Research and experimental development services in medical sciences and pharmacy",
+  "gst_rate": 18
+ },
+ {
+  "code": "998114",
+  "description": "All Services — Research and development services — Research and experimental development services in agricultural sciences",
+  "leaf_description": "Research and experimental development services in agricultural sciences",
+  "gst_rate": 18
+ },
+ {
+  "code": "998121",
+  "description": "All Services — Research and development services — Research and experimental development services in social sciences",
+  "leaf_description": "Research and experimental development services in social sciences",
+  "gst_rate": 18
+ },
+ {
+  "code": "998122",
+  "description": "All Services — Research and development services — Research and experimental development services in humanities",
+  "leaf_description": "Research and experimental development services in humanities",
+  "gst_rate": 18
+ },
+ {
+  "code": "998130",
+  "description": "All Services — Research and development services — Interdisciplinary research and experimental development services",
+  "leaf_description": "Interdisciplinary research and experimental development services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998141",
+  "description": "All Services — Research and development services — Research and development originals in pharmaceuticals",
+  "leaf_description": "Research and development originals in pharmaceuticals",
+  "gst_rate": 18
+ },
+ {
+  "code": "998142",
+  "description": "All Services — Research and development services — Research and development originals in agriculture",
+  "leaf_description": "Research and development originals in agriculture",
+  "gst_rate": 18
+ },
+ {
+  "code": "998143",
+  "description": "All Services — Research and development services — Research and development originals in biotechnology",
+  "leaf_description": "Research and development originals in biotechnology",
+  "gst_rate": 18
+ },
+ {
+  "code": "998144",
+  "description": "All Services — Research and development services — Research and development originals in computer related sciences",
+  "leaf_description": "Research and development originals in computer related sciences",
+  "gst_rate": 18
+ },
+ {
+  "code": "998145",
+  "description": "All Services — Research and development services — Research and development originals in other fields nowhere else classified",
+  "leaf_description": "Research and development originals in other fields nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998149",
+  "description": "All Services — Research and development services — Research and development originals in other fields nowhere else classified",
+  "leaf_description": "Research and development originals in other fields nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998211",
+  "description": "All Services — Legal and accounting services — Legal advisory and representation services concerning criminal law",
+  "leaf_description": "Legal advisory and representation services concerning criminal law",
+  "gst_rate": 18
+ },
+ {
+  "code": "998212",
+  "description": "All Services — Legal and accounting services — Legal advisory and representation services concerning other fields of law",
+  "leaf_description": "Legal advisory and representation services concerning other fields of law",
+  "gst_rate": 18
+ },
+ {
+  "code": "998213",
+  "description": "All Services — Legal and accounting services — Legal documentation and certification services concerning patents, copyrights and other intellectual property rights",
+  "leaf_description": "Legal documentation and certification services concerning patents, copyrights and other intellectual property rights",
+  "gst_rate": 18
+ },
+ {
+  "code": "998214",
+  "description": "All Services — Legal and accounting services — Legal documentation and certification services concerning other documents",
+  "leaf_description": "Legal documentation and certification services concerning other documents",
+  "gst_rate": 18
+ },
+ {
+  "code": "998215",
+  "description": "All Services — Legal and accounting services — Arbitration and conciliation services",
+  "leaf_description": "Arbitration and conciliation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998216",
+  "description": "All Services — Legal and accounting services — Other legal services nowhere else classified",
+  "leaf_description": "Other legal services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998219",
+  "description": "All Services — Legal and accounting services — Other legal services nowhere else classified",
+  "leaf_description": "Other legal services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998221",
+  "description": "All Services — Legal and accounting services — Financial auditing services",
+  "leaf_description": "Financial auditing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998222",
+  "description": "All Services — Legal and accounting services — Accounting and bookkeeping services",
+  "leaf_description": "Accounting and bookkeeping services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998223",
+  "description": "All Services — Legal and accounting services — Payroll services",
+  "leaf_description": "Payroll services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998224",
+  "description": "All Services — Legal and accounting services — Other similar services nowhere else classified",
+  "leaf_description": "Other similar services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998229",
+  "description": "All Services — Legal and accounting services — Other similar services nowhere else classified",
+  "leaf_description": "Other similar services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998231",
+  "description": "All Services — Legal and accounting services — Corporate tax consulting and preparation services",
+  "leaf_description": "Corporate tax consulting and preparation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998232",
+  "description": "All Services — Legal and accounting services — Individual tax preparation and planning services",
+  "leaf_description": "Individual tax preparation and planning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998239",
+  "description": "All Services — Legal and accounting services — Other tax consultancy and preparation services",
+  "leaf_description": "Other tax consultancy and preparation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998240",
+  "description": "All Services — Legal and accounting services — Insolvency and receivership services",
+  "leaf_description": "Insolvency and receivership services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998311",
+  "description": "All Services — Other professional, technical and business services — Management consulting and management services including financial, strategic, human resources, marketing, operations and supply chain management",
+  "leaf_description": "Management consulting and management services including financial, strategic, human resources, marketing, operations and supply chain management",
+  "gst_rate": 18
+ },
+ {
+  "code": "998312",
+  "description": "All Services — Other professional, technical and business services — Business consulting services including public relations services",
+  "leaf_description": "Business consulting services including public relations services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998313",
+  "description": "All Services — Other professional, technical and business services — Information technology consulting and support services",
+  "leaf_description": "Information technology consulting and support services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998314",
+  "description": "All Services — Other professional, technical and business services — Information technology design and development services",
+  "leaf_description": "Information technology design and development services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998315",
+  "description": "All Services — Other professional, technical and business services — Hosting and information technology infrastructure provisioning services",
+  "leaf_description": "Hosting and information technology infrastructure provisioning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998316",
+  "description": "All Services — Other professional, technical and business services — Information technology infrastructure and network management services",
+  "leaf_description": "Information technology infrastructure and network management services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998319",
+  "description": "All Services — Other professional, technical and business services — Other information technology services nowhere else classified",
+  "leaf_description": "Other information technology services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998321",
+  "description": "All Services — Other professional, technical and business services — Architectural advisory services",
+  "leaf_description": "Architectural advisory services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998322",
+  "description": "All Services — Other professional, technical and business services — Architectural services for residential building projects",
+  "leaf_description": "Architectural services for residential building projects",
+  "gst_rate": 18
+ },
+ {
+  "code": "998323",
+  "description": "All Services — Other professional, technical and business services — Architectural services for non-residential building projects",
+  "leaf_description": "Architectural services for non-residential building projects",
+  "gst_rate": 18
+ },
+ {
+  "code": "998324",
+  "description": "All Services — Other professional, technical and business services — Historical restoration architectural services",
+  "leaf_description": "Historical restoration architectural services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998325",
+  "description": "All Services — Other professional, technical and business services — Urban planning services",
+  "leaf_description": "Urban planning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998326",
+  "description": "All Services — Other professional, technical and business services — Rural land planning services",
+  "leaf_description": "Rural land planning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998327",
+  "description": "All Services — Other professional, technical and business services — Project site master planning services",
+  "leaf_description": "Project site master planning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998328",
+  "description": "All Services — Other professional, technical and business services — Landscape architectural services and advisory services",
+  "leaf_description": "Landscape architectural services and advisory services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998329",
+  "description": "All Services — Other professional, technical and business services — Other architectural services, urban and land planning and landscape architectural services",
+  "leaf_description": "Other architectural services, urban and land planning and landscape architectural services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998331",
+  "description": "All Services — Other professional, technical and business services — Engineering advisory services",
+  "leaf_description": "Engineering advisory services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998332",
+  "description": "All Services — Other professional, technical and business services — Engineering services for building projects",
+  "leaf_description": "Engineering services for building projects",
+  "gst_rate": 18
+ },
+ {
+  "code": "998333",
+  "description": "All Services — Other professional, technical and business services — Engineering services for industrial and manufacturing projects",
+  "leaf_description": "Engineering services for industrial and manufacturing projects",
+  "gst_rate": 18
+ },
+ {
+  "code": "998334",
+  "description": "All Services — Other professional, technical and business services — Engineering services for transportation projects",
+  "leaf_description": "Engineering services for transportation projects",
+  "gst_rate": 18
+ },
+ {
+  "code": "998335",
+  "description": "All Services — Other professional, technical and business services — Engineering services for power projects",
+  "leaf_description": "Engineering services for power projects",
+  "gst_rate": 18
+ },
+ {
+  "code": "998336",
+  "description": "All Services — Other professional, technical and business services — Engineering services for telecommunications and broadcasting projects",
+  "leaf_description": "Engineering services for telecommunications and broadcasting projects",
+  "gst_rate": 18
+ },
+ {
+  "code": "998337",
+  "description": "All Services — Other professional, technical and business services — Engineering services for waste management projects (hazardous and non-hazardous), for water, sewerage and drainage projects",
+  "leaf_description": "Engineering services for waste management projects (hazardous and non-hazardous), for water, sewerage and drainage projects",
+  "gst_rate": 18
+ },
+ {
+  "code": "998338",
+  "description": "All Services — Other professional, technical and business services — Engineering services for other projects nowhere else classified",
+  "leaf_description": "Engineering services for other projects nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998339",
+  "description": "All Services — Other professional, technical and business services — Project management services for construction projects",
+  "leaf_description": "Project management services for construction projects",
+  "gst_rate": 18
+ },
+ {
+  "code": "998341",
+  "description": "All Services — Other professional, technical and business services — Geological and geophysical consulting services",
+  "leaf_description": "Geological and geophysical consulting services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998342",
+  "description": "All Services — Other professional, technical and business services — Subsurface surveying services",
+  "leaf_description": "Subsurface surveying services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998343",
+  "description": "All Services — Other professional, technical and business services — Mineral exploration and evaluation",
+  "leaf_description": "Mineral exploration and evaluation",
+  "gst_rate": 18
+ },
+ {
+  "code": "998344",
+  "description": "All Services — Other professional, technical and business services — Surface surveying and map-making services",
+  "leaf_description": "Surface surveying and map-making services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998345",
+  "description": "All Services — Other professional, technical and business services — Weather forecasting and meteorological services",
+  "leaf_description": "Weather forecasting and meteorological services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998346",
+  "description": "All Services — Other professional, technical and business services — Technical testing and analysis services",
+  "leaf_description": "Technical testing and analysis services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998347",
+  "description": "All Services — Other professional, technical and business services — Certification of ships, aircraft, dams, and the like",
+  "leaf_description": "Certification of ships, aircraft, dams, and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "998348",
+  "description": "All Services — Other professional, technical and business services — Certification and authentication of works of art",
+  "leaf_description": "Certification and authentication of works of art",
+  "gst_rate": 18
+ },
+ {
+  "code": "998349",
+  "description": "All Services — Other professional, technical and business services — Other technical and scientific services nowhere else classified",
+  "leaf_description": "Other technical and scientific services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998351",
+  "description": "All Services — Other professional, technical and business services — Veterinary services for pet animals",
+  "leaf_description": "Veterinary services for pet animals",
+  "gst_rate": 18
+ },
+ {
+  "code": "998352",
+  "description": "All Services — Other professional, technical and business services — Veterinary services for livestock",
+  "leaf_description": "Veterinary services for livestock",
+  "gst_rate": 18
+ },
+ {
+  "code": "998359",
+  "description": "All Services — Other professional, technical and business services — Other veterinary services nowhere else classified",
+  "leaf_description": "Other veterinary services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998361",
+  "description": "All Services — Other professional, technical and business services — Advertising Services",
+  "leaf_description": "Advertising Services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998362",
+  "description": "All Services — Other professional, technical and business services — Purchase or sale of advertising space or time, on commission",
+  "leaf_description": "Purchase or sale of advertising space or time, on commission",
+  "gst_rate": 18
+ },
+ {
+  "code": "998363",
+  "description": "All Services — Other professional, technical and business services — Sale of advertising space in print media (except on commission)",
+  "leaf_description": "Sale of advertising space in print media (except on commission)",
+  "gst_rate": 18
+ },
+ {
+  "code": "998364",
+  "description": "All Services — Other professional, technical and business services — Sale of television and radio advertising time",
+  "leaf_description": "Sale of television and radio advertising time",
+  "gst_rate": 18
+ },
+ {
+  "code": "998365",
+  "description": "All Services — Other professional, technical and business services — Sale of Internet advertising space",
+  "leaf_description": "Sale of Internet advertising space",
+  "gst_rate": 18
+ },
+ {
+  "code": "998366",
+  "description": "All Services — Other professional, technical and business services — Sale of other advertising space or time (except on commission)",
+  "leaf_description": "Sale of other advertising space or time (except on commission)",
+  "gst_rate": 18
+ },
+ {
+  "code": "998371",
+  "description": "All Services — Other professional, technical and business services — Market research services",
+  "leaf_description": "Market research services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998372",
+  "description": "All Services — Other professional, technical and business services — Public opinion polling services",
+  "leaf_description": "Public opinion polling services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998381",
+  "description": "All Services — Other professional, technical and business services — Portrait photography services",
+  "leaf_description": "Portrait photography services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998382",
+  "description": "All Services — Other professional, technical and business services — Advertising and related photography services",
+  "leaf_description": "Advertising and related photography services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998383",
+  "description": "All Services — Other professional, technical and business services — Event photography and event videography services",
+  "leaf_description": "Event photography and event videography services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998384",
+  "description": "All Services — Other professional, technical and business services — Specialty photography services",
+  "leaf_description": "Specialty photography services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998385",
+  "description": "All Services — Other professional, technical and business services — Restoration and retouching services of photography",
+  "leaf_description": "Restoration and retouching services of photography",
+  "gst_rate": 18
+ },
+ {
+  "code": "998386",
+  "description": "All Services — Other professional, technical and business services — Photographic and videographic processing services",
+  "leaf_description": "Photographic and videographic processing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998387",
+  "description": "All Services — Other professional, technical and business services — Other photography and videography and their processing services nowhere else classified",
+  "leaf_description": "Other photography and videography and their processing services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998389",
+  "description": "All Services — Other professional, technical and business services — Other photography and videography and their processing services nowhere else classified",
+  "leaf_description": "Other photography and videography and their processing services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998391",
+  "description": "All Services — Other professional, technical and business services — Specialty design services including interior design, fashion design, industrial design and other specialty design services",
+  "leaf_description": "Specialty design services including interior design, fashion design, industrial design and other specialty design services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998392",
+  "description": "All Services — Other professional, technical and business services — Design originals",
+  "leaf_description": "Design originals",
+  "gst_rate": 18
+ },
+ {
+  "code": "998393",
+  "description": "All Services — Other professional, technical and business services — Scientific and technical consulting services",
+  "leaf_description": "Scientific and technical consulting services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998394",
+  "description": "All Services — Other professional, technical and business services — Original compilations of facts or information",
+  "leaf_description": "Original compilations of facts or information",
+  "gst_rate": 18
+ },
+ {
+  "code": "998395",
+  "description": "All Services — Other professional, technical and business services — Translation and interpretation services",
+  "leaf_description": "Translation and interpretation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998396",
+  "description": "All Services — Other professional, technical and business services — Trademarks and franchises",
+  "leaf_description": "Trademarks and franchises",
+  "gst_rate": 18
+ },
+ {
+  "code": "998397",
+  "description": "All Services — Other professional, technical and business services — Sponsorship services and brand promotion services",
+  "leaf_description": "Sponsorship services and brand promotion services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998398",
+  "description": "All Services — Other professional, technical and business services — Sponsorship services and brand promotion services",
+  "leaf_description": "Sponsorship services and brand promotion services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998399",
+  "description": "All Services — Other professional, technical and business services — Other professional, technical and business services nowhere else classified",
+  "leaf_description": "Other professional, technical and business services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998411",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Carrier services",
+  "leaf_description": "Carrier services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998412",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Fixed telephony services",
+  "leaf_description": "Fixed telephony services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998413",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Mobile telecommunications services",
+  "leaf_description": "Mobile telecommunications services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998414",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Private network services",
+  "leaf_description": "Private network services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998415",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Data transmission services",
+  "leaf_description": "Data transmission services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998419",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Other telecommunications services including fax services, telex services nowhere else classified",
+  "leaf_description": "Other telecommunications services including fax services, telex services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998421",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Internet backbone services",
+  "leaf_description": "Internet backbone services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998422",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Internet access services in wired and wireless mode",
+  "leaf_description": "Internet access services in wired and wireless mode",
+  "gst_rate": 18
+ },
+ {
+  "code": "998423",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Fax, telephony over the Internet",
+  "leaf_description": "Fax, telephony over the Internet",
+  "gst_rate": 18
+ },
+ {
+  "code": "998424",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Audio conferencing and video conferencing over the Internet",
+  "leaf_description": "Audio conferencing and video conferencing over the Internet",
+  "gst_rate": 18
+ },
+ {
+  "code": "998429",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Other internet telecommunications services nowhere else classified",
+  "leaf_description": "Other internet telecommunications services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998431",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — On-line text based information such as online books, newspapers, periodicals, directories and the like",
+  "leaf_description": "On-line text based information such as online books, newspapers, periodicals, directories and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "998432",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — On-line audio content",
+  "leaf_description": "On-line audio content",
+  "gst_rate": 18
+ },
+ {
+  "code": "998433",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — On-line video content",
+  "leaf_description": "On-line video content",
+  "gst_rate": 18
+ },
+ {
+  "code": "998434",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Software downloads",
+  "leaf_description": "Software downloads",
+  "gst_rate": 18
+ },
+ {
+  "code": "998435",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Supply consisting only of e-book",
+  "leaf_description": "Supply consisting only of e-book.",
+  "gst_rate": 18
+ },
+ {
+  "code": "998439",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Other on-line contents nowhere else classified",
+  "leaf_description": "Other on-line contents nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998441",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — News agency services to newspapers and periodicals",
+  "leaf_description": "News agency services to newspapers and periodicals",
+  "gst_rate": 18
+ },
+ {
+  "code": "998442",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Services of independent journalists and press photographers",
+  "leaf_description": "Services of independent journalists and press photographers",
+  "gst_rate": 18
+ },
+ {
+  "code": "998443",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — News agency services to audiovisual media",
+  "leaf_description": "News agency services to audiovisual media",
+  "gst_rate": 18
+ },
+ {
+  "code": "998451",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Library services",
+  "leaf_description": "Library services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998452",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Operation services of public archives including digital archives",
+  "leaf_description": "Operation services of public archives including digital archives",
+  "gst_rate": 18
+ },
+ {
+  "code": "998453",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Operation services of historical archives including digital archives",
+  "leaf_description": "Operation services of historical archives including digital archives",
+  "gst_rate": 18
+ },
+ {
+  "code": "998461",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Radio broadcast originals",
+  "leaf_description": "Radio broadcast originals",
+  "gst_rate": 18
+ },
+ {
+  "code": "998462",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Television broadcast originals",
+  "leaf_description": "Television broadcast originals",
+  "gst_rate": 18
+ },
+ {
+  "code": "998463",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Radio channel programmes",
+  "leaf_description": "Radio channel programmes",
+  "gst_rate": 18
+ },
+ {
+  "code": "998464",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Television channel programmes",
+  "leaf_description": "Television channel programmes",
+  "gst_rate": 18
+ },
+ {
+  "code": "998465",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Broadcasting services",
+  "leaf_description": "Broadcasting services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998466",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Home programme distribution services",
+  "leaf_description": "Home programme distribution services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998469",
+  "description": "All Services — Telecommunications, broadcasting and information supply services — Other broadcasting, programming and programme distribution services",
+  "leaf_description": "Other broadcasting, programming and programme distribution services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998511",
+  "description": "All Services — Support services — Executive or retained personnel search services",
+  "leaf_description": "Executive or retained personnel search services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998512",
+  "description": "All Services — Support services — Permanent placement services, other than executive search services",
+  "leaf_description": "Permanent placement services, other than executive search services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998513",
+  "description": "All Services — Support services — Contract staffing services",
+  "leaf_description": "Contract staffing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998514",
+  "description": "All Services — Support services — Temporary staffing services",
+  "leaf_description": "Temporary staffing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998515",
+  "description": "All Services — Support services — Long-term staffing (pay rolling) services",
+  "leaf_description": "Long-term staffing (pay rolling) services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998516",
+  "description": "All Services — Support services — Temporary staffing-to-permanent placement services",
+  "leaf_description": "Temporary staffing-to-permanent placement services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998517",
+  "description": "All Services — Support services — Co-employment staffing services",
+  "leaf_description": "Co-employment staffing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998519",
+  "description": "All Services — Support services — Other employment and labour supply services nowhere else classified",
+  "leaf_description": "Other employment and labour supply services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998521",
+  "description": "All Services — Support services — Investigation services",
+  "leaf_description": "Investigation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998522",
+  "description": "All Services — Support services — Security consulting services",
+  "leaf_description": "Security consulting services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998523",
+  "description": "All Services — Support services — Security systems services",
+  "leaf_description": "Security systems services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998524",
+  "description": "All Services — Support services — Armoured car services",
+  "leaf_description": "Armoured car services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998525",
+  "description": "All Services — Support services — Guard services",
+  "leaf_description": "Guard services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998526",
+  "description": "All Services — Support services — Training of guard dogs",
+  "leaf_description": "Training of guard dogs",
+  "gst_rate": 18
+ },
+ {
+  "code": "998527",
+  "description": "All Services — Support services — Polygraph services",
+  "leaf_description": "Polygraph services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998528",
+  "description": "All Services — Support services — Fingerprinting services",
+  "leaf_description": "Fingerprinting services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998529",
+  "description": "All Services — Support services — Other security services nowhere else classified",
+  "leaf_description": "Other security services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998531",
+  "description": "All Services — Support services — Disinfecting and exterminating services",
+  "leaf_description": "Disinfecting and exterminating services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998532",
+  "description": "All Services — Support services — Window cleaning services",
+  "leaf_description": "Window cleaning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998533",
+  "description": "All Services — Support services — General cleaning services",
+  "leaf_description": "General cleaning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998534",
+  "description": "All Services — Support services — Specialised cleaning services for reservoirs and tanks",
+  "leaf_description": "Specialised cleaning services for reservoirs and tanks",
+  "gst_rate": 18
+ },
+ {
+  "code": "998535",
+  "description": "All Services — Support services — Sterilisation of objects or premises (operating rooms)",
+  "leaf_description": "Sterilisation of objects or premises (operating rooms)",
+  "gst_rate": 18
+ },
+ {
+  "code": "998536",
+  "description": "All Services — Support services — Furnace and chimney cleaning services",
+  "leaf_description": "Furnace and chimney cleaning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998537",
+  "description": "All Services — Support services — Exterior cleaning of buildings of all types",
+  "leaf_description": "Exterior cleaning of buildings of all types",
+  "gst_rate": 18
+ },
+ {
+  "code": "998538",
+  "description": "All Services — Support services — Cleaning of transportation equipment",
+  "leaf_description": "Cleaning of transportation equipment",
+  "gst_rate": 18
+ },
+ {
+  "code": "998539",
+  "description": "All Services — Support services — Other cleaning services nowhere else classified",
+  "leaf_description": "Other cleaning services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998540",
+  "description": "All Services — Support services — Packaging services of goods for others",
+  "leaf_description": "Packaging services of goods for others",
+  "gst_rate": 18
+ },
+ {
+  "code": "998541",
+  "description": "All Services — Support services — Parcel packing and gift wrapping",
+  "leaf_description": "Parcel packing and gift wrapping",
+  "gst_rate": 18
+ },
+ {
+  "code": "998542",
+  "description": "All Services — Support services — Coin and currency packing services",
+  "leaf_description": "Coin and currency packing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998543",
+  "description": "All Services — Support services — Coin and currency packing services",
+  "leaf_description": "Coin and currency packing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998549",
+  "description": "All Services — Support services — Other packaging services nowhere else classified",
+  "leaf_description": "Other packaging services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998551",
+  "description": "All Services — Support services — Reservation services for transportation",
+  "leaf_description": "Reservation services for transportation",
+  "gst_rate": 18
+ },
+ {
+  "code": "998552",
+  "description": "All Services — Support services — Reservation services for accommodation, cruises and package tours",
+  "leaf_description": "Reservation services for accommodation, cruises and package tours",
+  "gst_rate": 18
+ },
+ {
+  "code": "998553",
+  "description": "All Services — Support services — Reservation services for convention centres, congress centres and exhibition halls",
+  "leaf_description": "Reservation services for convention centres, congress centres and exhibition halls",
+  "gst_rate": 18
+ },
+ {
+  "code": "998554",
+  "description": "All Services — Support services — Reservation services for event tickets, cinema halls, entertainment and recreational services and other reservation services",
+  "leaf_description": "Reservation services for event tickets, cinema halls, entertainment and recreational services and other reservation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998555",
+  "description": "All Services — Support services — Tour operator services",
+  "leaf_description": "Tour operator services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998556",
+  "description": "All Services — Support services — Tourist guide services",
+  "leaf_description": "Tourist guide services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998557",
+  "description": "All Services — Support services — Tourism promotion and visitor information services",
+  "leaf_description": "Tourism promotion and visitor information services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998559",
+  "description": "All Services — Support services — Other travel arrangement and related services nowhere else classified",
+  "leaf_description": "Other travel arrangement and related services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998591",
+  "description": "All Services — Support services — Credit reporting and rating services",
+  "leaf_description": "Credit reporting and rating services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998592",
+  "description": "All Services — Support services — Collection agency services",
+  "leaf_description": "Collection agency services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998593",
+  "description": "All Services — Support services — Telephone-based support services",
+  "leaf_description": "Telephone-based support services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998594",
+  "description": "All Services — Support services — Combined office administrative services",
+  "leaf_description": "Combined office administrative services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998595",
+  "description": "All Services — Support services — Specialised office support services such as duplicating services, mailing services, document preparation and the like",
+  "leaf_description": "Specialised office support services such as duplicating services, mailing services, document preparation and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "998596",
+  "description": "All Services — Support services — Events, Exhibitions, Conventions and trade shows organisation and assistance services",
+  "leaf_description": "Events, Exhibitions, Conventions and trade shows organisation and assistance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998597",
+  "description": "All Services — Support services — Landscape care and maintenance services",
+  "leaf_description": "Landscape care and maintenance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998598",
+  "description": "All Services — Support services — Other information services nowhere else classified",
+  "leaf_description": "Other information services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998599",
+  "description": "All Services — Support services — Other support services nowhere else classified",
+  "leaf_description": "Other support services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998611",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to crop production",
+  "leaf_description": "Support services to crop production",
+  "gst_rate": 18
+ },
+ {
+  "code": "998612",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Animal husbandry services",
+  "leaf_description": "Animal husbandry services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998613",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to hunting",
+  "leaf_description": "Support services to hunting",
+  "gst_rate": 18
+ },
+ {
+  "code": "998614",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to forestry and logging",
+  "leaf_description": "Support services to forestry and logging",
+  "gst_rate": 18
+ },
+ {
+  "code": "998615",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to fishing",
+  "leaf_description": "Support services to fishing",
+  "gst_rate": 18
+ },
+ {
+  "code": "998619",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Other support services to agriculture, hunting, forestry and fishing",
+  "leaf_description": "Other support services to agriculture, hunting, forestry and fishing",
+  "gst_rate": 18
+ },
+ {
+  "code": "998621",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to oil and gas extraction",
+  "leaf_description": "Support services to oil and gas extraction",
+  "gst_rate": 18
+ },
+ {
+  "code": "998622",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to other mining nowhere else classified",
+  "leaf_description": "Support services to other mining nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998631",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to electricity transmission and distribution",
+  "leaf_description": "Support services to electricity transmission and distribution",
+  "gst_rate": 18
+ },
+ {
+  "code": "998632",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to gas distribution",
+  "leaf_description": "Support services to gas distribution",
+  "gst_rate": 18
+ },
+ {
+  "code": "998633",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to water distribution",
+  "leaf_description": "Support services to water distribution",
+  "gst_rate": 18
+ },
+ {
+  "code": "998634",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Support services to Distribution services of steam, hot water and air-conditioning supply",
+  "leaf_description": "Support services to Distribution services of steam, hot water and air-conditioning supply",
+  "gst_rate": 18
+ },
+ {
+  "code": "998635",
+  "description": "All Services — Support services to agriculture, hunting, forestry, fishing, mining and utilities — Other support services to electricity , gas and water distribution",
+  "leaf_description": "Other support services to electricity , gas and water distribution",
+  "gst_rate": 18
+ },
+ {
+  "code": "998711",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of fabricated metal products, except machinery and equipment",
+  "leaf_description": "Maintenance and repair services of fabricated metal products, except machinery and equipment",
+  "gst_rate": 18
+ },
+ {
+  "code": "998712",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of office and accounting machinery",
+  "leaf_description": "Maintenance and repair services of office and accounting machinery",
+  "gst_rate": 18
+ },
+ {
+  "code": "998713",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of computers and peripheral equipment",
+  "leaf_description": "Maintenance and repair services of computers and peripheral equipment",
+  "gst_rate": 18
+ },
+ {
+  "code": "998714",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of transport machinery and equipment",
+  "leaf_description": "Maintenance and repair services of transport machinery and equipment",
+  "gst_rate": 18
+ },
+ {
+  "code": "998715",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of electrical household appliances",
+  "leaf_description": "Maintenance and repair services of electrical household appliances",
+  "gst_rate": 18
+ },
+ {
+  "code": "998716",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of telecommunication equipments and apparatus",
+  "leaf_description": "Maintenance and repair services of telecommunication equipments and apparatus",
+  "gst_rate": 18
+ },
+ {
+  "code": "998717",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of commercial and industrial machinery",
+  "leaf_description": "Maintenance and repair services of commercial and industrial machinery",
+  "gst_rate": 18
+ },
+ {
+  "code": "998718",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of elevators and escalators",
+  "leaf_description": "Maintenance and repair services of elevators and escalators",
+  "gst_rate": 18
+ },
+ {
+  "code": "998719",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of other machinery and equipments",
+  "leaf_description": "Maintenance and repair services of other machinery and equipments",
+  "gst_rate": 18
+ },
+ {
+  "code": "998721",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Repair services of footwear and leather goods",
+  "leaf_description": "Repair services of footwear and leather goods",
+  "gst_rate": 18
+ },
+ {
+  "code": "998722",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Repair services of watches, clocks and jewellery",
+  "leaf_description": "Repair services of watches, clocks and jewellery",
+  "gst_rate": 18
+ },
+ {
+  "code": "998723",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Repair services of garments and household textiles",
+  "leaf_description": "Repair services of garments and household textiles",
+  "gst_rate": 18
+ },
+ {
+  "code": "998724",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Repair services of furniture",
+  "leaf_description": "Repair services of furniture",
+  "gst_rate": 18
+ },
+ {
+  "code": "998725",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Repair services of bicycles",
+  "leaf_description": "Repair services of bicycles",
+  "gst_rate": 18
+ },
+ {
+  "code": "998726",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of musical instruments",
+  "leaf_description": "Maintenance and repair services of musical instruments",
+  "gst_rate": 18
+ },
+ {
+  "code": "998727",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Repair services for photographic equipment and cameras",
+  "leaf_description": "Repair services for photographic equipment and cameras",
+  "gst_rate": 18
+ },
+ {
+  "code": "998729",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Maintenance and repair services of other goods nowhere else classified",
+  "leaf_description": "Maintenance and repair services of other goods nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998731",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Installation services of fabricated metal products, except machinery and equipment",
+  "leaf_description": "Installation services of fabricated metal products, except machinery and equipment",
+  "gst_rate": 18
+ },
+ {
+  "code": "998732",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Installation services of industrial, manufacturing and service industry machinery and equipment",
+  "leaf_description": "Installation services of industrial, manufacturing and service industry machinery and equipment",
+  "gst_rate": 18
+ },
+ {
+  "code": "998733",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Installation services of office and accounting machinery and computers",
+  "leaf_description": "Installation services of office and accounting machinery and computers",
+  "gst_rate": 18
+ },
+ {
+  "code": "998734",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Installation services of radio, television and communications equipment and apparatus",
+  "leaf_description": "Installation services of radio, television and communications equipment and apparatus",
+  "gst_rate": 18
+ },
+ {
+  "code": "998735",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Installation services of professional medical machinery and equipment, and precision and optical instruments",
+  "leaf_description": "Installation services of professional medical machinery and equipment, and precision and optical instruments",
+  "gst_rate": 18
+ },
+ {
+  "code": "998736",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Installation services of electrical machinery and apparatus nowhere else classified",
+  "leaf_description": "Installation services of electrical machinery and apparatus nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998739",
+  "description": "All Services — Maintenance, repair and installation (except construction) services — Installation services of other goods nowhere else classified",
+  "leaf_description": "Installation services of other goods nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998811",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Meat processing services",
+  "leaf_description": "Meat processing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998812",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Fish processing services",
+  "leaf_description": "Fish processing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998813",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Fruit and vegetables processing services",
+  "leaf_description": "Fruit and vegetables processing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998814",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Vegetable and animal oil and fat manufacturing services",
+  "leaf_description": "Vegetable and animal oil and fat manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998815",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Dairy product manufacturing services",
+  "leaf_description": "Dairy product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998816",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Other food product manufacturing services",
+  "leaf_description": "Other food product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998817",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Prepared animal feeds manufacturing services",
+  "leaf_description": "Prepared animal feeds manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998818",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Beverage manufacturing services",
+  "leaf_description": "Beverage manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998819",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Tobacco manufacturing services nowhere else classified",
+  "leaf_description": "Tobacco manufacturing services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998821",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Textile manufacturing services",
+  "leaf_description": "Textile manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998822",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Wearing apparel manufacturing services",
+  "leaf_description": "Wearing apparel manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998823",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Leather and leather product manufacturing services",
+  "leaf_description": "Leather and leather product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998829",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Textile, wearing apparel and leather manufacturing services other than services by way of job work specified above",
+  "leaf_description": "Textile, wearing apparel and leather manufacturing services other than services by way of job work specified above.",
+  "gst_rate": 18
+ },
+ {
+  "code": "998831",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Wood and wood product manufacturing services",
+  "leaf_description": "Wood and wood product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998832",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Paper and paper product manufacturing services",
+  "leaf_description": "Paper and paper product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998839",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Wood and paper manufacturing services other than services by way of job work specified above",
+  "leaf_description": "Wood and paper manufacturing services other than services by way of job work specified above",
+  "gst_rate": 18
+ },
+ {
+  "code": "998841",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Coke and refined petroleum product manufacturing services",
+  "leaf_description": "Coke and refined petroleum product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998842",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Chemical product manufacturing services",
+  "leaf_description": "Chemical product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998843",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Pharmaceutical product manufacturing services",
+  "leaf_description": "Pharmaceutical product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998849",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Petroleum, chemical and pharmaceutical products manufacturing services other than services by way of job work specified above",
+  "leaf_description": "Petroleum, chemical and pharmaceutical products manufacturing services other than services by way of job work specified above",
+  "gst_rate": 18
+ },
+ {
+  "code": "998851",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Rubber and plastic product manufacturing services",
+  "leaf_description": "Rubber and plastic product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998852",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Plastic product manufacturing services",
+  "leaf_description": "Plastic product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998853",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Other non-metallic mineral product manufacturing services",
+  "leaf_description": "Other non-metallic mineral product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998859",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Rubber, plastic and other non-metallic mineral product manufacturing services, other than services by way of job work specified above",
+  "leaf_description": "Rubber, plastic and other non-metallic mineral product manufacturing services, other than services by way of job work specified above.",
+  "gst_rate": 18
+ },
+ {
+  "code": "998860",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Basic metal manufacturing services",
+  "leaf_description": "Basic metal manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998861",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Services by way of job work in relation to basic metals",
+  "leaf_description": "Services by way of job work in relation to basic metals",
+  "gst_rate": 18
+ },
+ {
+  "code": "998869",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Basic metal manufacturing services, other than services by way of job work specified above",
+  "leaf_description": "Basic metal manufacturing services, other than services by way of job work specified above",
+  "gst_rate": 18
+ },
+ {
+  "code": "998871",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Structural metal product, tank, reservoir and steam generator manufacturing services",
+  "leaf_description": "Structural metal product, tank, reservoir and steam generator manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998872",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Weapon and ammunition manufacturing services",
+  "leaf_description": "Weapon and ammunition manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998873",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Other fabricated metal product manufacturing and metal treatment services",
+  "leaf_description": "Other fabricated metal product manufacturing and metal treatment services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998874",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Computer, electronic and optical product manufacturing services",
+  "leaf_description": "Computer, electronic and optical product manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998875",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Electrical equipment manufacturing services",
+  "leaf_description": "Electrical equipment manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998876",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — General-purpose machinery manufacturing services nowhere else classified",
+  "leaf_description": "General-purpose machinery manufacturing services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998877",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Special-purpose machinery manufacturing services",
+  "leaf_description": "Special-purpose machinery manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998879",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Fabricated metal product, machinery and equipment manufacturing services, other than services by way of job work specified above",
+  "leaf_description": "Fabricated metal product, machinery and equipment manufacturing services, other than services by way of job work specified above",
+  "gst_rate": 18
+ },
+ {
+  "code": "998881",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Motor vehicle and trailer manufacturing services",
+  "leaf_description": "Motor vehicle and trailer manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998882",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Other transport equipment manufacturing services",
+  "leaf_description": "Other transport equipment manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998883",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Services by way of job work in relation to bus body building",
+  "leaf_description": "Services by way of job work in relation to bus body building",
+  "gst_rate": 18
+ },
+ {
+  "code": "998889",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Transport equipment manufacturing services, other than job work services specified above",
+  "leaf_description": "Transport equipment manufacturing services, other than job work services specified above",
+  "gst_rate": 18
+ },
+ {
+  "code": "998891",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Furniture manufacturing services",
+  "leaf_description": "Furniture manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998892",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Jewellery manufacturing services",
+  "leaf_description": "Jewellery manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998893",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Imitation jewellery manufacturing services",
+  "leaf_description": "Imitation jewellery manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998894",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Musical instrument manufacturing services",
+  "leaf_description": "Musical instrument manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998895",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Sports goods manufacturing services",
+  "leaf_description": "Sports goods manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998896",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Game and toy manufacturing services",
+  "leaf_description": "Game and toy manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998897",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Medical and dental instrument and supply manufacturing services",
+  "leaf_description": "Medical and dental instrument and supply manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998898",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Other manufacturing services nowhere else classified",
+  "leaf_description": "Other manufacturing services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998899",
+  "description": "All Services — Manufacturing services on physical inputs (goods) owned by others — Other manufacturing services nowhere else classified",
+  "leaf_description": "Other manufacturing services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "998911",
+  "description": "All Services — Other manufacturing services; publishing, printing and reproduction services; materials recovery services — Publishing, on a fee or contract basis",
+  "leaf_description": "Publishing, on a fee or contract basis",
+  "gst_rate": 18
+ },
+ {
+  "code": "998912",
+  "description": "All Services — Other manufacturing services; publishing, printing and reproduction services; materials recovery services — Printing and reproduction services of recorded media, on a fee or contract basis",
+  "leaf_description": "Printing and reproduction services of recorded media, on a fee or contract basis",
+  "gst_rate": 18
+ },
+ {
+  "code": "998920",
+  "description": "All Services — Other manufacturing services; publishing, printing and reproduction services; materials recovery services — Moulding, pressing, stamping, extruding and similar plastic manufacturing services",
+  "leaf_description": "Moulding, pressing, stamping, extruding and similar plastic manufacturing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998931",
+  "description": "All Services — Other manufacturing services; publishing, printing and reproduction services; materials recovery services — Iron and steel casting services",
+  "leaf_description": "Iron and steel casting services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998932",
+  "description": "All Services — Other manufacturing services; publishing, printing and reproduction services; materials recovery services — Non-ferrous metal casting services",
+  "leaf_description": "Non-ferrous metal casting services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998933",
+  "description": "All Services — Other manufacturing services; publishing, printing and reproduction services; materials recovery services — Metal forging, pressing, stamping, roll forming and powder metallurgy services",
+  "leaf_description": "Metal forging, pressing, stamping, roll forming and powder metallurgy services",
+  "gst_rate": 18
+ },
+ {
+  "code": "998941",
+  "description": "All Services — Other manufacturing services; publishing, printing and reproduction services; materials recovery services — Metal waste and scrap recovery (recycling) services, on a fee or contract basis",
+  "leaf_description": "Metal waste and scrap recovery (recycling) services, on a fee or contract basis",
+  "gst_rate": 18
+ },
+ {
+  "code": "998942",
+  "description": "All Services — Other manufacturing services; publishing, printing and reproduction services; materials recovery services — Non-metal waste and scrap recovery (recycling) services, on a fee or contract basis",
+  "leaf_description": "Non-metal waste and scrap recovery (recycling) services, on a fee or contract basis",
+  "gst_rate": 18
+ },
+ {
+  "code": "998950",
+  "description": "All Services — Other manufacturing services; publishing, printing and reproduction services; materials recovery services — Other manufacturing services, publishing, printing and reproduction services, materials recovery services nowhere else classified",
+  "leaf_description": "Other manufacturing services, publishing, printing and reproduction services, materials recovery services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999111",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Overall Government public services",
+  "leaf_description": "Overall Government public services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999112",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Public administrative services related to the provision of educational, health care, cultural and other social services, excluding social security service",
+  "leaf_description": "Public administrative services related to the provision of educational, health care, cultural and other social services, excluding social security service",
+  "gst_rate": 18
+ },
+ {
+  "code": "999113",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Public administrative services related to the more efficient operation of business",
+  "leaf_description": "Public administrative services related to the more efficient operation of business",
+  "gst_rate": 18
+ },
+ {
+  "code": "999119",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Other administrative services of the government nowhere else classified",
+  "leaf_description": "Other administrative services of the government nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999121",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Public administrative services related to External Affairs, Diplomatic and Consular services abroad",
+  "leaf_description": "Public administrative services related to External Affairs, Diplomatic and Consular services abroad",
+  "gst_rate": 18
+ },
+ {
+  "code": "999122",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Services related to foreign economic aid",
+  "leaf_description": "Services related to foreign economic aid",
+  "gst_rate": 18
+ },
+ {
+  "code": "999123",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Services related to foreign military aid",
+  "leaf_description": "Services related to foreign military aid",
+  "gst_rate": 18
+ },
+ {
+  "code": "999124",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Military defence services",
+  "leaf_description": "Military defence services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999125",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Civil defence services",
+  "leaf_description": "Civil defence services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999126",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Police and fire protection services",
+  "leaf_description": "Police and fire protection services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999127",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Public administrative services related to law courts",
+  "leaf_description": "Public administrative services related to law courts",
+  "gst_rate": 18
+ },
+ {
+  "code": "999128",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Administrative services related to the detention or rehabilitation of criminals",
+  "leaf_description": "Administrative services related to the detention or rehabilitation of criminals",
+  "gst_rate": 18
+ },
+ {
+  "code": "999129",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Public administrative services related to other public order and safety affairs nowhere else classified",
+  "leaf_description": "Public administrative services related to other public order and safety affairs nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999131",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Administrative services related to sickness, maternity or temporary disablement benefit schemes",
+  "leaf_description": "Administrative services related to sickness, maternity or temporary disablement benefit schemes",
+  "gst_rate": 18
+ },
+ {
+  "code": "999132",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Administrative services related to government employee pension schemes; old-age disability or survivors' benefit schemes, other than for government employees",
+  "leaf_description": "Administrative services related to government employee pension schemes; old-age disability or survivors' benefit schemes, other than for government employees",
+  "gst_rate": 18
+ },
+ {
+  "code": "999133",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Administrative services related to unemployment compensation benefit schemes",
+  "leaf_description": "Administrative services related to unemployment compensation benefit schemes",
+  "gst_rate": 18
+ },
+ {
+  "code": "999134",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Administrative services related to family and child allowance programmes",
+  "leaf_description": "Administrative services related to family and child allowance programmes",
+  "gst_rate": 18
+ },
+ {
+  "code": "999139",
+  "description": "All Services — Public administration and other services provided to the community as a whole; compulsory social security services — Other administrative services related to compulsory social security schemes",
+  "leaf_description": "Other administrative services related to compulsory social security schemes",
+  "gst_rate": 18
+ },
+ {
+  "code": "999210",
+  "description": "All Services — Education services — Pre-primary education services",
+  "leaf_description": "Pre-primary education services",
+  "gst_rate": 0
+ },
+ {
+  "code": "999220",
+  "description": "All Services — Education services — Primary education services",
+  "leaf_description": "Primary education services",
+  "gst_rate": 0
+ },
+ {
+  "code": "999231",
+  "description": "All Services — Education services — Secondary education services, general",
+  "leaf_description": "Secondary education services, general",
+  "gst_rate": 18
+ },
+ {
+  "code": "999232",
+  "description": "All Services — Education services — Secondary education services, technical and vocational",
+  "leaf_description": "Secondary education services, technical and vocational",
+  "gst_rate": 18
+ },
+ {
+  "code": "999241",
+  "description": "All Services — Education services — Higher education services, general",
+  "leaf_description": "Higher education services, general",
+  "gst_rate": 18
+ },
+ {
+  "code": "999242",
+  "description": "All Services — Education services — Higher education services, technical",
+  "leaf_description": "Higher education services, technical",
+  "gst_rate": 18
+ },
+ {
+  "code": "999243",
+  "description": "All Services — Education services — Higher education services, vocational",
+  "leaf_description": "Higher education services, vocational",
+  "gst_rate": 18
+ },
+ {
+  "code": "999249",
+  "description": "All Services — Education services — Other higher education services",
+  "leaf_description": "Other higher education services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999250",
+  "description": "All Services — Education services — Specialised education services",
+  "leaf_description": "Specialised education services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999259",
+  "description": "All Services — Education services — Specialised education services",
+  "leaf_description": "Specialised education services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999291",
+  "description": "All Services — Education services — Cultural education services",
+  "leaf_description": "Cultural education services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999292",
+  "description": "All Services — Education services — Sports and recreation education services",
+  "leaf_description": "Sports and recreation education services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999293",
+  "description": "All Services — Education services — Commercial training and coaching services",
+  "leaf_description": "Commercial training and coaching services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999294",
+  "description": "All Services — Education services — Other education and training services nowhere else classified",
+  "leaf_description": "Other education and training services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999295",
+  "description": "All Services — Education services — services involving conduct of examination for admission to educational institutions",
+  "leaf_description": "services involving conduct of examination for admission to educational institutions",
+  "gst_rate": 18
+ },
+ {
+  "code": "999299",
+  "description": "All Services — Education services — Other Educational support services",
+  "leaf_description": "Other Educational support services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999311",
+  "description": "All Services — Human health and social care services — Inpatient services",
+  "leaf_description": "Inpatient services",
+  "gst_rate": 0
+ },
+ {
+  "code": "999312",
+  "description": "All Services — Human health and social care services — Medical and dental services",
+  "leaf_description": "Medical and dental services",
+  "gst_rate": 0
+ },
+ {
+  "code": "999313",
+  "description": "All Services — Human health and social care services — Childbirth and related services",
+  "leaf_description": "Childbirth and related services",
+  "gst_rate": 0
+ },
+ {
+  "code": "999314",
+  "description": "All Services — Human health and social care services — Nursing and physiotherapeutic services",
+  "leaf_description": "Nursing and physiotherapeutic services",
+  "gst_rate": 0
+ },
+ {
+  "code": "999315",
+  "description": "All Services — Human health and social care services — Ambulance services",
+  "leaf_description": "Ambulance services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999316",
+  "description": "All Services — Human health and social care services — Medical laboratory and diagnostic-imaging services",
+  "leaf_description": "Medical laboratory and diagnostic-imaging services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999317",
+  "description": "All Services — Human health and social care services — Blood, sperm and organ bank services",
+  "leaf_description": "Blood, sperm and organ bank services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999318",
+  "description": "All Services — Human health and social care services — Blood, sperm and organ bank services",
+  "leaf_description": "Blood, sperm and organ bank services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999319",
+  "description": "All Services — Human health and social care services — Other human health services including homeopathy, unani, ayurveda, naturopathy, acupuncture and the like",
+  "leaf_description": "Other human health services including homeopathy, unani, ayurveda, naturopathy, acupuncture and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "999321",
+  "description": "All Services — Human health and social care services — Residential health-care services other than by hospitals",
+  "leaf_description": "Residential health-care services other than by hospitals",
+  "gst_rate": 18
+ },
+ {
+  "code": "999322",
+  "description": "All Services — Human health and social care services — Residential care services for the elderly and persons with disabilities",
+  "leaf_description": "Residential care services for the elderly and persons with disabilities",
+  "gst_rate": 18
+ },
+ {
+  "code": "999331",
+  "description": "All Services — Human health and social care services — Residential care services for children suffering from mental retardation, mental health illnesses or substance abuse",
+  "leaf_description": "Residential care services for children suffering from mental retardation, mental health illnesses or substance abuse",
+  "gst_rate": 18
+ },
+ {
+  "code": "999332",
+  "description": "All Services — Human health and social care services — Other social services with accommodation for children",
+  "leaf_description": "Other social services with accommodation for children",
+  "gst_rate": 18
+ },
+ {
+  "code": "999333",
+  "description": "All Services — Human health and social care services — Residential care services for adults suffering from mental retardation, mental health illnesses or substance abuse",
+  "leaf_description": "Residential care services for adults suffering from mental retardation, mental health illnesses or substance abuse",
+  "gst_rate": 18
+ },
+ {
+  "code": "999334",
+  "description": "All Services — Human health and social care services — Other social services with accommodation for adults",
+  "leaf_description": "Other social services with accommodation for adults",
+  "gst_rate": 18
+ },
+ {
+  "code": "999341",
+  "description": "All Services — Human health and social care services — Vocational rehabilitation services",
+  "leaf_description": "Vocational rehabilitation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999349",
+  "description": "All Services — Human health and social care services — Other social services without accommodation for the elderly and disabled nowhere else classified",
+  "leaf_description": "Other social services without accommodation for the elderly and disabled nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999351",
+  "description": "All Services — Human health and social care services — Child day-care services",
+  "leaf_description": "Child day-care services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999352",
+  "description": "All Services — Human health and social care services — Guidance and counseling services nowhere else classified related to children",
+  "leaf_description": "Guidance and counseling services nowhere else classified related to children",
+  "gst_rate": 18
+ },
+ {
+  "code": "999353",
+  "description": "All Services — Human health and social care services — Welfare services without accommodation",
+  "leaf_description": "Welfare services without accommodation",
+  "gst_rate": 18
+ },
+ {
+  "code": "999359",
+  "description": "All Services — Human health and social care services — Other social services without accommodation nowhere else classified",
+  "leaf_description": "Other social services without accommodation nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999411",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Sewerage and sewage treatment services",
+  "leaf_description": "Sewerage and sewage treatment services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999412",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Septic tank emptying and cleaning services",
+  "leaf_description": "Septic tank emptying and cleaning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999413",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Septic tank emptying and cleaning services",
+  "leaf_description": "Septic tank emptying and cleaning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999419",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Other sewerage, sewage treatment and septic tank cleaning services",
+  "leaf_description": "Other sewerage, sewage treatment and septic tank cleaning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999421",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Collection services of hazardous waste",
+  "leaf_description": "Collection services of hazardous waste",
+  "gst_rate": 18
+ },
+ {
+  "code": "999422",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Collection services of non-hazardous recyclable materials",
+  "leaf_description": "Collection services of non-hazardous recyclable materials",
+  "gst_rate": 18
+ },
+ {
+  "code": "999423",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — General waste collection services, residential",
+  "leaf_description": "General waste collection services, residential",
+  "gst_rate": 18
+ },
+ {
+  "code": "999424",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — General waste collection services, other nowhere else classified",
+  "leaf_description": "General waste collection services, other nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999429",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Other sewage and waste collection services",
+  "leaf_description": "Other sewage and waste collection services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999431",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Waste preparation, consolidation and storage services",
+  "leaf_description": "Waste preparation, consolidation and storage services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999432",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Hazardous waste treatment and disposal services",
+  "leaf_description": "Hazardous waste treatment and disposal services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999433",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Non-hazardous waste treatment and disposal services",
+  "leaf_description": "Non-hazardous waste treatment and disposal services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999439",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Other waste treatment and disposal services",
+  "leaf_description": "Other waste treatment and disposal services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999441",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Site remediation and clean-up services",
+  "leaf_description": "Site remediation and clean-up services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999442",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Containment, control and monitoring services and other site remediation services",
+  "leaf_description": "Containment, control and monitoring services and other site remediation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999443",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Building remediation services",
+  "leaf_description": "Building remediation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999449",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Other remediation services nowhere else classified",
+  "leaf_description": "Other remediation services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999451",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Sweeping and snow removal services",
+  "leaf_description": "Sweeping and snow removal services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999459",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Other sanitation services nowhere else classified",
+  "leaf_description": "Other sanitation services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999490",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Other environmental protection services nowhere else classified",
+  "leaf_description": "Other environmental protection services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999491",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Services by way of treatment or disposal of biomedical waste or the processes incidental thereto by a common biomedical waste treatment facility to a clinical establishment",
+  "leaf_description": "Services by way of treatment or disposal of biomedical waste or the processes incidental thereto by a common biomedical waste treatment facility to a clinical establishment.",
+  "gst_rate": 18
+ },
+ {
+  "code": "999499",
+  "description": "All Services — Sewage and waste collection, treatment and disposal and other environmental protection services — Other environmental protection services nowhere else classified",
+  "leaf_description": "Other environmental protection services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999511",
+  "description": "All Services — Services of membership organisations — Services furnished by business and employers organisations",
+  "leaf_description": "Services furnished by business and employers organisations",
+  "gst_rate": 18
+ },
+ {
+  "code": "999512",
+  "description": "All Services — Services of membership organisations — Services furnished by professional organisations",
+  "leaf_description": "Services furnished by professional organisations",
+  "gst_rate": 18
+ },
+ {
+  "code": "999520",
+  "description": "All Services — Services of membership organisations — Services furnished by trade unions",
+  "leaf_description": "Services furnished by trade unions",
+  "gst_rate": 18
+ },
+ {
+  "code": "999591",
+  "description": "All Services — Services of membership organisations — Religious services",
+  "leaf_description": "Religious services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999592",
+  "description": "All Services — Services of membership organisations — Services furnished by political organisations",
+  "leaf_description": "Services furnished by political organisations",
+  "gst_rate": 18
+ },
+ {
+  "code": "999593",
+  "description": "All Services — Services of membership organisations — Services furnished by human rights organisations",
+  "leaf_description": "Services furnished by human rights organisations",
+  "gst_rate": 18
+ },
+ {
+  "code": "999594",
+  "description": "All Services — Services of membership organisations — Cultural and recreational associations",
+  "leaf_description": "Cultural and recreational associations",
+  "gst_rate": 18
+ },
+ {
+  "code": "999595",
+  "description": "All Services — Services of membership organisations — Services furnished by environmental advocacy groups",
+  "leaf_description": "Services furnished by environmental advocacy groups",
+  "gst_rate": 18
+ },
+ {
+  "code": "999596",
+  "description": "All Services — Services of membership organisations — Services provided by youth associations",
+  "leaf_description": "Services provided by youth associations",
+  "gst_rate": 18
+ },
+ {
+  "code": "999597",
+  "description": "All Services — Services of membership organisations — Other civic and social organisations",
+  "leaf_description": "Other civic and social organisations",
+  "gst_rate": 18
+ },
+ {
+  "code": "999598",
+  "description": "All Services — Services of membership organisations — Home owners associations",
+  "leaf_description": "Home owners associations",
+  "gst_rate": 18
+ },
+ {
+  "code": "999599",
+  "description": "All Services — Services of membership organisations — Services provided by other membership organisations nowhere else classified",
+  "leaf_description": "Services provided by other membership organisations nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999611",
+  "description": "All Services — Recreational, cultural and sporting services — Sound recording services",
+  "leaf_description": "Sound recording services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999612",
+  "description": "All Services — Recreational, cultural and sporting services — Motion picture, videotape, television and radio programme production services",
+  "leaf_description": "Motion picture, videotape, television and radio programme production services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999613",
+  "description": "All Services — Recreational, cultural and sporting services — Audiovisual post-production services",
+  "leaf_description": "Audiovisual post-production services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999614",
+  "description": "All Services — Recreational, cultural and sporting services — Motion picture, videotape and television programme distribution services",
+  "leaf_description": "Motion picture, videotape and television programme distribution services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999615",
+  "description": "All Services — Recreational, cultural and sporting services — Motion picture projection services",
+  "leaf_description": "Motion picture projection services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999616",
+  "description": "All Services — Recreational, cultural and sporting services — Services by way of admission to exhibition of cinematograph films where price of admission ticket is one hundred rupees or less",
+  "leaf_description": "Services by way of admission to exhibition of cinematograph films where price of admission ticket is one hundred rupees or less",
+  "gst_rate": 18
+ },
+ {
+  "code": "999617",
+  "description": "All Services — Recreational, cultural and sporting services — Services by way of admission to exhibition of cinematograph films where price of admission ticket is above one hundred rupees",
+  "leaf_description": "Services by way of admission to exhibition of cinematograph films where price of admission ticket is above one hundred rupees.",
+  "gst_rate": 18
+ },
+ {
+  "code": "999621",
+  "description": "All Services — Recreational, cultural and sporting services — Performing arts event promotion and organisation services",
+  "leaf_description": "Performing arts event promotion and organisation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999622",
+  "description": "All Services — Recreational, cultural and sporting services — Performing arts event production and presentation services",
+  "leaf_description": "Performing arts event production and presentation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999623",
+  "description": "All Services — Recreational, cultural and sporting services — Performing arts facility operation services",
+  "leaf_description": "Performing arts facility operation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999624",
+  "description": "All Services — Recreational, cultural and sporting services — Services by way of admission or access to circus, Indian classical dance including folk dance, theatrical performance, drama [or planetarium], ballet etc",
+  "leaf_description": "Services by way of admission or access to circus, Indian classical dance including folk dance, theatrical performance, drama [or planetarium], ballet etc.",
+  "gst_rate": 18
+ },
+ {
+  "code": "999629",
+  "description": "All Services — Recreational, cultural and sporting services — Other performing arts and live entertainment services nowhere else classified",
+  "leaf_description": "Other performing arts and live entertainment services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999631",
+  "description": "All Services — Recreational, cultural and sporting services — Services of performing artists including actors, readers, musicians, singers, dancers, television personalities, independent models and the like",
+  "leaf_description": "Services of performing artists including actors, readers, musicians, singers, dancers, television personalities, independent models and the like",
+  "gst_rate": 18
+ },
+ {
+  "code": "999632",
+  "description": "All Services — Recreational, cultural and sporting services — Services of authors, composers, sculptors and other artists, except performing artists",
+  "leaf_description": "Services of authors, composers, sculptors and other artists, except performing artists",
+  "gst_rate": 18
+ },
+ {
+  "code": "999633",
+  "description": "All Services — Recreational, cultural and sporting services — Original works of authors, composers and other artists except performing artists, painters and sculptors",
+  "leaf_description": "Original works of authors, composers and other artists except performing artists, painters and sculptors",
+  "gst_rate": 18
+ },
+ {
+  "code": "999641",
+  "description": "All Services — Recreational, cultural and sporting services — Museum and preservation services of historical sites and buildings",
+  "leaf_description": "Museum and preservation services of historical sites and buildings",
+  "gst_rate": 18
+ },
+ {
+  "code": "999642",
+  "description": "All Services — Recreational, cultural and sporting services — Botanical, zoological and nature reserve services",
+  "leaf_description": "Botanical, zoological and nature reserve services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999651",
+  "description": "All Services — Recreational, cultural and sporting services — Sports and recreational sports event promotion and organisation services",
+  "leaf_description": "Sports and recreational sports event promotion and organisation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999652",
+  "description": "All Services — Recreational, cultural and sporting services — Sports and recreational sports facility operation services",
+  "leaf_description": "Sports and recreational sports facility operation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999653",
+  "description": "All Services — Recreational, cultural and sporting services — Services by way of admission to sporting events like Indian Premier League",
+  "leaf_description": "Services by way of admission to sporting events like Indian Premier League.",
+  "gst_rate": 18
+ },
+ {
+  "code": "999659",
+  "description": "All Services — Recreational, cultural and sporting services — Other sports and recreational sports services nowhere else classified",
+  "leaf_description": "Other sports and recreational sports services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999661",
+  "description": "All Services — Recreational, cultural and sporting services — Services of athletes",
+  "leaf_description": "Services of athletes",
+  "gst_rate": 18
+ },
+ {
+  "code": "999662",
+  "description": "All Services — Recreational, cultural and sporting services — Support services related to sports and recreation",
+  "leaf_description": "Support services related to sports and recreation",
+  "gst_rate": 18
+ },
+ {
+  "code": "999691",
+  "description": "All Services — Recreational, cultural and sporting services — Amusement park and similar attraction services",
+  "leaf_description": "Amusement park and similar attraction services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999692",
+  "description": "All Services — Recreational, cultural and sporting services — Coin-operated amusement machine services",
+  "leaf_description": "Coin-operated amusement machine services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999693",
+  "description": "All Services — Recreational, cultural and sporting services — Coin-operated amusement machine services",
+  "leaf_description": "Coin-operated amusement machine services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999694",
+  "description": "All Services — Recreational, cultural and sporting services — Services by way of admission to casinos or race clubs or any place having casinos or race clubs",
+  "leaf_description": "Services by way of admission to casinos or race clubs or any place having casinos or race clubs",
+  "gst_rate": 18
+ },
+ {
+  "code": "999699",
+  "description": "All Services — Recreational, cultural and sporting services — Other recreation and amusement services nowhere else classified",
+  "leaf_description": "Other recreation and amusement services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999711",
+  "description": "All Services — Other services — Coin-operated laundry services",
+  "leaf_description": "Coin-operated laundry services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999712",
+  "description": "All Services — Other services — Dry-cleaning services (including fur product cleaning services)",
+  "leaf_description": "Dry-cleaning services (including fur product cleaning services)",
+  "gst_rate": 18
+ },
+ {
+  "code": "999713",
+  "description": "All Services — Other services — Other textile cleaning services",
+  "leaf_description": "Other textile cleaning services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999714",
+  "description": "All Services — Other services — Pressing services",
+  "leaf_description": "Pressing services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999715",
+  "description": "All Services — Other services — Dyeing and colouring services",
+  "leaf_description": "Dyeing and colouring services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999719",
+  "description": "All Services — Other services — Other washing, cleaning and dyeing services nowhere else classified",
+  "leaf_description": "Other washing, cleaning and dyeing services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999721",
+  "description": "All Services — Other services — Hairdressing and barbers services",
+  "leaf_description": "Hairdressing and barbers services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999722",
+  "description": "All Services — Other services — Cosmetic treatment (including cosmetic or plastic surgery), manicuring and pedicuring services",
+  "leaf_description": "Cosmetic treatment (including cosmetic or plastic surgery), manicuring and pedicuring services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999723",
+  "description": "All Services — Other services — Physical well-being services including health club and fitness centre",
+  "leaf_description": "Physical well-being services including health club and fitness centre",
+  "gst_rate": 18
+ },
+ {
+  "code": "999729",
+  "description": "All Services — Other services — Other beauty treatment services nowhere else classified",
+  "leaf_description": "Other beauty treatment services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999731",
+  "description": "All Services — Other services — Cemeteries and cremation services",
+  "leaf_description": "Cemeteries and cremation services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999732",
+  "description": "All Services — Other services — Undertaking services",
+  "leaf_description": "Undertaking services",
+  "gst_rate": 18
+ },
+ {
+  "code": "999791",
+  "description": "All Services — Other services — Services involving commercial use or exploitation of any event",
+  "leaf_description": "Services involving commercial use or exploitation of any event",
+  "gst_rate": 18
+ },
+ {
+  "code": "999792",
+  "description": "All Services — Other services — Agreeing to do an act",
+  "leaf_description": "Agreeing to do an act",
+  "gst_rate": 18
+ },
+ {
+  "code": "999793",
+  "description": "All Services — Other services — Agreeing to refrain from doing an act",
+  "leaf_description": "Agreeing to refrain from doing an act",
+  "gst_rate": 18
+ },
+ {
+  "code": "999794",
+  "description": "All Services — Other services — Agreeing to tolerate an act",
+  "leaf_description": "Agreeing to tolerate an act",
+  "gst_rate": 18
+ },
+ {
+  "code": "999795",
+  "description": "All Services — Other services — Conduct of religious ceremonies or rituals by persons",
+  "leaf_description": "Conduct of religious ceremonies or rituals by persons",
+  "gst_rate": 18
+ },
+ {
+  "code": "999799",
+  "description": "All Services — Other services — Other services nowhere else classified",
+  "leaf_description": "Other services nowhere else classified",
+  "gst_rate": 18
+ },
+ {
+  "code": "999800",
+  "description": "All Services — Domestic services — Domestic services both part time and full time",
+  "leaf_description": "Domestic services both part time and full time",
+  "gst_rate": 18
+ },
+ {
+  "code": "999900",
+  "description": "All Services — Services provided by extraterritorial organisations and bodies",
+  "leaf_description": "Services provided by extraterritorial organisations and bodies",
+  "gst_rate": 18
+ },
+ {
+  "code": "996541",
+  "description": "All Services — Services provided by extraterritorial organisations and bodies — Multimodal Transport of goods from a place in India to another place in India",
+  "leaf_description": "Multimodal Transport of goods from a place in India to another place in India",
+  "gst_rate": 18
+ }
+]

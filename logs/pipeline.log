@@ -1,0 +1,306 @@
+2026-06-26 20:42:41,137 [INFO] main — ============================================================
+2026-06-26 20:42:41,138 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-26 20:42:41,138 [INFO] main —   Industry  : Automotive Fasteners
+2026-06-26 20:42:41,138 [INFO] main —   Doc Pairs : 20,000
+2026-06-26 20:42:41,138 [INFO] main —   Workers   : 4
+2026-06-26 20:42:41,138 [INFO] main — ============================================================
+2026-06-26 20:42:41,138 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-26 20:42:41,162 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-26 20:42:41,162 [INFO] main — [PASS 1] Bootstrapping industry catalog via Ollama (qwen2.5:7b) …
+2026-06-26 20:42:41,874 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-26 20:42:41,911 [INFO] bootstrap — Ollama reachable at http://localhost:11434
+2026-06-26 20:42:41,912 [INFO] bootstrap —   Batch 1/10 …
+2026-06-26 20:49:11,271 [INFO] bootstrap —   → 80 items
+2026-06-26 20:49:11,583 [INFO] bootstrap —   Batch 2/10 …
+2026-06-26 20:52:48,186 [INFO] bootstrap —   → 93 items
+2026-06-26 20:52:48,487 [INFO] bootstrap —   Batch 3/10 …
+2026-06-26 20:57:17,496 [INFO] bootstrap —   → 100 items
+2026-06-26 20:57:17,815 [INFO] bootstrap —   Batch 4/10 …
+2026-06-26 21:10:33,192 [WARNING] bootstrap — Ollama attempt 1: 
+2026-06-26 21:16:29,801 [WARNING] bootstrap — Ollama attempt 2: 
+2026-06-26 21:30:29,510 [INFO] main — ============================================================
+2026-06-26 21:30:29,510 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-26 21:30:29,510 [INFO] main —   Industry  : Automotive Fasteners
+2026-06-26 21:30:29,510 [INFO] main —   Doc Pairs : 10
+2026-06-26 21:30:29,510 [INFO] main —   Workers   : 1
+2026-06-26 21:30:29,510 [INFO] main — ============================================================
+2026-06-26 21:30:29,510 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-26 21:30:29,514 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-26 21:30:29,514 [INFO] main — [PASS 1] Bootstrapping industry catalog via Ollama (qwen2.5:1.5b) …
+2026-06-26 21:30:30,690 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-26 21:30:30,697 [INFO] bootstrap — Ollama reachable at http://localhost:11434
+2026-06-26 21:30:30,698 [INFO] bootstrap —   Batch 1/10 …
+2026-06-26 21:30:30,701 [WARNING] bootstrap — Ollama attempt 1: HTTP 404
+2026-06-26 21:30:31,705 [WARNING] bootstrap — Ollama attempt 2: HTTP 404
+2026-06-26 21:30:33,708 [WARNING] bootstrap — Ollama attempt 3: HTTP 404
+2026-06-26 21:30:37,712 [WARNING] bootstrap — Batch 0: description parse failed — Expecting value: line 1 column 1 (char 0)
+2026-06-26 21:30:37,712 [INFO] bootstrap —   → 0 items
+2026-06-26 21:30:38,012 [INFO] bootstrap —   Batch 2/10 …
+2026-06-26 21:30:38,014 [WARNING] bootstrap — Ollama attempt 1: HTTP 404
+2026-06-26 21:30:39,016 [WARNING] bootstrap — Ollama attempt 2: HTTP 404
+2026-06-26 21:30:41,019 [WARNING] bootstrap — Ollama attempt 3: HTTP 404
+2026-06-26 21:30:45,022 [WARNING] bootstrap — Batch 1: description parse failed — Expecting value: line 1 column 1 (char 0)
+2026-06-26 21:30:45,023 [INFO] bootstrap —   → 0 items
+2026-06-26 21:30:45,323 [INFO] bootstrap —   Batch 3/10 …
+2026-06-26 21:30:45,324 [WARNING] bootstrap — Ollama attempt 1: HTTP 404
+2026-06-26 21:30:46,326 [WARNING] bootstrap — Ollama attempt 2: HTTP 404
+2026-06-26 21:30:48,328 [WARNING] bootstrap — Ollama attempt 3: HTTP 404
+2026-06-26 21:30:52,330 [WARNING] bootstrap — Batch 2: description parse failed — Expecting value: line 1 column 1 (char 0)
+2026-06-26 21:30:52,331 [INFO] bootstrap —   → 0 items
+2026-06-26 21:30:52,631 [INFO] bootstrap —   Batch 4/10 …
+2026-06-26 21:30:52,632 [WARNING] bootstrap — Ollama attempt 1: HTTP 404
+2026-06-26 21:30:53,635 [WARNING] bootstrap — Ollama attempt 2: HTTP 404
+2026-06-26 21:30:55,639 [WARNING] bootstrap — Ollama attempt 3: HTTP 404
+2026-06-26 21:31:01,875 [WARNING] bootstrap — Batch 3: description parse failed — Expecting value: line 1 column 1 (char 0)
+2026-06-26 21:31:01,875 [INFO] bootstrap —   → 0 items
+2026-06-26 21:31:02,176 [INFO] bootstrap —   Batch 5/10 …
+2026-06-26 21:31:02,176 [WARNING] bootstrap — Ollama attempt 1: HTTP 404
+2026-06-26 21:31:03,179 [WARNING] bootstrap — Ollama attempt 2: HTTP 404
+2026-06-26 21:31:05,181 [WARNING] bootstrap — Ollama attempt 3: HTTP 404
+2026-06-26 21:31:09,183 [WARNING] bootstrap — Batch 4: description parse failed — Expecting value: line 1 column 1 (char 0)
+2026-06-26 21:31:09,183 [INFO] bootstrap —   → 0 items
+2026-06-26 21:31:09,484 [INFO] bootstrap —   Batch 6/10 …
+2026-06-26 21:31:09,485 [WARNING] bootstrap — Ollama attempt 1: HTTP 404
+2026-06-26 21:31:10,487 [WARNING] bootstrap — Ollama attempt 2: HTTP 404
+2026-06-26 21:31:12,489 [WARNING] bootstrap — Ollama attempt 3: HTTP 404
+2026-06-26 21:31:16,493 [WARNING] bootstrap — Batch 5: description parse failed — Expecting value: line 1 column 1 (char 0)
+2026-06-26 21:31:16,494 [INFO] bootstrap —   → 0 items
+2026-06-26 21:31:16,794 [INFO] bootstrap —   Batch 7/10 …
+2026-06-26 21:31:16,796 [WARNING] bootstrap — Ollama attempt 1: HTTP 404
+2026-06-26 21:31:17,798 [WARNING] bootstrap — Ollama attempt 2: HTTP 404
+2026-06-26 21:31:43,238 [INFO] main — ============================================================
+2026-06-26 21:31:43,238 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-26 21:31:43,238 [INFO] main —   Industry  : Automotive Fasteners
+2026-06-26 21:31:43,238 [INFO] main —   Doc Pairs : 10
+2026-06-26 21:31:43,238 [INFO] main —   Workers   : 1
+2026-06-26 21:31:43,238 [INFO] main — ============================================================
+2026-06-26 21:31:43,238 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-26 21:31:43,239 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-26 21:31:43,239 [INFO] main — [PASS 1] Bootstrapping industry catalog via Ollama (qwen2.5:7b) …
+2026-06-26 21:31:43,845 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-26 21:31:43,848 [INFO] bootstrap — Ollama reachable at http://localhost:11434
+2026-06-26 21:31:43,848 [INFO] bootstrap —   Batch 1/10 …
+2026-06-26 21:35:37,802 [INFO] bootstrap —   → 82 items
+2026-06-26 21:35:38,115 [INFO] bootstrap —   Batch 2/10 …
+2026-06-26 21:40:04,824 [INFO] bootstrap —   → 100 items
+2026-06-26 21:40:05,126 [INFO] bootstrap —   Batch 3/10 …
+2026-06-26 21:44:16,166 [INFO] bootstrap —   → 92 items
+2026-06-26 21:44:16,467 [INFO] bootstrap —   Batch 4/10 …
+2026-06-26 21:48:54,868 [INFO] bootstrap —   → 93 items
+2026-06-26 21:48:55,172 [INFO] bootstrap —   Batch 5/10 …
+2026-06-26 21:53:12,294 [INFO] bootstrap —   → 87 items
+2026-06-26 21:53:12,598 [INFO] bootstrap —   Batch 6/10 …
+2026-06-26 21:57:32,546 [INFO] bootstrap —   → 87 items
+2026-06-26 21:57:33,766 [INFO] bootstrap —   Batch 7/10 …
+2026-06-26 22:01:09,765 [INFO] bootstrap —   → 81 items
+2026-06-26 22:01:10,069 [INFO] bootstrap —   Batch 8/10 …
+2026-06-26 22:05:58,101 [INFO] bootstrap —   → 87 items
+2026-06-26 22:05:58,411 [INFO] bootstrap —   Batch 9/10 …
+2026-06-26 22:10:29,542 [INFO] bootstrap —   → 97 items
+2026-06-26 22:10:29,846 [INFO] bootstrap —   Batch 10/10 …
+2026-06-26 22:14:22,371 [INFO] bootstrap —   → 87 items
+2026-06-26 22:14:24,569 [INFO] bootstrap — Catalog saved: 1000 items → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-26 22:14:24,719 [INFO] main — [PASS 1] Catalog saved → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-26 22:14:24,720 [INFO] main — [PASS 2] Assembling 10 PO/Invoice pairs …
+2026-06-26 22:14:24,727 [INFO] assembler — Catalog loaded: 1000 items from /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-26 22:14:24,727 [INFO] assembler — Sharding: 10 docs → 1 shards across 1 workers
+2026-06-26 22:15:01,826 [INFO] assembler — Shard 00 done | PID 57002 | 10/10 ok | 0 failed | 33.6s | Overall: 10/10 (0.3/s)
+2026-06-26 22:15:01,833 [INFO] assembler — Assembly complete: 10 ok / 0 failed in 37.1s (0.3 docs/s)
+2026-06-26 22:15:01,834 [INFO] main — ============================================================
+2026-06-26 22:15:01,834 [INFO] main —   Pipeline complete in 2598.6s (43.3 min)
+2026-06-26 22:15:01,834 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
+2026-06-26 22:15:01,834 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-26 22:15:01,834 [INFO] main — ============================================================
+2026-06-27 07:21:14,685 [INFO] main — ============================================================
+2026-06-27 07:21:14,686 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-27 07:21:14,686 [INFO] main —   Industry  : Automotive Fasteners
+2026-06-27 07:21:14,686 [INFO] main —   Doc Pairs : 50
+2026-06-27 07:21:14,686 [INFO] main —   Workers   : 2
+2026-06-27 07:21:14,686 [INFO] main — ============================================================
+2026-06-27 07:21:14,686 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-27 07:21:14,712 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-27 07:21:14,712 [INFO] main — [PASS 1] Bootstrapping industry catalog via Ollama (qwen2.5:7b) …
+2026-06-27 07:21:15,822 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-27 07:21:15,826 [INFO] bootstrap — Ollama reachable at http://localhost:11434
+2026-06-27 07:21:15,826 [INFO] bootstrap —   Batch 1/10 …
+2026-06-27 07:24:58,325 [INFO] bootstrap —   → 82 items
+2026-06-27 07:24:58,632 [INFO] bootstrap —   Batch 2/10 …
+2026-06-27 07:29:20,482 [INFO] bootstrap —   → 100 items
+2026-06-27 07:29:20,783 [INFO] bootstrap —   Batch 3/10 …
+2026-06-27 07:33:04,924 [INFO] bootstrap —   → 92 items
+2026-06-27 07:33:05,225 [INFO] bootstrap —   Batch 4/10 …
+2026-06-27 07:36:55,553 [INFO] bootstrap —   → 93 items
+2026-06-27 07:36:55,856 [INFO] bootstrap —   Batch 5/10 …
+2026-06-27 07:41:50,764 [INFO] bootstrap —   → 87 items
+2026-06-27 07:41:51,068 [INFO] bootstrap —   Batch 6/10 …
+2026-06-27 07:48:02,183 [INFO] bootstrap —   → 87 items
+2026-06-27 07:48:02,485 [INFO] bootstrap —   Batch 7/10 …
+2026-06-27 07:51:44,186 [INFO] bootstrap —   → 81 items
+2026-06-27 07:51:44,489 [INFO] bootstrap —   Batch 8/10 …
+2026-06-27 07:56:38,720 [INFO] bootstrap —   → 87 items
+2026-06-27 07:56:39,025 [INFO] bootstrap —   Batch 9/10 …
+2026-06-27 08:01:04,901 [INFO] bootstrap —   → 97 items
+2026-06-27 08:01:05,206 [INFO] bootstrap —   Batch 10/10 …
+2026-06-27 08:05:03,897 [INFO] bootstrap —   → 87 items
+2026-06-27 08:05:06,117 [INFO] bootstrap — Catalog saved: 1000 items → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-27 08:05:06,332 [INFO] main — [PASS 1] Catalog saved → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-27 08:05:06,334 [INFO] main — [PASS 2] Assembling 50 PO/Invoice pairs …
+2026-06-27 08:05:06,339 [INFO] assembler — Catalog loaded: 1000 items from /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-27 08:05:06,339 [INFO] assembler — Sharding: 50 docs → 2 shards across 2 workers
+2026-06-27 08:05:06,340 [INFO] assembler — Realism tiers: clean 50% / degraded 30% / heavy 20% (deterministic per doc_index)
+2026-06-27 08:05:24,310 [ERROR] database — DB insert failed for index 25: no such table: documents
+2026-06-27 08:05:24,322 [ERROR] worker — [idx=25] Failed: no such table: documents
+2026-06-27 08:05:24,668 [ERROR] database — DB insert failed for index 0: no such table: documents
+2026-06-27 08:05:24,668 [ERROR] worker — [idx=0] Failed: no such table: documents
+2026-06-27 08:05:29,968 [ERROR] database — DB insert failed for index 1: no such table: documents
+2026-06-27 08:05:29,968 [ERROR] worker — [idx=1] Failed: no such table: documents
+2026-06-27 08:05:30,656 [ERROR] database — DB insert failed for index 26: no such table: documents
+2026-06-27 08:05:30,656 [ERROR] worker — [idx=26] Failed: no such table: documents
+2026-06-27 08:05:34,078 [ERROR] database — DB insert failed for index 27: no such table: documents
+2026-06-27 08:05:34,079 [ERROR] worker — [idx=27] Failed: no such table: documents
+2026-06-27 08:05:34,382 [ERROR] database — DB insert failed for index 2: no such table: documents
+2026-06-27 08:05:34,382 [ERROR] worker — [idx=2] Failed: no such table: documents
+2026-06-27 08:05:37,316 [ERROR] database — DB insert failed for index 28: no such table: documents
+2026-06-27 08:05:37,316 [ERROR] worker — [idx=28] Failed: no such table: documents
+2026-06-27 08:05:37,367 [ERROR] database — DB insert failed for index 3: no such table: documents
+2026-06-27 08:05:37,367 [ERROR] worker — [idx=3] Failed: no such table: documents
+2026-06-27 08:05:40,147 [ERROR] database — DB insert failed for index 4: no such table: documents
+2026-06-27 08:05:40,148 [ERROR] worker — [idx=4] Failed: no such table: documents
+2026-06-27 08:05:40,479 [ERROR] database — DB insert failed for index 29: no such table: documents
+2026-06-27 08:05:40,480 [ERROR] worker — [idx=29] Failed: no such table: documents
+2026-06-27 08:05:42,749 [ERROR] database — DB insert failed for index 5: no such table: documents
+2026-06-27 08:05:42,749 [ERROR] worker — [idx=5] Failed: no such table: documents
+2026-06-27 08:05:42,891 [ERROR] database — DB insert failed for index 30: no such table: documents
+2026-06-27 08:05:42,892 [ERROR] worker — [idx=30] Failed: no such table: documents
+2026-06-27 08:05:46,067 [ERROR] database — DB insert failed for index 6: no such table: documents
+2026-06-27 08:05:46,067 [ERROR] worker — [idx=6] Failed: no such table: documents
+2026-06-27 08:05:46,138 [ERROR] database — DB insert failed for index 31: no such table: documents
+2026-06-27 08:05:46,138 [ERROR] worker — [idx=31] Failed: no such table: documents
+2026-06-27 08:05:48,655 [ERROR] database — DB insert failed for index 7: no such table: documents
+2026-06-27 08:05:48,656 [ERROR] worker — [idx=7] Failed: no such table: documents
+2026-06-27 08:05:48,831 [ERROR] database — DB insert failed for index 32: no such table: documents
+2026-06-27 08:05:48,831 [ERROR] worker — [idx=32] Failed: no such table: documents
+2026-06-27 08:05:51,532 [ERROR] database — DB insert failed for index 8: no such table: documents
+2026-06-27 08:05:51,532 [ERROR] worker — [idx=8] Failed: no such table: documents
+2026-06-27 08:05:51,654 [ERROR] database — DB insert failed for index 33: no such table: documents
+2026-06-27 08:05:51,654 [ERROR] worker — [idx=33] Failed: no such table: documents
+2026-06-27 08:05:58,874 [ERROR] database — DB insert failed for index 9: no such table: documents
+2026-06-27 08:05:58,875 [ERROR] worker — [idx=9] Failed: no such table: documents
+2026-06-27 08:05:58,962 [ERROR] database — DB insert failed for index 34: no such table: documents
+2026-06-27 08:05:58,962 [ERROR] worker — [idx=34] Failed: no such table: documents
+2026-06-27 08:06:01,501 [ERROR] database — DB insert failed for index 35: no such table: documents
+2026-06-27 08:06:01,501 [ERROR] worker — [idx=35] Failed: no such table: documents
+2026-06-27 08:06:01,757 [ERROR] database — DB insert failed for index 10: no such table: documents
+2026-06-27 08:06:01,757 [ERROR] worker — [idx=10] Failed: no such table: documents
+2026-06-27 08:06:03,983 [ERROR] database — DB insert failed for index 36: no such table: documents
+2026-06-27 08:06:03,984 [ERROR] worker — [idx=36] Failed: no such table: documents
+2026-06-27 08:06:04,699 [ERROR] database — DB insert failed for index 11: no such table: documents
+2026-06-27 08:06:04,700 [ERROR] worker — [idx=11] Failed: no such table: documents
+2026-06-27 08:06:07,325 [ERROR] database — DB insert failed for index 37: no such table: documents
+2026-06-27 08:06:07,325 [ERROR] worker — [idx=37] Failed: no such table: documents
+2026-06-27 08:06:08,705 [ERROR] database — DB insert failed for index 12: no such table: documents
+2026-06-27 08:06:08,706 [ERROR] worker — [idx=12] Failed: no such table: documents
+2026-06-27 08:06:09,945 [ERROR] database — DB insert failed for index 38: no such table: documents
+2026-06-27 08:06:09,945 [ERROR] worker — [idx=38] Failed: no such table: documents
+2026-06-27 08:06:11,515 [ERROR] database — DB insert failed for index 13: no such table: documents
+2026-06-27 08:06:11,516 [ERROR] worker — [idx=13] Failed: no such table: documents
+2026-06-27 08:06:12,813 [ERROR] database — DB insert failed for index 39: no such table: documents
+2026-06-27 08:06:12,813 [ERROR] worker — [idx=39] Failed: no such table: documents
+2026-06-27 08:06:14,029 [ERROR] database — DB insert failed for index 14: no such table: documents
+2026-06-27 08:06:14,030 [ERROR] worker — [idx=14] Failed: no such table: documents
+2026-06-27 08:06:15,590 [ERROR] database — DB insert failed for index 40: no such table: documents
+2026-06-27 08:06:15,590 [ERROR] worker — [idx=40] Failed: no such table: documents
+2026-06-27 08:06:16,849 [ERROR] database — DB insert failed for index 15: no such table: documents
+2026-06-27 08:06:16,849 [ERROR] worker — [idx=15] Failed: no such table: documents
+2026-06-27 08:06:18,345 [ERROR] database — DB insert failed for index 41: no such table: documents
+2026-06-27 08:06:18,345 [ERROR] worker — [idx=41] Failed: no such table: documents
+2026-06-27 08:06:19,394 [ERROR] database — DB insert failed for index 16: no such table: documents
+2026-06-27 08:06:19,394 [ERROR] worker — [idx=16] Failed: no such table: documents
+2026-06-27 08:06:21,182 [ERROR] database — DB insert failed for index 42: no such table: documents
+2026-06-27 08:06:21,182 [ERROR] worker — [idx=42] Failed: no such table: documents
+2026-06-27 08:06:22,706 [ERROR] database — DB insert failed for index 17: no such table: documents
+2026-06-27 08:06:22,706 [ERROR] worker — [idx=17] Failed: no such table: documents
+2026-06-27 08:06:23,730 [ERROR] database — DB insert failed for index 43: no such table: documents
+2026-06-27 08:06:23,730 [ERROR] worker — [idx=43] Failed: no such table: documents
+2026-06-27 08:06:25,319 [ERROR] database — DB insert failed for index 18: no such table: documents
+2026-06-27 08:06:25,319 [ERROR] worker — [idx=18] Failed: no such table: documents
+2026-06-27 08:06:26,253 [ERROR] database — DB insert failed for index 44: no such table: documents
+2026-06-27 08:06:26,253 [ERROR] worker — [idx=44] Failed: no such table: documents
+2026-06-27 08:06:27,843 [ERROR] database — DB insert failed for index 19: no such table: documents
+2026-06-27 08:06:27,843 [ERROR] worker — [idx=19] Failed: no such table: documents
+2026-06-27 08:06:32,029 [ERROR] database — DB insert failed for index 45: no such table: documents
+2026-06-27 08:06:32,029 [ERROR] worker — [idx=45] Failed: no such table: documents
+2026-06-27 08:06:33,844 [ERROR] database — DB insert failed for index 20: no such table: documents
+2026-06-27 08:06:33,844 [ERROR] worker — [idx=20] Failed: no such table: documents
+2026-06-27 08:06:34,746 [ERROR] database — DB insert failed for index 46: no such table: documents
+2026-06-27 08:06:34,747 [ERROR] worker — [idx=46] Failed: no such table: documents
+2026-06-27 08:06:36,342 [ERROR] database — DB insert failed for index 21: no such table: documents
+2026-06-27 08:06:36,342 [ERROR] worker — [idx=21] Failed: no such table: documents
+2026-06-27 08:06:37,715 [ERROR] database — DB insert failed for index 47: no such table: documents
+2026-06-27 08:06:37,716 [ERROR] worker — [idx=47] Failed: no such table: documents
+2026-06-27 08:06:39,377 [ERROR] database — DB insert failed for index 22: no such table: documents
+2026-06-27 08:06:39,377 [ERROR] worker — [idx=22] Failed: no such table: documents
+2026-06-27 08:06:40,642 [ERROR] database — DB insert failed for index 48: no such table: documents
+2026-06-27 08:06:40,643 [ERROR] worker — [idx=48] Failed: no such table: documents
+2026-06-27 08:06:42,438 [ERROR] database — DB insert failed for index 23: no such table: documents
+2026-06-27 08:06:42,438 [ERROR] worker — [idx=23] Failed: no such table: documents
+2026-06-27 08:06:43,626 [ERROR] database — DB insert failed for index 49: no such table: documents
+2026-06-27 08:06:43,626 [ERROR] worker — [idx=49] Failed: no such table: documents
+2026-06-27 08:06:43,683 [INFO] assembler — Shard 01 done | PID 57426 | 0/25 ok | 25 failed | 92.53s | Overall: 25/50 (0.3/s)
+2026-06-27 08:06:45,905 [ERROR] database — DB insert failed for index 24: no such table: documents
+2026-06-27 08:06:45,905 [ERROR] worker — [idx=24] Failed: no such table: documents
+2026-06-27 08:06:45,954 [INFO] assembler — Shard 00 done | PID 57427 | 0/25 ok | 25 failed | 94.8s | Overall: 50/50 (0.5/s)
+2026-06-27 08:06:45,966 [INFO] assembler — Assembly complete: 0 ok / 50 failed in 99.6s (0.5 docs/s)
+2026-06-27 08:06:45,966 [INFO] assembler — Tier breakdown: {}
+2026-06-27 08:06:45,966 [WARNING] assembler — 50 documents failed — check logs/pipeline.log
+2026-06-27 08:06:45,967 [INFO] main — ============================================================
+2026-06-27 08:06:45,967 [INFO] main —   Pipeline complete in 2731.3s (45.5 min)
+2026-06-27 08:06:45,967 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
+2026-06-27 08:06:45,967 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-27 08:06:45,967 [INFO] main — ============================================================
+2026-06-27 16:08:33,614 [INFO] main — ============================================================
+2026-06-27 16:08:33,615 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-27 16:08:33,615 [INFO] main —   Industry  : Automotive Fasteners
+2026-06-27 16:08:33,615 [INFO] main —   Doc Pairs : 50
+2026-06-27 16:08:33,615 [INFO] main —   Workers   : 2
+2026-06-27 16:08:33,615 [INFO] main — ============================================================
+2026-06-27 16:08:33,615 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-27 16:08:33,641 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-27 16:08:33,641 [INFO] main — [PASS 1] Bootstrapping industry catalog via Ollama (qwen2.5:7b) …
+2026-06-27 16:08:38,632 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-27 16:08:38,656 [INFO] bootstrap — Ollama reachable at http://localhost:11434
+2026-06-27 16:08:38,656 [INFO] bootstrap —   Batch 1/10 …
+2026-06-27 16:13:01,267 [INFO] bootstrap —   → 82 items
+2026-06-27 16:13:01,588 [INFO] bootstrap —   Batch 2/10 …
+2026-06-27 16:17:54,295 [INFO] bootstrap —   → 100 items
+2026-06-27 16:17:54,596 [INFO] bootstrap —   Batch 3/10 …
+2026-06-27 16:22:08,815 [INFO] bootstrap —   → 92 items
+2026-06-27 16:22:09,117 [INFO] bootstrap —   Batch 4/10 …
+2026-06-27 16:26:24,434 [INFO] bootstrap —   → 93 items
+2026-06-27 16:26:24,735 [INFO] bootstrap —   Batch 5/10 …
+2026-06-27 16:30:52,216 [INFO] bootstrap —   → 87 items
+2026-06-27 16:30:52,523 [INFO] bootstrap —   Batch 6/10 …
+2026-06-27 16:35:01,237 [INFO] bootstrap —   → 87 items
+2026-06-27 16:35:01,540 [INFO] bootstrap —   Batch 7/10 …
+2026-06-27 16:38:14,370 [INFO] bootstrap —   → 81 items
+2026-06-27 16:38:14,672 [INFO] bootstrap —   Batch 8/10 …
+2026-06-27 16:42:45,825 [INFO] bootstrap —   → 87 items
+2026-06-27 16:42:46,133 [INFO] bootstrap —   Batch 9/10 …
+2026-06-27 16:47:03,962 [INFO] bootstrap —   → 97 items
+2026-06-27 16:47:04,268 [INFO] bootstrap —   Batch 10/10 …
+2026-06-27 16:50:16,178 [INFO] bootstrap —   → 87 items
+2026-06-27 16:50:18,332 [INFO] bootstrap — Catalog saved: 1000 items → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-27 16:50:18,567 [INFO] main — [PASS 1] Catalog saved → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-27 16:50:18,569 [INFO] main — [PASS 2] Assembling 50 PO/Invoice pairs …
+2026-06-27 16:50:18,652 [INFO] assembler — Catalog loaded: 1000 items from /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-27 16:50:18,653 [INFO] assembler — Sharding: 50 docs → 2 shards across 2 workers
+2026-06-27 16:50:18,653 [INFO] assembler — Realism tiers: clean 50% / degraded 30% / heavy 20% (deterministic per doc_index)
+2026-06-27 16:51:55,827 [INFO] assembler — Shard 01 done | PID 236845 | 25/25 ok | 0 failed | 94.71s | Overall: 25/50 (0.3/s)
+2026-06-27 16:51:56,542 [INFO] assembler — Shard 00 done | PID 236846 | 25/25 ok | 0 failed | 95.43s | Overall: 50/50 (0.5/s)
+2026-06-27 16:51:56,585 [INFO] assembler — Assembly complete: 50 ok / 0 failed in 97.9s (0.5 docs/s)
+2026-06-27 16:51:56,586 [INFO] assembler — Tier breakdown: {'clean': 19, 'heavy': 9, 'degraded': 22}
+2026-06-27 16:51:56,595 [INFO] main — ============================================================
+2026-06-27 16:51:56,596 [INFO] main —   Pipeline complete in 2603.0s (43.4 min)
+2026-06-27 16:51:56,596 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
+2026-06-27 16:51:56,596 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-27 16:51:56,596 [INFO] main — ============================================================
