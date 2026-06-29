@@ -1,0 +1,12 @@
+You are a B2B procurement specialist for the Automotive Fasteners industry in India.
+
+List EXACTLY 88 distinct physical goods AND 12 services that a
+Automotive Fasteners business would buy or sell. This is batch 1.
+
+RULES:
+1. Each item is a SPECIFIC product or service (include grade/spec/size where meaningful).
+2. No duplicate items. No brands.
+3. Services: freight, installation, AMC, testing, consulting, etc.
+4. Return ONLY a JSON array of strings — one description per element.
+
+No markdown, no explanation. Just the JSON array of 100 strings.

@@ -304,3 +304,152 @@
 2026-06-27 16:51:56,596 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
 2026-06-27 16:51:56,596 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
 2026-06-27 16:51:56,596 [INFO] main — ============================================================
+2026-06-28 18:43:55,570 [INFO] main — ============================================================
+2026-06-28 18:43:55,571 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-28 18:43:55,571 [INFO] main —   Industry  : Automotive Fasteners
+2026-06-28 18:43:55,571 [INFO] main —   Doc Pairs : 50
+2026-06-28 18:43:55,571 [INFO] main —   Workers   : 2
+2026-06-28 18:43:55,571 [INFO] main — ============================================================
+2026-06-28 18:43:55,571 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-28 18:43:55,572 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 18:43:55,573 [INFO] main — [PASS 1] Bootstrapping industry catalog via Ollama (qwen2.5:7b) …
+2026-06-28 18:43:57,713 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-28 18:43:57,768 [INFO] bootstrap — Ollama reachable at http://localhost:11434
+2026-06-28 18:43:57,769 [INFO] bootstrap —   Batch 1/10 …
+2026-06-28 18:44:28,906 [WARNING] bootstrap — Ollama attempt 1: HTTP 500
+2026-06-28 18:44:49,921 [WARNING] bootstrap — Ollama attempt 2: HTTP 500
+2026-06-28 18:45:03,565 [WARNING] bootstrap — Ollama attempt 3: HTTP 500
+2026-06-28 18:45:07,580 [WARNING] bootstrap — Batch 0: description parse failed — Expecting value: line 1 column 1 (char 0)
+2026-06-28 18:45:07,580 [INFO] bootstrap —   → 0 items
+2026-06-28 18:45:07,881 [INFO] bootstrap —   Batch 2/10 …
+2026-06-28 20:24:55,727 [INFO] main — ============================================================
+2026-06-28 20:24:55,728 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-28 20:24:55,728 [INFO] main —   Industry    : Automotive Fasteners
+2026-06-28 20:24:55,728 [INFO] main —   Doc Pairs   : 50
+2026-06-28 20:24:55,728 [INFO] main —   Workers     : 2
+2026-06-28 20:24:55,728 [INFO] main —   Language    : en
+2026-06-28 20:24:55,728 [INFO] main —   LLM backend : ollama / qwen2.5:7b
+2026-06-28 20:24:55,728 [INFO] main —   Handwriting : off
+2026-06-28 20:24:55,728 [INFO] main —   Mode        : FRESH (previous output will be wiped)
+2026-06-28 20:24:55,728 [INFO] main — ============================================================
+2026-06-28 20:24:55,728 [INFO] main — Fresh run mode — wiping previous output …
+2026-06-28 20:24:55,749 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/purchase_orders
+2026-06-28 20:24:55,757 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/tax_invoices
+2026-06-28 20:24:55,758 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 20:24:55,759 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-28 20:24:55,794 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 20:24:55,794 [INFO] main — [PASS 1] Bootstrapping industry catalog (ollama/qwen2.5:7b) …
+2026-06-28 20:24:57,310 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-28 20:24:57,365 [INFO] bootstrap — LLM provider 'ollama' is reachable
+2026-06-28 20:24:57,365 [INFO] bootstrap —   Batch 1/10 …
+2026-06-28 20:25:19,770 [WARNING] llm_providers — [ollama] attempt 1/3: Ollama HTTP 500
+2026-06-28 20:25:37,731 [WARNING] llm_providers — [ollama] attempt 2/3: Ollama HTTP 500
+2026-06-28 20:26:02,957 [WARNING] llm_providers — [ollama] attempt 3/3: Ollama HTTP 500
+2026-06-28 20:26:07,001 [WARNING] bootstrap — Batch 0: description parse failed — Ollama: all 3 retries exhausted
+2026-06-28 20:26:07,003 [INFO] bootstrap —   → 0 items
+2026-06-28 20:26:07,304 [INFO] bootstrap —   Batch 2/10 …
+2026-06-28 20:26:22,315 [WARNING] llm_providers — [ollama] attempt 1/3: Ollama HTTP 500
+2026-06-28 20:26:33,856 [WARNING] llm_providers — [ollama] attempt 2/3: Ollama HTTP 500
+2026-06-28 20:26:50,209 [WARNING] llm_providers — [ollama] attempt 3/3: Ollama HTTP 500
+2026-06-28 20:26:54,209 [WARNING] bootstrap — Batch 1: description parse failed — Ollama: all 3 retries exhausted
+2026-06-28 20:26:54,210 [INFO] bootstrap —   → 0 items
+2026-06-28 20:26:54,510 [INFO] bootstrap —   Batch 3/10 …
+2026-06-28 20:27:20,609 [WARNING] llm_providers — [ollama] attempt 1/3: Ollama HTTP 500
+2026-06-28 20:43:00,358 [INFO] main — ============================================================
+2026-06-28 20:43:00,359 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-28 20:43:00,359 [INFO] main —   Industry    : Automotive Fasteners
+2026-06-28 20:43:00,359 [INFO] main —   Doc Pairs   : 50
+2026-06-28 20:43:00,359 [INFO] main —   Workers     : 2
+2026-06-28 20:43:00,359 [INFO] main —   Language    : en
+2026-06-28 20:43:00,359 [INFO] main —   LLM backend : ollama / qwen2.5:7b
+2026-06-28 20:43:00,359 [INFO] main —   Handwriting : off
+2026-06-28 20:43:00,359 [INFO] main —   Mode        : FRESH (previous output will be wiped)
+2026-06-28 20:43:00,360 [INFO] main — ============================================================
+2026-06-28 20:43:00,360 [INFO] main — Fresh run mode — wiping previous output …
+2026-06-28 20:43:00,360 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 20:43:00,360 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-28 20:43:00,406 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 20:43:00,406 [INFO] main — [PASS 1] Bootstrapping industry catalog (ollama/qwen2.5:7b) …
+2026-06-28 20:43:01,171 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-28 20:43:01,192 [INFO] bootstrap — LLM provider 'ollama' is reachable
+2026-06-28 20:43:01,192 [INFO] bootstrap —   Batch 1/10 …
+2026-06-28 20:43:22,813 [WARNING] llm_providers — [ollama] attempt 1/3: Ollama HTTP 500
+2026-06-28 21:03:59,164 [INFO] main — ============================================================
+2026-06-28 21:03:59,166 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-28 21:03:59,166 [INFO] main —   Industry    : Automotive Fasteners
+2026-06-28 21:03:59,166 [INFO] main —   Doc Pairs   : 50
+2026-06-28 21:03:59,166 [INFO] main —   Workers     : 2
+2026-06-28 21:03:59,166 [INFO] main —   Language    : en
+2026-06-28 21:03:59,166 [INFO] main —   LLM backend : ollama / qwen2.5:7b
+2026-06-28 21:03:59,166 [INFO] main —   Handwriting : off
+2026-06-28 21:03:59,166 [INFO] main —   Mode        : FRESH (previous output will be wiped)
+2026-06-28 21:03:59,166 [INFO] main — ============================================================
+2026-06-28 21:03:59,166 [INFO] main — Fresh run mode — wiping previous output …
+2026-06-28 21:03:59,168 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 21:03:59,168 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-28 21:03:59,222 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 21:03:59,222 [INFO] main — [PASS 1] Bootstrapping industry catalog (ollama/qwen2.5:7b) …
+2026-06-28 21:04:00,794 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-28 21:04:00,818 [INFO] bootstrap — LLM provider 'ollama' is reachable
+2026-06-28 21:04:00,819 [INFO] bootstrap —   Batch 1/10 …
+2026-06-28 21:07:12,250 [WARNING] bootstrap — Batch 0: description parse failed — Unterminated string starting at: line 179 column 5 (char 10733)
+2026-06-28 21:07:12,251 [INFO] bootstrap —   → 0 items
+2026-06-28 21:07:12,551 [INFO] bootstrap —   Batch 2/10 …
+2026-06-28 21:10:27,276 [WARNING] bootstrap — Batch 1: description parse failed — Unterminated string starting at: line 198 column 5 (char 9209)
+2026-06-28 21:10:27,276 [INFO] bootstrap —   → 0 items
+2026-06-28 21:10:27,576 [INFO] bootstrap —   Batch 3/10 …
+2026-06-28 21:33:27,946 [INFO] main — ============================================================
+2026-06-28 21:33:27,947 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-28 21:33:27,947 [INFO] main —   Industry    : Automotive Fasteners
+2026-06-28 21:33:27,947 [INFO] main —   Doc Pairs   : 50
+2026-06-28 21:33:27,947 [INFO] main —   Workers     : 2
+2026-06-28 21:33:27,947 [INFO] main —   Language    : en
+2026-06-28 21:33:27,947 [INFO] main —   LLM backend : ollama / qwen2.5:7b
+2026-06-28 21:33:27,947 [INFO] main —   Handwriting : off
+2026-06-28 21:33:27,947 [INFO] main —   Mode        : FRESH (previous output will be wiped)
+2026-06-28 21:33:27,947 [INFO] main — ============================================================
+2026-06-28 21:33:27,947 [INFO] main — Fresh run mode — wiping previous output …
+2026-06-28 21:33:27,949 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 21:33:27,950 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-28 21:33:27,991 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 21:33:27,991 [INFO] main — [PASS 1] Bootstrapping industry catalog (ollama/qwen2.5:7b) …
+2026-06-28 21:33:29,137 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-28 21:33:29,147 [INFO] bootstrap — LLM provider 'ollama' is reachable
+2026-06-28 21:33:29,147 [INFO] bootstrap —   Batch 1/10 …
+2026-06-28 21:37:29,624 [INFO] bootstrap —   → 82 items
+2026-06-28 21:37:29,930 [INFO] bootstrap —   Batch 2/10 …
+2026-06-28 21:42:05,755 [INFO] bootstrap —   → 100 items
+2026-06-28 21:42:06,063 [INFO] bootstrap —   Batch 3/10 …
+2026-06-28 21:46:10,029 [INFO] bootstrap —   → 92 items
+2026-06-28 21:46:10,331 [INFO] bootstrap —   Batch 4/10 …
+2026-06-28 21:50:22,299 [INFO] bootstrap —   → 93 items
+2026-06-28 21:50:22,607 [INFO] bootstrap —   Batch 5/10 …
+2026-06-28 21:54:32,075 [INFO] bootstrap —   → 87 items
+2026-06-28 21:54:32,383 [INFO] bootstrap —   Batch 6/10 …
+2026-06-28 21:58:32,361 [INFO] bootstrap —   → 87 items
+2026-06-28 21:58:32,668 [INFO] bootstrap —   Batch 7/10 …
+2026-06-28 22:01:44,874 [INFO] bootstrap —   → 81 items
+2026-06-28 22:01:45,178 [INFO] bootstrap —   Batch 8/10 …
+2026-06-28 22:05:58,801 [INFO] bootstrap —   → 87 items
+2026-06-28 22:05:59,103 [INFO] bootstrap —   Batch 9/10 …
+2026-06-28 22:09:47,875 [INFO] bootstrap —   → 97 items
+2026-06-28 22:09:48,181 [INFO] bootstrap —   Batch 10/10 …
+2026-06-28 22:13:04,526 [INFO] bootstrap —   → 87 items
+2026-06-28 22:13:06,686 [INFO] bootstrap — Catalog saved: 1000 items → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-28 22:13:06,799 [INFO] main — [PASS 1] Catalog saved → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-28 22:13:06,800 [INFO] main — [PASS 2] Assembling 50 PO/Invoice pairs …
+2026-06-28 22:13:06,809 [INFO] assembler — Catalog loaded: 1000 items from /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-28 22:13:06,814 [INFO] assembler — Sharding: 50 docs → 2 shards across 2 workers
+2026-06-28 22:13:06,814 [INFO] assembler — Realism tiers: clean 50% / degraded 30% / heavy 20% (deterministic per doc_index)
+2026-06-28 22:13:08,033 [WARNING] worker — Could not load language 'en': No module named 'pipeline.languages' — using English
+2026-06-28 22:13:08,033 [WARNING] worker — Could not load language 'en': No module named 'pipeline.languages' — using English
+2026-06-28 22:14:51,722 [INFO] assembler — Shard 01 done | PID 67455 | 25/25 ok | 0 failed | 103.68s | Overall: 25/50 (0.2/s)
+2026-06-28 22:14:51,844 [INFO] assembler — Shard 00 done | PID 67454 | 25/25 ok | 0 failed | 103.81s | Overall: 50/50 (0.5/s)
+2026-06-28 22:14:51,855 [INFO] assembler — Assembly complete: 50 ok / 0 failed in 105.0s (0.5 docs/s)
+2026-06-28 22:14:51,855 [INFO] assembler — Tier breakdown: {'clean': 19, 'heavy': 9, 'degraded': 22}
+2026-06-28 22:14:51,855 [INFO] assembler — Discrepant pairs (PO/Invoice mismatch): 0 (written to discrepant/ subfolder)
+2026-06-28 22:14:51,856 [INFO] main — ============================================================
+2026-06-28 22:14:51,856 [INFO] main —   Pipeline complete in 2483.9s (41.4 min)
+2026-06-28 22:14:51,856 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
+2026-06-28 22:14:51,856 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-28 22:14:51,856 [INFO] main — ============================================================

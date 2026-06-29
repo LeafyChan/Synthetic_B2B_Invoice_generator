@@ -3,29 +3,23 @@ pipeline/bootstrap.py
 =====================
 Pass 1 — Dynamic Catalog Bootstrap
 
-Two paths, both grounded in the REAL official HSN/SAC master (14,709 goods
-codes + 649 service codes from HSN_SAC.xlsx):
+Now routes through pipeline.llm_providers so Ollama, OpenAI-compatible APIs,
+and Anthropic all work through the same interface — no more hardcoded Ollama HTTP.
 
-Ollama path  (when Ollama is running)
---------------------------------------
+Two paths, both grounded in the REAL official HSN/SAC master:
+
+Ollama/LLM path  (when provider is reachable)
+----------------------------------------------
 1. Ask the LLM to generate product DESCRIPTIONS only — no HSN digits.
-2. Run each description through TF-IDF semantic search against the real
-   master → get top-5 real candidate codes per item.
-3. Pass those candidates back to the LLM for final code selection.
-4. LLM cannot invent codes: it only chooses from real pre-filtered options.
-5. Rate is always overridden from the real schedule — LLM never controls it.
+2. Run each description through TF-IDF semantic search → real candidate codes.
+3. Pass candidates back to the LLM for final code selection.
+4. LLM cannot invent codes; it only chooses from real pre-filtered options.
+5. Rate is always overridden from the real schedule.
 
-Fallback path  (no Ollama, or Ollama down)
--------------------------------------------
-1. Use TF-IDF to search the real master with the industry description +
-   rotating keyword queries drawn from B2B product/service vocabulary.
-2. Build the catalog entirely from real codes with correct rates and units.
-3. No LLM involved — fully offline, deterministic, reproducible.
-
-Result: for ANY industry description (baby diapers, ayurvedic medicines,
-hardware store, cold chain logistics — anything) the HSN/SAC codes in the
-output catalog are real, correctly rated, and semantically matched to the
-business type.
+Fallback path  (provider unreachable)
+---------------------------------------
+1. TF-IDF search over the real master with rotating keyword queries.
+2. Fully offline, deterministic, reproducible.
 """
 
 from __future__ import annotations
@@ -35,6 +29,7 @@ import json
 import logging
 import random
 from pathlib import Path
+from typing import Optional
 
 import aiohttp
 
@@ -44,12 +39,20 @@ BATCH_SIZE   = 100
 TARGET_ITEMS = 1000
 SERVICES_FRACTION = 0.12
 
-_PRICE_BY_RATE = {
-    0:  (5,    500),
-    5:  (10,   2000),
-    12: (50,   15000),
-    18: (20,   50000),
-    28: (200,  200000),
+_PRICE_BY_RATE: dict[float, tuple[float, float]] = {
+    0:    (5,     500),
+    0.1:  (5,     200),
+    0.25: (500,   50000),   # diamonds/precious stones
+    1:    (10,    1000),
+    1.5:  (10,    1000),
+    3:    (500,   200000),  # precious metals
+    5:    (10,    2000),
+    6:    (10,    2000),
+    7.5:  (20,    5000),
+    12:   (50,    15000),
+    18:   (20,    50000),
+    28:   (200,   200000),
+    40:   (500,   500000),
 }
 
 _GOODS_QUERY_WORDS = [
@@ -104,7 +107,7 @@ def _selection_prompt(description: str, candidates: list[dict]) -> str:
     return f"""Product: "{description}"
 
 Choose the best-matching HSN/SAC code from this list of REAL official Indian codes.
-Return ONLY: {{"index": <1-based>, "unit": "<PCS|KG|MTR|LTR|BOX|SET|NOS|SQM|PKT|ROLL>", "unit_cost_inr": <float>}}
+Return ONLY: {{"index": <1-based>, "unit": "<PCS|KGS|MTR|LTR|BOX|SET|NOS|SQM|PAC|ROL>", "unit_cost_inr": <float>}}
 
 Candidates:
 {cand_text}
@@ -113,35 +116,14 @@ No markdown. No explanation. Just the JSON object.
 """
 
 
-async def _call_ollama_raw(session, ollama_url, model, prompt, retries=3):
-    url = f"{ollama_url}/api/generate"
-    payload = {"model": model, "prompt": prompt, "stream": False,
-                "options": {"temperature": 0.0, "top_p": 1.0, "num_predict": 4096}}
-    for attempt in range(retries):
-        try:
-            async with session.post(url, json=payload, timeout=aiohttp.ClientTimeout(total=300)) as resp:
-                if resp.status != 200:
-                    raise RuntimeError(f"HTTP {resp.status}")
-                data = await resp.json()
-                raw = data.get("response", "").strip()
-                if raw.startswith("```"):
-                    raw = raw.split("```")[1]
-                    if raw.startswith("json"):
-                        raw = raw[4:]
-                return raw.strip()
-        except Exception as e:
-            log.warning(f"Ollama attempt {attempt+1}: {e}")
-            await asyncio.sleep(2 ** attempt)
-    return ""
-
-
-async def _generate_batch_ollama(session, ollama_url, model, industry, batch_index, hsn_index):
+async def _generate_batch_with_provider(provider, industry, batch_index, hsn_index, session=None):
+    """Generate one catalog batch using the given LLM provider."""
     desc_prompt = _descriptions_prompt(industry, batch_index, BATCH_SIZE)
-    raw = await _call_ollama_raw(session, ollama_url, model, desc_prompt)
     try:
+        raw = await provider.complete(desc_prompt, temperature=0.0, session=session)
         descriptions = json.loads(raw)
         if not isinstance(descriptions, list):
-            raise ValueError
+            raise ValueError("not a list")
         descriptions = [str(d).strip() for d in descriptions if str(d).strip()]
     except Exception as e:
         log.warning(f"Batch {batch_index}: description parse failed — {e}")
@@ -151,19 +133,22 @@ async def _generate_batch_ollama(session, ollama_url, model, industry, batch_ind
     for desc in descriptions[:BATCH_SIZE]:
         try:
             is_svc = any(kw in desc.lower() for kw in
-                         ("service","maintenance","freight","transport","consulting",
-                          "installation","testing","amc","audit","repair","handling"))
+                         ("service", "maintenance", "freight", "transport", "consulting",
+                          "installation", "testing", "amc", "audit", "repair", "handling"))
             candidates = hsn_index.search_services(desc, top_k=5) if is_svc \
                          else hsn_index.search_goods(desc, top_k=5)
             if not candidates:
                 continue
-            sel_raw = await _call_ollama_raw(session, ollama_url, model,
-                                              _selection_prompt(desc, candidates))
+            sel_raw = await provider.complete(
+                _selection_prompt(desc, candidates),
+                temperature=0.0, session=session
+            )
             sel = json.loads(sel_raw)
             idx1 = int(sel.get("index", 1))
             chosen = candidates[min(idx1 - 1, len(candidates) - 1)]
             unit = str(sel.get("unit", chosen.get("unit", "PCS")))
-            if unit not in ("PCS","KG","MTR","LTR","BOX","SET","NOS","SQM","PKT","ROLL"):
+            from .gst_rate_schedule import VALID_UNIT_CODES
+            if unit not in VALID_UNIT_CODES:
                 unit = chosen.get("unit", "PCS")
             cost = max(0.01, float(sel.get("unit_cost_inr", 100.0)))
             items.append({
@@ -183,12 +168,16 @@ def _make_description(industry, rec, rng):
     leaf = rec.get("leaf_description", "").strip(" :;,.")
     if not leaf or leaf.upper() in ("OTHER", "OTHERS", "UNSPECIFIED"):
         leaf = rec["description"].split(" — ")[-1].strip(" :;,.")
-    specs = ["Grade A","ISO 9001","BIS Certified","IS Grade","Export Quality",
-             "Industrial Grade","Commercial Grade","Standard Grade"]
+    specs = ["Grade A", "ISO 9001", "BIS Certified", "IS Grade", "Export Quality",
+             "Industrial Grade", "Commercial Grade", "Standard Grade"]
     return f"{leaf[:80]}, {rng.choice(specs)} — {industry}"
 
 
 def _fallback_from_index(hsn_index, industry, count):
+    # _PRICE_BY_RATE is already defined at module level in this file (see top
+    # of bootstrap.py) — it does NOT exist in gst_rate_schedule.py. The old
+    # local import here always raised ImportError and crashed every call to
+    # the TF-IDF fallback path.
     rng = random.Random(hash(industry) & 0xFFFFFFFF)
     num_services = max(1, round(count * SERVICES_FRACTION))
     num_goods    = count - num_services
@@ -263,11 +252,11 @@ def _fallback_from_index(hsn_index, industry, count):
 def _stub_catalog(industry, count):
     rng = random.Random(42)
     POOL = [
-        ("73181500",18,"PCS","Fasteners"), ("84818090",18,"PCS","Valves"),
-        ("85044000",18,"PCS","Electronics"), ("39201000",18,"KG","Plastics"),
-        ("48191000",12,"BOX","Packaging"), ("52111000", 5,"MTR","Textiles"),
-        ("30042011",12,"BOX","Pharma"), ("94032000",18,"PCS","Furniture"),
-        ("99651100",12,"NOS","Transport"), ("99871200",18,"NOS","Maintenance"),
+        ("73181500", 18, "PCS", "Fasteners"), ("84818090", 18, "PCS", "Valves"),
+        ("85044000", 18, "PCS", "Electronics"), ("39201000", 18, "KGS", "Plastics"),
+        ("48191000", 12, "BOX", "Packaging"), ("52111000",  5, "MTR", "Textiles"),
+        ("30042011", 12, "BOX", "Pharma"),    ("94032000", 18, "PCS", "Furniture"),
+        ("99651100", 12, "NOS", "Transport"), ("99871200", 18, "NOS", "Maintenance"),
     ]
     items = []
     for i in range(count):
@@ -293,10 +282,43 @@ def _generate_fallback_catalog(industry: str, count: int = TARGET_ITEMS) -> list
         return _stub_catalog(industry, count)
 
 
-async def run_bootstrap(industry, model, ollama_url, output_path):
+async def run_bootstrap(
+    industry: str,
+    llm_provider: str = "ollama",
+    llm_model: str = "qwen2.5:7b",
+    llm_api_key: Optional[str] = None,
+    llm_base_url: Optional[str] = None,
+    output_path: Path = Path("industry_catalog.json"),
+    # Legacy kwargs kept for backward compat
+    model: Optional[str] = None,
+    ollama_url: Optional[str] = None,
+):
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # Resolve legacy args
+    if model and not llm_model:
+        llm_model = model
+    if ollama_url and llm_provider == "ollama" and not llm_base_url:
+        llm_base_url = ollama_url
+
+    # Build the LLM provider
+    from pipeline.llm_providers import get_provider
+    provider_kwargs = {"model": llm_model}
+    if llm_api_key:
+        provider_kwargs["api_key"] = llm_api_key
+    if llm_base_url:
+        if llm_provider == "ollama":
+            provider_kwargs["base_url"] = llm_base_url
+        else:
+            provider_kwargs["base_url"] = llm_base_url
+    try:
+        provider = get_provider(llm_provider, **provider_kwargs)
+    except Exception as e:
+        log.warning(f"Could not create LLM provider: {e} — falling back to TF-IDF only")
+        provider = None
+
+    # Load HSN index
     try:
         from pipeline.hsn_lookup import HSNIndex
         hsn_index = HSNIndex()
@@ -308,27 +330,29 @@ async def run_bootstrap(industry, model, ollama_url, output_path):
         index_available = False
         hsn_index = None
 
-    ollama_available = False
-    if index_available:
+    # Check provider reachability
+    provider_available = False
+    if provider and index_available:
         try:
-            async with aiohttp.ClientSession() as s:
-                async with s.get(f"{ollama_url}/api/tags",
-                                  timeout=aiohttp.ClientTimeout(total=5)) as r:
-                    if r.status == 200:
-                        ollama_available = True
-                        log.info(f"Ollama reachable at {ollama_url}")
+            connector = aiohttp.TCPConnector(limit=2)
+            async with aiohttp.ClientSession(connector=connector) as session:
+                provider_available = await provider.healthcheck(session=session)
+            if provider_available:
+                log.info(f"LLM provider '{llm_provider}' is reachable")
+            else:
+                log.warning(f"LLM provider '{llm_provider}' not reachable — TF-IDF fallback")
         except Exception as e:
-            log.warning(f"Ollama not reachable ({e}) — TF-IDF-only fallback")
+            log.warning(f"Provider health check failed ({e}) — TF-IDF fallback")
 
-    if ollama_available and index_available:
+    if provider_available and index_available:
         num_batches = TARGET_ITEMS // BATCH_SIZE
         all_items: list[dict] = []
         connector = aiohttp.TCPConnector(limit=2)
         async with aiohttp.ClientSession(connector=connector) as session:
             for bi in range(num_batches):
                 log.info(f"  Batch {bi+1}/{num_batches} …")
-                batch = await _generate_batch_ollama(
-                    session, ollama_url, model, industry, bi, hsn_index)
+                batch = await _generate_batch_with_provider(
+                    provider, industry, bi, hsn_index, session=session)
                 log.info(f"  → {len(batch)} items")
                 all_items.extend(batch)
                 await asyncio.sleep(0.3)

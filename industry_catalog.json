@@ -41,7 +41,7 @@
   },
   {
     "description": "T-Nut M10 x 30mm",
-    "hsn_code": "44022010",
+    "hsn_code": "44020010",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 5,
@@ -275,7 +275,7 @@
     "description": "Bearing Retainer 80mm",
     "hsn_code": "84821020",
     "unit": "PCS",
-    "unit_cost_inr": 50.0,
+    "unit_cost_inr": 500.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -395,7 +395,7 @@
     "description": "Bearing Retainer 140mm",
     "hsn_code": "84821020",
     "unit": "PCS",
-    "unit_cost_inr": 500.0,
+    "unit_cost_inr": 50.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -435,7 +435,7 @@
     "description": "Bearing Retainer 160mm",
     "hsn_code": "84821020",
     "unit": "PCS",
-    "unit_cost_inr": 50.0,
+    "unit_cost_inr": 500.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -515,7 +515,7 @@
     "description": "Bearing Retainer 200mm",
     "hsn_code": "84821020",
     "unit": "PCS",
-    "unit_cost_inr": 50.0,
+    "unit_cost_inr": 500.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -546,7 +546,7 @@
   {
     "description": "Flat Washer 150mm",
     "hsn_code": "72261990",
-    "unit": "PCS",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
@@ -595,7 +595,7 @@
     "description": "Bearing Retainer 240mm",
     "hsn_code": "84821020",
     "unit": "PCS",
-    "unit_cost_inr": 50.0,
+    "unit_cost_inr": 500.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -626,7 +626,7 @@
   {
     "description": "Flat Washer 200mm",
     "hsn_code": "72261990",
-    "unit": "PCS",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
@@ -635,7 +635,7 @@
     "description": "Bearing Retainer 260mm",
     "hsn_code": "84821020",
     "unit": "PCS",
-    "unit_cost_inr": 50.0,
+    "unit_cost_inr": 500.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -683,7 +683,7 @@
     "description": "Rivets - Aluminum, Diameter 5mm, Length 10mm",
     "hsn_code": "73182300",
     "unit": "PCS",
-    "unit_cost_inr": 0.1,
+    "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Articles Of Iron Or Steel"
   },
@@ -697,7 +697,7 @@
   },
   {
     "description": "Spring Washers - Split, Steel, 24mm OD",
-    "hsn_code": "73182100",
+    "hsn_code": "73182990",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -738,7 +738,7 @@
   {
     "description": "Clips - Retaining, Steel, 16mm Width",
     "hsn_code": "72269990",
-    "unit": "KG",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
@@ -1033,7 +1033,7 @@
   },
   {
     "description": "Seals - Labyrinth, Steel, 120mm OD",
-    "hsn_code": "40169360",
+    "hsn_code": "40169340",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1065,7 +1065,7 @@
   },
   {
     "description": "Seals - Labyrinth, Steel, 140mm OD",
-    "hsn_code": "40169360",
+    "hsn_code": "40169340",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1193,11 +1193,11 @@
   },
   {
     "description": "Seals - Labyrinth, Steel, 220mm OD",
-    "hsn_code": "40169360",
+    "hsn_code": "78060020",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
-    "category": "Rubber And Articles Thereof"
+    "category": "Lead And Articles Thereof"
   },
   {
     "description": "Bearings - Deep Groove Ball, Size 60x80x35mm",
@@ -1265,7 +1265,7 @@
   },
   {
     "description": "Bearings - Spherical Ball, Size 70x80x35mm",
-    "hsn_code": "84821053",
+    "hsn_code": "84821090",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1321,7 +1321,7 @@
   },
   {
     "description": "Seals - Labyrinth, Steel, 300mm OD",
-    "hsn_code": "40169360",
+    "hsn_code": "40169340",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1353,7 +1353,7 @@
   },
   {
     "description": "Seals - Labyrinth, Steel, 320mm OD",
-    "hsn_code": "40169360",
+    "hsn_code": "40169340",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1417,7 +1417,7 @@
   },
   {
     "description": "Seals - Labyrinth, Steel, 360mm OD",
-    "hsn_code": "40169360",
+    "hsn_code": "40169340",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1481,11 +1481,11 @@
   },
   {
     "description": "Rivets - Aluminum, 3/16 inch diameter",
-    "hsn_code": "73182300",
+    "hsn_code": "83082000",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
-    "category": "Articles Of Iron Or Steel"
+    "category": "Miscellaneous Articles Of Base Metal"
   },
   {
     "description": "Screws - Phillips Head, Stainless Steel, M4 x 25mm",
@@ -1505,7 +1505,7 @@
   },
   {
     "description": "Lock Washers - Split, Steel, 10mm Diameter",
-    "hsn_code": "73182100",
+    "hsn_code": "73181900",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1585,7 +1585,7 @@
   },
   {
     "description": "Seals - O-Ring, NBR, 12mm ID",
-    "hsn_code": "40169320",
+    "hsn_code": "40169390",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1659,7 +1659,7 @@
     "description": "Bearings - Deep Groove Ball, SS, 16mm x 32mm",
     "hsn_code": "84821013",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 50.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -1689,7 +1689,7 @@
   },
   {
     "description": "Bearings - Angular Contact Ball, SS, 20mm x 36mm",
-    "hsn_code": "84821013",
+    "hsn_code": "84821053",
     "unit": "PCS",
     "unit_cost_inr": 50.0,
     "gst_rate": 18,
@@ -1706,7 +1706,7 @@
   {
     "description": "Belts - Round Belt, Poly-V, 12x120mm",
     "hsn_code": "40103911",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -1787,7 +1787,7 @@
     "description": "Bearings - Deep Groove Ball, SS, 24mm x 48mm",
     "hsn_code": "84821013",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 50.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -1802,7 +1802,7 @@
   {
     "description": "Belts - Flat Belt, Poly-V, 30x300mm",
     "hsn_code": "59100060",
-    "unit": "PCS",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 12,
     "category": "Impregnated, Coated, Covered Or Laminated Textile "
@@ -1817,7 +1817,7 @@
   },
   {
     "description": "Bearings - Angular Contact Ball, SS, 28mm x 52mm",
-    "hsn_code": "84821013",
+    "hsn_code": "84821053",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1841,7 +1841,7 @@
   },
   {
     "description": "Clips - Retaining Ring, Steel, 16-64 Series",
-    "hsn_code": "72299090",
+    "hsn_code": "72299059",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1866,7 +1866,7 @@
   {
     "description": "Belts - Flat Belt, Poly-V, 35x350mm",
     "hsn_code": "59100060",
-    "unit": "PCS",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 12,
     "category": "Impregnated, Coated, Covered Or Laminated Textile "
@@ -1889,7 +1889,7 @@
   },
   {
     "description": "Seals - Lip Seal, NBR, 32mm OD, 8mm Width",
-    "hsn_code": "40169390",
+    "hsn_code": "40169330",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1913,7 +1913,7 @@
   },
   {
     "description": "Bearings - Deep Groove Ball, SS, 36mm x 64mm",
-    "hsn_code": "84821013",
+    "hsn_code": "84821053",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1962,14 +1962,14 @@
   {
     "description": "Belts - Round Belt, Poly-V, 28x280mm",
     "hsn_code": "40103911",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
   },
   {
     "description": "Clips - Retaining Ring, Steel, 16-80 Series",
-    "hsn_code": "72224020",
+    "hsn_code": "72224010",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -1994,7 +1994,7 @@
   {
     "description": "Belts - Flat Belt, Poly-V, 45x450mm",
     "hsn_code": "59100060",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 12,
     "category": "Impregnated, Coated, Covered Or Laminated Textile "
@@ -2026,7 +2026,7 @@
   {
     "description": "Freight Services - LTL",
     "hsn_code": "996532",
-    "unit": "PCS",
+    "unit": "KGS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "All Services"
@@ -2162,7 +2162,7 @@
   {
     "description": "Straps - Steel, Galvanized, 6mm x 4m Roll",
     "hsn_code": "91139010",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -2202,7 +2202,7 @@
   {
     "description": "Straps - Plastic, Reinforced, 8mm x 5m Roll",
     "hsn_code": "39169080",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Plastics And Articles Thereof"
@@ -2225,7 +2225,7 @@
   },
   {
     "description": "Belts - Flat, 14mm Width, 900mm Length",
-    "hsn_code": "40103911",
+    "hsn_code": "40103190",
     "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -2242,7 +2242,7 @@
   {
     "description": "Straps - Metal, Steel, 10mm x 3m Roll",
     "hsn_code": "91132010",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -2282,7 +2282,7 @@
   {
     "description": "Straps - Rubber, Reinforced, 12mm x 2m Roll",
     "hsn_code": "40101390",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -2314,7 +2314,7 @@
   {
     "description": "Clips - Wire, Square, 6mm Diameter, 1m Roll",
     "hsn_code": "72299040",
-    "unit": "ROLL",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
@@ -2322,7 +2322,7 @@
   {
     "description": "Straps - Fabric, Reinforced, 14mm x 3m Roll",
     "hsn_code": "91139010",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -2345,8 +2345,8 @@
   },
   {
     "description": "Belts - Flat, 16mm Width, 1000mm Length",
-    "hsn_code": "40103390",
-    "unit": "PCS",
+    "hsn_code": "40103190",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -2362,7 +2362,7 @@
   {
     "description": "Straps - Plastic, Reinforced, 16mm x 2m Roll",
     "hsn_code": "39169080",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Plastics And Articles Thereof"
@@ -2377,7 +2377,7 @@
   },
   {
     "description": "Seals - Lip, Fluorocarbon, 70 Shore A, 49mm Dia",
-    "hsn_code": "40169330",
+    "hsn_code": "40169390",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -2393,16 +2393,16 @@
   },
   {
     "description": "Clips - Retaining, Plastic, 20mm Width",
-    "hsn_code": "39169080",
+    "hsn_code": "83059020",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
-    "category": "Plastics And Articles Thereof"
+    "category": "Miscellaneous Articles Of Base Metal"
   },
   {
     "description": "Straps - Metal, Steel, 12mm x 3m Roll",
     "hsn_code": "91132010",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -2434,7 +2434,7 @@
   {
     "description": "Clips - Wire, Round, 8mm Diameter, 1m Roll",
     "hsn_code": "72179011",
-    "unit": "ROLL",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
@@ -2442,7 +2442,7 @@
   {
     "description": "Straps - Rubber, Reinforced, 18mm x 3m Roll",
     "hsn_code": "40101390",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -2465,8 +2465,8 @@
   },
   {
     "description": "Belts - Flat, 18mm Width, 1200mm Length",
-    "hsn_code": "40103390",
-    "unit": "PCS",
+    "hsn_code": "40103911",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -2482,7 +2482,7 @@
   {
     "description": "Straps - Fabric, Reinforced, 20mm x 3m Roll",
     "hsn_code": "91139010",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -2506,7 +2506,7 @@
   {
     "description": "Belts - Round, 12mm Width, 900mm Length",
     "hsn_code": "40103190",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -2522,7 +2522,7 @@
   {
     "description": "Straps - Metal, Steel, 14mm x 3m Roll",
     "hsn_code": "91132010",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -2554,7 +2554,7 @@
   {
     "description": "Clips - Wire, Square, 10mm Diameter, 1m Roll",
     "hsn_code": "72299040",
-    "unit": "ROLL",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
@@ -2562,7 +2562,7 @@
   {
     "description": "Straps - Rubber, Reinforced, 20mm x 3m Roll",
     "hsn_code": "40101390",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -2585,8 +2585,8 @@
   },
   {
     "description": "Belts - Flat, 20mm Width, 1500mm Length",
-    "hsn_code": "40103190",
-    "unit": "PCS",
+    "hsn_code": "40103911",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -2602,7 +2602,7 @@
   {
     "description": "Straps - Fabric, Reinforced, 22mm x 3m Roll",
     "hsn_code": "91139010",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -2642,7 +2642,7 @@
   {
     "description": "Straps - Metal, Steel, 16mm x 3m Roll",
     "hsn_code": "91132010",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -2674,7 +2674,7 @@
   {
     "description": "Clips - Wire, Round, 12mm Diameter, 1m Roll",
     "hsn_code": "72179011",
-    "unit": "ROLL",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
@@ -2682,7 +2682,7 @@
   {
     "description": "Straps - Rubber, Reinforced, 22mm x 3m Roll",
     "hsn_code": "40101390",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -2722,7 +2722,7 @@
   {
     "description": "Straps - Fabric, Reinforced, 24mm x 3m Roll",
     "hsn_code": "91139010",
-    "unit": "ROLL",
+    "unit": "ROL",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -2859,7 +2859,7 @@
     "description": "Bolts - Hexagonal Head, Cold Finished, Grade 4.6, M12 x 50mm",
     "hsn_code": "72151000",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 0.5,
     "gst_rate": 18,
     "category": "Iron And Steel"
   },
@@ -3345,7 +3345,7 @@
   },
   {
     "description": "Nuts - Hexagon Socket Cap, Brass, M48 x 290mm",
-    "hsn_code": "74198030",
+    "hsn_code": "74082190",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -3418,7 +3418,7 @@
   {
     "description": "Freight Services for Automotive Components",
     "hsn_code": "996532",
-    "unit": "PCS",
+    "unit": "KGS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "All Services"
@@ -3506,7 +3506,7 @@
   {
     "description": "Washer - Flat, Steel, 6mm",
     "hsn_code": "72261990",
-    "unit": "PCS",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
@@ -3666,14 +3666,14 @@
   {
     "description": "Belts - Round Belt, 12.7mm x 38.1mm",
     "hsn_code": "40103991",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
   },
   {
     "description": "Bearings - Cylindrical Roller, Size 16mm",
-    "hsn_code": "84825011",
+    "hsn_code": "84825000",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -3706,7 +3706,7 @@
   {
     "description": "Belts - Poly-V Belt, 12.7mm x 40.6mm",
     "hsn_code": "39081079",
-    "unit": "PCS",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Plastics And Articles Thereof"
@@ -3721,7 +3721,7 @@
   },
   {
     "description": "Bushings - Bronze, Inner Diameter 50mm, Outer Diameter 70mm",
-    "hsn_code": "73045920",
+    "hsn_code": "73045130",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -3866,7 +3866,7 @@
   {
     "description": "Belts - Poly-V Belt, 12.7mm x 95.3mm",
     "hsn_code": "39081029",
-    "unit": "PCS",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Plastics And Articles Thereof"
@@ -3921,7 +3921,7 @@
   },
   {
     "description": "Bushings - Steel, Inner Diameter 100mm, Outer Diameter 120mm",
-    "hsn_code": "73045930",
+    "hsn_code": "73045130",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -4001,7 +4001,7 @@
   },
   {
     "description": "Bushings - Steel, Inner Diameter 120mm, Outer Diameter 140mm",
-    "hsn_code": "73045930",
+    "hsn_code": "73045130",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -4106,7 +4106,7 @@
   {
     "description": "Freight Services",
     "hsn_code": "996532",
-    "unit": "NOS",
+    "unit": "KGS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "All Services"
@@ -4330,7 +4330,7 @@
   {
     "description": "Belts - Flat Belt, Polyurethane",
     "hsn_code": "59100060",
-    "unit": "PCS",
+    "unit": "MTR",
     "unit_cost_inr": 0.01,
     "gst_rate": 12,
     "category": "Impregnated, Coated, Covered Or Laminated Textile "
@@ -4353,7 +4353,7 @@
   },
   {
     "description": "Couplings - Spline Type",
-    "hsn_code": "73071900",
+    "hsn_code": "73072900",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -4402,7 +4402,7 @@
   {
     "description": "Straps - Braided Polyester",
     "hsn_code": "91139010",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -4458,7 +4458,7 @@
   {
     "description": "Straps - Braided Aramid",
     "hsn_code": "91139010",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Clocks And Watches And Parts Thereof"
@@ -4483,7 +4483,7 @@
     "description": "Seals - Lip Type, Rubber, Inch, Custom",
     "hsn_code": "40169390",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 0.5,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
   },
@@ -4491,7 +4491,7 @@
     "description": "Gaskets - Metal Jacketed, Inch, Custom",
     "hsn_code": "84841010",
     "unit": "PCS",
-    "unit_cost_inr": 50.0,
+    "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -4507,14 +4507,14 @@
     "description": "Clips - Wire, Inch",
     "hsn_code": "72299031",
     "unit": "PCS",
-    "unit_cost_inr": 5.0,
+    "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
   },
   {
     "description": "Straps - Braided Kevlar",
     "hsn_code": "56073000",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 12,
     "category": "Wadding, Felt And Nonwovens; Special Yarns; Twine,"
@@ -4529,7 +4529,7 @@
   },
   {
     "description": "Bearings - Tapered Roller, Brass, Metric",
-    "hsn_code": "84823000",
+    "hsn_code": "84822090",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -4547,7 +4547,7 @@
     "description": "Gaskets - Metal Jacketed, Custom, Metric",
     "hsn_code": "84841010",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 50.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -4563,7 +4563,7 @@
     "description": "Clips - Wire, Inch, Custom",
     "hsn_code": "72299040",
     "unit": "PCS",
-    "unit_cost_inr": 5.0,
+    "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
   },
@@ -4595,7 +4595,7 @@
     "description": "Seals - Lip Type, Rubber, Custom, Inch",
     "hsn_code": "40169390",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 0.5,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
   },
@@ -4619,7 +4619,7 @@
     "description": "Clips - Wire, Metric, Custom",
     "hsn_code": "72299040",
     "unit": "PCS",
-    "unit_cost_inr": 5.0,
+    "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
   },
@@ -4673,7 +4673,7 @@
   },
   {
     "description": "Clips - Wire, Inch, Custom, Metric",
-    "hsn_code": "72299040",
+    "hsn_code": "72299031",
     "unit": "PCS",
     "unit_cost_inr": 5.0,
     "gst_rate": 18,
@@ -4698,7 +4698,7 @@
   {
     "description": "Freight - LTL",
     "hsn_code": "996532",
-    "unit": "PCS",
+    "unit": "KGS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "All Services"
@@ -4755,7 +4755,7 @@
     "description": "Packaging - Customized Packaging Solutions",
     "hsn_code": "48115110",
     "unit": "PCS",
-    "unit_cost_inr": 50.0,
+    "unit_cost_inr": 0.5,
     "gst_rate": 12,
     "category": "Paper And Paperboard, Articles Of Paper Pulp, Of P"
   },
@@ -4795,7 +4795,7 @@
     "description": "Disposal - Recycling Solutions",
     "hsn_code": "62104010",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 500.0,
     "gst_rate": 5,
     "category": "Articles Of Apparel And Clothing Accessories, Not "
   },
@@ -4833,7 +4833,7 @@
   },
   {
     "description": "Bushings - Nylon, Inner Diameter 32mm, Outer Diameter 50mm",
-    "hsn_code": "73045920",
+    "hsn_code": "73045130",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -4938,7 +4938,7 @@
   {
     "description": "Belts - Timing Belt, 14.3mm x 57.2mm",
     "hsn_code": "40103991",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -5018,7 +5018,7 @@
   {
     "description": "Belts - Timing Belt, 17.5mm x 73.7mm",
     "hsn_code": "40103991",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -5178,7 +5178,7 @@
   {
     "description": "Belts - Timing Belt, 28.6mm x 103.1mm",
     "hsn_code": "40103911",
-    "unit": "MTR",
+    "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
@@ -5299,7 +5299,7 @@
     "description": "Bearings - Thrust Ball, Size 65mm",
     "hsn_code": "84821090",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 50.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -5313,7 +5313,7 @@
   },
   {
     "description": "Seals - V-seal, Durometer 130 Shore A, 160mm OD",
-    "hsn_code": "40169390",
+    "hsn_code": "40169330",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -5483,7 +5483,7 @@
     "description": "Brackets - Aluminum",
     "hsn_code": "83021090",
     "unit": "PCS",
-    "unit_cost_inr": 50.0,
+    "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Miscellaneous Articles Of Base Metal"
   },
@@ -5569,7 +5569,7 @@
   },
   {
     "description": "Gaskets - Metal Asbestos Composite",
-    "hsn_code": "68129922",
+    "hsn_code": "68129022",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -5667,7 +5667,7 @@
     "description": "Gaskets - Metal Asbestos Composite, High Temperature",
     "hsn_code": "68129922",
     "unit": "PCS",
-    "unit_cost_inr": 50.0,
+    "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Articles Of Stone, Plaster, Cement, Asbestos, Mica"
   },
@@ -6017,9 +6017,9 @@
   },
   {
     "description": "Bushings - Bronze",
-    "hsn_code": "74072910",
-    "unit": "KG",
-    "unit_cost_inr": 120.5,
+    "hsn_code": "74040024",
+    "unit": "PCS",
+    "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Copper And Articles Thereof"
   },
@@ -6050,16 +6050,16 @@
   {
     "description": "Bushings - Stainless Steel",
     "hsn_code": "72221999",
-    "unit": "PCS",
+    "unit": "KGS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Iron And Steel"
   },
   {
     "description": "Seals - Lip Type, Rubber, Inch, Metric",
-    "hsn_code": "40169390",
+    "hsn_code": "40169330",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 0.5,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
   },
@@ -6107,7 +6107,7 @@
     "description": "Seals - Lip Type, Rubber, Inch, Metric, Custom",
     "hsn_code": "40169330",
     "unit": "PCS",
-    "unit_cost_inr": 0.5,
+    "unit_cost_inr": 0.01,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
   },
@@ -6161,9 +6161,9 @@
   },
   {
     "description": "Seals - Lip Type, Rubber, Inch, Metric, Custom, Special",
-    "hsn_code": "40169390",
+    "hsn_code": "40169330",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 0.5,
     "gst_rate": 18,
     "category": "Rubber And Articles Thereof"
   },
@@ -6265,7 +6265,7 @@
   },
   {
     "description": "Bushings - Brass, Inch, Custom",
-    "hsn_code": "74198030",
+    "hsn_code": "74199930",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -6275,7 +6275,7 @@
     "description": "Gaskets - Metal Jacketed, Inch, Metric, Custom, Special, Standard, Customized",
     "hsn_code": "84841010",
     "unit": "PCS",
-    "unit_cost_inr": 0.01,
+    "unit_cost_inr": 5.0,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
@@ -6289,7 +6289,7 @@
   },
   {
     "description": "Clips - Wire, Hexagonal",
-    "hsn_code": "72299040",
+    "hsn_code": "72299031",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -6329,7 +6329,7 @@
   },
   {
     "description": "Freight - Domestic",
-    "hsn_code": "996532",
+    "hsn_code": "999800",
     "unit": "PCS",
     "unit_cost_inr": 0.01,
     "gst_rate": 18,
@@ -6384,794 +6384,314 @@
     "category": "Project Imports, Laboratory Chemicals, Passengers "
   },
   {
-    "description": "WASTE AND SCRAP, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "81029700",
-    "unit": "KG",
-    "unit_cost_inr": 43589.56,
-    "gst_rate": 18,
-    "category": "Other Base Metals; Cermets; Articles Thereof"
-  },
-  {
-    "description": "OTHER, Grade A — Automotive Fasteners",
-    "hsn_code": "96062990",
-    "unit": "PCS",
-    "unit_cost_inr": 29550.21,
-    "gst_rate": 18,
-    "category": "Miscellaneous Manufactured Articles"
-  },
-  {
-    "description": "SHIRTING FABRICS, BIS Certified — Automotive Fasteners",
-    "hsn_code": "52114330",
-    "unit": "MTR",
-    "unit_cost_inr": 643.06,
+    "description": "FOLIAGE, BRANCHES AND OTHER PARTS OF PLANTS, WITHOUT FLOWERS OR FLOWER BUDS, AND, IS Grade — Automotive Fasteners",
+    "hsn_code": "06049900",
+    "unit": "LTR",
+    "unit_cost_inr": 1072.58,
     "gst_rate": 5,
-    "category": "Cotton"
+    "category": "Live Trees And Other Plants , Bulbs, Roots And The"
   },
   {
-    "description": "FISH, FRESH OR CHILLED, EXCLUDING FISH FILLETS AND OTHER FISH MEAT OF HEADING 03, IS Grade — Automotive Fasteners",
-    "hsn_code": "03026600",
-    "unit": "PCS",
-    "unit_cost_inr": 564.66,
-    "gst_rate": 5,
-    "category": "Fish And Crustaceans, Molluscs And Other Aquatic I"
-  },
-  {
-    "description": "OTHER, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "54031090",
-    "unit": "SQM",
-    "unit_cost_inr": 1208.11,
-    "gst_rate": 5,
-    "category": "Man-Made Filaments; Strip And The Like Of Man-Made"
-  },
-  {
-    "description": "OTHER KG, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "08041090",
-    "unit": "PCS",
-    "unit_cost_inr": 119.22,
-    "gst_rate": 0,
-    "category": "Edible Fruit And Nuts; Peel Of Citrus Fruit Or Mel"
-  },
-  {
-    "description": "PHOTOGRAPHIC PAPER OR PAPERBOARD, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "37032010",
-    "unit": "SQM",
-    "unit_cost_inr": 26000.49,
-    "gst_rate": 18,
-    "category": "Photographic Or Cinematographic Goods"
-  },
-  {
-    "description": "OTHER, Industrial Grade — Automotive Fasteners",
+    "description": "OTHER, Standard Grade — Automotive Fasteners",
     "hsn_code": "96071990",
     "unit": "PCS",
-    "unit_cost_inr": 18698.0,
+    "unit_cost_inr": 12308.92,
     "gst_rate": 18,
     "category": "Miscellaneous Manufactured Articles"
   },
   {
-    "description": "OTHER, Grade A — Automotive Fasteners",
-    "hsn_code": "85364900",
+    "description": "PRINTING MACHINERY USED FOR PRINTING BY MEANS OF PLATES, CYLINDERS AND OTHERPRIN, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "84439970",
     "unit": "SET",
-    "unit_cost_inr": 7205.79,
+    "unit_cost_inr": 35225.67,
+    "gst_rate": 18,
+    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
+  },
+  {
+    "description": "Other Cargo And Baggage Handling Services — Automotive Fasteners",
+    "hsn_code": "996719",
+    "unit": "NOS",
+    "unit_cost_inr": 10772.65,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OF STONE, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "97031020",
+    "unit": "SQM",
+    "unit_cost_inr": 596.7,
+    "gst_rate": 12,
+    "category": "Works Of Art, Collectors' Pieces And Antiques"
+  },
+  {
+    "description": "ELECTRIC PORTABLE GENERATORS OF AN OUTPUT NOT EXCEEDING 3.5 KVA, Standard Grade — Automotive Fasteners",
+    "hsn_code": "85022010",
+    "unit": "SET",
+    "unit_cost_inr": 40400.6,
     "gst_rate": 18,
     "category": "Electrical Machinery And Equipment And Parts There"
   },
   {
-    "description": "SHIRTING, Export Quality — Automotive Fasteners",
-    "hsn_code": "52114130",
-    "unit": "MTR",
-    "unit_cost_inr": 714.24,
-    "gst_rate": 5,
-    "category": "Cotton"
-  },
-  {
-    "description": "OTHER, BIS Certified — Automotive Fasteners",
-    "hsn_code": "15099090",
+    "description": "LINT, MEDICATED, IS Grade — Automotive Fasteners",
+    "hsn_code": "30059030",
     "unit": "LTR",
-    "unit_cost_inr": 106.02,
-    "gst_rate": 5,
-    "category": "Animal,Vegetable Or Microbial Fats And Oils And Th"
-  },
-  {
-    "description": "MECHANICAL STOKERS, MECHANICAL GRATES, MECHANICAL ASH DISCHARGERS AND SIMILAR AP, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "84163000",
-    "unit": "SET",
-    "unit_cost_inr": 25422.47,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "CINNAMIC ALDEHYDE, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "29122910",
-    "unit": "KG",
-    "unit_cost_inr": 33693.57,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "OTHER, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "48022090",
-    "unit": "ROLL",
-    "unit_cost_inr": 14739.07,
-    "gst_rate": 12,
-    "category": "Paper And Paperboard, Articles Of Paper Pulp, Of P"
-  },
-  {
-    "description": "ZIP FASTENERS, IS Grade — Automotive Fasteners",
-    "hsn_code": "96071910",
-    "unit": "PCS",
-    "unit_cost_inr": 27405.41,
-    "gst_rate": 18,
-    "category": "Miscellaneous Manufactured Articles"
-  },
-  {
-    "description": "CONCRETE MIXERS, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "84743110",
-    "unit": "SQM",
-    "unit_cost_inr": 45337.77,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "BLEACHED, Grade A — Automotive Fasteners",
-    "hsn_code": "54072020",
-    "unit": "SQM",
-    "unit_cost_inr": 1650.15,
-    "gst_rate": 5,
-    "category": "Man-Made Filaments; Strip And The Like Of Man-Made"
-  },
-  {
-    "description": "BELT FASTENERS FOR MACHINERY BELTS, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "73269020",
-    "unit": "SET",
-    "unit_cost_inr": 46048.29,
-    "gst_rate": 18,
-    "category": "Articles Of Iron Or Steel"
-  },
-  {
-    "description": "OTHER VIDEO CONTROL UNIT, BIS Certified — Automotive Fasteners",
-    "hsn_code": "85437042",
-    "unit": "SET",
-    "unit_cost_inr": 47401.42,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "PILE-DRIVERS, BIS Certified — Automotive Fasteners",
-    "hsn_code": "84301010",
-    "unit": "SET",
-    "unit_cost_inr": 21450.82,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "OIL-CAKE AND OIL-CAKE MEAL, UNDECORTICATED, EXPELLER VARIETY, Export Quality — Automotive Fasteners",
-    "hsn_code": "23061030",
-    "unit": "LTR",
-    "unit_cost_inr": 473.13,
-    "gst_rate": 5,
-    "category": "Residues And Waste From The Food Industries; Prepa"
-  },
-  {
-    "description": "Goods Transport Agency Services For Other Modes Of Transport — Automotive Fasteners",
-    "hsn_code": "996792",
-    "unit": "NOS",
-    "unit_cost_inr": 49859.61,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "Other, Grade A — Automotive Fasteners",
-    "hsn_code": "84594190",
-    "unit": "ROLL",
-    "unit_cost_inr": 46180.26,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "METHYL SALICYLATE, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "29182310",
-    "unit": "LTR",
-    "unit_cost_inr": 36041.0,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "BOXES, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "48192020",
-    "unit": "SQM",
-    "unit_cost_inr": 11113.65,
-    "gst_rate": 12,
-    "category": "Paper And Paperboard, Articles Of Paper Pulp, Of P"
-  },
-  {
-    "description": "Security Systems Services — Automotive Fasteners",
-    "hsn_code": "998523",
-    "unit": "NOS",
-    "unit_cost_inr": 9916.41,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "PORTABLE BRIDGE, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "76109021",
-    "unit": "KG",
-    "unit_cost_inr": 27301.66,
-    "gst_rate": 18,
-    "category": "Project Imports, Laboratory Chemicals, Passengers "
-  },
-  {
-    "description": "OTHER, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "33061090",
-    "unit": "LTR",
-    "unit_cost_inr": 10224.01,
-    "gst_rate": 18,
-    "category": "Essential Oils And Resinoids, Perfumery, Cosmetic "
-  },
-  {
-    "description": "WASTE OF SHEEPS AND LAMBS WOOL, Export Quality — Automotive Fasteners",
-    "hsn_code": "51032010",
-    "unit": "MTR",
-    "unit_cost_inr": 401.64,
-    "gst_rate": 5,
-    "category": "Wool, Fine Or Coarse Animal Hair; Horsehair Yarn A"
-  },
-  {
-    "description": "MACKEREL (SCOMBER SCOMBRUS, SCOMBER AUSTRALASICUS, SCOMBER JAPONICUS), Industrial Grade — Automotive Fasteners",
-    "hsn_code": "03035400",
-    "unit": "PCS",
-    "unit_cost_inr": 456.71,
-    "gst_rate": 5,
-    "category": "Fish And Crustaceans, Molluscs And Other Aquatic I"
-  },
-  {
-    "description": "For snake venom, IS Grade — Automotive Fasteners",
-    "hsn_code": "30021240",
-    "unit": "MTR",
-    "unit_cost_inr": 1120.02,
-    "gst_rate": 5,
-    "category": "Pharmaceutical Products"
-  },
-  {
-    "description": "WIRE GAUZE (WIRE CLOTH, WIRE MESH), ISO 9001 — Automotive Fasteners",
-    "hsn_code": "73141910",
-    "unit": "MTR",
-    "unit_cost_inr": 12198.15,
-    "gst_rate": 18,
-    "category": "Articles Of Iron Or Steel"
-  },
-  {
-    "description": "TRACTORS (OTHER THAN TRACTORS OF HEADING 8709 OTHER : OF ENGINE CAPACITY NOT EXC, Standard Grade — Automotive Fasteners",
-    "hsn_code": "87019010",
-    "unit": "ROLL",
-    "unit_cost_inr": 14746.73,
-    "gst_rate": 12,
-    "category": "Vehicles Other Than Railway Or Tramway Rolling-Sto"
-  },
-  {
-    "description": "FOOTWEAR WITH OUTER SOLES OF LEATHER OR COMPOSITION LEATHER, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "64042000",
-    "unit": "SQM",
-    "unit_cost_inr": 40682.03,
-    "gst_rate": 18,
-    "category": "Footwear, Gaiters And The Like; Parts Of Such Arti"
-  },
-  {
-    "description": "Other, Export Quality — Automotive Fasteners",
-    "hsn_code": "44219119",
-    "unit": "KG",
-    "unit_cost_inr": 3548.38,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "BROAD GUAGE BOGIE EIGHT WHEELER WAGONS OF PAY-LOAD EXCEEDING 60 TONNES BUT NOT E, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "86069220",
-    "unit": "ROLL",
-    "unit_cost_inr": 3595.82,
-    "gst_rate": 12,
-    "category": "Railway Or Tramway Locomotives, Rolling-Stock And "
-  },
-  {
-    "description": "Other Similar Services Nowhere Else Classified — Automotive Fasteners",
-    "hsn_code": "998229",
-    "unit": "NOS",
-    "unit_cost_inr": 37400.35,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "Legal Advisory And Representation Services Concerning Other Fields Of Law — Automotive Fasteners",
-    "hsn_code": "998212",
-    "unit": "NOS",
-    "unit_cost_inr": 11591.5,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "PARTICLE BOARD AND SIMILAR BOARD (FOR EXAMPLE, ORIENTED STRAND BOARD AND WAFER B, IS Grade — Automotive Fasteners",
-    "hsn_code": "44103920",
-    "unit": "SQM",
-    "unit_cost_inr": 13808.87,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "PLAIN PARTICLE BOARD, Standard Grade — Automotive Fasteners",
-    "hsn_code": "44109010",
-    "unit": "SQM",
-    "unit_cost_inr": 6505.24,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "Installation Services Of Office And Accounting Machinery And Computers — Automotive Fasteners",
-    "hsn_code": "998733",
-    "unit": "NOS",
-    "unit_cost_inr": 47908.08,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "SISSOO (DALBERGIA SISSO), Export Quality — Automotive Fasteners",
-    "hsn_code": "44039927",
-    "unit": "MTR",
-    "unit_cost_inr": 14854.29,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "APPLES, Export Quality — Automotive Fasteners",
-    "hsn_code": "08133000",
-    "unit": "PCS",
-    "unit_cost_inr": 70.63,
-    "gst_rate": 0,
-    "category": "Edible Fruit And Nuts; Peel Of Citrus Fruit Or Mel"
-  },
-  {
-    "description": "PETROLEUM OILS AND OILS OBTAINED FROM BITUMINOUS MINERALS, OTHER THAN CRUDE; PRE, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "27101970",
-    "unit": "SQM",
-    "unit_cost_inr": 380.71,
-    "gst_rate": 0,
-    "category": "Mineral Fuels, Mineral Oils And Products Of Their "
-  },
-  {
-    "description": "CONTAINING NITRATES AND PHOSPHATES, Export Quality — Automotive Fasteners",
-    "hsn_code": "31055100",
-    "unit": "KG",
-    "unit_cost_inr": 676.22,
-    "gst_rate": 5,
-    "category": "Fertilisers"
-  },
-  {
-    "description": "OF CROSS SECTION – HALF ROUND, Standard Grade — Automotive Fasteners",
-    "hsn_code": "72179011",
-    "unit": "MTR",
-    "unit_cost_inr": 25346.41,
-    "gst_rate": 18,
-    "category": "Iron And Steel"
-  },
-  {
-    "description": "Accounting And Bookkeeping Services — Automotive Fasteners",
-    "hsn_code": "998222",
-    "unit": "NOS",
-    "unit_cost_inr": 31174.18,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "PHENOLS; PHENOL-ALCOHOLS - MONOPHENOLS : XYLENOLS AND THEIR SALTS, BIS Certified — Automotive Fasteners",
-    "hsn_code": "29071400",
-    "unit": "KG",
-    "unit_cost_inr": 29614.9,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "OTHER, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "85392990",
-    "unit": "SET",
-    "unit_cost_inr": 3167.84,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "Pyridaben, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "29142960",
-    "unit": "KG",
-    "unit_cost_inr": 49049.28,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "Other Security Services Nowhere Else Classified — Automotive Fasteners",
-    "hsn_code": "998529",
-    "unit": "NOS",
-    "unit_cost_inr": 27687.14,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "CRESYLIC ACID, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "29071220",
-    "unit": "LTR",
-    "unit_cost_inr": 18424.86,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "Other, Export Quality — Automotive Fasteners",
-    "hsn_code": "44032390",
-    "unit": "MTR",
-    "unit_cost_inr": 1409.75,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "ETHAMBUTOL, Export Quality — Automotive Fasteners",
-    "hsn_code": "30042094",
-    "unit": "SET",
-    "unit_cost_inr": 2833.12,
+    "unit_cost_inr": 7212.03,
     "gst_rate": 12,
     "category": "Pharmaceutical Products"
   },
   {
-    "description": "Other, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "44032290",
-    "unit": "MTR",
-    "unit_cost_inr": 11217.0,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "NATURAL INDIGO, Grade A — Automotive Fasteners",
-    "hsn_code": "32030040",
-    "unit": "SQM",
-    "unit_cost_inr": 25607.53,
-    "gst_rate": 18,
-    "category": "Tanning Or Dyeing Extracts; Tannins And Their Deri"
-  },
-  {
-    "description": "OTHER, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "40081990",
-    "unit": "MTR",
-    "unit_cost_inr": 46991.19,
-    "gst_rate": 18,
-    "category": "Rubber And Articles Thereof"
-  },
-  {
-    "description": "Security Consulting Services — Automotive Fasteners",
-    "hsn_code": "998522",
-    "unit": "NOS",
-    "unit_cost_inr": 35483.37,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "BASIC BLACK, Standard Grade — Automotive Fasteners",
-    "hsn_code": "32041393",
-    "unit": "SQM",
-    "unit_cost_inr": 5197.86,
-    "gst_rate": 18,
-    "category": "Tanning Or Dyeing Extracts; Tannins And Their Deri"
-  },
-  {
-    "description": "Other, IS Grade — Automotive Fasteners",
-    "hsn_code": "71081290",
-    "unit": "KG",
-    "unit_cost_inr": 9946.12,
-    "gst_rate": 3,
-    "category": "Natural Or Cultured Pearls, Precious Or Semi-Preci"
-  },
-  {
-    "description": "RECORDS, TAPES AND OTHER RECORDED MEDIA FOR SOUND OR OTHER SIMILARLY RECORDED PH, Grade A — Automotive Fasteners",
-    "hsn_code": "85245319",
-    "unit": "SQM",
-    "unit_cost_inr": 15721.57,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "RIGID, PLAIN, BIS Certified — Automotive Fasteners",
-    "hsn_code": "39206310",
-    "unit": "SQM",
-    "unit_cost_inr": 42844.75,
-    "gst_rate": 18,
-    "category": "Plastics And Articles Thereof"
-  },
-  {
-    "description": "OTHER LIVE ANIMALS - OTHER - OTHER, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "01069090",
-    "unit": "PCS",
-    "unit_cost_inr": 110.82,
-    "gst_rate": 0,
-    "category": "Live Animals"
-  },
-  {
-    "description": "CARDED, IS Grade — Automotive Fasteners",
-    "hsn_code": "51081000",
-    "unit": "MTR",
-    "unit_cost_inr": 1832.03,
-    "gst_rate": 5,
-    "category": "Wool, Fine Or Coarse Animal Hair; Horsehair Yarn A"
-  },
-  {
-    "description": "TILAPIAS (OREOCHROMIS SPP.), CATFISH (PANGASIU SPP.,SILURUS SPP., CLARIAS SPP., , ISO 9001 — Automotive Fasteners",
-    "hsn_code": "03045100",
-    "unit": "MTR",
-    "unit_cost_inr": 313.08,
-    "gst_rate": 5,
-    "category": "Fish And Crustaceans, Molluscs And Other Aquatic I"
-  },
-  {
-    "description": "REFINED BLEACHED DEODORISED PALM STEARIN, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "15119030",
-    "unit": "LTR",
-    "unit_cost_inr": 1108.8,
-    "gst_rate": 5,
-    "category": "Animal,Vegetable Or Microbial Fats And Oils And Th"
-  },
-  {
-    "description": "PARTS AND ACCESSORIES, Standard Grade — Automotive Fasteners",
-    "hsn_code": "90139000",
-    "unit": "SQM",
-    "unit_cost_inr": 40581.66,
-    "gst_rate": 18,
-    "category": "Optical, Photographic, Cinematographic, Measuring,"
-  },
-  {
-    "description": "OTHER SPORTING, HUNTING OR TARGET-SHOOTING RIFLES, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "93033000",
+    "description": "OTHER, Export Quality — Automotive Fasteners",
+    "hsn_code": "84141090",
     "unit": "SET",
-    "unit_cost_inr": 3595.27,
-    "gst_rate": 12,
-    "category": "Arms And Ammunition; Parts And Accessories Thereof"
-  },
-  {
-    "description": "Engineering Advisory Services — Automotive Fasteners",
-    "hsn_code": "998331",
-    "unit": "NOS",
-    "unit_cost_inr": 49695.96,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "PARTS OF COTTON WEAVING MACHINERY, Export Quality — Automotive Fasteners",
-    "hsn_code": "84484910",
-    "unit": "SQM",
-    "unit_cost_inr": 7969.55,
+    "unit_cost_inr": 42278.45,
     "gst_rate": 18,
     "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
   {
-    "description": "PAPAIN, PURE, OF PHARMACEUTICAL GRADE, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "35079071",
-    "unit": "BOX",
-    "unit_cost_inr": 30234.07,
-    "gst_rate": 18,
-    "category": "Albuminoidal Substances; Modified Starches; Glues;"
-  },
-  {
-    "description": "ELECTRIC ACCUMULATORS, INCLUDING SEPARATORS THEREFOR, WHETHER OR NOT RECTANGULAR, Standard Grade — Automotive Fasteners",
-    "hsn_code": "85074000",
-    "unit": "SET",
-    "unit_cost_inr": 8434.29,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "AMPHIBOLE, IS Grade — Automotive Fasteners",
-    "hsn_code": "25249022",
-    "unit": "SQM",
-    "unit_cost_inr": 1441.85,
-    "gst_rate": 5,
-    "category": "Salt, Sulphur, Earths And Stone, Plastering Materi"
-  },
-  {
-    "description": "AUTOMATIC DATA PROCESSING MACHINES AND UNITS THEREOF; MAGNETIC OR OPTICAL READER, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "84716022",
-    "unit": "SQM",
-    "unit_cost_inr": 39755.78,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "OTHER, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "70051090",
-    "unit": "MTR",
-    "unit_cost_inr": 26324.06,
-    "gst_rate": 18,
-    "category": "Glass And Glassware"
-  },
-  {
-    "description": "PRESS-FASTENERS, SNAP-FASTENERS AND PRESS-STUDS, Standard Grade — Automotive Fasteners",
-    "hsn_code": "96061010",
+    "description": "HOMOGENISED COMPOSITE FOOD PREPARATIONS, Standard Grade — Automotive Fasteners",
+    "hsn_code": "21042000",
     "unit": "PCS",
-    "unit_cost_inr": 38501.02,
+    "unit_cost_inr": 15702.95,
     "gst_rate": 18,
-    "category": "Miscellaneous Manufactured Articles"
-  },
-  {
-    "description": "Installation Services Of Professional Medical Machinery And Equipment, And Precision And Optical Instruments — Automotive Fasteners",
-    "hsn_code": "998735",
-    "unit": "NOS",
-    "unit_cost_inr": 40831.35,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "SHEETS FOR PLYWOODS, IS Grade — Automotive Fasteners",
-    "hsn_code": "44083910",
-    "unit": "SQM",
-    "unit_cost_inr": 3268.36,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "ZIP FASTENERS, IS Grade — Automotive Fasteners",
-    "hsn_code": "96071110",
-    "unit": "KG",
-    "unit_cost_inr": 1500.12,
-    "gst_rate": 18,
-    "category": "Miscellaneous Manufactured Articles"
-  },
-  {
-    "description": "Installation Services Of Electrical Machinery And Apparatus Nowhere Else Classified — Automotive Fasteners",
-    "hsn_code": "998736",
-    "unit": "NOS",
-    "unit_cost_inr": 24651.14,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "LIVE HORSES, ASSES, MULES AND HINNIES PURE-BRED BREEDING ANIMAL S OTHER, IS Grade — Automotive Fasteners",
-    "hsn_code": "01011090",
-    "unit": "PCS",
-    "unit_cost_inr": 478.61,
-    "gst_rate": 0,
-    "category": "Live Animals"
-  },
-  {
-    "description": "METHACRYLIC ACID, BIS Certified — Automotive Fasteners",
-    "hsn_code": "29161310",
-    "unit": "LTR",
-    "unit_cost_inr": 24597.06,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "Containing bromochlorodifluoromethane, bromotrifluoromethane or dibromotetrafluo, Standard Grade — Automotive Fasteners",
-    "hsn_code": "38130010",
-    "unit": "MTR",
-    "unit_cost_inr": 5818.9,
-    "gst_rate": 18,
-    "category": "Miscellaneous Chemical Products"
-  },
-  {
-    "description": "OTHER, BIS Certified — Automotive Fasteners",
-    "hsn_code": "85094090",
-    "unit": "SET",
-    "unit_cost_inr": 4726.08,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "OF A THICKNESS OF 3 MM TO 4.75 MM, IS Grade — Automotive Fasteners",
-    "hsn_code": "72255020",
-    "unit": "ROLL",
-    "unit_cost_inr": 15508.24,
-    "gst_rate": 18,
-    "category": "Iron And Steel"
-  },
-  {
-    "description": "HOT, Standard Grade — Automotive Fasteners",
-    "hsn_code": "84552110",
-    "unit": "SET",
-    "unit_cost_inr": 48998.15,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "DYED, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "52053330",
-    "unit": "LTR",
-    "unit_cost_inr": 1122.21,
-    "gst_rate": 5,
-    "category": "Cotton"
+    "category": "Miscellaneous Edible Preparations"
   },
   {
     "description": "Freight Reinsurance Services — Automotive Fasteners",
     "hsn_code": "997145",
     "unit": "NOS",
-    "unit_cost_inr": 25938.36,
+    "unit_cost_inr": 7350.85,
     "gst_rate": 18,
     "category": "All Services"
   },
   {
-    "description": "ACETO ACETIC PARA CHLORANILIDE, BIS Certified — Automotive Fasteners",
-    "hsn_code": "29242940",
-    "unit": "LTR",
-    "unit_cost_inr": 26901.46,
+    "description": "Bromadiolone conforming to IS 12914, Standard Grade — Automotive Fasteners",
+    "hsn_code": "38089911",
+    "unit": "MTR",
+    "unit_cost_inr": 38218.02,
     "gst_rate": 18,
-    "category": "Organic Chemicals"
+    "category": "Miscellaneous Chemical Products"
   },
   {
-    "description": "OTHER, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "32041790",
-    "unit": "SQM",
-    "unit_cost_inr": 26163.61,
+    "description": "ZIP FASTENERS, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "96071110",
+    "unit": "KG",
+    "unit_cost_inr": 34678.44,
     "gst_rate": 18,
-    "category": "Tanning Or Dyeing Extracts; Tannins And Their Deri"
+    "category": "Miscellaneous Manufactured Articles"
   },
   {
-    "description": "OTHER, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "97039090",
-    "unit": "SQM",
-    "unit_cost_inr": 1142.62,
-    "gst_rate": 12,
-    "category": "Works Of Art, Collectors' Pieces And Antiques"
-  },
-  {
-    "description": "JUTE FABRICS AND ARTICLES USED IN MACHINERY OR PLANT, Export Quality — Automotive Fasteners",
-    "hsn_code": "59113240",
-    "unit": "SQM",
-    "unit_cost_inr": 4407.96,
-    "gst_rate": 12,
-    "category": "Impregnated, Coated, Covered Or Laminated Textile "
-  },
-  {
-    "description": "OTHER, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "64059000",
-    "unit": "PCS",
-    "unit_cost_inr": 44862.78,
+    "description": "Other, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "84439990",
+    "unit": "SET",
+    "unit_cost_inr": 26026.72,
     "gst_rate": 18,
-    "category": "Footwear, Gaiters And The Like; Parts Of Such Arti"
+    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
   {
-    "description": "SYRINGES, WITH OR WITHOUT NEEDLES, Export Quality — Automotive Fasteners",
-    "hsn_code": "90183100",
-    "unit": "SQM",
-    "unit_cost_inr": 6663.86,
-    "gst_rate": 12,
-    "category": "Optical, Photographic, Cinematographic, Measuring,"
-  },
-  {
-    "description": "FRICTION MATERIAL AND ARTICLES THEREOF (FOR EXAMPLE, SHEETS, ROLLS, STRIPS, SEGM, Grade A — Automotive Fasteners",
-    "hsn_code": "68131000",
-    "unit": "ROLL",
-    "unit_cost_inr": 21588.42,
-    "gst_rate": 18,
-    "category": "Articles Of Stone, Plaster, Cement, Asbestos, Mica"
-  },
-  {
-    "description": "POLYACETALS, OTHER POLYETHERS AND EPOXIDE RESINS, IN PRIMARY FORMS; POLYCARBONAT, Standard Grade — Automotive Fasteners",
-    "hsn_code": "39079990",
-    "unit": "LTR",
-    "unit_cost_inr": 3133.82,
+    "description": "CANES, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "39162011",
+    "unit": "MTR",
+    "unit_cost_inr": 12607.28,
     "gst_rate": 18,
     "category": "Plastics And Articles Thereof"
   },
   {
-    "description": "VAT BACK 27 (OLIVE R), Standard Grade — Automotive Fasteners",
-    "hsn_code": "32041583",
-    "unit": "SQM",
-    "unit_cost_inr": 425.41,
-    "gst_rate": 18,
-    "category": "Tanning Or Dyeing Extracts; Tannins And Their Deri"
+    "description": "WITH MAXIMUM TAKE-OFF WEIGHT MORE THAN 7 KG BUT NOT MORE THAN 25 KG, Export Quality — Automotive Fasteners",
+    "hsn_code": "88069300",
+    "unit": "KG",
+    "unit_cost_inr": 640.24,
+    "gst_rate": 5,
+    "category": "Aircraft, Spacecraft, And Parts Thereof"
   },
   {
-    "description": "MULTIMETERS WITH A RECORDING DEVICE, IS Grade — Automotive Fasteners",
-    "hsn_code": "90303200",
-    "unit": "SQM",
-    "unit_cost_inr": 38823.19,
+    "description": "Project Management Services For Construction Projects — Automotive Fasteners",
+    "hsn_code": "998339",
+    "unit": "NOS",
+    "unit_cost_inr": 47795.81,
     "gst_rate": 18,
-    "category": "Optical, Photographic, Cinematographic, Measuring,"
+    "category": "All Services"
   },
   {
-    "description": "WELDED ,OF STAINLESS STEEL, Standard Grade — Automotive Fasteners",
-    "hsn_code": "73061100",
+    "description": "OTHER, IS Grade — Automotive Fasteners",
+    "hsn_code": "85451900",
+    "unit": "SET",
+    "unit_cost_inr": 29102.61,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "Installation Services Of Office And Accounting Machinery And Computers — Automotive Fasteners",
+    "hsn_code": "998733",
+    "unit": "NOS",
+    "unit_cost_inr": 44043.06,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OTHER, IS Grade — Automotive Fasteners",
+    "hsn_code": "58071090",
+    "unit": "SQM",
+    "unit_cost_inr": 9364.22,
+    "gst_rate": 12,
+    "category": "Special Woven Fabrics; Tufted Textile Fabrics; Lac"
+  },
+  {
+    "description": "Other Security Services Nowhere Else Classified — Automotive Fasteners",
+    "hsn_code": "998529",
+    "unit": "NOS",
+    "unit_cost_inr": 553.84,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OTHER, Grade A — Automotive Fasteners",
+    "hsn_code": "82074090",
+    "unit": "SET",
+    "unit_cost_inr": 17935.2,
+    "gst_rate": 18,
+    "category": "Tools, Implements, Cutlery, Spoons And Forks, Of B"
+  },
+  {
+    "description": "OTHER, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "54083490",
+    "unit": "SQM",
+    "unit_cost_inr": 472.78,
+    "gst_rate": 5,
+    "category": "Man-Made Filaments; Strip And The Like Of Man-Made"
+  },
+  {
+    "description": "OTHER, Grade A — Automotive Fasteners",
+    "hsn_code": "50060029",
     "unit": "MTR",
-    "unit_cost_inr": 3777.1,
+    "unit_cost_inr": 1591.33,
+    "gst_rate": 5,
+    "category": "Silk"
+  },
+  {
+    "description": "Supply Consisting Only Of E-Book. — Automotive Fasteners",
+    "hsn_code": "998435",
+    "unit": "NOS",
+    "unit_cost_inr": 49506.86,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Goods Transport Agency Services For Other Modes Of Transport — Automotive Fasteners",
+    "hsn_code": "996792",
+    "unit": "NOS",
+    "unit_cost_inr": 22709.78,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "PLYWOOD, VENEERED PANELS AND SIMILAR LAMINATED WOOD - PLYWOOD, CONSISTING SOLELY, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "44121930",
+    "unit": "SQM",
+    "unit_cost_inr": 13061.51,
+    "gst_rate": 12,
+    "category": "Wood And Articles Of Wood; Wood Charcoal"
+  },
+  {
+    "description": "FURNISHING FABRICS (EXCLUDING PILE AND CHENILLE FABRICS), Industrial Grade — Automotive Fasteners",
+    "hsn_code": "52095220",
+    "unit": "MTR",
+    "unit_cost_inr": 125.51,
+    "gst_rate": 5,
+    "category": "Cotton"
+  },
+  {
+    "description": "PRESS-FASTENERS, SNAP-FASTENERS AND PRESS-STUDS, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "96061010",
+    "unit": "PCS",
+    "unit_cost_inr": 2018.82,
+    "gst_rate": 18,
+    "category": "Miscellaneous Manufactured Articles"
+  },
+  {
+    "description": "BASE STATIONS, Export Quality — Automotive Fasteners",
+    "hsn_code": "85176100",
+    "unit": "SET",
+    "unit_cost_inr": 47280.72,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "Security Consulting Services — Automotive Fasteners",
+    "hsn_code": "998522",
+    "unit": "NOS",
+    "unit_cost_inr": 23474.54,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "CHLORDIMEFORM (ISO), Export Quality — Automotive Fasteners",
+    "hsn_code": "29252100",
+    "unit": "KG",
+    "unit_cost_inr": 7418.82,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "POLY (VINYL ACETATE) AND RESINS, Standard Grade — Automotive Fasteners",
+    "hsn_code": "39051920",
+    "unit": "LTR",
+    "unit_cost_inr": 49165.31,
+    "gst_rate": 18,
+    "category": "Plastics And Articles Thereof"
+  },
+  {
+    "description": "Other Sanitation Services Nowhere Else Classified — Automotive Fasteners",
+    "hsn_code": "999459",
+    "unit": "NOS",
+    "unit_cost_inr": 13044.34,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "PAINTINGS, DRAWINGS AND PASTELS, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "97019100",
+    "unit": "LTR",
+    "unit_cost_inr": 3025.26,
+    "gst_rate": 12,
+    "category": "Works Of Art, Collectors' Pieces And Antiques"
+  },
+  {
+    "description": "Other Supporting Services For Road Transport Nowhere Else Classified — Automotive Fasteners",
+    "hsn_code": "996749",
+    "unit": "NOS",
+    "unit_cost_inr": 32847.0,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "POTENTIOMETERS, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "85333910",
+    "unit": "SET",
+    "unit_cost_inr": 26392.03,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "Pension Fund Management Services — Automotive Fasteners",
+    "hsn_code": "997164",
+    "unit": "NOS",
+    "unit_cost_inr": 33616.65,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "WIRE GAUZE (WIRE CLOTH, WIRE MESH), Grade A — Automotive Fasteners",
+    "hsn_code": "73141910",
+    "unit": "MTR",
+    "unit_cost_inr": 33002.67,
+    "gst_rate": 18,
+    "category": "Articles Of Iron Or Steel"
+  },
+  {
+    "description": "OTHER, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "73043129",
+    "unit": "ROLL",
+    "unit_cost_inr": 39835.88,
     "gst_rate": 18,
     "category": "Articles Of Iron Or Steel"
   },
@@ -7179,824 +6699,1304 @@
     "description": "Payroll Services — Automotive Fasteners",
     "hsn_code": "998223",
     "unit": "NOS",
-    "unit_cost_inr": 7470.12,
+    "unit_cost_inr": 27812.15,
     "gst_rate": 18,
     "category": "All Services"
   },
   {
-    "description": "THE FOLLOWING GOODS FOR USE IN MANUFACTURE OF CELLULAR MOBILE PHONES, NAMELY :-(, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "40169990",
-    "unit": "PCS",
-    "unit_cost_inr": 38288.27,
-    "gst_rate": 18,
-    "category": "Rubber And Articles Thereof"
-  },
-  {
-    "description": "OIL-CAKE AND OIL-CAKE MEAL, EXPELLER VARIETY, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "23063010",
-    "unit": "LTR",
-    "unit_cost_inr": 1331.17,
-    "gst_rate": 5,
-    "category": "Residues And Waste From The Food Industries; Prepa"
-  },
-  {
-    "description": "OTHER, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "39262049",
-    "unit": "SQM",
-    "unit_cost_inr": 22459.28,
-    "gst_rate": 18,
-    "category": "Plastics And Articles Thereof"
-  },
-  {
-    "description": "Installation Services Of Fabricated Metal Products, Except Machinery And Equipment — Automotive Fasteners",
-    "hsn_code": "998731",
-    "unit": "NOS",
-    "unit_cost_inr": 11766.06,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "INULIN, Grade A — Automotive Fasteners",
-    "hsn_code": "11082000",
+    "description": "WIRE GAUZE (WIRE CLOTH, WIRE MESH), Industrial Grade — Automotive Fasteners",
+    "hsn_code": "73141410",
     "unit": "MTR",
-    "unit_cost_inr": 395.44,
-    "gst_rate": 0,
-    "category": "Products Of The Milling Industry; Malt; Starches; "
-  },
-  {
-    "description": "Other Similar Services Nowhere Else Classified — Automotive Fasteners",
-    "hsn_code": "998224",
-    "unit": "NOS",
-    "unit_cost_inr": 922.17,
+    "unit_cost_inr": 5894.92,
     "gst_rate": 18,
-    "category": "All Services"
+    "category": "Articles Of Iron Or Steel"
   },
   {
-    "description": "BLEACHED, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "55151220",
-    "unit": "MTR",
-    "unit_cost_inr": 1222.69,
-    "gst_rate": 5,
-    "category": "Man-Made Staple Fibres"
-  },
-  {
-    "description": "OTHER TOYS; REDUCED-SIZE (*SCALE*) MODELS AND SIMILAR RECREATIONAL MODELS, WORKI, BIS Certified — Automotive Fasteners",
-    "hsn_code": "95036010",
-    "unit": "PCS",
-    "unit_cost_inr": 8259.4,
-    "gst_rate": 12,
-    "category": "Toys, Games And Sports Requisites; Parts And Acces"
-  },
-  {
-    "description": "2-D/ 3D COMPUTER GRAPHICS, Standard Grade — Automotive Fasteners",
-    "hsn_code": "85238060",
-    "unit": "SQM",
-    "unit_cost_inr": 38217.79,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "ARTICLES OF ASBESTOS-CEMENT, OF CELLULOSE FIBRECEMENT OR THE LIKE OTHER ARTICLES, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "68119000",
-    "unit": "SQM",
-    "unit_cost_inr": 28969.38,
-    "gst_rate": 18,
-    "category": "Articles Of Stone, Plaster, Cement, Asbestos, Mica"
-  },
-  {
-    "description": "OTHER, Grade A — Automotive Fasteners",
-    "hsn_code": "72069019",
-    "unit": "KG",
-    "unit_cost_inr": 46965.6,
+    "description": "COLD ROLLED, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "72251920",
+    "unit": "ROLL",
+    "unit_cost_inr": 33668.98,
     "gst_rate": 18,
     "category": "Iron And Steel"
-  },
-  {
-    "description": "FOR CAMERAS, PROJECTORS OR PHOTOGRAPHIC ENLARGERS OR REDUCERS, Grade A — Automotive Fasteners",
-    "hsn_code": "90021100",
-    "unit": "SQM",
-    "unit_cost_inr": 15074.16,
-    "gst_rate": 18,
-    "category": "Optical, Photographic, Cinematographic, Measuring,"
-  },
-  {
-    "description": "OTHER, Grade A — Automotive Fasteners",
-    "hsn_code": "28399090",
-    "unit": "KG",
-    "unit_cost_inr": 1575.43,
-    "gst_rate": 18,
-    "category": "Inorganic Chemicals, Organic Or Inorganic Compound"
-  },
-  {
-    "description": "MUMBAI DUCK, BIS Certified — Automotive Fasteners",
-    "hsn_code": "03055910",
-    "unit": "KG",
-    "unit_cost_inr": 1554.06,
-    "gst_rate": 5,
-    "category": "Fish And Crustaceans, Molluscs And Other Aquatic I"
-  },
-  {
-    "description": "Pension Fund Management Services — Automotive Fasteners",
-    "hsn_code": "997164",
-    "unit": "NOS",
-    "unit_cost_inr": 31704.82,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "OTHER, Standard Grade — Automotive Fasteners",
-    "hsn_code": "29093090",
-    "unit": "SQM",
-    "unit_cost_inr": 44879.83,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "Other, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "97011090",
-    "unit": "LTR",
-    "unit_cost_inr": 11354.98,
-    "gst_rate": 12,
-    "category": "Works Of Art, Collectors' Pieces And Antiques"
-  },
-  {
-    "description": "BAUXITE (NATURAL), CALCINED, BIS Certified — Automotive Fasteners",
-    "hsn_code": "26060020",
-    "unit": "LTR",
-    "unit_cost_inr": 866.18,
-    "gst_rate": 5,
-    "category": "Ores, Slag And Ash"
-  },
-  {
-    "description": "ELECTRONIC CALCULATORS CAPABLE OF OPERATION WITHOUT AN EXTERNAL SOURCE OF ELECTR, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "84701000",
-    "unit": "SET",
-    "unit_cost_inr": 32549.7,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "CLOTH, GRILL, NETTING AND FENCING, OF ALUMINIUM WIRE, Grade A — Automotive Fasteners",
-    "hsn_code": "76169100",
-    "unit": "MTR",
-    "unit_cost_inr": 778.29,
-    "gst_rate": 18,
-    "category": "Aluminium And Articles Thereof"
-  },
-  {
-    "description": "Other Legal Services Nowhere Else Classified — Automotive Fasteners",
-    "hsn_code": "998219",
-    "unit": "NOS",
-    "unit_cost_inr": 33408.94,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "DOGFISH AND OTHER SHARKS, IS Grade — Automotive Fasteners",
-    "hsn_code": "03028100",
-    "unit": "PCS",
-    "unit_cost_inr": 1247.34,
-    "gst_rate": 5,
-    "category": "Fish And Crustaceans, Molluscs And Other Aquatic I"
   },
   {
     "description": "Other Legal Services Nowhere Else Classified — Automotive Fasteners",
     "hsn_code": "998216",
     "unit": "NOS",
-    "unit_cost_inr": 11263.82,
+    "unit_cost_inr": 35304.51,
     "gst_rate": 18,
     "category": "All Services"
   },
   {
-    "description": "OF PLASTIC, BIS Certified — Automotive Fasteners",
-    "hsn_code": "85353010",
-    "unit": "SET",
-    "unit_cost_inr": 34294.64,
+    "description": "Accounting And Bookkeeping Services — Automotive Fasteners",
+    "hsn_code": "998222",
+    "unit": "NOS",
+    "unit_cost_inr": 26915.15,
     "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
+    "category": "All Services"
   },
   {
-    "description": "PARTS, Standard Grade — Automotive Fasteners",
-    "hsn_code": "96061020",
+    "description": "FORGED BLANKS OF ALLOY STEEL, BIS Certified — Automotive Fasteners",
+    "hsn_code": "72249040",
+    "unit": "MTR",
+    "unit_cost_inr": 8458.65,
+    "gst_rate": 18,
+    "category": "Iron And Steel"
+  },
+  {
+    "description": "SPRATS, Standard Grade — Automotive Fasteners",
+    "hsn_code": "16041320",
     "unit": "PCS",
-    "unit_cost_inr": 22382.39,
+    "unit_cost_inr": 4045.88,
+    "gst_rate": 12,
+    "category": "Preparations Of Meat, Of Fish, Of Crustaceans, Mol"
+  },
+  {
+    "description": "OTHER, Export Quality — Automotive Fasteners",
+    "hsn_code": "96062990",
+    "unit": "PCS",
+    "unit_cost_inr": 11534.02,
     "gst_rate": 18,
     "category": "Miscellaneous Manufactured Articles"
   },
   {
-    "description": "WIRE GAUZE (WIRE CLOTH, WIRE MESH), IS Grade — Automotive Fasteners",
-    "hsn_code": "73141410",
-    "unit": "MTR",
-    "unit_cost_inr": 48472.91,
-    "gst_rate": 18,
-    "category": "Articles Of Iron Or Steel"
-  },
-  {
-    "description": "OTHER, IS Grade — Automotive Fasteners",
-    "hsn_code": "53039090",
-    "unit": "SQM",
-    "unit_cost_inr": 660.18,
-    "gst_rate": 5,
-    "category": "Other Vegetable Textile Fibres; Paper Yarn And Wov"
-  },
-  {
-    "description": "AZOIC COUPLING COMPONENT 2 (NAPHTHOL AS), Grade A — Automotive Fasteners",
-    "hsn_code": "32041911",
-    "unit": "SQM",
-    "unit_cost_inr": 18629.98,
-    "gst_rate": 18,
-    "category": "Tanning Or Dyeing Extracts; Tannins And Their Deri"
-  },
-  {
-    "description": "ACETATE RAYON SPUN YARN, Grade A — Automotive Fasteners",
-    "hsn_code": "55101220",
-    "unit": "MTR",
-    "unit_cost_inr": 1065.81,
-    "gst_rate": 5,
-    "category": "Man-Made Staple Fibres"
-  },
-  {
-    "description": "PLYWOOD, VENEERED PANELS AND SIMILAR LAMINATED WOOD - PLYWOOD, CONSISTING SOLELY, BIS Certified — Automotive Fasteners",
-    "hsn_code": "44121410",
-    "unit": "SQM",
-    "unit_cost_inr": 11432.5,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "IN POWDER, BIS Certified — Automotive Fasteners",
-    "hsn_code": "33061010",
-    "unit": "LTR",
-    "unit_cost_inr": 44092.85,
-    "gst_rate": 18,
-    "category": "Essential Oils And Resinoids, Perfumery, Cosmetic "
-  },
-  {
-    "description": "MAHOGANY (SWIETENIA SPP.), Export Quality — Automotive Fasteners",
-    "hsn_code": "44072100",
-    "unit": "KG",
-    "unit_cost_inr": 13929.61,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "DEAD-BURNT (SINTERED) MAGNESIA, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "25199020",
-    "unit": "SQM",
-    "unit_cost_inr": 785.31,
-    "gst_rate": 5,
-    "category": "Salt, Sulphur, Earths And Stone, Plastering Materi"
-  },
-  {
-    "description": "UNBLEACHED, BIS Certified — Automotive Fasteners",
-    "hsn_code": "55131110",
-    "unit": "MTR",
-    "unit_cost_inr": 940.44,
-    "gst_rate": 5,
-    "category": "Man-Made Staple Fibres"
-  },
-  {
-    "description": "of alarm clocks, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "91091010",
-    "unit": "PCS",
-    "unit_cost_inr": 31780.01,
-    "gst_rate": 18,
-    "category": "Clocks And Watches And Parts Thereof"
-  },
-  {
-    "description": "AUTOMATIC BUTT WELDING MACHINERY, Grade A — Automotive Fasteners",
-    "hsn_code": "85152120",
-    "unit": "SQM",
-    "unit_cost_inr": 44876.02,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "CLAWS AND WASTE OF TORTOISE SHELL, BIS Certified — Automotive Fasteners",
-    "hsn_code": "05079070",
-    "unit": "MTR",
-    "unit_cost_inr": 148.35,
-    "gst_rate": 0,
-    "category": "Products Of Animal Origin, Not Elsewhere Specified"
-  },
-  {
-    "description": "Specialised transport vehicles such as ambulances, prison vans and the like, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "87037020",
-    "unit": "ROLL",
-    "unit_cost_inr": 4580.35,
-    "gst_rate": 28,
-    "category": "Vehicles Other Than Railway Or Tramway Rolling-Sto"
-  },
-  {
-    "description": "ACID BROWN, IS Grade — Automotive Fasteners",
-    "hsn_code": "32041217",
-    "unit": "SQM",
-    "unit_cost_inr": 47977.23,
-    "gst_rate": 18,
-    "category": "Tanning Or Dyeing Extracts; Tannins And Their Deri"
-  },
-  {
-    "description": "OTHER, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "27079900",
-    "unit": "SQM",
-    "unit_cost_inr": 16201.25,
-    "gst_rate": 18,
-    "category": "Mineral Fuels, Mineral Oils And Products Of Their "
-  },
-  {
-    "description": "OF STONE, IS Grade — Automotive Fasteners",
-    "hsn_code": "97031020",
-    "unit": "SQM",
-    "unit_cost_inr": 6292.26,
-    "gst_rate": 12,
-    "category": "Works Of Art, Collectors' Pieces And Antiques"
-  },
-  {
-    "description": "OTHER STONE, Export Quality — Automotive Fasteners",
-    "hsn_code": "68029900",
-    "unit": "SQM",
-    "unit_cost_inr": 45340.54,
-    "gst_rate": 18,
-    "category": "Articles Of Stone, Plaster, Cement, Asbestos, Mica"
-  },
-  {
-    "description": "STRIP, IS Grade — Automotive Fasteners",
-    "hsn_code": "72091830",
-    "unit": "ROLL",
-    "unit_cost_inr": 8556.7,
-    "gst_rate": 18,
-    "category": "Iron And Steel"
-  },
-  {
-    "description": "META-PHENYLENE DIAMINE-4-SULPHONIC ACID, IS Grade — Automotive Fasteners",
-    "hsn_code": "29222926",
-    "unit": "LTR",
-    "unit_cost_inr": 17567.47,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "Supply Consisting Only Of E-Book. — Automotive Fasteners",
-    "hsn_code": "998435",
+    "description": "Maintenance And Repair Services Of Musical Instruments — Automotive Fasteners",
+    "hsn_code": "998726",
     "unit": "NOS",
-    "unit_cost_inr": 32125.51,
+    "unit_cost_inr": 30130.4,
     "gst_rate": 18,
     "category": "All Services"
   },
   {
-    "description": "COPPER WORKED ARTICLES, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "74198040",
-    "unit": "PCS",
-    "unit_cost_inr": 46385.91,
+    "description": "Other Similar Services Nowhere Else Classified — Automotive Fasteners",
+    "hsn_code": "998224",
+    "unit": "NOS",
+    "unit_cost_inr": 5239.57,
     "gst_rate": 18,
-    "category": "Copper And Articles Thereof"
+    "category": "All Services"
   },
   {
-    "description": "FERRO-ZIRCONIUM, Export Quality — Automotive Fasteners",
-    "hsn_code": "72029915",
-    "unit": "KG",
-    "unit_cost_inr": 32327.27,
-    "gst_rate": 18,
-    "category": "Iron And Steel"
-  },
-  {
-    "description": "AMINO ACETIC ACID (GLYCINE), Export Quality — Automotive Fasteners",
-    "hsn_code": "29224910",
-    "unit": "LTR",
-    "unit_cost_inr": 32172.84,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "COTTON SEWING THREAD, NOT CONTAINING ANY SYNTHETIC STAPLE FIBRE, Export Quality — Automotive Fasteners",
-    "hsn_code": "52042040",
-    "unit": "MTR",
-    "unit_cost_inr": 81.02,
-    "gst_rate": 5,
-    "category": "Cotton"
-  },
-  {
-    "description": "IN POWDER, Standard Grade — Automotive Fasteners",
-    "hsn_code": "25062020",
-    "unit": "SQM",
-    "unit_cost_inr": 1136.38,
-    "gst_rate": 5,
-    "category": "Salt, Sulphur, Earths And Stone, Plastering Materi"
-  },
-  {
-    "description": "1-AZABICYCLO(2,2,2)OCTAN-3-OL, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "29333930",
-    "unit": "KG",
-    "unit_cost_inr": 27715.78,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "SHIRTING FABRICS, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "52102110",
-    "unit": "MTR",
-    "unit_cost_inr": 582.17,
-    "gst_rate": 5,
-    "category": "Cotton"
-  },
-  {
-    "description": "BILLETS, Grade A — Automotive Fasteners",
-    "hsn_code": "72189910",
-    "unit": "MTR",
-    "unit_cost_inr": 46556.54,
-    "gst_rate": 18,
-    "category": "Iron And Steel"
-  },
-  {
-    "description": "UREA FORMALDEHYDE RESINS, Export Quality — Automotive Fasteners",
-    "hsn_code": "39091010",
-    "unit": "LTR",
-    "unit_cost_inr": 38362.62,
-    "gst_rate": 18,
-    "category": "Plastics And Articles Thereof"
-  },
-  {
-    "description": "AMPICILLIN AND CLOXACILLIN COMBINATIONS, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "30041060",
+    "description": "OTHER, IS Grade — Automotive Fasteners",
+    "hsn_code": "84331990",
     "unit": "SET",
-    "unit_cost_inr": 2800.43,
-    "gst_rate": 12,
-    "category": "Pharmaceutical Products"
+    "unit_cost_inr": 6645.11,
+    "gst_rate": 18,
+    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
   },
   {
-    "description": "POLYESTER SUITINGS, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "54075220",
+    "description": "SYNTHETIC FILAMENT YARN, Grade A — Automotive Fasteners",
+    "hsn_code": "54060010",
     "unit": "SQM",
-    "unit_cost_inr": 419.7,
+    "unit_cost_inr": 1479.48,
     "gst_rate": 5,
     "category": "Man-Made Filaments; Strip And The Like Of Man-Made"
   },
   {
-    "description": "Sports And Recreational Sports Facility Operation Services — Automotive Fasteners",
-    "hsn_code": "999652",
-    "unit": "NOS",
-    "unit_cost_inr": 30704.97,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "PATCH PRINTS, INCLUDING LOGOS INTENDED EXCLUSIVELY FOR EDUCATIONAL PURPOSES, Standard Grade — Automotive Fasteners",
-    "hsn_code": "37069062",
-    "unit": "SQM",
-    "unit_cost_inr": 28352.16,
-    "gst_rate": 18,
-    "category": "Photographic Or Cinematographic Goods"
-  },
-  {
-    "description": "MOTOR VEHICLES FOR THE TRANSPORT OF GOODS OTHER, WITH COMPRESSION-IGNITION INTER, Export Quality — Automotive Fasteners",
-    "hsn_code": "87042211",
-    "unit": "ROLL",
-    "unit_cost_inr": 146253.75,
-    "gst_rate": 28,
-    "category": "Vehicles Other Than Railway Or Tramway Rolling-Sto"
-  },
-  {
-    "description": "OTHER, Grade A — Automotive Fasteners",
-    "hsn_code": "05069019",
-    "unit": "LTR",
-    "unit_cost_inr": 257.73,
-    "gst_rate": 0,
-    "category": "Products Of Animal Origin, Not Elsewhere Specified"
-  },
-  {
-    "description": "OTHER FIXED VEGETABLE FATS AND OILS (INCLUDING JOJOBA OIL) AND THEIR FRACTIONS, , Industrial Grade — Automotive Fasteners",
-    "hsn_code": "15154000",
-    "unit": "LTR",
-    "unit_cost_inr": 17917.91,
-    "gst_rate": 18,
-    "category": "Animal,Vegetable Or Microbial Fats And Oils And Th"
-  },
-  {
-    "description": "MEDICAMENTS (EXCLUDING GOODS OF HEADING 3002, 3005 OR 3006) CONSISTING OF MIXED , IS Grade — Automotive Fasteners",
-    "hsn_code": "30044020",
-    "unit": "SET",
-    "unit_cost_inr": 13977.55,
-    "gst_rate": 12,
-    "category": "Pharmaceutical Products"
-  },
-  {
-    "description": "ELECTRONIC INTEGRATED CIRCUITS AND MICRO-ASSEMBLIES -CARDS INCORPORATING AN ELEC, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "85421010",
-    "unit": "SET",
-    "unit_cost_inr": 6783.34,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "INDICATOR PANELS INCORPORATING LIQUID CRYSTAL DEVICES (LCD) OR LIGHT-EMITTING DI, Standard Grade — Automotive Fasteners",
-    "hsn_code": "85312000",
-    "unit": "SQM",
-    "unit_cost_inr": 29042.48,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "OTHER, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "03038999",
-    "unit": "PCS",
-    "unit_cost_inr": 616.95,
-    "gst_rate": 5,
-    "category": "Fish And Crustaceans, Molluscs And Other Aquatic I"
-  },
-  {
-    "description": "HEPTENE (HEPTYLENE), Commercial Grade — Automotive Fasteners",
-    "hsn_code": "29012920",
+    "description": "SODIUM THIOSULPHATE (HYPO), Export Quality — Automotive Fasteners",
+    "hsn_code": "28323010",
     "unit": "KG",
-    "unit_cost_inr": 20003.87,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "PLATES AND CYLINDERS, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "84425010",
-    "unit": "SET",
-    "unit_cost_inr": 35261.42,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "OF POWER EXCEEDING 30,000 KW BUT NOT EXCEEDING 60,000 KW, Grade A — Automotive Fasteners",
-    "hsn_code": "84118230",
-    "unit": "SET",
-    "unit_cost_inr": 5794.04,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "PRINTING PAPER DYED OR MARBLED IN MASS, Grade A — Automotive Fasteners",
-    "hsn_code": "48026230",
-    "unit": "ROLL",
-    "unit_cost_inr": 6759.51,
-    "gst_rate": 12,
-    "category": "Paper And Paperboard, Articles Of Paper Pulp, Of P"
-  },
-  {
-    "description": "OTHER AUTOMOBILE LIGHTING EQUIPMENT, Export Quality — Automotive Fasteners",
-    "hsn_code": "85122020",
-    "unit": "SET",
-    "unit_cost_inr": 2616.96,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "FOR OTHER USES, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "90222900",
-    "unit": "SQM",
-    "unit_cost_inr": 16804.66,
-    "gst_rate": 18,
-    "category": "Optical, Photographic, Cinematographic, Measuring,"
-  },
-  {
-    "description": "OF MAN-MADE FIBRES, Export Quality — Automotive Fasteners",
-    "hsn_code": "63029300",
-    "unit": "SQM",
-    "unit_cost_inr": 1701.15,
-    "gst_rate": 5,
-    "category": "Other Made Up Textile Articles; Sets; Worn Clothin"
-  },
-  {
-    "description": "Carbendazim (ISO), bitertanol, chlorfenopyr, chlorfluazuron, fenoxaprop-P-ethyl,, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "29339920",
-    "unit": "KG",
-    "unit_cost_inr": 11623.13,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "NEITHER CRUSHED NOR GROUND, Grade A — Automotive Fasteners",
-    "hsn_code": "09082100",
-    "unit": "SQM",
-    "unit_cost_inr": 846.84,
-    "gst_rate": 5,
-    "category": "Coffee, Tea, Mate And Spices"
-  },
-  {
-    "description": "OF WILD ANIMALS, Standard Grade — Automotive Fasteners",
-    "hsn_code": "05040051",
-    "unit": "MTR",
-    "unit_cost_inr": 14.85,
-    "gst_rate": 0,
-    "category": "Products Of Animal Origin, Not Elsewhere Specified"
-  },
-  {
-    "description": "Other, BIS Certified — Automotive Fasteners",
-    "hsn_code": "62149099",
-    "unit": "SQM",
-    "unit_cost_inr": 1710.23,
-    "gst_rate": 5,
-    "category": "Articles Of Apparel And Clothing Accessories, Not "
-  },
-  {
-    "description": "PLATED OR COATED WITH OTHER BASE METALS, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "72159020",
-    "unit": "MTR",
-    "unit_cost_inr": 44345.31,
-    "gst_rate": 18,
-    "category": "Iron And Steel"
-  },
-  {
-    "description": "BUILDERS` JOINERY AND CARPENTRY OF WOOD, INCLUDING CELLULAR WOOD PANELS, ASSEMBL, Export Quality — Automotive Fasteners",
-    "hsn_code": "44186000",
-    "unit": "SQM",
-    "unit_cost_inr": 13467.62,
-    "gst_rate": 12,
-    "category": "Wood And Articles Of Wood; Wood Charcoal"
-  },
-  {
-    "description": "Non-galvanised pipes, other : Clad, plated or coated, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "73061941",
-    "unit": "MTR",
-    "unit_cost_inr": 10216.52,
-    "gst_rate": 18,
-    "category": "Project Imports, Laboratory Chemicals, Passengers "
-  },
-  {
-    "description": "IRON OR STEEL WOOL, POT SCOURERS AND SCOURING OR POLISHING PADS, GLOVES AND THE , ISO 9001 — Automotive Fasteners",
-    "hsn_code": "73231000",
-    "unit": "SET",
-    "unit_cost_inr": 39869.86,
-    "gst_rate": 18,
-    "category": "Articles Of Iron Or Steel"
-  },
-  {
-    "description": "POTASH ALUM, Export Quality — Automotive Fasteners",
-    "hsn_code": "28333030",
-    "unit": "KG",
-    "unit_cost_inr": 3596.65,
+    "unit_cost_inr": 45882.53,
     "gst_rate": 18,
     "category": "Inorganic Chemicals, Organic Or Inorganic Compound"
   },
   {
-    "description": "Other Supporting Services For Road Transport Nowhere Else Classified — Automotive Fasteners",
-    "hsn_code": "996749",
+    "description": "OSCILLOSCOPES, SPECTRUM ANALYSERS AND OTHER INSTRUMENTS AND APPARATUS FOR MEASUR, Grade A — Automotive Fasteners",
+    "hsn_code": "90303990",
+    "unit": "SQM",
+    "unit_cost_inr": 2241.66,
+    "gst_rate": 18,
+    "category": "Optical, Photographic, Cinematographic, Measuring,"
+  },
+  {
+    "description": "OTHER MICROSCOPES, IS Grade — Automotive Fasteners",
+    "hsn_code": "90118000",
+    "unit": "SQM",
+    "unit_cost_inr": 21610.52,
+    "gst_rate": 18,
+    "category": "Optical, Photographic, Cinematographic, Measuring,"
+  },
+  {
+    "description": "MOTION SIMULATORS AND MOVING THEATRES, Standard Grade — Automotive Fasteners",
+    "hsn_code": "95082400",
+    "unit": "LTR",
+    "unit_cost_inr": 42855.1,
+    "gst_rate": 18,
+    "category": "Toys, Games And Sports Requisites; Parts And Acces"
+  },
+  {
+    "description": "Software Downloads — Automotive Fasteners",
+    "hsn_code": "998434",
     "unit": "NOS",
-    "unit_cost_inr": 18306.89,
+    "unit_cost_inr": 23324.38,
     "gst_rate": 18,
     "category": "All Services"
   },
   {
-    "description": "Performing Arts Facility Operation Services — Automotive Fasteners",
-    "hsn_code": "999623",
+    "description": "OF AN OUTPUT NOT EXCEEDING 75 KVA, Export Quality — Automotive Fasteners",
+    "hsn_code": "85021100",
+    "unit": "SET",
+    "unit_cost_inr": 31673.24,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "RAYON TAFETTA, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "54083213",
+    "unit": "SQM",
+    "unit_cost_inr": 970.77,
+    "gst_rate": 5,
+    "category": "Man-Made Filaments; Strip And The Like Of Man-Made"
+  },
+  {
+    "description": "BISMUTH COMPOUNDS OF AROMATIC MONOACIDS, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "29163920",
+    "unit": "SQM",
+    "unit_cost_inr": 29734.52,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "Security Systems Services — Automotive Fasteners",
+    "hsn_code": "998523",
     "unit": "NOS",
-    "unit_cost_inr": 15291.93,
+    "unit_cost_inr": 30201.18,
     "gst_rate": 18,
     "category": "All Services"
   },
   {
-    "description": "MULL (INCLUDING LIMBRIC AND WILLAYA), ISO 9001 — Automotive Fasteners",
-    "hsn_code": "52085260",
+    "description": "Space Transport Services Of Freight — Automotive Fasteners",
+    "hsn_code": "996532",
+    "unit": "NOS",
+    "unit_cost_inr": 13591.15,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "SHIRTING FABRICS, IS Grade — Automotive Fasteners",
+    "hsn_code": "52102110",
     "unit": "MTR",
-    "unit_cost_inr": 1408.63,
+    "unit_cost_inr": 1298.71,
     "gst_rate": 5,
     "category": "Cotton"
   },
   {
-    "description": "FITTINGS, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "39174000",
+    "description": "OF COTTON, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "61072100",
     "unit": "MTR",
-    "unit_cost_inr": 1333.05,
+    "unit_cost_inr": 326.33,
+    "gst_rate": 5,
+    "category": "Articles Of Apparel And Clothing Accessories, Knit"
+  },
+  {
+    "description": "Other Storage And Warehousing Services — Automotive Fasteners",
+    "hsn_code": "996729",
+    "unit": "NOS",
+    "unit_cost_inr": 32876.79,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Lysergic acid, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "29396310",
+    "unit": "LTR",
+    "unit_cost_inr": 42642.02,
+    "gst_rate": 18,
+    "category": "Project Imports, Laboratory Chemicals, Passengers "
+  },
+  {
+    "description": "Repair Services Of Furniture — Automotive Fasteners",
+    "hsn_code": "998724",
+    "unit": "NOS",
+    "unit_cost_inr": 26671.78,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Legal Advisory And Representation Services Concerning Other Fields Of Law — Automotive Fasteners",
+    "hsn_code": "998212",
+    "unit": "NOS",
+    "unit_cost_inr": 47353.49,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Installation Services Of Professional Medical Machinery And Equipment, And Precision And Optical Instruments — Automotive Fasteners",
+    "hsn_code": "998735",
+    "unit": "NOS",
+    "unit_cost_inr": 32076.09,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Frozen, Export Quality — Automotive Fasteners",
+    "hsn_code": "03077200",
+    "unit": "KG",
+    "unit_cost_inr": 282.71,
+    "gst_rate": 5,
+    "category": "Fish And Crustaceans, Molluscs And Other Aquatic I"
+  },
+  {
+    "description": "HELIOTROPIN (PIPERONYL ALDEHYDE), Standard Grade — Automotive Fasteners",
+    "hsn_code": "29124920",
+    "unit": "MTR",
+    "unit_cost_inr": 31823.02,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "OTHER, Standard Grade — Automotive Fasteners",
+    "hsn_code": "69021090",
+    "unit": "SQM",
+    "unit_cost_inr": 45488.69,
+    "gst_rate": 18,
+    "category": "Ceramic Products"
+  },
+  {
+    "description": "FRESH, BIS Certified — Automotive Fasteners",
+    "hsn_code": "09101110",
+    "unit": "SQM",
+    "unit_cost_inr": 1800.58,
+    "gst_rate": 5,
+    "category": "Coffee, Tea, Mate And Spices"
+  },
+  {
+    "description": "OTHER, Export Quality — Automotive Fasteners",
+    "hsn_code": "29362690",
+    "unit": "LTR",
+    "unit_cost_inr": 11551.09,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "Domestic articles of wood (hand decorated ), ISO 9001 — Automotive Fasteners",
+    "hsn_code": "97019091",
+    "unit": "LTR",
+    "unit_cost_inr": 9106.44,
+    "gst_rate": 12,
+    "category": "Works Of Art, Collectors' Pieces And Antiques"
+  },
+  {
+    "description": "WIRE RODS, Export Quality — Automotive Fasteners",
+    "hsn_code": "76041010",
+    "unit": "MTR",
+    "unit_cost_inr": 33224.25,
+    "gst_rate": 18,
+    "category": "Aluminium And Articles Thereof"
+  },
+  {
+    "description": "Leasing Or Rental Services Concerning Do-It-Yourself Machinery And Equipment — Automotive Fasteners",
+    "hsn_code": "997327",
+    "unit": "NOS",
+    "unit_cost_inr": 6393.77,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "KERNELS,OTHER, IS Grade — Automotive Fasteners",
+    "hsn_code": "12024220",
+    "unit": "LTR",
+    "unit_cost_inr": 200.34,
+    "gst_rate": 0,
+    "category": "Oil Seeds And Oleaginous Fruits, Miscellaneous Gra"
+  },
+  {
+    "description": "FOOD GRINDERS, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "85094010",
+    "unit": "SET",
+    "unit_cost_inr": 33369.46,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "OTHER, Standard Grade — Automotive Fasteners",
+    "hsn_code": "23062090",
+    "unit": "LTR",
+    "unit_cost_inr": 1022.14,
+    "gst_rate": 5,
+    "category": "Residues And Waste From The Food Industries; Prepa"
+  },
+  {
+    "description": "PARACHLOROTOLUENE (4-CHLOROMETHYL BENZENE), Industrial Grade — Automotive Fasteners",
+    "hsn_code": "29039950",
+    "unit": "KG",
+    "unit_cost_inr": 21849.78,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "Airport Operation Services (Excluding Cargo Handling) — Automotive Fasteners",
+    "hsn_code": "996761",
+    "unit": "NOS",
+    "unit_cost_inr": 34360.49,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Technical Testing And Analysis Services — Automotive Fasteners",
+    "hsn_code": "998346",
+    "unit": "NOS",
+    "unit_cost_inr": 15890.97,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Maintenance And Repair Services Of Other Machinery And Equipments — Automotive Fasteners",
+    "hsn_code": "998719",
+    "unit": "NOS",
+    "unit_cost_inr": 3040.44,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "FOR A VOLTAGE OF 33 KV, Standard Grade — Automotive Fasteners",
+    "hsn_code": "85352112",
+    "unit": "SET",
+    "unit_cost_inr": 6043.77,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "PARTS, Grade A — Automotive Fasteners",
+    "hsn_code": "96072000",
+    "unit": "PCS",
+    "unit_cost_inr": 834.32,
+    "gst_rate": 18,
+    "category": "Miscellaneous Manufactured Articles"
+  },
+  {
+    "description": "SNAKE VENOM, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "30012030",
+    "unit": "MTR",
+    "unit_cost_inr": 1722.32,
+    "gst_rate": 5,
+    "category": "Pharmaceutical Products"
+  },
+  {
+    "description": "CAMBRICS (INCLUDING MADAPOLLAM AND JACONET), LONGCLOTH(INCLUDING CALICO) AND VOI, IS Grade — Automotive Fasteners",
+    "hsn_code": "52083260",
+    "unit": "LTR",
+    "unit_cost_inr": 1536.86,
+    "gst_rate": 5,
+    "category": "Cotton"
+  },
+  {
+    "description": "BALLS, Grade A — Automotive Fasteners",
+    "hsn_code": "70021000",
+    "unit": "MTR",
+    "unit_cost_inr": 19264.04,
+    "gst_rate": 18,
+    "category": "Glass And Glassware"
+  },
+  {
+    "description": "OTHER, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "69010090",
+    "unit": "SQM",
+    "unit_cost_inr": 5093.0,
+    "gst_rate": 18,
+    "category": "Ceramic Products"
+  },
+  {
+    "description": "55% FE OR MORE BUT BELOW 58% FE, IS Grade — Automotive Fasteners",
+    "hsn_code": "26011142",
+    "unit": "LTR",
+    "unit_cost_inr": 1258.35,
+    "gst_rate": 5,
+    "category": "Ores, Slag And Ash"
+  },
+  {
+    "description": "OF POLYURETHANE FOAM, Export Quality — Automotive Fasteners",
+    "hsn_code": "39263010",
+    "unit": "SQM",
+    "unit_cost_inr": 8810.35,
     "gst_rate": 18,
     "category": "Plastics And Articles Thereof"
   },
   {
     "description": "OTHER, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "61042990",
+    "hsn_code": "59031090",
     "unit": "SQM",
-    "unit_cost_inr": 1785.57,
-    "gst_rate": 5,
-    "category": "Articles Of Apparel And Clothing Accessories, Knit"
+    "unit_cost_inr": 4595.09,
+    "gst_rate": 12,
+    "category": "Impregnated, Coated, Covered Or Laminated Textile "
   },
   {
-    "description": "OTHER TOYS; REDUCED-SIZE (*SCALE*) MODELS AND SIMILAR RECREATIONAL MODELS, WORKI, BIS Certified — Automotive Fasteners",
-    "hsn_code": "95031000",
+    "description": "OTHER, Standard Grade — Automotive Fasteners",
+    "hsn_code": "81099900",
     "unit": "KG",
-    "unit_cost_inr": 8199.43,
-    "gst_rate": 12,
-    "category": "Toys, Games And Sports Requisites; Parts And Acces"
-  },
-  {
-    "description": "OTHER, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "73079990",
-    "unit": "MTR",
-    "unit_cost_inr": 27249.81,
+    "unit_cost_inr": 47398.13,
     "gst_rate": 18,
-    "category": "Articles Of Iron Or Steel"
-  },
-  {
-    "description": "FURNISHING FABRICS (EXCLUDING PILE AND CHENILLE FABRICS), BIS Certified — Automotive Fasteners",
-    "hsn_code": "52084150",
-    "unit": "MTR",
-    "unit_cost_inr": 1200.88,
-    "gst_rate": 5,
-    "category": "Cotton"
-  },
-  {
-    "description": "DIESEL-ELECTRIC LOCOMOTIVES, Industrial Grade — Automotive Fasteners",
-    "hsn_code": "86021000",
-    "unit": "ROLL",
-    "unit_cost_inr": 11807.23,
-    "gst_rate": 12,
-    "category": "Railway Or Tramway Locomotives, Rolling-Stock And "
-  },
-  {
-    "description": "DIETHYL ETHYLPHOSPHONATE, Standard Grade — Automotive Fasteners",
-    "hsn_code": "29314300",
-    "unit": "KG",
-    "unit_cost_inr": 1013.29,
-    "gst_rate": 18,
-    "category": "Organic Chemicals"
-  },
-  {
-    "description": "CIPROFLOXACIN, Export Quality — Automotive Fasteners",
-    "hsn_code": "30042013",
-    "unit": "SET",
-    "unit_cost_inr": 7710.93,
-    "gst_rate": 12,
-    "category": "Pharmaceutical Products"
-  },
-  {
-    "description": "Other Administrative Services Related To Compulsory Social Security Schemes — Automotive Fasteners",
-    "hsn_code": "999139",
-    "unit": "NOS",
-    "unit_cost_inr": 44406.1,
-    "gst_rate": 18,
-    "category": "All Services"
-  },
-  {
-    "description": "MINIATURE CIRCUIT BREAKERS, Export Quality — Automotive Fasteners",
-    "hsn_code": "85362030",
-    "unit": "SQM",
-    "unit_cost_inr": 20505.54,
-    "gst_rate": 18,
-    "category": "Electrical Machinery And Equipment And Parts There"
-  },
-  {
-    "description": "TAPPING MACHINES, Grade A — Automotive Fasteners",
-    "hsn_code": "84597020",
-    "unit": "SET",
-    "unit_cost_inr": 22856.69,
-    "gst_rate": 18,
-    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
-  },
-  {
-    "description": "CHROME MAGNESITE BRICKS, ISO 9001 — Automotive Fasteners",
-    "hsn_code": "69021020",
-    "unit": "SQM",
-    "unit_cost_inr": 18236.05,
-    "gst_rate": 18,
-    "category": "Ceramic Products"
-  },
-  {
-    "description": "OTHER, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "90021900",
-    "unit": "SQM",
-    "unit_cost_inr": 6248.53,
-    "gst_rate": 18,
-    "category": "Optical, Photographic, Cinematographic, Measuring,"
-  },
-  {
-    "description": "Project Management Services For Construction Projects — Automotive Fasteners",
-    "hsn_code": "998339",
-    "unit": "NOS",
-    "unit_cost_inr": 44445.46,
-    "gst_rate": 18,
-    "category": "All Services"
+    "category": "Other Base Metals; Cermets; Articles Thereof"
   },
   {
     "description": "Legal Advisory And Representation Services Concerning Criminal Law — Automotive Fasteners",
     "hsn_code": "998211",
     "unit": "NOS",
-    "unit_cost_inr": 18825.72,
+    "unit_cost_inr": 28922.66,
     "gst_rate": 18,
     "category": "All Services"
   },
   {
-    "description": "OTHER, Export Quality — Automotive Fasteners",
-    "hsn_code": "35079079",
-    "unit": "PCS",
-    "unit_cost_inr": 35010.12,
-    "gst_rate": 18,
-    "category": "Albuminoidal Substances; Modified Starches; Glues;"
+    "description": "OTHER, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "51021990",
+    "unit": "MTR",
+    "unit_cost_inr": 120.69,
+    "gst_rate": 5,
+    "category": "Wool, Fine Or Coarse Animal Hair; Horsehair Yarn A"
   },
   {
-    "description": "AZOIC DIAZO COMPONENT 6 (FAST ORANGE GR BASE), Standard Grade — Automotive Fasteners",
-    "hsn_code": "32041936",
+    "description": "OTHER, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "85362090",
     "unit": "SQM",
-    "unit_cost_inr": 45599.44,
+    "unit_cost_inr": 6550.62,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "OTHER, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "87142090",
+    "unit": "ROLL",
+    "unit_cost_inr": 25774.33,
+    "gst_rate": 28,
+    "category": "Vehicles Other Than Railway Or Tramway Rolling-Sto"
+  },
+  {
+    "description": "OF A BRIX VALUE NOT EXCEEDING 29, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "20096100",
+    "unit": "SQM",
+    "unit_cost_inr": 11432.27,
+    "gst_rate": 12,
+    "category": "Preparations Of Vegetables, Fruit, Nuts Or Other P"
+  },
+  {
+    "description": "Embroidered with Lucknow Chikan Craft, Export Quality — Automotive Fasteners",
+    "hsn_code": "62042991",
+    "unit": "SQM",
+    "unit_cost_inr": 22.59,
+    "gst_rate": 5,
+    "category": "Articles Of Apparel And Clothing Accessories, Not "
+  },
+  {
+    "description": "HUMAN BLOOD; ANIMAL BLOOD PREPARED FOR THERAPEUTIC, PROPHYLACTIC OR DIAGNOSTIC U, Standard Grade — Automotive Fasteners",
+    "hsn_code": "30023000",
+    "unit": "MTR",
+    "unit_cost_inr": 830.63,
+    "gst_rate": 5,
+    "category": "Pharmaceutical Products"
+  },
+  {
+    "description": "SEQUINNED OR BEADED WITH CHATTONS, Standard Grade — Automotive Fasteners",
+    "hsn_code": "62041911",
+    "unit": "SQM",
+    "unit_cost_inr": 1207.14,
+    "gst_rate": 5,
+    "category": "Articles Of Apparel And Clothing Accessories, Not "
+  },
+  {
+    "description": "MINIATURE CIRCUIT BREAKERS, Export Quality — Automotive Fasteners",
+    "hsn_code": "85362030",
+    "unit": "SQM",
+    "unit_cost_inr": 25859.55,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "POLYESTER SUITINGS, Standard Grade — Automotive Fasteners",
+    "hsn_code": "54078124",
+    "unit": "SQM",
+    "unit_cost_inr": 567.53,
+    "gst_rate": 5,
+    "category": "Man-Made Filaments; Strip And The Like Of Man-Made"
+  },
+  {
+    "description": "SAREE, Standard Grade — Automotive Fasteners",
+    "hsn_code": "52082120",
+    "unit": "MTR",
+    "unit_cost_inr": 84.45,
+    "gst_rate": 5,
+    "category": "Cotton"
+  },
+  {
+    "description": "Sports And Recreational Sports Facility Operation Services — Automotive Fasteners",
+    "hsn_code": "999652",
+    "unit": "NOS",
+    "unit_cost_inr": 15922.97,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Certification And Authentication Of Works Of Art — Automotive Fasteners",
+    "hsn_code": "998348",
+    "unit": "NOS",
+    "unit_cost_inr": 2332.58,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Container Handling Services — Automotive Fasteners",
+    "hsn_code": "996711",
+    "unit": "NOS",
+    "unit_cost_inr": 35854.7,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "FULL RANGE NAPHTHA, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "27101229",
+    "unit": "LTR",
+    "unit_cost_inr": 59.36,
+    "gst_rate": 0,
+    "category": "Mineral Fuels, Mineral Oils And Products Of Their "
+  },
+  {
+    "description": "OTHER, IS Grade — Automotive Fasteners",
+    "hsn_code": "29214190",
+    "unit": "KG",
+    "unit_cost_inr": 4648.36,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "CARPETS AND OTHER TEXTILE FLOOR COVERINGS, WOVEN, NOT TUFTED OR FLOCKED, WHETHER, Export Quality — Automotive Fasteners",
+    "hsn_code": "57025140",
+    "unit": "SQM",
+    "unit_cost_inr": 10639.34,
+    "gst_rate": 12,
+    "category": "Carpets And Other Textile Floor Coverings"
+  },
+  {
+    "description": "Perfluorooctane sulphonic acid, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "29043100",
+    "unit": "LTR",
+    "unit_cost_inr": 15708.11,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "OF IRON, IS Grade — Automotive Fasteners",
+    "hsn_code": "73043131",
+    "unit": "ROLL",
+    "unit_cost_inr": 24540.75,
+    "gst_rate": 18,
+    "category": "Articles Of Iron Or Steel"
+  },
+  {
+    "description": "Installation Services Of Industrial, Manufacturing And Service Industry Machinery And Equipment — Automotive Fasteners",
+    "hsn_code": "998732",
+    "unit": "NOS",
+    "unit_cost_inr": 32695.71,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OTHER, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "85437099",
+    "unit": "SET",
+    "unit_cost_inr": 49673.19,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "NYLON SAREES, BIS Certified — Automotive Fasteners",
+    "hsn_code": "54074440",
+    "unit": "SQM",
+    "unit_cost_inr": 205.72,
+    "gst_rate": 5,
+    "category": "Man-Made Filaments; Strip And The Like Of Man-Made"
+  },
+  {
+    "description": "Management Consulting And Management Services Including Financial, Strategic, Human Resources, Marketing, Operations And Supply Chain Management — Automotive Fasteners",
+    "hsn_code": "998311",
+    "unit": "NOS",
+    "unit_cost_inr": 11617.65,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "General Cleaning Services — Automotive Fasteners",
+    "hsn_code": "998533",
+    "unit": "NOS",
+    "unit_cost_inr": 22790.9,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "WINE LEES; ARGOL, BIS Certified — Automotive Fasteners",
+    "hsn_code": "23070000",
+    "unit": "LTR",
+    "unit_cost_inr": 484.98,
+    "gst_rate": 5,
+    "category": "Residues And Waste From The Food Industries; Prepa"
+  },
+  {
+    "description": "Financial Consultancy Services — Automotive Fasteners",
+    "hsn_code": "997156",
+    "unit": "NOS",
+    "unit_cost_inr": 41015.8,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Financial Auditing Services — Automotive Fasteners",
+    "hsn_code": "998221",
+    "unit": "NOS",
+    "unit_cost_inr": 46898.84,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "WADDING OF TEXTILE MATERIALS AND ARTICLES THEREOF; TEXTILE FIBRES, NOT EXCEEDING, BIS Certified — Automotive Fasteners",
+    "hsn_code": "56011000",
+    "unit": "SQM",
+    "unit_cost_inr": 12218.12,
+    "gst_rate": 12,
+    "category": "Wadding, Felt And Nonwovens; Special Yarns; Twine,"
+  },
+  {
+    "description": "WIRE AND RODS OF AGGLOMERATED BASE METAL, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "83113010",
+    "unit": "SQM",
+    "unit_cost_inr": 45028.63,
+    "gst_rate": 18,
+    "category": "Miscellaneous Articles Of Base Metal"
+  },
+  {
+    "description": "Other Cleaning Services Nowhere Else Classified — Automotive Fasteners",
+    "hsn_code": "998539",
+    "unit": "NOS",
+    "unit_cost_inr": 21422.04,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OTHER EQUIPMENT FOR THE HEAT TREATMENT OF MATERIALS BY INDUCTION OR DIELECTRIC L, IS Grade — Automotive Fasteners",
+    "hsn_code": "85144000",
+    "unit": "SQM",
+    "unit_cost_inr": 2783.91,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "TELEPHONE SETS, INCLUDING TELEPHONES FOR CELLULAR NETWORKS OR FOR OTHER WIRELESS, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "85177010",
+    "unit": "SQM",
+    "unit_cost_inr": 29120.1,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "DIFLUOROMETHANE (HFC-32), Standard Grade — Automotive Fasteners",
+    "hsn_code": "29034200",
+    "unit": "KG",
+    "unit_cost_inr": 30649.4,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "GLASS FOR SUN GLASSES, Grade A — Automotive Fasteners",
+    "hsn_code": "70159020",
+    "unit": "PCS",
+    "unit_cost_inr": 2504.48,
+    "gst_rate": 18,
+    "category": "Glass And Glassware"
+  },
+  {
+    "description": "ZIP FASTENERS, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "96071910",
+    "unit": "PCS",
+    "unit_cost_inr": 6229.32,
+    "gst_rate": 18,
+    "category": "Miscellaneous Manufactured Articles"
+  },
+  {
+    "description": "OTHER WOVEN FABRICS, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "55142900",
+    "unit": "MTR",
+    "unit_cost_inr": 1583.28,
+    "gst_rate": 5,
+    "category": "Man-Made Staple Fibres"
+  },
+  {
+    "description": "BELT FASTENERS FOR MACHINERY BELTS, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "73269020",
+    "unit": "SET",
+    "unit_cost_inr": 33730.51,
+    "gst_rate": 18,
+    "category": "Articles Of Iron Or Steel"
+  },
+  {
+    "description": "FOR SWITCHES HAVING RATING ABOVE 15 AMPS, HIGH RUPTURING CAPACITY OR REWIREABLE, Standard Grade — Automotive Fasteners",
+    "hsn_code": "85361020",
+    "unit": "SET",
+    "unit_cost_inr": 19777.12,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "Embroidered with Lucknow Chikan Craft, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "62044230",
+    "unit": "MTR",
+    "unit_cost_inr": 1430.78,
+    "gst_rate": 5,
+    "category": "Articles Of Apparel And Clothing Accessories, Not "
+  },
+  {
+    "description": "Legal Documentation And Certification Services Concerning Other Documents — Automotive Fasteners",
+    "hsn_code": "998214",
+    "unit": "NOS",
+    "unit_cost_inr": 32715.91,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Alphacypermethrin, beta cyfluthrin, chlorothalonil, cyflumetofen, cyfluthrin, cy, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "29269010",
+    "unit": "KG",
+    "unit_cost_inr": 23535.62,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "DISC PLOUGHS, Standard Grade — Automotive Fasteners",
+    "hsn_code": "84321010",
+    "unit": "ROLL",
+    "unit_cost_inr": 48706.35,
+    "gst_rate": 18,
+    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
+  },
+  {
+    "description": "OTHER, NOT INCLUDED IN THE SUB-HEADINGS ABOVE, CONTAINING 20% OR MORE BY MASS OF, Grade A — Automotive Fasteners",
+    "hsn_code": "38276500",
+    "unit": "MTR",
+    "unit_cost_inr": 36434.33,
+    "gst_rate": 18,
+    "category": "Miscellaneous Chemical Products"
+  },
+  {
+    "description": "MACHINERY FOR PREPARING, TANNING OR WORKING HIDES, SKINS OR LEATHER, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "84531000",
+    "unit": "SQM",
+    "unit_cost_inr": 20174.43,
+    "gst_rate": 18,
+    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
+  },
+  {
+    "description": "FOR MEN, Grade A — Automotive Fasteners",
+    "hsn_code": "64032021",
+    "unit": "PCS",
+    "unit_cost_inr": 30047.52,
+    "gst_rate": 18,
+    "category": "Footwear, Gaiters And The Like; Parts Of Such Arti"
+  },
+  {
+    "description": "PRINTED, Export Quality — Automotive Fasteners",
+    "hsn_code": "76071995",
+    "unit": "SQM",
+    "unit_cost_inr": 32082.85,
+    "gst_rate": 18,
+    "category": "Aluminium And Articles Thereof"
+  },
+  {
+    "description": "BASALT TILES, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "69039020",
+    "unit": "SQM",
+    "unit_cost_inr": 40540.24,
+    "gst_rate": 18,
+    "category": "Ceramic Products"
+  },
+  {
+    "description": "CIPROFLOXACINE AND ITS SALTS, BIS Certified — Automotive Fasteners",
+    "hsn_code": "29419030",
+    "unit": "KG",
+    "unit_cost_inr": 26291.81,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "4-[4,6-BIS(2,4-DIMETHYLPHENYL)-1,3,5- TRIAZINE-2-YL]-1,3-BENZENEDIOL, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "29336920",
+    "unit": "KG",
+    "unit_cost_inr": 47791.12,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "OF COPPER, BIS Certified — Automotive Fasteners",
+    "hsn_code": "28332500",
+    "unit": "KG",
+    "unit_cost_inr": 2315.04,
+    "gst_rate": 18,
+    "category": "Inorganic Chemicals, Organic Or Inorganic Compound"
+  },
+  {
+    "description": "Goods Transport Agency Services For Road Transport — Automotive Fasteners",
+    "hsn_code": "996791",
+    "unit": "NOS",
+    "unit_cost_inr": 39240.37,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OTHER, Standard Grade — Automotive Fasteners",
+    "hsn_code": "93019000",
+    "unit": "SET",
+    "unit_cost_inr": 4698.8,
+    "gst_rate": 12,
+    "category": "Arms And Ammunition; Parts And Accessories Thereof"
+  },
+  {
+    "description": "DISODIUM CARBONATE, DENSE, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "28362010",
+    "unit": "SQM",
+    "unit_cost_inr": 49487.45,
+    "gst_rate": 18,
+    "category": "Inorganic Chemicals, Organic Or Inorganic Compound"
+  },
+  {
+    "description": "OTHER, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "44123190",
+    "unit": "SQM",
+    "unit_cost_inr": 7040.45,
+    "gst_rate": 12,
+    "category": "Wood And Articles Of Wood; Wood Charcoal"
+  },
+  {
+    "description": "TRANSMISSION APPARATUS FOR RADIO-TELEPHONY, RADIOTELEGRAPHY, RADIO-BROADCASTING , BIS Certified — Automotive Fasteners",
+    "hsn_code": "85252099",
+    "unit": "SET",
+    "unit_cost_inr": 3181.75,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "Engineering Advisory Services — Automotive Fasteners",
+    "hsn_code": "998331",
+    "unit": "NOS",
+    "unit_cost_inr": 37086.31,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OTHER, NOT REINFORCED OR OTHERWISE COMBINED WITH OTHER MATERIALS, WITH FITTINGS, IS Grade — Automotive Fasteners",
+    "hsn_code": "39173300",
+    "unit": "SQM",
+    "unit_cost_inr": 22579.46,
+    "gst_rate": 18,
+    "category": "Plastics And Articles Thereof"
+  },
+  {
+    "description": "G.V.W. EXCEEDING 5 TONNES, IS Grade — Automotive Fasteners",
+    "hsn_code": "87043200",
+    "unit": "ROLL",
+    "unit_cost_inr": 85896.97,
+    "gst_rate": 28,
+    "category": "Vehicles Other Than Railway Or Tramway Rolling-Sto"
+  },
+  {
+    "description": "Scooters, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "87116020",
+    "unit": "ROLL",
+    "unit_cost_inr": 188153.07,
+    "gst_rate": 28,
+    "category": "Vehicles Other Than Railway Or Tramway Rolling-Sto"
+  },
+  {
+    "description": "Installation Services Of Electrical Machinery And Apparatus Nowhere Else Classified — Automotive Fasteners",
+    "hsn_code": "998736",
+    "unit": "NOS",
+    "unit_cost_inr": 39883.63,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Dried squids, IS Grade — Automotive Fasteners",
+    "hsn_code": "03074940",
+    "unit": "KG",
+    "unit_cost_inr": 804.19,
+    "gst_rate": 5,
+    "category": "Fish And Crustaceans, Molluscs And Other Aquatic I"
+  },
+  {
+    "description": "Alphanaphthyl Acetic Acid conforming to IS 13070; Chlormequat Chloride (CCC) con, Export Quality — Automotive Fasteners",
+    "hsn_code": "38089341",
+    "unit": "LTR",
+    "unit_cost_inr": 38751.31,
+    "gst_rate": 18,
+    "category": "Miscellaneous Chemical Products"
+  },
+  {
+    "description": "CONTAINING LESS THAN 1 PART HAFNIUM TO 500 PARTS ZIRCONIUM BY WEIGHT, IS Grade — Automotive Fasteners",
+    "hsn_code": "81093100",
+    "unit": "KG",
+    "unit_cost_inr": 39144.49,
+    "gst_rate": 18,
+    "category": "Other Base Metals; Cermets; Articles Thereof"
+  },
+  {
+    "description": "Maintenance And Repair Services Of Transport Machinery And Equipment — Automotive Fasteners",
+    "hsn_code": "998714",
+    "unit": "NOS",
+    "unit_cost_inr": 12867.21,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "RYE RYE : OF SEED QUALITY, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "10020010",
+    "unit": "PCS",
+    "unit_cost_inr": 313.34,
+    "gst_rate": 0,
+    "category": "Cereals"
+  },
+  {
+    "description": "LACQUERED, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "76130012",
+    "unit": "PCS",
+    "unit_cost_inr": 6963.26,
+    "gst_rate": 18,
+    "category": "Aluminium And Articles Thereof"
+  },
+  {
+    "description": "Legal Documentation And Certification Services Concerning Patents, Copyrights And Other Intellectual Property Rights — Automotive Fasteners",
+    "hsn_code": "998213",
+    "unit": "NOS",
+    "unit_cost_inr": 38191.79,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OTHER, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "48045900",
+    "unit": "ROLL",
+    "unit_cost_inr": 14858.28,
+    "gst_rate": 12,
+    "category": "Paper And Paperboard, Articles Of Paper Pulp, Of P"
+  },
+  {
+    "description": "MADE WHOLLY IN BLACK AND WHITE AND OF A LENGTH EXCEEDING 4,000 M, Export Quality — Automotive Fasteners",
+    "hsn_code": "37061012",
+    "unit": "SQM",
+    "unit_cost_inr": 18874.8,
+    "gst_rate": 18,
+    "category": "Photographic Or Cinematographic Goods"
+  },
+  {
+    "description": "OF WOOL, BIS Certified — Automotive Fasteners",
+    "hsn_code": "61178020",
+    "unit": "MTR",
+    "unit_cost_inr": 1307.55,
+    "gst_rate": 5,
+    "category": "Articles Of Apparel And Clothing Accessories, Knit"
+  },
+  {
+    "description": "SYNTHESISED RECEIVERS, BIS Certified — Automotive Fasteners",
+    "hsn_code": "85437072",
+    "unit": "SET",
+    "unit_cost_inr": 28202.81,
+    "gst_rate": 18,
+    "category": "Electrical Machinery And Equipment And Parts There"
+  },
+  {
+    "description": "OTHER, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "29221990",
+    "unit": "KG",
+    "unit_cost_inr": 48317.41,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "Other, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "62041290",
+    "unit": "MTR",
+    "unit_cost_inr": 390.21,
+    "gst_rate": 5,
+    "category": "Articles Of Apparel And Clothing Accessories, Not "
+  },
+  {
+    "description": "Embroidered with Lucknow Chikan Craft, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "62144010",
+    "unit": "MTR",
+    "unit_cost_inr": 695.37,
+    "gst_rate": 5,
+    "category": "Articles Of Apparel And Clothing Accessories, Not "
+  },
+  {
+    "description": "Other Support Services Nowhere Else Classified — Automotive Fasteners",
+    "hsn_code": "998599",
+    "unit": "NOS",
+    "unit_cost_inr": 39044.97,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "CHROME ORE LUMPS BELOW 40% CR2O2, Export Quality — Automotive Fasteners",
+    "hsn_code": "26100030",
+    "unit": "LTR",
+    "unit_cost_inr": 1045.6,
+    "gst_rate": 5,
+    "category": "Ores, Slag And Ash"
+  },
+  {
+    "description": "Other Administrative Services Related To Compulsory Social Security Schemes — Automotive Fasteners",
+    "hsn_code": "999139",
+    "unit": "NOS",
+    "unit_cost_inr": 9582.76,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OF PLASTICS, NOT COVERED WITH TEXTILE MATERIAL, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "96062100",
+    "unit": "SQM",
+    "unit_cost_inr": 48107.3,
+    "gst_rate": 18,
+    "category": "Miscellaneous Manufactured Articles"
+  },
+  {
+    "description": "POWERED BY ELECTRIC ACCUMULATORS, Export Quality — Automotive Fasteners",
+    "hsn_code": "86012000",
+    "unit": "ROLL",
+    "unit_cost_inr": 10745.19,
+    "gst_rate": 12,
+    "category": "Railway Or Tramway Locomotives, Rolling-Stock And "
+  },
+  {
+    "description": "Licensing Services For The Right To Use Computer Software And Databases — Automotive Fasteners",
+    "hsn_code": "997331",
+    "unit": "NOS",
+    "unit_cost_inr": 1821.17,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "Other Textile Cleaning Services — Automotive Fasteners",
+    "hsn_code": "999713",
+    "unit": "NOS",
+    "unit_cost_inr": 29256.42,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "CHAMOTTE OR DINAS EARTHS, IS Grade — Automotive Fasteners",
+    "hsn_code": "25087000",
+    "unit": "SQM",
+    "unit_cost_inr": 1210.52,
+    "gst_rate": 5,
+    "category": "Salt, Sulphur, Earths And Stone, Plastering Materi"
+  },
+  {
+    "description": "SYNTHETIC ORGANIC TANNING SUBSTANCES, Export Quality — Automotive Fasteners",
+    "hsn_code": "32021000",
+    "unit": "SQM",
+    "unit_cost_inr": 24606.55,
     "gst_rate": 18,
     "category": "Tanning Or Dyeing Extracts; Tannins And Their Deri"
   },
   {
-    "description": "MUSICAL BOXES, FAIRGROUND ORGANS, MECHANICAL STREET ORGANS, MECHANICAL SINGING B, Commercial Grade — Automotive Fasteners",
-    "hsn_code": "92082000",
+    "description": "OF MAN-MADE FIBRES, Standard Grade — Automotive Fasteners",
+    "hsn_code": "61178040",
+    "unit": "MTR",
+    "unit_cost_inr": 1523.96,
+    "gst_rate": 5,
+    "category": "Articles Of Apparel And Clothing Accessories, Knit"
+  },
+  {
+    "description": "OTHER, Export Quality — Automotive Fasteners",
+    "hsn_code": "74082990",
+    "unit": "MTR",
+    "unit_cost_inr": 36046.81,
+    "gst_rate": 18,
+    "category": "Copper And Articles Thereof"
+  },
+  {
+    "description": "WOOL FIBRE DOUBLING OR TWISTING MACHINES, IS Grade — Automotive Fasteners",
+    "hsn_code": "84453050",
+    "unit": "ROLL",
+    "unit_cost_inr": 3903.66,
+    "gst_rate": 18,
+    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
+  },
+  {
+    "description": "OF COPOLYMERS OF VINYL ACETATE, Standard Grade — Automotive Fasteners",
+    "hsn_code": "39159021",
+    "unit": "KG",
+    "unit_cost_inr": 20399.68,
+    "gst_rate": 18,
+    "category": "Plastics And Articles Thereof"
+  },
+  {
+    "description": "RUBBER CONTRACEPTIVES, MALE (CONDOMS), IS Grade — Automotive Fasteners",
+    "hsn_code": "40141010",
+    "unit": "BOX",
+    "unit_cost_inr": 2460.31,
+    "gst_rate": 12,
+    "category": "Rubber And Articles Thereof"
+  },
+  {
+    "description": "Other Similar Services Nowhere Else Classified — Automotive Fasteners",
+    "hsn_code": "998229",
+    "unit": "NOS",
+    "unit_cost_inr": 36299.23,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "OTHER, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "38112900",
+    "unit": "LTR",
+    "unit_cost_inr": 31574.55,
+    "gst_rate": 18,
+    "category": "Miscellaneous Chemical Products"
+  },
+  {
+    "description": "TARTARIC ACID, BIS Certified — Automotive Fasteners",
+    "hsn_code": "29181200",
+    "unit": "LTR",
+    "unit_cost_inr": 27562.43,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "PARTS, Industrial Grade — Automotive Fasteners",
+    "hsn_code": "96061020",
+    "unit": "PCS",
+    "unit_cost_inr": 42808.8,
+    "gst_rate": 18,
+    "category": "Miscellaneous Manufactured Articles"
+  },
+  {
+    "description": "OTHER, IS Grade — Automotive Fasteners",
+    "hsn_code": "69039090",
+    "unit": "MTR",
+    "unit_cost_inr": 45485.04,
+    "gst_rate": 18,
+    "category": "Ceramic Products"
+  },
+  {
+    "description": "EARTH COLOURS, BIS Certified — Automotive Fasteners",
+    "hsn_code": "28212000",
+    "unit": "KG",
+    "unit_cost_inr": 35303.08,
+    "gst_rate": 18,
+    "category": "Inorganic Chemicals, Organic Or Inorganic Compound"
+  },
+  {
+    "description": "OTHER, IS Grade — Automotive Fasteners",
+    "hsn_code": "84393090",
+    "unit": "SQM",
+    "unit_cost_inr": 45693.48,
+    "gst_rate": 18,
+    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
+  },
+  {
+    "description": "POLES, PILINGS AND POSTS, Standard Grade — Automotive Fasteners",
+    "hsn_code": "44032420",
+    "unit": "MTR",
+    "unit_cost_inr": 8454.62,
+    "gst_rate": 12,
+    "category": "Wood And Articles Of Wood; Wood Charcoal"
+  },
+  {
+    "description": "THREADING MACHINES, ISO 9001 — Automotive Fasteners",
+    "hsn_code": "84597010",
     "unit": "SET",
-    "unit_cost_inr": 127939.08,
-    "gst_rate": 28,
-    "category": "Musical Instruments; Parts And Accessories Of Such"
+    "unit_cost_inr": 41089.36,
+    "gst_rate": 18,
+    "category": "Nuclear Reactors, Boilers, Machinery And Mechanica"
+  },
+  {
+    "description": "NIOBIUM OR TANTALUM ORES AND CONCENTRATES, Export Quality — Automotive Fasteners",
+    "hsn_code": "26159020",
+    "unit": "LTR",
+    "unit_cost_inr": 1778.56,
+    "gst_rate": 5,
+    "category": "Ores, Slag And Ash"
+  },
+  {
+    "description": "ALUMINIUM CHLORITE, Grade A — Automotive Fasteners",
+    "hsn_code": "28289040",
+    "unit": "KG",
+    "unit_cost_inr": 34836.34,
+    "gst_rate": 18,
+    "category": "Inorganic Chemicals, Organic Or Inorganic Compound"
+  },
+  {
+    "description": "Installation Services Of Fabricated Metal Products, Except Machinery And Equipment — Automotive Fasteners",
+    "hsn_code": "998731",
+    "unit": "NOS",
+    "unit_cost_inr": 33058.6,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "TURF, Standard Grade — Automotive Fasteners",
+    "hsn_code": "57032100",
+    "unit": "SQM",
+    "unit_cost_inr": 12584.6,
+    "gst_rate": 12,
+    "category": "Carpets And Other Textile Floor Coverings"
+  },
+  {
+    "description": "MENS OR BOYS SUITS, ENSEMBLES, JACKETS, BLAZERS, TROUSERS, BIB AND BRACE OVERALL, IS Grade — Automotive Fasteners",
+    "hsn_code": "62034200",
+    "unit": "MTR",
+    "unit_cost_inr": 985.11,
+    "gst_rate": 5,
+    "category": "Articles Of Apparel And Clothing Accessories, Not "
+  },
+  {
+    "description": "Port And Waterway Operation Services (Excluding Cargo Handling) Such As Operation Services Of Ports, Docks, Light Houses, Light Ships And The Like — Automotive Fasteners",
+    "hsn_code": "996751",
+    "unit": "NOS",
+    "unit_cost_inr": 49439.98,
+    "gst_rate": 18,
+    "category": "All Services"
+  },
+  {
+    "description": "HALOGENATED DERIVATIVES OF HYDROCARBONS - FLUORINATED, BROMINATED OR IODINATED D, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "29033919",
+    "unit": "KG",
+    "unit_cost_inr": 38010.48,
+    "gst_rate": 18,
+    "category": "Organic Chemicals"
+  },
+  {
+    "description": "SPOOLED HANKS, BIS Certified — Automotive Fasteners",
+    "hsn_code": "53081020",
+    "unit": "ROLL",
+    "unit_cost_inr": 949.58,
+    "gst_rate": 5,
+    "category": "Other Vegetable Textile Fibres; Paper Yarn And Wov"
+  },
+  {
+    "description": "FIXED FOCUS 110 MM CAMERAS, Commercial Grade — Automotive Fasteners",
+    "hsn_code": "90065910",
+    "unit": "SQM",
+    "unit_cost_inr": 42717.46,
+    "gst_rate": 18,
+    "category": "Optical, Photographic, Cinematographic, Measuring,"
+  },
+  {
+    "description": "EELS (ANGUILLA SPP.), Standard Grade — Automotive Fasteners",
+    "hsn_code": "03019200",
+    "unit": "PCS",
+    "unit_cost_inr": 1020.29,
+    "gst_rate": 5,
+    "category": "Fish And Crustaceans, Molluscs And Other Aquatic I"
+  },
+  {
+    "description": "STUDDED WITH OTHER PRECIOUS AND SEMI-PRECIOUS STONES, Export Quality — Automotive Fasteners",
+    "hsn_code": "71131145",
+    "unit": "KG",
+    "unit_cost_inr": 44721.85,
+    "gst_rate": 3,
+    "category": "Natural Or Cultured Pearls, Precious Or Semi-Preci"
+  },
+  {
+    "description": "OTHER, Grade A — Automotive Fasteners",
+    "hsn_code": "37029890",
+    "unit": "ROLL",
+    "unit_cost_inr": 43616.68,
+    "gst_rate": 18,
+    "category": "Photographic Or Cinematographic Goods"
   }
 ]
