@@ -1,6 +1,23 @@
 venv/
 logs/
+output/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Local-only scripts / scratch — not meant to be tracked
 fix_dirs.sh
 setup.sh
 test_pipeline.py
-**/__pycache__/
+test_ctx.py
+real_batch_prompt.txt
+
+# Notes / logs you don't want public
+learning.md
+projectlog.md
+
+# Generated / regeneratable artifacts
+industry_catalog.json
+*.db
+*.db-wal
+*.db-shm

@@ -3,32 +3,23 @@ pipeline/assembler.py
 =====================
 Pass 2 — High-Throughput Assembly
 
-New in this version
---------------------
-- Language support: passes --language + libretranslate_url down to layout_engine
-- Handwriting mode: optionally post-processes HTML through pipeline.handwriting
-- Discrepancy separation: pairs where has_discrepancy=True are written to
-  a separate subfolder (purchase_orders/discrepant/ + tax_invoices/discrepant/)
-  so they can be used as a standalone reconciliation/fraud-detection dataset
-  without mixing into the clean training split.
-
 Output layout
 -------------
 output/
     purchase_orders/
-        clean/            po_000000.png
-        degraded/          po_000003.png
-        heavy/             po_000007.png
-        discrepant/        po_000012.png   ← pairs with PO/Invoice mismatch
+        clean/            po_000000.png  po_000000.pdf
+        degraded/         po_000003.png  po_000003.pdf
+        heavy/            po_000007.png  po_000007.pdf
+        discrepant/       po_000012.png  po_000012.pdf
     tax_invoices/
-        clean/            inv_000000.png
-        degraded/          inv_000003.png
-        heavy/             inv_000007.png
-        discrepant/        inv_000012.png  ← matching invoice for above
+        clean/            inv_000000.png  inv_000000.pdf
+        degraded/         inv_000003.png  inv_000003.pdf
+        heavy/            inv_000007.png  inv_000007.pdf
+        discrepant/       inv_000012.png  inv_000012.pdf
 
-Note: a discrepant document is ALSO placed in its tier subfolder AND in
-discrepant/ — so discrepant/ is an additive overlay for easy filtering,
-not a replacement for the tier structure.
+Multi-page PDFs: documents with many line items (26-50) naturally overflow
+one A4 page. Playwright's page.pdf() flows content across pages automatically
+using the @media print CSS rules in layout_engine.py. No manual splitting.
 """
 
 import asyncio
@@ -56,13 +47,20 @@ def _worker_process(
     language: str,
     libretranslate_url: str,
     handwriting_mode: Optional[str],
+    output_format: str,          # "png" | "pdf" | "both"
+    tier_plan: Optional[dict] = None,   # {doc_index: tier} — None = default probabilistic assign_tier()
 ) -> dict:
     """Worker entry point — runs in a subprocess."""
     from pipeline.data_models import generate_document_pair
     from pipeline.layout_engine import render_purchase_order_html, render_tax_invoice_html
     from pipeline.degradation import degrade_image, get_degradation_metadata, assign_tier
+    from pipeline.pdf_degradation import degrade_pdf
     from pipeline.database import log_document_pair
-    from pipeline.renderer import render_html_to_png, close_browser
+    from pipeline.renderer import render_html_to_png, render_html_to_pdf, close_browser
+    from pipeline.timing import timed, log_timing_summary
+
+    emit_png = output_format in ("png", "both")
+    emit_pdf = output_format in ("pdf", "both")
 
     # Set up language config once per worker
     lang_cfg = None
@@ -91,65 +89,115 @@ def _worker_process(
     async def process_one(idx: int):
         nonlocal success, failed, discrepant_count
         try:
-            tier = assign_tier(idx) if apply_degradation else "clean"
+            if not apply_degradation:
+                tier = "clean"
+            elif tier_plan is not None:
+                # Exact-count mode — tier_plan was pre-resolved by
+                # tier_planner.resolve_tier_plan() in run_assembly() and
+                # already covers every idx in shard_indices.
+                tier = tier_plan[idx]
+            else:
+                tier = assign_tier(idx)
 
-            po, inv = generate_document_pair(idx, catalog)
+            with timed("generate_document_pair"):
+                po, inv = generate_document_pair(idx, catalog)
+
+            # has_discrepancy: detect meaningful PO/invoice mismatches
+            # (grand totals diverge more than rounding when a line item
+            # quantity or price was patched by data_models — this is the
+            # hook for future discrepancy injection; for now it's always False)
+            has_disc = getattr(inv, "has_discrepancy", False)
+            if has_disc:
+                discrepant_count += 1
 
             # Render HTML (language-aware if lang_cfg is available)
-            if lang_cfg is not None:
-                po_html  = render_purchase_order_html(po,  lang_cfg=lang_cfg)
-                inv_html = render_tax_invoice_html(inv, lang_cfg=lang_cfg)
-            else:
-                po_html  = render_purchase_order_html(po)
-                inv_html = render_tax_invoice_html(inv)
+            with timed("render_html"):
+                if lang_cfg is not None:
+                    po_html  = render_purchase_order_html(po,  lang_cfg=lang_cfg)
+                    inv_html = render_tax_invoice_html(inv, lang_cfg=lang_cfg)
+                else:
+                    po_html  = render_purchase_order_html(po)
+                    inv_html = render_tax_invoice_html(inv)
 
             # Optional full-document handwriting overlay
             if handwriting_mode:
                 from pipeline.handwriting import render_handwritten_document
                 intensity = {"clean": 0.4, "degraded": 0.7, "heavy": 1.0}.get(tier, 0.7)
-                po_html  = render_handwritten_document(po_html,  mode=handwriting_mode,
-                                                        seed=idx * 2,     intensity=intensity)
-                inv_html = render_handwritten_document(inv_html, mode=handwriting_mode,
-                                                        seed=idx * 2 + 1, intensity=intensity)
-
-            po_png_raw  = await render_html_to_png(po_html)
-            inv_png_raw = await render_html_to_png(inv_html)
-
-            po_png  = degrade_image(po_png_raw,  idx * 2,     tier=tier, apply_degradation=apply_degradation)
-            inv_png = degrade_image(inv_png_raw, idx * 2 + 1, tier=tier, apply_degradation=apply_degradation)
-            deg_meta = get_degradation_metadata(idx * 2, tier=tier)
+                with timed("handwriting_overlay"):
+                    po_html  = render_handwritten_document(po_html,  mode=handwriting_mode,
+                                                            seed=idx * 2,     intensity=intensity)
+                    inv_html = render_handwritten_document(inv_html, mode=handwriting_mode,
+                                                            seed=idx * 2 + 1, intensity=intensity)
 
             po_filename  = f"po_{idx:06d}.png"
             inv_filename = f"inv_{idx:06d}.png"
+            po_pdf_filename  = f"po_{idx:06d}.pdf"
+            inv_pdf_filename = f"inv_{idx:06d}.pdf"
 
-            # Write to tier subfolder
-            (po_base  / tier / po_filename).write_bytes(po_png)
-            (inv_base / tier / inv_filename).write_bytes(inv_png)
+            # ── PNG output ────────────────────────────────────────────────────
+            if emit_png:
+                async with timed("render_html_to_png"):
+                    po_png_raw  = await render_html_to_png(po_html)
+                    inv_png_raw = await render_html_to_png(inv_html)
+                with timed("degrade_image"):
+                    po_png  = degrade_image(po_png_raw,  idx * 2,     tier=tier, apply_degradation=apply_degradation)
+                    inv_png = degrade_image(inv_png_raw, idx * 2 + 1, tier=tier, apply_degradation=apply_degradation)
+                (po_base  / tier / po_filename).write_bytes(po_png)
+                (inv_base / tier / inv_filename).write_bytes(inv_png)
+                if has_disc:
+                    (po_base  / "discrepant" / po_filename).write_bytes(po_png)
+                    (inv_base / "discrepant" / inv_filename).write_bytes(inv_png)
 
-            # Also write to discrepant/ if this pair has a PO<->Invoice mismatch
-            has_disc = getattr(inv, "has_discrepancy", False)
-            if has_disc:
-                (po_base  / "discrepant" / po_filename).write_bytes(po_png)
-                (inv_base / "discrepant" / inv_filename).write_bytes(inv_png)
-                discrepant_count += 1
+            # ── PDF output ────────────────────────────────────────────────────
+            # Multi-page is automatic: Playwright's page.pdf() flows content
+            # across A4 pages via the @media print CSS in layout_engine.py.
+            # Documents with many line items (26-50) will span 2-4 pages.
+            #
+            # Degradation: degrade_pdf() rasterizes each page, runs the SAME
+            # degrade_image() pipeline used for PNGs (degradation.py), then
+            # rebuilds a PDF from the degraded pages. Uses the identical
+            # idx*2 / idx*2+1 seeds as the PNG branch above so a "heavy" tier
+            # PDF and its PNG counterpart get the same profile/parameters —
+            # they're visually consistent, just one is raster-in-pdf.
+            if emit_pdf:
+                async with timed("render_html_to_pdf"):
+                    po_pdf_raw  = await render_html_to_pdf(po_html)
+                    inv_pdf_raw = await render_html_to_pdf(inv_html)
+                with timed("degrade_pdf"):
+                    po_pdf_bytes  = degrade_pdf(po_pdf_raw,  idx * 2,     tier=tier, apply_degradation=apply_degradation) if po_pdf_raw else b""
+                    inv_pdf_bytes = degrade_pdf(inv_pdf_raw, idx * 2 + 1, tier=tier, apply_degradation=apply_degradation) if inv_pdf_raw else b""
+                if po_pdf_bytes:
+                    (po_base  / tier / po_pdf_filename).write_bytes(po_pdf_bytes)
+                if inv_pdf_bytes:
+                    (inv_base / tier / inv_pdf_filename).write_bytes(inv_pdf_bytes)
+                if has_disc:
+                    if po_pdf_bytes:
+                        (po_base  / "discrepant" / po_pdf_filename).write_bytes(po_pdf_bytes)
+                    if inv_pdf_bytes:
+                        (inv_base / "discrepant" / inv_pdf_filename).write_bytes(inv_pdf_bytes)
 
+            # ── Degradation metadata (needed for DB even if PNG not emitted) ─
+            deg_meta = get_degradation_metadata(idx * 2, tier=tier)
+
+            # ── Database log ──────────────────────────────────────────────────
             po_dict  = po.to_dict()
             inv_dict = inv.to_dict()
-            log_document_pair(
-                db_path=Path(db_path),
-                po_data=po_dict,
-                inv_data=inv_dict,
-                po_filename=f"{tier}/{po_filename}",
-                inv_filename=f"{tier}/{inv_filename}",
-                degradation_profile=deg_meta["profile_name"],
-                tier=tier,
-            )
+            with timed("log_document_pair"):
+                log_document_pair(
+                    db_path=Path(db_path),
+                    po_data=po_dict,
+                    inv_data=inv_dict,
+                    po_filename=f"{tier}/{po_filename}",
+                    inv_filename=f"{tier}/{inv_filename}",
+                    degradation_profile=deg_meta["profile_name"],
+                    tier=tier,
+                )
             success += 1
             tier_counts[tier] += 1
 
         except Exception as e:
             failed += 1
-            logging.getLogger("worker").error(f"[idx={idx}] Failed: {e}", exc_info=False)
+            logging.getLogger("worker").error(f"[idx={idx}] Failed: {e}", exc_info=True)
 
     async def run_shard():
         for i, idx in enumerate(shard_indices):
@@ -162,6 +210,8 @@ def _worker_process(
                     f"({rate:.1f} docs/s, {failed} failed, {discrepant_count} discrepant) "
                     f"| tiers: {dict(tier_counts)}"
                 )
+                log_timing_summary(prefix=f"PID {os.getpid()} — ")
+        log_timing_summary(prefix=f"PID {os.getpid()} FINAL — ")
         await close_browser()
 
     asyncio.run(run_shard())
@@ -187,7 +237,18 @@ async def run_assembly(
     language: str = "en",
     libretranslate_url: str = "http://localhost:5000",
     handwriting_mode: Optional[str] = None,
+    start_index: int = 0,
+    output_format: str = "both",
+    tier_counts: Optional[dict] = None,
 ) -> None:
+    """
+    start_index : first doc_index to generate (default 0).
+    output_format : "png" | "pdf" | "both" (default "both")
+    tier_counts : optional {"clean": n, "degraded": n, "heavy": n} — exact
+        counts that MUST sum to `count`. If None (default), tier assignment
+        falls back to the original probabilistic assign_tier(doc_index)
+        behaviour (~50/30/20 split), unchanged from before.
+    """
     catalog_path = Path(catalog_path)
     output_dir   = Path(output_dir)
     db_path      = Path(db_path)
@@ -197,17 +258,33 @@ async def run_assembly(
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     log.info(f"Catalog loaded: {len(catalog)} items from {catalog_path}")
 
-    # Even shard split — correct for all count/workers combinations
     import numpy as np
-    all_indices = list(range(count))
+    all_indices = list(range(start_index, start_index + count))
     shards = [arr.tolist() for arr in np.array_split(all_indices, workers)]
-    shards = [s for s in shards if s]  # drop empty shards if workers > count
+    shards = [s for s in shards if s]
 
-    log.info(f"Sharding: {count} docs → {len(shards)} shards across {workers} workers")
-    if apply_degradation:
-        log.info("Realism tiers: clean 50% / degraded 30% / heavy 20% (deterministic per doc_index)")
+    # ── Resolve tier plan (exact-count mode or default probabilistic) ───────
+    tier_plan: Optional[dict] = None
+    if apply_degradation and tier_counts is not None:
+        from pipeline.tier_planner import resolve_tier_plan
+        tier_plan = resolve_tier_plan(all_indices, tier_counts)
+        log.info(f"Exact tier counts requested: {tier_counts} (verified to sum to {count})")
+    elif not apply_degradation:
+        if tier_counts is not None:
+            log.warning("--tier-counts given but --no-degradation is set — "
+                        "all docs will be 'clean' regardless of --tier-counts")
     else:
+        log.info("No --tier-counts given — using default probabilistic "
+                 "tier split (clean 50% / degraded 30% / heavy 20%)")
+
+    log.info(f"Sharding: {count} docs (indices {start_index}–{start_index + count - 1}) → "
+             f"{len(shards)} shards across {workers} workers")
+    if apply_degradation and tier_plan is None:
+        log.info("Realism tiers: clean 50% / degraded 30% / heavy 20% (deterministic per doc_index)")
+    elif not apply_degradation:
         log.info("Degradation disabled — all docs in 'clean/' subfolder")
+    log.info(f"Output format: {output_format}")
+    log.info("Multi-page PDFs: documents with 26-50 line items will span 2-4 A4 pages automatically")
     if language != "en":
         log.info(f"Language: {language}")
     if handwriting_mode:
@@ -224,7 +301,12 @@ async def run_assembly(
             executor.submit(
                 _worker_process,
                 shard, catalog, str(output_dir), str(db_path),
-                apply_degradation, language, libretranslate_url, handwriting_mode,
+                apply_degradation, language, libretranslate_url,
+                handwriting_mode, output_format,
+                # Each worker only needs the slice of the plan covering its
+                # own shard — pass the full dict (cheap: count entries max)
+                # and let the worker look up by idx; no need to pre-slice.
+                tier_plan,
             ): i
             for i, shard in enumerate(shards)
         }
@@ -254,7 +336,16 @@ async def run_assembly(
         f"in {elapsed:.1f}s ({(total_success + total_failed)/max(elapsed,0.001):.1f} docs/s)"
     )
     log.info(f"Tier breakdown: {dict(total_tier_counts)}")
-    log.info(f"Discrepant pairs (PO/Invoice mismatch): {total_discrepant:,} "
-             f"(written to discrepant/ subfolder)")
+    log.info(f"Discrepant pairs: {total_discrepant:,}")
+    if tier_counts is not None:
+        mismatches = {
+            t: (tier_counts.get(t, 0), total_tier_counts.get(t, 0))
+            for t in ("clean", "degraded", "heavy")
+            if tier_counts.get(t, 0) != total_tier_counts.get(t, 0)
+        }
+        if mismatches:
+            log.warning(f"Requested tier counts did not match actual output (requested, actual): {mismatches}")
+        else:
+            log.info("Exact tier counts matched the request precisely.")
     if total_failed > 0:
         log.warning(f"{total_failed} documents failed — check logs/pipeline.log")

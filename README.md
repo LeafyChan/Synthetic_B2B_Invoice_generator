@@ -1,574 +1,319 @@
-# B2B Synthetic Document Dataset Pipeline — Project Log
-**Last updated:** 28 June 2026
+# B2B Synthetic Document Dataset Pipeline
+
+Generates paired Purchase Orders and Tax Invoices as PNG images and multi-page PDFs,
+with a SQLite ground-truth log. Designed for OCR / document-understanding model training.
 
 ---
 
-## At a Glance
+## Quick Start
 
-| Component | Status | Notes |
-|---|---|---|
-| Core 2-pass pipeline (catalog + assembly) | ✅ **Working** | Tested end-to-end |
-| Real HSN/SAC grounding (14,709 + 649 codes) | ✅ **Done** | TF-IDF index, no invented codes |
-| 3-tier visual realism (clean/degraded/heavy) | ✅ **Done** | 50/30/20 split |
-| Low-ink / streaky printer fade effect | ✅ **Done** | Layered into tiers 2 & 3 |
-| **Critical bug fixes #1–3** (screenshot truncation, shared line items, GSTIN correlation) | ✅ **Fixed** | See §14 |
-| **Unit code fix** (KG→KGS, PKT→PAC, ROLL→ROL) | ✅ **Fixed** | All units now official CBIC codes |
-| **GST rate fix** (added 0.25%, 3%, 0.1%, 40%, etc.) | ✅ **Fixed** | Full official rate set |
-| **Fresh vs append run mode** | ✅ **Done** | Default = fresh (wipes output+DB); `--append` to add |
-| **Discrepant pair separation** | ✅ **Done** | ~20% of pairs → also written to `discrepant/` subfolder |
-| **Multi-language architecture** (languages.py) | ✅ **Done + INTEGRATED** | `--language` flag wired into main.py + assembler + layout_engine |
-| **LLM provider abstraction** (llm_providers.py) | ✅ **Done + INTEGRATED** | `--llm-provider` flag; replaces `--ollama-model` / `--ollama-url` |
-| **Full-document handwriting** (handwriting.py) | ✅ **Done + INTEGRATED** | `--handwriting font` flag wired in |
-| 20,000-pair production run | ⏳ **Not started** | All fixes landed — ready after a fresh smoke test |
+```bash
+# One-time setup: build the HSN/SAC TF-IDF search index
+python pipeline/build_hsn_index.py --xlsx /path/to/HSN_SAC.xlsx
 
----
+# Smoke test (no Playwright needed, validates imports + math)
+python test_pipeline.py
 
-## Table of Contents
+# Fresh run — 3 pairs, 1 worker, PDF+PNG, all tiers, no degradation flag off
+# (degradation is ON by default; --no-degradation disables it)
+python main.py --industry "Automotive Fasteners" --count 3 --workers 1 --output-format both
 
-1. [The Original Idea](#1-the-original-idea)
-2. [Architecture Overview](#2-architecture-overview)
-3. [HSN/SAC Brief](#3-hsnsac-brief)
-4. [Three-Tier Visual Realism + Low-Ink Fade](#4-three-tier-visual-realism--low-ink-fade)
-5. [Multi-Language Architecture](#5-multi-language-architecture)
-6. [Handwriting (Font Mode + Synthesis Stub)](#6-handwriting-font-mode--synthesis-stub)
-7. [LLM Provider Abstraction](#7-llm-provider-abstraction--beyond-ollama)
-8. [Resolved Issue — Empty Database](#8-resolved-issue--empty-database)
-9. [File Manifest](#9-file-manifest--what-to-drop-where)
-10. [Command Reference — Every Command Used So Far](#10-command-reference--every-command-used-so-far)
-11. [Proposed Final Outcome](#11-proposed-final-outcome)
-12. [Suggested Additions Not Yet Built](#12-suggested-additions-not-yet-built)
-13. [On Using This Dataset](#13-on-using-this-dataset)
-14. [Known Issues — Code Review Findings](#14-known-issues-found-in-code-review)
-
----
-
-## 1. The Original Idea
-
-Build a synthetic dataset generator producing large volumes of realistic Indian B2B business document pairs — Purchase Orders and matching Tax Invoices — complete with ground-truth structured data for every field on every document. Intended use: training and evaluating document-understanding / OCR models.
-
-Three things layered together make this realistic:
-- **Structurally varied documents** — different layouts, terminology, fonts, formats.
-- **Tax-correct content** — real HSN/SAC product codes with the GST rates that actually apply.
-- **Visually degraded renders** — real-world scanned/photographed documents are never pixel-perfect.
-
-Original target: 20,000 Purchase Orders + 20,000 Tax Invoices + one master SQLite database.
-
----
-
-## 2. Architecture Overview
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     main.py (Coordinator)                   │
-│  asyncio event loop • arg parsing • logging • DB init       │
-│  fresh/append mode • language • handwriting • LLM backend   │
-└────────────┬───────────────────────┬────────────────────────┘
-             │                       │
-      ┌──────▼──────┐        ┌───────▼──────────────────────┐
-      │   PASS 1    │        │          PASS 2               │
-      │  bootstrap  │        │       assembler               │
-      │             │        │                               │
-      │ llm_provid- │        │ ProcessPoolExecutor           │
-      │ ers.py      │        │ N worker shards               │
-      │ (ollama /   │        │ ↓                             │
-      │  openai /   │        │ data_models.py  (discrepancy) │
-      │  anthropic) │        │ layout_engine.py (lang_cfg)   │
-      │ ↓           │        │ handwriting.py  (optional)    │
-      │ industry_   │        │ renderer.py     (no-truncate) │
-      │ catalog.json│        │ degradation.py  (3 tiers)     │
-      └─────────────┘        │ database.py                   │
-                             │ languages.py                  │
-                             └───────────────────────────────┘
+# Full 20k run
+python main.py --industry "Automotive Fasteners" --workers 4
 ```
 
-### Output layout
+### Test command for 3 multi-page PDFs (clean / degraded / heavy), fresh mode
+
+```bash
+python main.py \
+  --industry "Industrial Equipment" \
+  --count 3 \
+  --workers 1 \
+  --output-format pdf \
+  --skip-bootstrap
+```
+
+> **Why `--skip-bootstrap`?** If `industry_catalog.json` already exists from a previous run,
+> this skips the LLM/TF-IDF catalog generation step and reuses it. Remove the flag on a
+> first run or when you want a fresh catalog.
+
+> **Why only 3 docs hit all 3 tiers?** `assign_tier()` is deterministic per doc_index.
+> doc_index 0 → clean, doc_index 1 → degraded, doc_index 2 → heavy (based on the
+> 50/30/20 weighted random with a fixed prime salt). With 3 docs you are likely to see
+> at least 2 tiers; with ~10 docs you will reliably see all 3. Use `--count 10` if you
+> want to guarantee one of each tier in the output.
+
+```bash
+# Guaranteed hit of all 3 tiers + multi-page PDFs
+python main.py \
+  --industry "Industrial Equipment" \
+  --count 10 \
+  --workers 1 \
+  --output-format pdf \
+  --skip-bootstrap
+```
+
+---
+
+## How Multi-Page PDFs Work
+
+Multi-page output is **automatic and random** — no flag needed.
+
+### What controls page count
+
+`data_models.py` draws line-item counts from this distribution per document:
+
+| Probability | Line items | Typical pages |
+|-------------|------------|---------------|
+| 15 %        | 5 – 9      | 1             |
+| 60 %        | 10 – 25    | 1 – 2         |
+| 25 %        | 26 – 50    | 2 – 4         |
+
+Documents with 26–50 items reliably spill across 2–4 A4 pages.
+
+### Page layout (what goes where)
+
+- **Page 1** — coloured header bar, buyer/seller/shipping/meta blocks, and the first
+  N line items that fit.
+- **Page 2+ (overflow)** — continuation of the items table.
+- **Last page** — remaining items, then the summary block (subtotal / tax / grand total)
+  and footer (payment terms, signature). These are kept together via
+  `page-break-inside: avoid` in the `@media print` CSS block in `layout_engine.py`.
+
+### How it's implemented
+
+`layout_engine.py` has a `@media print` CSS block that:
+- Removes the fixed `794px` width and `box-shadow` so the document fills A4 width.
+- Applies `page-break-inside: avoid` to every `<tr>` in the items table (no row splits
+  across pages) and to `.summary-block` / `.footer-block` (they stay together on the
+  last page).
+
+`renderer.py`'s `render_html_to_pdf()` calls Playwright's `page.pdf(format="A4",
+print_background=True)` with zero margins, which activates those print rules and lets
+the browser's layout engine handle pagination automatically.
+
+The PDF bytes are written to `output/purchase_orders/<tier>/po_NNNNNN.pdf` and
+`output/tax_invoices/<tier>/inv_NNNNNN.pdf`.
+
+---
+
+## Output Structure
 
 ```
 output/
+├── master_ground_truth.db          ← SQLite: one row per doc, one row per pair
 ├── purchase_orders/
-│   ├── clean/          po_000000.png  (50% of pairs)
-│   ├── degraded/       po_000003.png  (30% of pairs)
-│   ├── heavy/          po_000007.png  (20% of pairs)
-│   └── discrepant/     po_000012.png  (~20% of pairs — PO/Invoice mismatch)
-├── tax_invoices/
-│   ├── clean/          inv_000000.png
-│   ├── degraded/       inv_000003.png
-│   ├── heavy/          inv_000007.png
-│   └── discrepant/     inv_000012.png
-└── master_ground_truth.db
-```
-
-**Important:** discrepant pairs are also in their tier folder — `discrepant/` is an additive overlay for easy filtering, not a replacement for the tier structure.
-
----
-
-## 3. HSN/SAC Brief
-
-HSN (Harmonized System of Nomenclature) codes: 2-digit chapter → 4-digit heading → 6-digit subheading → 8-digit tariff item. The pipeline uses all 14,709 leaf-level 8-digit codes + 649 SAC codes from the official CBIC `HSN_SAC.xlsx` master.
-
-**Unit code fix applied:** previously `guess_unit()` returned `KG`, `PKT`, `ROLL` — invalid codes not in the official CBIC unit master. These are now `KGS`, `PAC`, `ROL` respectively, matching the official master exactly.
-
-**GST rate fix applied:** previously only rates {5, 12, 18, 28} were used. The full official set is now: `{0, 0.1, 0.25, 1, 1.5, 3, 5, 6, 7.5, 12, 18, 28, 40}` — covering exempt goods, diamonds (0.25%), precious metals (3%), and luxury goods (40%).
-
----
-
-## 4. Three-Tier Visual Realism + Low-Ink Fade
-
-Three deterministic tiers (50% clean / 30% degraded / 20% heavy), assigned per `doc_index`. Output in separate subfolders. See earlier sections for full detail.
-
----
-
-## 5. Multi-Language Architecture
-
-**Now fully integrated.** `--language` flag wired from `main.py` → `assembler.py` → `layout_engine.py`.
-
-- **Tier A** (verified): `en`, `fr`
-- **Tier B** (evidence-based, unverified): `hi` (Hindi/Devanagari), `ur` (Urdu/Nastaliq RTL)
-- **Tier C** (auto-translated via LibreTranslate): any other code LibreTranslate supports
-
-RTL layout fully handled: `dir="rtl"` on body, `<span dir="ltr">` wrapping on all numeric/code fields.
-
-### LibreTranslate setup (WSL + venv)
-
-```bash
-# In your project venv:
-pip install libretranslate --break-system-packages
-
-# Then start the server (keep this terminal open, or use a tmux/screen session):
-libretranslate --load-only en,hi,ur,bn,ta,te,fr,de,es,zh &
-
-# Or Docker if you prefer (easier — avoids any venv conflicts):
-docker run -ti --rm -p 5000:5000 libretranslate/libretranslate
-
-# Verify it's running:
-curl http://localhost:5000/languages
-```
-
-**Notes for WSL:**
-- LibreTranslate downloads ~50MB of Argos Translate model files on first run. This can take a few minutes.
-- The `&` above backgrounds it; to stop it: `kill %1` or `pkill libretranslate`.
-- If running Docker on WSL, make sure Docker Desktop WSL integration is enabled in Docker Desktop → Settings → Resources → WSL Integration.
-- Cached Tier C configs live in `pipeline/language_cache/{code}.json` — translation only runs once per language ever, not per document.
-
----
-
-## 6. Handwriting (Font Mode + Synthesis Stub)
-
-**Now fully integrated.** `--handwriting font` wired from `main.py` → `assembler.py` → per-document HTML post-processing via `pipeline.handwriting.render_handwritten_document()`.
-
-Intensity is tier-aware: 0.4 for clean, 0.7 for degraded, 1.0 for heavy.
-
-`--handwriting synthesis` raises `NotImplementedError` with a clear integration contract message.
-
----
-
-## 7. LLM Provider Abstraction — Beyond Ollama
-
-**Now fully integrated.** `--llm-provider` / `--llm-model` / `--llm-api-key` / `--llm-base-url` wired from `main.py` → `bootstrap.py` via `pipeline.llm_providers.get_provider()`.
-
-Old flags `--ollama-model` and `--ollama-url` still work for backward compatibility.
-
----
-
-## 8. Resolved Issue — Empty Database
-
-Confirmed fixed. A second run produced 100 rows in `documents` (50 POs + 50 invoices), 50 rows in `document_pairs`, correct schema including `tier` column. See earlier sections for diagnostic steps.
-
----
-
-## 9. File Manifest — What to Drop Where
-
-All paths relative to project root (`~/b2b_synthetic_gen/`):
-
-| File | Destination | Notes |
-|---|---|---|
-| `main.py` | `main.py` | **Replace** — fresh/append mode, language, LLM, handwriting flags |
-| `gst_rate_schedule.py` | `pipeline/gst_rate_schedule.py` | **Replace** — full rate set, CBIC unit codes |
-| `bootstrap.py` | `pipeline/bootstrap.py` | **Replace** — uses llm_providers, all backends |
-| `assembler.py` | `pipeline/assembler.py` | **Replace** — language, handwriting, discrepant folder |
-| `layout_engine.py` | `pipeline/layout_engine.py` | **Replace** — language-integrated, RTL support |
-| `data_models.py` | `pipeline/data_models.py` | **Replace** — fixes #2 (shared items) + #3 (GSTIN) |
-| `renderer.py` | `pipeline/renderer.py` | **Replace** — fixes #1 (screenshot truncation) |
-| `languages.py` | `pipeline/languages.py` | **New file** |
-| `handwriting.py` | `pipeline/handwriting.py` | **New file** |
-| `llm_providers.py` | `pipeline/llm_providers.py` | **New file** |
-| `degradation.py` | `pipeline/degradation.py` | **Replace** (already done in previous session) |
-| `database.py` | `pipeline/database.py` | **Replace** (already done — adds tier column) |
-
----
-
-## 10. Command Reference — Every Command Used So Far
-
-### 10.1 — One-Time Environment Setup
-
-```bash
-cd ~/b2b_synthetic_gen
-
-# Confirm Python 3.10+
-python3 --version
-
-# Create venv inside project folder
-python3 -m venv venv
-source venv/bin/activate
-
-# Install all dependencies
-pip install --upgrade pip
-pip install -r requirements.txt
-
-# Playwright headless Chromium
-python3 -m playwright install chromium
-sudo python3 -m playwright install-deps chromium
-```
-
-### 10.2 — WSL Memory Configuration
-
-```bash
-# Edit from within WSL (file lives on Windows side)
-cat > /mnt/c/Users/<your_windows_username>/.wslconfig << 'EOF'
-[wsl2]
-memory=10GB
-processors=4
-swap=4GB
-EOF
-```
-
-Then from **PowerShell** (not WSL):
-```powershell
-wsl --shutdown
-```
-
-Reopen WSL and confirm:
-```bash
-free -h
-```
-
-To revert:
-```bash
-rm /mnt/c/Users/<your_windows_username>/.wslconfig
-```
-```powershell
-wsl --shutdown
-```
-
-### 10.3 — Ollama Setup
-
-```bash
-# Install Ollama (system-level, outside venv)
-curl -fsSL https://ollama.com/install.sh | sh
-
-# Check systemd availability
-cat /proc/1/comm
-# "systemd" → use systemctl:
-sudo systemctl enable ollama
-sudo systemctl start ollama
-sudo systemctl status ollama
-
-# "init" → start manually each session:
-ollama serve
-
-# Pull the model (in a separate terminal)
-ollama pull qwen2.5:7b
-
-# Verify server
-curl http://localhost:11434/api/tags
-
-# Verify GPU usage
-nvidia-smi
-ollama ps
-```
-
-### 10.4 — LibreTranslate Setup (WSL, inside venv)
-
-```bash
-source venv/bin/activate
-
-# Option A: pip install (inside venv)
-pip install libretranslate
-
-# Start server — load the languages you plan to use
-# Keep this running in a separate terminal or tmux session
-libretranslate --load-only en,fr,hi,ur,bn,ta,te,kn,ml,gu,pa,de,es,zh &
-
-# Verify it's up
-curl http://localhost:5000/languages | python3 -m json.tool | head -20
-
-# Option B: Docker (if Docker Desktop with WSL integration is enabled)
-docker run -d --rm -p 5000:5000 libretranslate/libretranslate
-
-# Stop the Docker container
-docker ps                          # find container ID
-docker stop <container_id>
-
-# First-time language model download can take 2–5 minutes
-# Subsequent starts are instant (models cached on disk)
-```
-
-**Language codes you can pass to --language:**
-
-| Code | Language | Tier | Notes |
-|------|----------|------|-------|
-| `en` | English | A ✅ | Default, no LibreTranslate needed |
-| `fr` | French | A ✅ | No LibreTranslate needed |
-| `hi` | Hindi | B ⚠️ | No LibreTranslate needed, Noto Sans Devanagari font auto-loaded |
-| `ur` | Urdu | B ⚠️ | No LibreTranslate needed, RTL layout, Noto Nastaliq Urdu font |
-| `bn`, `ta`, `te`, `de`, `es`, etc. | Others | C 🤖 | LibreTranslate must be running |
-
-### 10.5 — Build HSN/SAC Index (One-Time)
-
-```bash
-source venv/bin/activate
-
-# Place HSN_SAC.xlsx in project root first, then:
-python3 pipeline/build_hsn_index.py --xlsx HSN_SAC.xlsx
-
-# Commit pipeline/hsn_data/ to your repo — never needs re-running
-# unless you refresh the official xlsx from the GST portal
-```
-
-### 10.6 — Smoke Test (Always Run Before a Real Batch)
-
-```bash
-source venv/bin/activate
-python3 test_pipeline.py
-```
-
-All checks should pass before generating at scale.
-
-### 10.7 — Fresh Run (DEFAULT — Wipes Previous Output)
-
-```bash
-source venv/bin/activate
-
-# Smallest possible test — single worker, no degradation, no Ollama
-python3 main.py --industry "Automotive Fasteners" --count 10 --workers 1 --no-degradation
-
-# Slightly larger — tiers enabled
-python3 main.py --industry "Automotive Fasteners" --count 50 --workers 2
-
-# Reuse existing catalog
-python3 main.py --industry "Automotive Fasteners" --count 50 --workers 2 --skip-bootstrap
-
-# Full production run with Ollama
-python3 main.py --industry "Pharmaceutical Equipment" --workers 4
-
-# Full run without Ollama (TF-IDF fallback catalog)
-python3 main.py --industry "Commercial Furniture" --workers 4
-```
-
-### 10.8 — Append Run (Keeps Existing Output)
-
-```bash
-# Add more documents to an existing run without wiping what's already there
-python3 main.py --industry "Automotive Fasteners" --count 5000 --workers 4 --append --skip-bootstrap
-```
-
-### 10.9 — Multi-Language Runs
-
-```bash
-# Built-in languages — no LibreTranslate needed
-python3 main.py --industry "Automotive Fasteners" --language fr --count 100 --workers 2
-python3 main.py --industry "Automotive Fasteners" --language hi --count 100 --workers 2
-python3 main.py --industry "Automotive Fasteners" --language ur --count 100 --workers 2
-
-# Tier C — LibreTranslate must be running on port 5000
-python3 main.py --industry "Automotive Fasteners" --language de --count 50 --workers 2
-python3 main.py --industry "Automotive Fasteners" --language ta --count 50 --workers 2
-
-# Custom LibreTranslate URL
-python3 main.py --industry "Fasteners" --language es \
-    --libretranslate-url http://localhost:5000 --count 50 --workers 2
-```
-
-### 10.10 — Paid LLM Provider Runs
-
-```bash
-# OpenAI
-python3 main.py --industry "Automotive Fasteners" \
-    --llm-provider openai --llm-model gpt-4o-mini \
-    --llm-api-key sk-... \
-    --workers 4
-
-# OpenAI-compatible (Together, Groq, Fireworks, etc.)
-python3 main.py --industry "Automotive Fasteners" \
-    --llm-provider openai \
-    --llm-model meta-llama/Llama-3-70b-chat-hf \
-    --llm-api-key <together_key> \
-    --llm-base-url https://api.together.xyz/v1 \
-    --workers 4
-
-# Anthropic Claude
-python3 main.py --industry "Automotive Fasteners" \
-    --llm-provider anthropic --llm-model claude-sonnet-4-6 \
-    --llm-api-key sk-ant-... \
-    --workers 4
-```
-
-### 10.11 — Handwriting Mode
-
-```bash
-# Full-document handwriting font overlay (working)
-python3 main.py --industry "Automotive Fasteners" \
-    --handwriting font --count 50 --workers 2 --no-degradation
-
-# Synthesis mode — raises NotImplementedError (documented stub)
-python3 main.py --industry "Automotive Fasteners" --handwriting synthesis --count 1 --workers 1
-```
-
-### 10.12 — Combined Flags
-
-```bash
-# Hindi + handwriting + no degradation — good for visual inspection
-python3 main.py --industry "Industrial Safety" \
-    --language hi --handwriting font \
-    --count 20 --workers 1 --no-degradation
-
-# French + paid API + full degradation
-python3 main.py --industry "Commercial HVAC" \
-    --language fr \
-    --llm-provider openai --llm-model gpt-4o-mini --llm-api-key sk-... \
-    --count 200 --workers 4
-```
-
-### 10.13 — Cleaning Between Runs
-
-```bash
-# The pipeline wipes output automatically on a fresh run (default).
-# But if you need to do it manually:
-
-# Delete all output images and DB
-rm -rf output/purchase_orders/ output/tax_invoices/
-rm -f output/master_ground_truth.db output/master_ground_truth.db-wal output/master_ground_truth.db-shm
-
-# Clear stale Python bytecode (do this after replacing any .py file)
-find ~/b2b_synthetic_gen -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
-find ~/b2b_synthetic_gen -name "*.pyc" -delete
-
-# Confirm no duplicate pipeline files exist (was a suspected cause of the original empty-DB issue)
-find ~/b2b_synthetic_gen -name "database.py"
-find ~/b2b_synthetic_gen -name "assembler.py"
-find ~/b2b_synthetic_gen -name "degradation.py"
-```
-
-### 10.14 — Inspecting the Output Database
-
-```bash
-# Quick schema + row counts
-python3 -c "
-import sqlite3
-conn = sqlite3.connect('output/master_ground_truth.db')
-print(conn.execute(\"SELECT name FROM sqlite_master WHERE type='table'\").fetchall())
-print('documents:', conn.execute('SELECT COUNT(*) FROM documents').fetchone()[0])
-print('pairs:',     conn.execute('SELECT COUNT(*) FROM document_pairs').fetchone()[0])
-conn.close()
-"
-
-# Tier distribution
-python3 -c "
-import sqlite3
-conn = sqlite3.connect('output/master_ground_truth.db')
-print(conn.execute('SELECT tier, COUNT(*) FROM document_pairs GROUP BY tier').fetchall())
-conn.close()
-"
-
-# Discrepant pair count
-python3 -c "
-import sqlite3, json
-conn = sqlite3.connect('output/master_ground_truth.db')
-rows = conn.execute(\"SELECT json_payload FROM documents WHERE doc_type='tax_invoice' LIMIT 500\").fetchall()
-disc = sum(1 for (r,) in rows if json.loads(r).get('has_discrepancy'))
-print(f'Discrepant invoices in sample: {disc}/500')
-conn.close()
-"
-
-# High-value pairs
-sqlite3 output/master_ground_truth.db \
-    "SELECT po_number, invoice_number, grand_total FROM document_pairs
-     WHERE grand_total > 100000 ORDER BY grand_total DESC LIMIT 10;"
-
-# Full JSON for a specific document
-sqlite3 output/master_ground_truth.db \
-    "SELECT json_payload FROM documents WHERE filename LIKE '%po_000042%';"
-```
-
-### 10.15 — Expected Output Folder Structure
-
-```
-output/
-├── purchase_orders/
-│   ├── clean/          po_000000.png  po_000001.png  ...
-│   ├── degraded/       po_000002.png  ...
-│   ├── heavy/          po_000004.png  ...
-│   └── discrepant/     po_000005.png  ...   (~20% of total)
-├── tax_invoices/
-│   ├── clean/          inv_000000.png ...
-│   ├── degraded/       inv_000002.png ...
-│   ├── heavy/          inv_000004.png ...
-│   └── discrepant/     inv_000005.png ...
-└── master_ground_truth.db
-logs/
-└── pipeline.log
-industry_catalog.json
+│   ├── clean/      po_000000.png  po_000000.pdf  ...
+│   ├── degraded/   po_000001.png  po_000001.pdf  ...
+│   ├── heavy/      po_000002.png  po_000002.pdf  ...
+│   └── discrepant/ (future: pairs with deliberate PO↔invoice mismatches)
+└── tax_invoices/
+    ├── clean/      inv_000000.png  inv_000000.pdf  ...
+    ├── degraded/   inv_000001.png  inv_000001.pdf  ...
+    ├── heavy/      inv_000002.png  inv_000002.pdf  ...
+    └── discrepant/
 ```
 
 ---
 
-## 11. Proposed Final Outcome
+## Run Modes
 
-A self-contained, reproducible dataset generator that, for any chosen industry, produces:
+### Fresh run (default)
+Wipes `output/purchase_orders/`, `output/tax_invoices/`, and `master_ground_truth.db`,
+then generates from doc_index 0.
 
-- 20,000 Purchase Orders + 20,000 matching Tax Invoices as high-resolution PNG images, organised into clean/degraded/heavy realism tiers in a 50/30/20 split
-- ~20% of pairs with deliberate, realistic PO↔Invoice discrepancies (partial shipment, price change, item substitution), labelled in the SQLite ground truth and written to a separate `discrepant/` subfolder for easy reconciliation-dataset extraction
-- One SQLite master ground-truth database with full structured JSON, every financial figure, PO↔Invoice linkage, discrepancy labels, and realism tier
-- Official CBIC unit codes (KGS, PAC, ROL, etc.) and full GST rate set (0% through 40%)
-- Optional multi-language output (4 hand-curated + auto-translate fallback for dozens more)
-- Optional full-document handwriting rendering
-- Choice of LLM backend for catalog bootstrap (Ollama / OpenAI-compatible / Anthropic)
+```bash
+python main.py --industry "Textile Machinery" --count 20000 --workers 4
+```
 
----
+### Append run
+Keeps existing files and DB. Auto-continues from `max(doc_index) + 1` so new documents
+never overwrite existing ones.
 
-## 12. Suggested Additions Not Yet Built
+```bash
+python main.py --industry "Textile Machinery" --count 5000 --workers 4 --append
+```
 
-- **Multi-page documents** — real invoices with 15+ line items should spill onto a second page
-- **Bounding-box / token-level ground truth** — Playwright can report each field's bounding box before degradation; currently discarded
-- **Document tampering / fraud variants** — mismatched GST math, altered totals (distinct from the current PO↔Invoice discrepancy which is about content mismatch between the two documents in a pair, not arithmetic errors within one document)
-- **Other Indian regulatory document types** — e-way bills, delivery challans, credit/debit notes
-- **Resume support** — `--resume` flag to skip already-completed indices after a crash
+### Reuse catalog
+Skip Pass 1 (LLM bootstrap) if `industry_catalog.json` already exists:
 
----
-
-## 13. On Using This Dataset
-
-Strongest-fit use cases:
-
-1. **Document-understanding / OCR model fine-tuning** — evaluate field-extraction accuracy across the three realism tiers; "accuracy degrades by X% from clean to heavy" is a concrete, presentable result
-2. **PO↔Invoice reconciliation / discrepancy detection** — the `discrepant/` folder with labelled mismatches makes this a clean binary classification or entity-extraction task
-3. **Synthetic-to-real domain transfer** — train on synthetic, evaluate on real invoices
-4. **Dataset release / benchmark** — "controllable-difficulty benchmark for Indian B2B document OCR" with three realism tiers as the headline feature
+```bash
+python main.py --industry "Textile Machinery" --count 1000 --workers 4 --skip-bootstrap
+```
 
 ---
 
-## 14. Known Issues Found in Code Review
+## CLI Reference
 
-### Fixed ✅
+| Flag | Default | Description |
+|------|---------|-------------|
+| `--industry` | `"Automotive Fasteners"` | Industry name sent to the LLM for catalog generation |
+| `--count` | `20000` | Number of PO/Invoice pairs to generate |
+| `--workers` | `4` | Parallel subprocess workers (one Chromium per worker) |
+| `--output-format` | `both` | `png` / `pdf` / `both` |
+| `--append` | off | Keep existing output; continue numbering from last doc_index |
+| `--skip-bootstrap` | off | Reuse `industry_catalog.json` if it exists |
+| `--no-degradation` | off | Skip OpenCV degradation; all docs go to `clean/` |
+| `--language` | `en` | Language code: `en`, `hi`, `ur`, `fr`, or any LibreTranslate code |
+| `--handwriting` | off | `font` or `synthesis` (synthesis is a documented stub) |
+| `--llm-provider` | `ollama` | `ollama` / `openai` / `anthropic` |
+| `--llm-model` | `qwen2.5:7b` | Model string passed to the provider |
+| `--llm-api-key` | — | API key (OpenAI / Anthropic) |
+| `--start-index` | auto | Override starting doc_index (auto-resolved on `--append`) |
+| `--list-languages` | — | Print all supported language codes and exit |
 
-| # | Issue | Fix applied |
-|---|---|---|
-| 1 | Screenshot clip truncated long documents silently | renderer.py: measure real content height, resize viewport before clip |
-| 2 | PO and Invoice shared the same Python list/objects | data_models.py: deep copy + ~20% deliberate discrepancies |
-| 3 | GSTIN state code unrelated to address state | data_models.py: STATE_NAME_TO_GST_CODE lookup table |
-| — | Unit codes not in CBIC official master (KG, PKT, ROLL) | gst_rate_schedule.py: returns KGS, PAC, ROL |
-| — | GST rates limited to {5,12,18,28} only | gst_rate_schedule.py: full official rate set |
+---
 
-### Open (real tech debt, non-blocking)
+## Degradation Tiers
 
-| # | Issue | File |
-|---|---|---|
-| 4 | Resume support half-built — no `--resume` flag, no uniqueness constraint | database.py, assembler.py |
-| 5 | `loop = asyncio.get_event_loop()` dead code; async framing misleading | assembler.py |
-| 6 | New browser context per render (should reuse one context per worker) | renderer.py |
-| 7 | No spatial/bounding-box ground truth captured | layout_engine.py, renderer.py |
-| 8 | `lookup_rate()` SAC branch: `is_service` flag was previously ignored | gst_rate_schedule.py ✅ fixed |
-| 9 | `guess_unit()` ran on full ancestor-chain description, not leaf only | gst_rate_schedule.py ✅ fixed |
-| 10 | Shard split was a patch, not correct for all count/workers combos | assembler.py ✅ fixed (numpy array_split) |
-| 11 | `get_pair_count()` / `get_tier_counts()` swallow all exceptions silently | database.py |
-| 12 | Handwritten signatory name has no ground-truth backing field | layout_engine.py (by design, documented) |
+Assigned deterministically per `doc_index` (50 % clean / 30 % degraded / 20 % heavy):
+
+| Tier | Profiles | Effects |
+|------|----------|---------|
+| `clean` | pristine, clean_laser, high_res_clean | Near-zero noise, no stains, no rotation |
+| `degraded` | worn_laser, inkjet_old, low_ink, archive_scan, office_copy, streaky_toner | Visible noise, light stains, mild crumple, low-ink streaking, slight rotation |
+| `heavy` | fax_quality, tea_stained, crumpled_scan, low_dpi_old, ink_bleed_worn, dying_cartridge | Heavy stains, strong crumple/warp, resolution loss, aggressive fading, rotation up to ±2.5° |
+
+---
+
+## Architecture Overview
+
+```
+Pass 1 — bootstrap.py (run once per industry)
+  LLM → product descriptions
+  → hsn_lookup.py (TF-IDF over official HSN/SAC master)
+  → industry_catalog.json  (~1,000 items with real HSN codes + GST rates)
+
+Pass 2 — assembler.py (parallel workers, one per CPU)
+  for each doc_index:
+    data_models.py          → PurchaseOrder + TaxInvoice dataclasses
+    layout_engine.py        → HTML strings (8 layout variants × 8 themes)
+    [handwriting.py]        → optional font-based handwriting overlay
+    renderer.py             → PNG bytes (Playwright/Chromium screenshot)
+                            → PDF bytes (Playwright page.pdf(), multi-page)
+    degradation.py          → tiered OpenCV degradation (PNG only)
+    database.py             → SQLite insert (documents + document_pairs)
+```
+
+---
+
+## Module Responsibilities
+
+| File | What it does |
+|------|-------------|
+| `data_models.py` | Dataclasses + deterministic field generators (Faker, seeded RNG) |
+| `layout_engine.py` | HTML template rendering; 8 layout variants, 8 colour themes, RTL support |
+| `renderer.py` | Playwright pool; `render_html_to_png()` + `render_html_to_pdf()` |
+| `degradation.py` | OpenCV pipeline; 15 profiles across 3 tiers; `assign_tier()` |
+| `database.py` | SQLite schema + insert helpers; WAL mode for parallel writes |
+| `bootstrap.py` | Pass 1 orchestration; LLM path + TF-IDF fallback |
+| `assembler.py` | Pass 2 orchestration; `ProcessPoolExecutor` sharding |
+| `main.py` | CLI entry point; fresh/append logic; logging setup |
+| `hsn_lookup.py` | Runtime TF-IDF search over HSN/SAC master (lazy singleton) |
+| `build_hsn_index.py` | One-time index builder from official HSN_SAC.xlsx |
+| `gst_rate_schedule.py` | Chapter/heading/SAC rate tables; `lookup_rate()`; `guess_unit()` |
+| `languages.py` | `LanguageConfig` dataclass; built-in EN/HI/UR/FR labels; LibreTranslate bridge |
+| `handwriting.py` | Font-mode full-document handwriting overlay; synthesis stub |
+| `llm_providers.py` | Provider abstraction: Ollama / OpenAI-compatible / Anthropic |
+
+---
+
+## Dependencies
+
+```
+playwright        # HTML → PNG/PDF rendering
+opencv-python     # Image degradation
+Pillow            # Fallback renderer + degradation helpers
+numpy             # Array ops in degradation
+faker             # Synthetic names/addresses (en_IN locale)
+scikit-learn      # TF-IDF vectorizer for HSN lookup
+joblib            # Serialise/load TF-IDF index
+openpyxl          # Parse HSN_SAC.xlsx in build_hsn_index.py
+aiohttp           # Async HTTP to LLM providers
+```
+
+Install Playwright browsers after `pip install playwright`:
+```bash
+playwright install chromium
+```
+
+---
+
+## Known Limitations / Planned Extensions
+
+- **Discrepancy injection** — `has_discrepancy` flag exists on `TaxInvoice` and the
+  `discrepant/` output folders are created, but intentional PO↔invoice mismatches are
+  not yet generated. Planned: randomly patch a line-item quantity or unit price on the
+  invoice side after copying from the PO.
+
+- **Handwriting synthesis mode** — `handwriting.py`'s `mode="synthesis"` raises
+  `NotImplementedError`. Font mode (`mode="font"`) is fully working. A real synthesis
+  backend would need an IAM-trained stroke-sequence model; see the stub's docstring for
+  the exact integration contract.
+
+- **PDF degradation** — degradation (`degradation.py`) is applied to PNG output only.
+  PDF files are stored as clean Playwright output regardless of tier. Degrading PDFs
+  would require rasterising each page then re-encoding, which is a separate step.
+
+- **Non-Latin handwriting synthesis** — `handwriting.py` font mode works for any Google
+  Font (including Devanagari/Nastaliq via `languages.py`), but synthesis mode is Latin
+  only pending an IAM-equivalent model for those scripts.
+
+---
+
+## Project Log (session history)
+
+### What was built and why
+
+**Two-pass architecture** — Pass 1 (bootstrap) runs once per industry and is expensive
+(LLM calls). Pass 2 (assembly) runs 20,000 times and is cheap (template + render). This
+1:1,000 reuse ratio is the reason the split exists.
+
+**HTML + Playwright instead of reportlab/WeasyPrint/PIL** — A real browser rendering
+engine handles fonts, RTL text, table layout, and multi-page flow correctly by
+construction. PIL-based rendering would require hand-coding every layout detail.
+ReportLab has a steep API surface. WeasyPrint is close but Playwright gives a real
+Chromium engine and a clean screenshot API for PNG output on the same path as PDF.
+
+**TF-IDF for HSN lookup** — HSN/SAC descriptions are dense legal jargon where exact
+term overlap is the strongest match signal, not semantic paraphrase. TF-IDF needs no
+model download, no GPU, runs in <10ms per query, and builds in <5 seconds. Sentence
+transformers would add inference cost with no benefit for this specific retrieval task.
+
+**SQLite over PostgreSQL** — single-machine pipeline, one portable output file, no
+concurrent multi-user access needed. `PRAGMA journal_mode=WAL` handles the one real
+concurrency concern (multiple worker processes writing simultaneously).
+
+**Provider abstraction in `llm_providers.py`** — Ollama was originally hardcoded in
+`bootstrap.py`. The refactor defines a `complete()` / `healthcheck()` interface so
+switching to OpenAI or Anthropic is a config change, not a code change.
+
+### Bugs fixed during development
+
+- `_PRICE_BY_RATE` was being imported from `gst_rate_schedule` (where it doesn't exist)
+  inside `bootstrap.py`'s fallback path. Fixed by removing the phantom import — the
+  dict was already defined at module level in `bootstrap.py`.
+
+- `assign_tier()` was not exported from `degradation.py`'s public surface initially,
+  causing an ImportError in `assembler.py`. Fixed by ensuring it is defined at module
+  level (not inside a function).
+
+- `--append` originally only prevented the output folder from being wiped, but did not
+  prevent `doc_index` from restarting at 0 — causing silent overwrites on resume.
+  Fixed by adding `get_max_doc_index()` to `database.py` and auto-resolving
+  `start_index = max_existing + 1` in `main.py`.
+
+- `get_pair_count()` and `get_max_doc_index()` used bare `except` clauses that silently
+  returned 0/−1 for any failure, making a locked/corrupt DB indistinguishable from an
+  empty one. Fixed by adding `log.warning` / `log.error` with explicit messages
+  explaining what main.py will infer from the returned value.
+
+- `_jitter_css()` in `handwriting.py` originally set `display: inline-block` on `<td>`
+  elements, which collapsed table column widths. Fixed by applying only `transform`
+  (rotate/translate) to table cells and reserving `display` overrides for paragraph
+  elements only.
+
+- `lookup_rate()` in `gst_rate_schedule.py` originally inferred `is_service=True` from
+  codes starting with `"99"` — a landmine because Indian customs chapters 98/99 also
+  cover physical goods. Fixed by requiring callers to pass `is_service` explicitly and
+  never inferring it from the code string.

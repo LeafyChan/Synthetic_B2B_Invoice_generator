@@ -453,3 +453,261 @@
 2026-06-28 22:14:51,856 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
 2026-06-28 22:14:51,856 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
 2026-06-28 22:14:51,856 [INFO] main — ============================================================
+2026-06-29 10:06:26,173 [INFO] main — ============================================================
+2026-06-29 10:06:26,174 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-29 10:06:26,174 [INFO] main —   Industry    : Automotive Fasteners
+2026-06-29 10:06:26,174 [INFO] main —   Doc Pairs   : 1
+2026-06-29 10:06:26,174 [INFO] main —   Workers     : 1
+2026-06-29 10:06:26,174 [INFO] main —   Language    : ur
+2026-06-29 10:06:26,174 [INFO] main —   LLM backend : ollama / qwen2.5:7b
+2026-06-29 10:06:26,174 [INFO] main —   Handwriting : off
+2026-06-29 10:06:26,174 [INFO] main —   Mode        : APPEND
+2026-06-29 10:06:26,174 [INFO] main — ============================================================
+2026-06-29 10:06:26,174 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-29 10:06:26,175 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 10:06:26,175 [INFO] main — [PASS 1] Skipped — using existing /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 10:06:26,175 [INFO] main — Append mode: auto-continuing from doc_index 50 (highest existing index was 49)
+2026-06-29 10:06:26,175 [INFO] main — [PASS 2] Assembling 1 PO/Invoice pairs (indices 50–50) …
+2026-06-29 10:06:26,178 [INFO] assembler — Catalog loaded: 1000 items from /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 10:06:26,216 [INFO] assembler — Sharding: 1 docs (indices 50–50) → 1 shards across 1 workers
+2026-06-29 10:06:26,216 [INFO] assembler — Realism tiers: clean 50% / degraded 30% / heavy 20% (deterministic per doc_index)
+2026-06-29 10:06:26,216 [INFO] assembler — Language: ur
+2026-06-29 10:06:26,356 [WARNING] worker — Could not load language 'ur': No module named 'pipeline.languages' — using English
+2026-06-29 10:06:29,947 [INFO] assembler — Shard 00 done | PID 112655 | 1/1 ok | 0 failed | 3.59s | Overall: 1/1 (0.3/s)
+2026-06-29 10:06:29,952 [INFO] assembler — Assembly complete: 1 ok / 0 failed in 3.7s (0.3 docs/s)
+2026-06-29 10:06:29,952 [INFO] assembler — Tier breakdown: {'clean': 1}
+2026-06-29 10:06:29,952 [INFO] assembler — Discrepant pairs (PO/Invoice mismatch): 0 (written to discrepant/ subfolder)
+2026-06-29 10:06:29,952 [INFO] main — ============================================================
+2026-06-29 10:06:29,952 [INFO] main —   Pipeline complete in 3.8s (0.1 min)
+2026-06-29 10:06:29,952 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
+2026-06-29 10:06:29,952 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 10:06:29,952 [INFO] main — ============================================================
+2026-06-29 10:38:17,704 [INFO] main — ============================================================
+2026-06-29 10:38:17,705 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-29 10:38:17,705 [INFO] main —   Industry    : Automotive Fasteners
+2026-06-29 10:38:17,705 [INFO] main —   Doc Pairs   : 1
+2026-06-29 10:38:17,705 [INFO] main —   Workers     : 1
+2026-06-29 10:38:17,705 [INFO] main —   Language    : ur
+2026-06-29 10:38:17,705 [INFO] main —   LLM backend : ollama / qwen2.5:7b
+2026-06-29 10:38:17,705 [INFO] main —   Handwriting : off
+2026-06-29 10:38:17,705 [INFO] main —   Mode        : APPEND
+2026-06-29 10:38:17,705 [INFO] main — ============================================================
+2026-06-29 10:38:17,705 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-29 10:38:17,709 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 10:38:17,709 [INFO] main — [PASS 1] Skipped — using existing /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 10:38:17,710 [INFO] main — Append mode: auto-continuing from doc_index 51 (highest existing index was 50)
+2026-06-29 10:38:17,710 [INFO] main — [PASS 2] Assembling 1 PO/Invoice pairs (indices 51–51) …
+2026-06-29 10:38:17,712 [INFO] assembler — Catalog loaded: 1000 items from /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 10:38:17,838 [INFO] assembler — Sharding: 1 docs (indices 51–51) → 1 shards across 1 workers
+2026-06-29 10:38:17,838 [INFO] assembler — Realism tiers: clean 50% / degraded 30% / heavy 20% (deterministic per doc_index)
+2026-06-29 10:38:17,838 [INFO] assembler — Language: ur
+2026-06-29 10:38:18,168 [INFO] worker — Language: Urdu (Tier 2)
+2026-06-29 10:38:21,845 [INFO] assembler — Shard 00 done | PID 118976 | 1/1 ok | 0 failed | 3.68s | Overall: 1/1 (0.2/s)
+2026-06-29 10:38:21,849 [INFO] assembler — Assembly complete: 1 ok / 0 failed in 4.0s (0.2 docs/s)
+2026-06-29 10:38:21,849 [INFO] assembler — Tier breakdown: {'clean': 1}
+2026-06-29 10:38:21,849 [INFO] assembler — Discrepant pairs (PO/Invoice mismatch): 0 (written to discrepant/ subfolder)
+2026-06-29 10:38:21,849 [INFO] main — ============================================================
+2026-06-29 10:38:21,849 [INFO] main —   Pipeline complete in 4.1s (0.1 min)
+2026-06-29 10:38:21,849 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
+2026-06-29 10:38:21,849 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 10:38:21,850 [INFO] main — ============================================================
+2026-06-29 16:58:57,332 [INFO] main — ============================================================
+2026-06-29 16:58:57,333 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-29 16:58:57,333 [INFO] main —   Industry    : Industrial Equipment
+2026-06-29 16:58:57,334 [INFO] main —   Doc Pairs   : 3
+2026-06-29 16:58:57,334 [INFO] main —   Workers     : 1
+2026-06-29 16:58:57,334 [INFO] main —   Language    : en
+2026-06-29 16:58:57,334 [INFO] main —   LLM backend : ollama / qwen2.5:7b
+2026-06-29 16:58:57,334 [INFO] main —   Handwriting : off
+2026-06-29 16:58:57,334 [INFO] main —   Output fmt  : pdf
+2026-06-29 16:58:57,334 [INFO] main —   Mode        : FRESH (previous output will be wiped)
+2026-06-29 16:58:57,334 [INFO] main — ============================================================
+2026-06-29 16:58:57,334 [INFO] main — Fresh run mode — wiping previous output …
+2026-06-29 16:58:57,355 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/purchase_orders
+2026-06-29 16:58:57,368 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/tax_invoices
+2026-06-29 16:58:57,370 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 16:58:57,370 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-29 16:58:57,405 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 16:58:57,405 [INFO] main — [PASS 1] Bootstrapping industry catalog (ollama/qwen2.5:7b) …
+2026-06-29 16:58:58,630 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-29 16:58:58,703 [INFO] bootstrap — LLM provider 'ollama' is reachable
+2026-06-29 16:58:58,703 [INFO] bootstrap —   Batch 1/10 …
+2026-06-29 17:01:00,195 [WARNING] bootstrap — Batch 0: description parse failed — Expecting ',' delimiter: line 7 column 26 (char 231)
+2026-06-29 17:01:00,201 [INFO] bootstrap —   → 0 items
+2026-06-29 17:01:00,503 [INFO] bootstrap —   Batch 2/10 …
+2026-06-29 17:04:06,210 [INFO] bootstrap —   → 96 items
+2026-06-29 17:04:06,513 [INFO] bootstrap —   Batch 3/10 …
+2026-06-29 17:07:03,126 [INFO] bootstrap —   → 86 items
+2026-06-29 17:07:03,427 [INFO] bootstrap —   Batch 4/10 …
+2026-06-29 17:10:55,425 [INFO] bootstrap —   → 99 items
+2026-06-29 17:10:55,727 [INFO] bootstrap —   Batch 5/10 …
+2026-06-29 17:14:39,437 [WARNING] bootstrap — Batch 4: description parse failed — Unterminated string starting at: line 304 column 5 (char 16930)
+2026-06-29 17:14:39,438 [INFO] bootstrap —   → 0 items
+2026-06-29 17:14:39,738 [INFO] bootstrap —   Batch 6/10 …
+2026-06-29 17:16:37,196 [WARNING] bootstrap — Batch 5: description parse failed — Expecting ',' delimiter: line 26 column 46 (char 1130)
+2026-06-29 17:16:37,197 [INFO] bootstrap —   → 0 items
+2026-06-29 17:16:37,498 [INFO] bootstrap —   Batch 7/10 …
+2026-06-29 17:21:51,830 [INFO] bootstrap —   → 99 items
+2026-06-29 17:21:52,136 [INFO] bootstrap —   Batch 8/10 …
+2026-06-29 17:26:12,582 [WARNING] bootstrap — Batch 7: description parse failed — Unterminated string starting at: line 308 column 5 (char 16531)
+2026-06-29 17:26:12,583 [INFO] bootstrap —   → 0 items
+2026-06-29 17:26:12,883 [INFO] bootstrap —   Batch 9/10 …
+2026-06-29 17:29:21,172 [INFO] bootstrap —   → 83 items
+2026-06-29 17:29:21,493 [INFO] bootstrap —   Batch 10/10 …
+2026-06-29 17:33:21,343 [WARNING] bootstrap — Batch 9: description parse failed — Unterminated string starting at: line 245 column 5 (char 9844)
+2026-06-29 17:33:21,343 [INFO] bootstrap —   → 0 items
+2026-06-29 17:33:26,759 [INFO] bootstrap — Catalog saved: 709 items → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 17:33:26,855 [INFO] main — [PASS 1] Catalog saved → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 17:33:26,856 [INFO] main — [PASS 2] Assembling 3 PO/Invoice pairs (indices 0–2) …
+2026-06-29 17:33:26,862 [INFO] assembler — Catalog loaded: 709 items from /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 17:33:26,866 [INFO] assembler — Sharding: 3 docs (indices 0–2) → 1 shards across 1 workers
+2026-06-29 17:33:26,866 [INFO] assembler — Realism tiers: clean 50% / degraded 30% / heavy 20% (deterministic per doc_index)
+2026-06-29 17:33:26,866 [INFO] assembler — Output format: pdf
+2026-06-29 17:33:26,866 [INFO] assembler — Multi-page PDFs: documents with 26-50 line items will span 2-4 A4 pages automatically
+2026-06-29 17:33:27,808 [INFO] worker — Language: English (Tier 1)
+2026-06-29 17:33:34,987 [INFO] assembler — Shard 00 done | PID 222586 | 3/3 ok | 0 failed | 7.18s | Overall: 3/3 (0.4/s)
+2026-06-29 17:33:34,997 [INFO] assembler — Assembly complete: 3 ok / 0 failed in 8.1s (0.4 docs/s)
+2026-06-29 17:33:34,997 [INFO] assembler — Tier breakdown: {'degraded': 2, 'heavy': 1}
+2026-06-29 17:33:34,997 [INFO] assembler — Discrepant pairs: 0
+2026-06-29 17:33:34,998 [INFO] main — ============================================================
+2026-06-29 17:33:34,998 [INFO] main —   Pipeline complete in 2077.7s (34.6 min)
+2026-06-29 17:33:34,998 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
+2026-06-29 17:33:34,998 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 17:33:34,998 [INFO] main — ============================================================
+2026-06-29 18:13:58,529 [INFO] main — ============================================================
+2026-06-29 18:13:58,529 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-29 18:13:58,529 [INFO] main —   Industry    : Industrial Equipment
+2026-06-29 18:13:58,529 [INFO] main —   Doc Pairs   : 3
+2026-06-29 18:13:58,529 [INFO] main —   Workers     : 1
+2026-06-29 18:13:58,529 [INFO] main —   Language    : en
+2026-06-29 18:13:58,529 [INFO] main —   LLM backend : ollama / qwen2.5:7b
+2026-06-29 18:13:58,529 [INFO] main —   Handwriting : off
+2026-06-29 18:13:58,529 [INFO] main —   Output fmt  : pdf
+2026-06-29 18:13:58,529 [INFO] main —   Mode        : FRESH (previous output will be wiped)
+2026-06-29 18:13:58,529 [INFO] main — ============================================================
+2026-06-29 18:13:58,530 [INFO] main — Fresh run mode — wiping previous output …
+2026-06-29 18:13:58,531 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/purchase_orders
+2026-06-29 18:13:58,531 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/tax_invoices
+2026-06-29 18:13:58,532 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 18:13:58,532 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-29 18:13:58,560 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 18:13:58,560 [INFO] main — [PASS 1] Bootstrapping industry catalog (ollama/qwen2.5:7b) …
+2026-06-29 18:14:00,944 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-29 18:14:00,961 [INFO] bootstrap — LLM provider 'ollama' is reachable
+2026-06-29 18:14:00,961 [INFO] bootstrap —   Batch 1/10 …
+2026-06-29 18:15:47,882 [WARNING] bootstrap — Batch 0: description parse failed — unrecoverable JSON: Expecting ',' delimiter: line 7 column 26 (char 231)
+2026-06-29 18:15:47,886 [INFO] bootstrap —   → 0 items
+2026-06-29 18:15:48,189 [INFO] bootstrap —   Batch 2/10 …
+2026-06-29 18:18:48,427 [INFO] bootstrap —   → 96 items
+2026-06-29 18:18:48,728 [INFO] bootstrap —   Batch 3/10 …
+2026-06-29 18:21:40,698 [INFO] bootstrap —   → 86 items
+2026-06-29 18:21:41,000 [INFO] bootstrap —   Batch 4/10 …
+2026-06-29 18:24:52,213 [INFO] bootstrap —   → 99 items
+2026-06-29 18:24:52,514 [INFO] bootstrap —   Batch 5/10 …
+2026-06-29 18:28:35,388 [WARNING] bootstrap — Batch 4: truncated JSON repaired — recovered partial batch
+2026-06-29 18:31:11,516 [INFO] bootstrap —   → 99 items
+2026-06-29 18:31:11,821 [INFO] bootstrap —   Batch 6/10 …
+2026-06-29 18:34:26,151 [INFO] bootstrap —   → 98 items
+2026-06-29 18:34:26,456 [INFO] bootstrap —   Batch 7/10 …
+2026-06-29 18:37:19,763 [INFO] bootstrap —   → 88 items
+2026-06-29 18:37:20,067 [INFO] bootstrap —   Batch 8/10 …
+2026-06-29 18:41:03,260 [WARNING] bootstrap — Batch 7: truncated JSON repaired — recovered partial batch
+2026-06-29 18:43:36,495 [INFO] bootstrap —   → 97 items
+2026-06-29 18:43:36,809 [INFO] bootstrap —   Batch 9/10 …
+2026-06-29 18:47:41,412 [INFO] bootstrap —   → 91 items
+2026-06-29 18:47:41,719 [INFO] bootstrap —   Batch 10/10 …
+2026-06-29 18:51:22,618 [WARNING] bootstrap — Batch 9: truncated JSON repaired — recovered partial batch
+2026-06-29 18:54:07,237 [INFO] bootstrap —   → 99 items
+2026-06-29 18:54:10,302 [INFO] bootstrap — Catalog saved: 982 items → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 18:54:10,401 [INFO] main — [PASS 1] Catalog saved → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 18:54:10,402 [INFO] main — [PASS 2] Assembling 3 PO/Invoice pairs (indices 0–2) …
+2026-06-29 18:54:10,406 [INFO] assembler — Catalog loaded: 982 items from /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-29 18:54:10,410 [INFO] assembler — Sharding: 3 docs (indices 0–2) → 1 shards across 1 workers
+2026-06-29 18:54:10,410 [INFO] assembler — Realism tiers: clean 50% / degraded 30% / heavy 20% (deterministic per doc_index)
+2026-06-29 18:54:10,410 [INFO] assembler — Output format: pdf
+2026-06-29 18:54:10,410 [INFO] assembler — Multi-page PDFs: documents with 26-50 line items will span 2-4 A4 pages automatically
+2026-06-29 18:54:12,209 [INFO] worker — Language: English (Tier 1)
+2026-06-29 18:54:40,943 [INFO] assembler — Shard 00 done | PID 277322 | 3/3 ok | 0 failed | 28.73s | Overall: 3/3 (0.1/s)
+2026-06-29 18:54:40,957 [INFO] assembler — Assembly complete: 3 ok / 0 failed in 30.5s (0.1 docs/s)
+2026-06-29 18:54:40,959 [INFO] assembler — Tier breakdown: {'degraded': 2, 'heavy': 1}
+2026-06-29 18:54:40,959 [INFO] assembler — Discrepant pairs: 0
+2026-06-29 18:54:40,959 [INFO] main — ============================================================
+2026-06-29 18:54:40,960 [INFO] main —   Pipeline complete in 2442.4s (40.7 min)
+2026-06-29 18:54:40,960 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
+2026-06-29 18:54:40,960 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-29 18:54:40,960 [INFO] main — ============================================================
+2026-06-30 07:05:14,904 [INFO] main — ============================================================
+2026-06-30 07:05:14,905 [INFO] main —   B2B SYNTHETIC DOCUMENT PIPELINE
+2026-06-30 07:05:14,905 [INFO] main —   Industry    : Diapers and health products
+2026-06-30 07:05:14,906 [INFO] main —   Doc Pairs   : 10
+2026-06-30 07:05:14,906 [INFO] main —   Workers     : 1
+2026-06-30 07:05:14,906 [INFO] main —   Language    : en
+2026-06-30 07:05:14,906 [INFO] main —   LLM backend : ollama / qwen2.5:7b
+2026-06-30 07:05:14,906 [INFO] main —   Handwriting : off
+2026-06-30 07:05:14,906 [INFO] main —   Output fmt  : both
+2026-06-30 07:05:14,906 [INFO] main —   Tier counts : {'clean': 3, 'degraded': 3, 'heavy': 4}
+2026-06-30 07:05:14,906 [INFO] main —   Mode        : FRESH (previous output will be wiped)
+2026-06-30 07:05:14,906 [INFO] main — ============================================================
+2026-06-30 07:05:14,906 [INFO] main — Fresh run mode — wiping previous output …
+2026-06-30 07:05:14,915 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/purchase_orders
+2026-06-30 07:05:14,916 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/tax_invoices
+2026-06-30 07:05:14,921 [INFO] main —   Removed /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-30 07:05:14,922 [INFO] main — Initialising SQLite master ground-truth database …
+2026-06-30 07:05:14,955 [INFO] database — Database initialised: /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-30 07:05:14,955 [INFO] main — [PASS 1] Bootstrapping industry catalog (ollama/qwen2.5:7b) …
+2026-06-30 07:05:16,043 [INFO] bootstrap — HSN index: 14709 goods + 649 services
+2026-06-30 07:05:16,093 [INFO] bootstrap — LLM provider 'ollama' is reachable
+2026-06-30 07:05:16,093 [INFO] bootstrap —   Batch 1/10 …
+2026-06-30 07:08:02,198 [INFO] bootstrap —   → 76 items
+2026-06-30 07:08:02,503 [INFO] bootstrap —   Batch 2/10 …
+2026-06-30 07:10:36,347 [INFO] bootstrap —   → 72 items
+2026-06-30 07:10:36,666 [INFO] bootstrap —   Batch 3/10 …
+2026-06-30 07:14:07,213 [INFO] bootstrap —   → 96 items
+2026-06-30 07:14:07,515 [INFO] bootstrap —   Batch 4/10 …
+2026-06-30 07:17:28,992 [INFO] bootstrap —   → 99 items
+2026-06-30 07:17:29,294 [INFO] bootstrap —   Batch 5/10 …
+2026-06-30 07:20:46,475 [INFO] bootstrap —   → 96 items
+2026-06-30 07:20:46,780 [INFO] bootstrap —   Batch 6/10 …
+2026-06-30 07:23:36,924 [INFO] bootstrap —   → 86 items
+2026-06-30 07:23:37,229 [INFO] bootstrap —   Batch 7/10 …
+2026-06-30 07:27:30,937 [INFO] bootstrap —   → 94 items
+2026-06-30 07:27:31,246 [INFO] bootstrap —   Batch 8/10 …
+2026-06-30 07:31:15,509 [WARNING] bootstrap — Batch 7: truncated JSON repaired — recovered partial batch
+2026-06-30 07:33:54,934 [INFO] bootstrap —   → 99 items
+2026-06-30 07:33:55,243 [INFO] bootstrap —   Batch 9/10 …
+2026-06-30 07:36:40,802 [INFO] bootstrap —   → 86 items
+2026-06-30 07:36:41,103 [INFO] bootstrap —   Batch 10/10 …
+2026-06-30 07:39:30,283 [INFO] bootstrap —   → 88 items
+2026-06-30 07:39:34,135 [INFO] bootstrap — Catalog saved: 1000 items → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-30 07:39:34,259 [INFO] main — [PASS 1] Catalog saved → /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-30 07:39:34,260 [INFO] main — [PASS 1] Stage time: 2059.3s
+2026-06-30 07:39:34,260 [INFO] main — [PASS 2] Assembling 10 PO/Invoice pairs (indices 0–9) …
+2026-06-30 07:39:34,263 [INFO] assembler — Catalog loaded: 1000 items from /home/leafy/b2b_synthetic_gen/industry_catalog.json
+2026-06-30 07:39:34,267 [INFO] tier_planner — Exact tier plan resolved: requested={'clean': 3, 'degraded': 3, 'heavy': 4} actual={'clean': 3, 'degraded': 3, 'heavy': 4}
+2026-06-30 07:39:34,267 [INFO] assembler — Exact tier counts requested: {'clean': 3, 'degraded': 3, 'heavy': 4} (verified to sum to 10)
+2026-06-30 07:39:34,268 [INFO] assembler — Sharding: 10 docs (indices 0–9) → 1 shards across 1 workers
+2026-06-30 07:39:34,268 [INFO] assembler — Output format: both
+2026-06-30 07:39:34,268 [INFO] assembler — Multi-page PDFs: documents with 26-50 line items will span 2-4 A4 pages automatically
+2026-06-30 07:39:35,471 [INFO] worker — Language: English (Tier 1)
+2026-06-30 07:41:28,526 [INFO] timing — PID 362297 FINAL — Timing breakdown (total tracked time: 107.3s):
+    degrade_pdf                      44.7s  ( 41.6%)     10 calls  avg  4470.8ms
+    render_html_to_png               24.3s  ( 22.6%)     10 calls  avg  2429.2ms
+    degrade_image                    21.9s  ( 20.4%)     10 calls  avg  2185.3ms
+    render_html_to_pdf               16.3s  ( 15.2%)     10 calls  avg  1630.4ms
+    log_document_pair                 0.1s  (  0.1%)     10 calls  avg    14.5ms
+    generate_document_pair            0.0s  (  0.0%)     10 calls  avg     3.8ms
+    render_html                       0.0s  (  0.0%)     10 calls  avg     0.4ms
+2026-06-30 07:41:28,610 [INFO] assembler — Shard 00 done | PID 362297 | 10/10 ok | 0 failed | 113.13s | Overall: 10/10 (0.1/s)
+2026-06-30 07:41:28,623 [INFO] assembler — Assembly complete: 10 ok / 0 failed in 114.4s (0.1 docs/s)
+2026-06-30 07:41:28,623 [INFO] assembler — Tier breakdown: {'degraded': 3, 'heavy': 4, 'clean': 3}
+2026-06-30 07:41:28,623 [INFO] assembler — Discrepant pairs: 2
+2026-06-30 07:41:28,623 [INFO] assembler — Exact tier counts matched the request precisely.
+2026-06-30 07:41:28,624 [INFO] main — [PASS 2] Stage time: 114.4s
+2026-06-30 07:41:28,624 [INFO] main — ============================================================
+2026-06-30 07:41:28,624 [INFO] main —   Pipeline complete in 2173.7s (36.2 min)
+2026-06-30 07:41:28,624 [INFO] main —   Pass 1 (bootstrap) : 2059.3s (94.7%)
+2026-06-30 07:41:28,624 [INFO] main —   Pass 2 (assembly)  : 114.4s (5.3%)
+2026-06-30 07:41:28,624 [INFO] main —   Output    : /home/leafy/b2b_synthetic_gen/output
+2026-06-30 07:41:28,624 [INFO] main —   Database  : /home/leafy/b2b_synthetic_gen/output/master_ground_truth.db
+2026-06-30 07:41:28,624 [INFO] main —   See logs/pipeline.log for per-worker step-by-step timing breakdowns
+2026-06-30 07:41:28,624 [INFO] main — ============================================================

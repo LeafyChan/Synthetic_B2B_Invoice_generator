@@ -9,6 +9,7 @@ Uses Faker (Indian locale) for addresses, company names, and dates.
 
 import random
 import string
+from copy import deepcopy
 from dataclasses import dataclass, field, asdict
 from datetime import date, timedelta
 from typing import Optional
@@ -28,6 +29,21 @@ def get_faker(seed: int) -> Faker:
 
 
 # ── Terminology pools (for floating label randomisation) ──────────────────────
+# IMPORTANT — these English pools are the ground-truth values stored in the
+# PurchaseOrder/TaxInvoice dataclasses and logged to the DB's json_payload
+# (so OCR ground truth stays comparable across languages). They are NOT
+# meant to be the literal text printed on a non-English document — that
+# would mean the "floating terminology" feature could never be translated
+# (this used to be exactly what happened: layout_engine.py rendered
+# po.buyer_term etc. directly with html.escape(), bypassing lang_cfg
+# entirely, which is one of the reasons a non-English run still showed
+# English text for these specific fields).
+#
+# Fix: each *_term field also gets a same-length integer "*_term_idx" field
+# recording which pool entry was chosen. layout_engine.py uses the index to
+# look up a translated equivalent from lang_cfg.labels (falling back to
+# the English pool value here if lang_cfg has no translation for that
+# index) instead of rendering the stored English string directly.
 BUYER_TERMS = ["Bill To", "Buyer", "Purchaser", "Client", "Consignee", "Billed Party"]
 SELLER_TERMS = ["Sold By", "Vendor", "Supplier", "From", "Issued By", "Seller"]
 SHIP_TERMS = ["Ship To", "Delivery Address", "Dispatch To", "Consign To", "Deliver At"]
@@ -44,7 +60,146 @@ SIGN_OFFS = [
     "Authorised by", "Signed", "Finance Head",
 ]
 
-# ── GSTIN generation ──────────────────────────────────────────────────────────
+# ── Discrepancy injection ──────────────────────────────────────────────────────
+# ~15% of pairs get a deliberate PO/Invoice mismatch — a realistic training
+# signal for "does the invoice match the PO" downstream tasks. Assignment is
+# deterministic per doc_index (separate RNG stream + prime salt, same pattern
+# as degradation.assign_tier) so re-runs are reproducible.
+#
+# IMPORTANT: PurchaseOrder and TaxInvoice previously shared the *same*
+# `line_items` list object (and the same LineItem instances inside it) —
+# generate_document_pair() did `po = PurchaseOrder(line_items=line_items, ...)`
+# and `inv = TaxInvoice(line_items=line_items, ...)` with the identical list.
+# That meant mutating one side's line items to create a discrepancy would
+# have silently mutated the PO's "ground truth" too, making the pair
+# identical again (or corrupting non-discrepant pairs). Fixed by giving the
+# invoice its own deepcopy of line_items before any discrepancy is applied —
+# see generate_document_pair() below.
+DISCREPANCY_RATE = 0.15
+
+DISCREPANCY_KINDS = (
+    "quantity_mismatch",   # invoice qty differs from PO qty on one line item
+    "price_mismatch",      # invoice unit_cost differs from PO unit_cost
+    "extra_line_item",     # invoice bills for an item not on the PO
+    "missing_line_item",   # invoice omits an item that was on the PO
+    "gst_rate_mismatch",   # invoice applies a different GST rate than PO line
+)
+
+
+def _assign_discrepancy(doc_index: int) -> bool:
+    """Deterministically decide whether this doc pair gets a discrepancy."""
+    rng = random.Random(doc_index * 524287 + 11)   # distinct prime salt
+    return rng.random() < DISCREPANCY_RATE
+
+
+def _apply_discrepancy(
+    inv_line_items: list["LineItem"],
+    rng: random.Random,
+    catalog: list[dict],
+) -> tuple[list["LineItem"], str, list[str]]:
+    """
+    Mutate a (already deep-copied) list of invoice LineItems to introduce
+    exactly one realistic PO/Invoice mismatch. Returns
+    (possibly-modified line_items, discrepancy_kind, human-readable notes).
+
+    Operates ONLY on the list passed in — caller must have already deep-
+    copied it from the PO's line_items so the PO's ground truth is untouched.
+    """
+    kind = rng.choice(DISCREPANCY_KINDS)
+    notes: list[str] = []
+
+    if not inv_line_items:
+        return inv_line_items, kind, notes
+
+    target_idx = rng.randrange(len(inv_line_items))
+    target = inv_line_items[target_idx]
+
+    if kind == "quantity_mismatch":
+        delta = rng.choice([-1, 1]) * rng.randint(1, max(1, target.quantity // 4 or 1))
+        new_qty = max(1, target.quantity + delta)
+        if new_qty == target.quantity:
+            new_qty += 1
+        notes.append(
+            f"Line {target_idx + 1} ({target.description[:40]}): "
+            f"PO qty {target.quantity} vs Invoice qty {new_qty}"
+        )
+        inv_line_items[target_idx] = dataclass_replace_quantity(target, new_qty)
+
+    elif kind == "price_mismatch":
+        pct = rng.uniform(0.05, 0.25) * rng.choice([-1, 1])
+        new_cost = round(max(0.01, target.unit_cost_inr * (1 + pct)), 2)
+        notes.append(
+            f"Line {target_idx + 1} ({target.description[:40]}): "
+            f"PO unit_cost {target.unit_cost_inr} vs Invoice unit_cost {new_cost}"
+        )
+        inv_line_items[target_idx] = dataclass_replace_cost(target, new_cost)
+
+    elif kind == "gst_rate_mismatch":
+        # Pick a different valid rate than what's on the PO line item —
+        # simulates the invoice being filed under the wrong HSN/SAC slab.
+        from pipeline.gst_rate_schedule import VALID_GST_RATES
+        other_rates = [r for r in VALID_GST_RATES if r != target.gst_rate]
+        new_rate = rng.choice(other_rates) if other_rates else target.gst_rate
+        notes.append(
+            f"Line {target_idx + 1} ({target.description[:40]}): "
+            f"PO GST {target.gst_rate}% vs Invoice GST {new_rate}%"
+        )
+        inv_line_items[target_idx] = dataclass_replace_gst(target, new_rate)
+
+    elif kind == "extra_line_item":
+        extra_src = rng.choice(catalog) if catalog else None
+        if extra_src:
+            extra = LineItem(
+                description=extra_src["description"],
+                hsn_code=extra_src["hsn_code"],
+                unit=extra_src["unit"],
+                quantity=rng.randint(1, 50),
+                unit_cost_inr=extra_src["unit_cost_inr"],
+                gst_rate=extra_src["gst_rate"],
+                category=extra_src["category"],
+            )
+            inv_line_items.append(extra)
+            notes.append(
+                f"Invoice bills an extra item not on PO: {extra.description[:50]} "
+                f"(qty {extra.quantity})"
+            )
+
+    elif kind == "missing_line_item":
+        if len(inv_line_items) > 1:
+            removed = inv_line_items.pop(target_idx)
+            notes.append(
+                f"Invoice omits PO line {target_idx + 1}: {removed.description[:50]} "
+                f"(PO qty {removed.quantity})"
+            )
+        else:
+            kind = "quantity_mismatch"  # fallback — can't remove the only item
+            delta = 1
+            new_qty = target.quantity + delta
+            notes.append(
+                f"Line {target_idx + 1} ({target.description[:40]}): "
+                f"PO qty {target.quantity} vs Invoice qty {new_qty}"
+            )
+            inv_line_items[target_idx] = dataclass_replace_quantity(target, new_qty)
+
+    return inv_line_items, kind, notes
+
+
+def dataclass_replace_quantity(li: "LineItem", new_qty: int) -> "LineItem":
+    from dataclasses import replace
+    return replace(li, quantity=new_qty)
+
+
+def dataclass_replace_cost(li: "LineItem", new_cost: float) -> "LineItem":
+    from dataclasses import replace
+    return replace(li, unit_cost_inr=new_cost)
+
+
+def dataclass_replace_gst(li: "LineItem", new_rate: float) -> "LineItem":
+    from dataclasses import replace
+    return replace(li, gst_rate=new_rate)
+
+
+
 STATE_CODES = [
     "01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
     "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
@@ -155,7 +310,10 @@ class PurchaseOrder:
     shipping_address: dict
     line_items: list[LineItem]
     payment_terms: str
-    # Floating terminology choices
+    # Floating terminology choices (English ground-truth strings — see note
+    # above _BUYER_TERMS et al. for why these stay English regardless of
+    # --language; layout_engine.py uses the *_term_idx fields below to look
+    # up a translated equivalent for display)
     buyer_term: str
     seller_term: str
     ship_term: str
@@ -164,6 +322,16 @@ class PurchaseOrder:
     sign_off: str
     # Layout variant seed
     layout_variant: int
+    # Pool indices for the terminology choices above, so the renderer can
+    # resolve a translated label without re-deriving which pool entry was
+    # picked. Defaulted so existing keyword-constructed callers don't break.
+    buyer_term_idx: int = 0
+    seller_term_idx: int = 0
+    ship_term_idx: int = 0
+    po_num_term_idx: int = 0
+    date_term_idx: int = 0
+    sign_off_idx: int = 0
+    payment_terms_idx: int = 0
 
     @property
     def subtotal(self) -> float:
@@ -201,6 +369,22 @@ class TaxInvoice:
     sign_off: str
     # Layout variant seed
     layout_variant: int
+    # Pool indices — see PurchaseOrder for why these exist
+    inv_num_term_idx: int = 0
+    inv_date_term_idx: int = 0
+    buyer_term_idx: int = 0
+    seller_term_idx: int = 0
+    ship_term_idx: int = 0
+    sign_off_idx: int = 0
+    payment_terms_idx: int = 0
+    # Discrepancy ground truth — see DISCREPANCY_KINDS / _apply_discrepancy
+    # above. has_discrepancy is what assembler.py checks to route a copy of
+    # the rendered output into output/.../discrepant/ alongside its normal
+    # tier folder. discrepancy_kind/notes are stored in the DB json_payload
+    # as ground truth for training a "does this invoice match its PO" model.
+    has_discrepancy: bool = False
+    discrepancy_kind: Optional[str] = None
+    discrepancy_notes: list[str] = field(default_factory=list)
 
     @property
     def subtotal(self) -> float:
@@ -276,9 +460,18 @@ def generate_document_pair(
     payment_days = rng.choice([15, 30, 45, 60, 90])
     due_date = inv_date + timedelta(days=payment_days)
 
-    # ── Line items ─────────────────────────────────────────────────────────────
-    num_items = rng.randint(1, 5)
-    catalog_sample = rng.sample(catalog, min(num_items, len(catalog)))
+    # ── Line items ────────────────────────────────────────────────────────────
+    # Real B2B invoices have 10–50+ line items; 1–5 was unrealistically thin.
+    # Distribution: 60% chance of 10–25 items, 25% chance of 26–50, 15% of 5–9
+    # (the tail keeps some variety without every doc being exactly long).
+    roll = rng.random()
+    if roll < 0.15:
+        num_items = rng.randint(5, 9)
+    elif roll < 0.75:
+        num_items = rng.randint(10, 25)
+    else:
+        num_items = rng.randint(26, 50)
+    catalog_sample = rng.choices(catalog, k=min(num_items, len(catalog)))
     line_items = []
     for cat_item in catalog_sample:
         qty = rng.randint(1, 200)
@@ -296,18 +489,49 @@ def generate_document_pair(
     # ── Reference numbers ─────────────────────────────────────────────────────
     po_num = _random_po_number(rng, idx)
     inv_num = _random_invoice_number(rng, idx, po_num)
-    payment_terms = rng.choice(PAYMENT_TERMS_POOL)
+    payment_terms_idx = rng.randrange(len(PAYMENT_TERMS_POOL))
+    payment_terms = PAYMENT_TERMS_POOL[payment_terms_idx]
     layout_variant = rng.randint(0, 7)
 
+    # ── Discrepancy injection ─────────────────────────────────────────────────
+    # The invoice gets its OWN deep copy of line_items here — critically,
+    # BEFORE any discrepancy mutation. The PO below is assembled from the
+    # original `line_items` list; the invoice is assembled from
+    # `inv_line_items`. If these were the same list/objects (as in the
+    # previous version of this function), mutating one for discrepancy
+    # injection would corrupt the PO's ground truth too.
+    inv_line_items = deepcopy(line_items)
+    has_discrepancy = _assign_discrepancy(idx)
+    discrepancy_kind: Optional[str] = None
+    discrepancy_notes: list[str] = []
+    if has_discrepancy:
+        inv_line_items, discrepancy_kind, discrepancy_notes = _apply_discrepancy(
+            inv_line_items, rng, catalog
+        )
+
     # ── Terminology picks ─────────────────────────────────────────────────────
-    buyer_term = rng.choice(BUYER_TERMS)
-    seller_term = rng.choice(SELLER_TERMS)
-    ship_term = rng.choice(SHIP_TERMS)
-    po_num_term = rng.choice(PO_TERMS)
-    date_term = rng.choice(DATE_TERMS)
-    inv_num_term = rng.choice(INV_TERMS)
-    inv_date_term = rng.choice(INVDATE_TERMS)
-    sign_off = rng.choice(SIGN_OFFS)
+    # Indices are captured alongside each choice so layout_engine.py can look
+    # up a translated equivalent (lang_cfg.labels) for the SAME pool entry,
+    # instead of rendering this English string directly regardless of
+    # --language (see the note above the pool definitions for why the
+    # strings here stay English: they're the OCR ground-truth value).
+    buyer_term_idx = rng.randrange(len(BUYER_TERMS))
+    seller_term_idx = rng.randrange(len(SELLER_TERMS))
+    ship_term_idx = rng.randrange(len(SHIP_TERMS))
+    po_num_term_idx = rng.randrange(len(PO_TERMS))
+    date_term_idx = rng.randrange(len(DATE_TERMS))
+    inv_num_term_idx = rng.randrange(len(INV_TERMS))
+    inv_date_term_idx = rng.randrange(len(INVDATE_TERMS))
+    sign_off_idx = rng.randrange(len(SIGN_OFFS))
+
+    buyer_term = BUYER_TERMS[buyer_term_idx]
+    seller_term = SELLER_TERMS[seller_term_idx]
+    ship_term = SHIP_TERMS[ship_term_idx]
+    po_num_term = PO_TERMS[po_num_term_idx]
+    date_term = DATE_TERMS[date_term_idx]
+    inv_num_term = INV_TERMS[inv_num_term_idx]
+    inv_date_term = INVDATE_TERMS[inv_date_term_idx]
+    sign_off = SIGN_OFFS[sign_off_idx]
 
     # ── Assemble PO ───────────────────────────────────────────────────────────
     po = PurchaseOrder(
@@ -330,6 +554,13 @@ def generate_document_pair(
         date_term=date_term,
         sign_off=sign_off,
         layout_variant=layout_variant,
+        buyer_term_idx=buyer_term_idx,
+        seller_term_idx=seller_term_idx,
+        ship_term_idx=ship_term_idx,
+        po_num_term_idx=po_num_term_idx,
+        date_term_idx=date_term_idx,
+        sign_off_idx=sign_off_idx,
+        payment_terms_idx=payment_terms_idx,
     )
 
     # ── Assemble Invoice ──────────────────────────────────────────────────────
@@ -345,7 +576,7 @@ def generate_document_pair(
         seller_address=seller_addr,
         seller_gstin=seller_gstin,
         shipping_address=ship_addr,
-        line_items=line_items,
+        line_items=inv_line_items,
         is_interstate=is_interstate,
         payment_terms=payment_terms,
         due_date=due_date.strftime("%d/%m/%Y"),
@@ -356,6 +587,16 @@ def generate_document_pair(
         ship_term=ship_term,
         sign_off=sign_off,
         layout_variant=layout_variant,
+        inv_num_term_idx=inv_num_term_idx,
+        inv_date_term_idx=inv_date_term_idx,
+        buyer_term_idx=buyer_term_idx,
+        seller_term_idx=seller_term_idx,
+        ship_term_idx=ship_term_idx,
+        sign_off_idx=sign_off_idx,
+        payment_terms_idx=payment_terms_idx,
+        has_discrepancy=has_discrepancy,
+        discrepancy_kind=discrepancy_kind,
+        discrepancy_notes=discrepancy_notes,
     )
 
     return po, inv

@@ -116,12 +116,37 @@ No markdown. No explanation. Just the JSON object.
 """
 
 
+async def _repair_truncated_json_array(raw: str) -> str:
+    """
+    Best-effort repair of a truncated JSON array from a cut-off LLM response.
+    Finds the last complete quoted string element and closes the array there,
+    so a 73-item response yields 73 items instead of a total batch loss.
+    """
+    raw = raw.strip()
+    # Find the last complete "..." element (ends with optional comma after the quote)
+    last_close = raw.rfind('",')
+    if last_close == -1:
+        last_close = raw.rfind('"')
+    if last_close == -1:
+        return raw  # nothing salvageable
+    return raw[: last_close + 1].rstrip(",") + "\n]"
+
+
 async def _generate_batch_with_provider(provider, industry, batch_index, hsn_index, session=None):
     """Generate one catalog batch using the given LLM provider."""
     desc_prompt = _descriptions_prompt(industry, batch_index, BATCH_SIZE)
     try:
-        raw = await provider.complete(desc_prompt, temperature=0.0, session=session)
-        descriptions = json.loads(raw)
+        raw = await provider.complete(desc_prompt, temperature=0.0, max_tokens=4096, session=session)
+        try:
+            descriptions = json.loads(raw)
+        except json.JSONDecodeError:
+            # Response was likely truncated mid-array — repair and retry parse
+            repaired = await _repair_truncated_json_array(raw)
+            try:
+                descriptions = json.loads(repaired)
+                log.warning(f"Batch {batch_index}: truncated JSON repaired — recovered partial batch")
+            except json.JSONDecodeError as e2:
+                raise ValueError(f"unrecoverable JSON: {e2}") from e2
         if not isinstance(descriptions, list):
             raise ValueError("not a list")
         descriptions = [str(d).strip() for d in descriptions if str(d).strip()]
@@ -141,7 +166,7 @@ async def _generate_batch_with_provider(provider, industry, batch_index, hsn_ind
                 continue
             sel_raw = await provider.complete(
                 _selection_prompt(desc, candidates),
-                temperature=0.0, session=session
+                temperature=0.0, max_tokens=100, session=session
             )
             sel = json.loads(sel_raw)
             idx1 = int(sel.get("index", 1))

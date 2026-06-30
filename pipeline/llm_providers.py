@@ -110,29 +110,20 @@ class OllamaProvider(LLMProvider):
     name = "ollama"
 
     def __init__(self, model: str = "qwen2.5:7b", base_url: str = "http://localhost:11434",
-                 num_ctx: int = 3072):
+                 num_ctx: int = 4096):
         """
         num_ctx : context window requested from llama.cpp for this run.
-            Ollama's default n_ctx (4096 here) can over-allocate the KV
-            cache buffer on tight-VRAM GPUs (e.g. 6GB laptop cards),
-            causing `cudaMalloc failed: out of memory` — especially right
-            after a prior crashed/segfaulted llama-server left VRAM
-            fragmented, even when nvidia-smi reports several GB "free".
-
-            num_ctx must cover BOTH the prompt AND the generated output —
+            Must cover BOTH the prompt AND the generated output —
             bootstrap.py's description-generation prompt asks for up to
             100 items in one JSON array, which needs ~1,750+ tokens of
-            output alone, so going too low (e.g. 512) causes the response
-            to get cut off mid-JSON ("Unterminated string") well before
-            any OOM risk even comes into play.
+            output alone, so going too low causes the response to get cut
+            off mid-JSON ("Unterminated string") before output completes.
 
-            3072 was empirically confirmed (on a 6GB RTX 4050 laptop GPU,
-            after a clean Ollama/WSL restart) to produce complete, valid
-            100-item JSON batches with no truncation and no OOM — same
-            result as 4096, but with deliberate headroom below the value
-            that OOM'd while VRAM was still fragmented from an earlier
-            crash. Adjust up if you have more VRAM to spare, or down if
-            you hit OOM again on a tighter card.
+            4096 (default) reliably produces complete 100-item JSON batches.
+            bootstrap.py also adds a truncation-repair fallback on top of
+            this so partially-cut responses still yield partial items rather
+            than a total batch loss. Drop to 3072 if you hit VRAM OOM on a
+            tight GPU (e.g. 6GB) after a crash left VRAM fragmented.
         """
         self.model = model
         self.base_url = base_url.rstrip("/")

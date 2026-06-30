@@ -11,7 +11,9 @@ Resolution: 794×1123px @ deviceScaleFactor=2 → effectively 1588×2246px
 """
 
 import asyncio
+import io
 import logging
+import re
 import tempfile
 from pathlib import Path
 from typing import Optional
@@ -35,6 +37,8 @@ except ImportError:
 # ── Browser pool (one instance per process / worker) ─────────────────────────
 _playwright_instance = None
 _browser: Optional["Browser"] = None
+_context: Optional["BrowserContext"] = None
+_context_scale: Optional[float] = None
 
 
 async def _get_browser() -> "Browser":
@@ -56,8 +60,47 @@ async def _get_browser() -> "Browser":
     return _browser
 
 
+async def _get_context(scale: float) -> "BrowserContext":
+    """
+    Return a persistent BrowserContext for this worker process, creating it
+    (or recreating it after a crash, or after a scale change) only when
+    needed — NOT on every render call.
+    """
+    global _context, _context_scale
+    browser = await _get_browser()
+    needs_new = (
+        _context is None
+        or _context_scale != scale
+    )
+    if not needs_new:
+        try:
+            needs_new = _context.pages is None
+        except Exception:
+            needs_new = True
+    if needs_new:
+        if _context is not None:
+            try:
+                await _context.close()
+            except Exception:
+                pass
+        _context = await browser.new_context(
+            viewport={"width": 900, "height": 1200},
+            device_scale_factor=scale,
+        )
+        _context_scale = scale
+        log.debug(f"New persistent browser context created (scale={scale})")
+    return _context
+
+
 async def close_browser():
-    global _playwright_instance, _browser
+    global _playwright_instance, _browser, _context, _context_scale
+    if _context:
+        try:
+            await _context.close()
+        except Exception:
+            pass
+        _context = None
+        _context_scale = None
     if _browser:
         await _browser.close()
         _browser = None
@@ -87,15 +130,11 @@ async def render_html_to_png(
     if not PLAYWRIGHT_AVAILABLE:
         return await _pillow_fallback_render(html_content)
 
-    browser = await _get_browser()
-    context: BrowserContext = await browser.new_context(
-        viewport={"width": 900, "height": 1200},
-        device_scale_factor=scale,
-    )
+    context: "BrowserContext" = await _get_context(scale)
     page: Page = await context.new_page()
 
+    tmp_path = None
     try:
-        # Write HTML to a temp file and load via file:// to allow font loading
         with tempfile.NamedTemporaryFile(
             mode="w", suffix=".html", encoding="utf-8", delete=False
         ) as f:
@@ -104,13 +143,11 @@ async def render_html_to_png(
 
         await page.goto(f"file://{tmp_path}", timeout=timeout_ms)
 
-        # Wait for fonts to load (Caveat from Google Fonts)
         try:
             await page.wait_for_load_state("networkidle", timeout=10000)
         except Exception:
             await page.wait_for_load_state("domcontentloaded", timeout=5000)
 
-        # Get document bounding box to set exact clip region
         bounding = await page.evaluate("""() => {
             const doc = document.querySelector('.document');
             if (doc) {
@@ -135,15 +172,80 @@ async def render_html_to_png(
 
     except Exception as e:
         log.error(f"Playwright render error: {e}")
-        # Return a 1×1 transparent PNG on failure so the pipeline continues
         return _minimal_error_png()
     finally:
         await page.close()
-        await context.close()
+        if tmp_path:
+            try:
+                Path(tmp_path).unlink(missing_ok=True)
+            except Exception:
+                pass
+
+
+async def render_html_to_pdf(
+    html_content: str,
+    timeout_ms: int = 30000,
+) -> bytes:
+    """
+    Render an HTML string to a multi-page PDF using Playwright.
+
+    Playwright's page.pdf() handles pagination natively — the browser
+    applies @page CSS rules, page-break-inside/after, and flows content
+    across as many A4 pages as needed. No manual page-splitting required.
+
+    Documents with 10-50 line items will naturally span multiple pages.
+    The first page carries the header + party blocks + first N items;
+    subsequent pages continue the items table then land on the summary
+    and footer. This is driven entirely by content length — no random
+    selection needed, it just falls out of normal CSS flow.
+
+    Parameters
+    ----------
+    html_content  : complete HTML document string (same as for render_html_to_png)
+    timeout_ms    : Playwright navigation timeout in milliseconds
+
+    Returns
+    -------
+    PDF bytes (multi-page when line items overflow one A4 page)
+    """
+    if not PLAYWRIGHT_AVAILABLE:
+        log.warning("Playwright unavailable — PDF render skipped, returning empty bytes")
+        return b""
+
+    context: "BrowserContext" = await _get_context(scale=1.0)
+    page: Page = await context.new_page()
+
+    tmp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".html", encoding="utf-8", delete=False
+        ) as f:
+            f.write(html_content)
+            tmp_path = f.name
+
+        await page.goto(f"file://{tmp_path}", timeout=timeout_ms)
         try:
-            Path(tmp_path).unlink(missing_ok=True)
+            await page.wait_for_load_state("networkidle", timeout=10000)
         except Exception:
-            pass
+            await page.wait_for_load_state("domcontentloaded", timeout=5000)
+
+        pdf_bytes = await page.pdf(
+            format="A4",
+            print_background=True,
+            margin={"top": "0mm", "right": "0mm", "bottom": "0mm", "left": "0mm"},
+        )
+        return pdf_bytes
+
+    except Exception as e:
+        log.error(f"Playwright PDF render error: {e}")
+        return b""
+    finally:
+        await page.close()
+        if tmp_path:
+            try:
+                Path(tmp_path).unlink(missing_ok=True)
+            except Exception:
+                pass
 
 
 async def _pillow_fallback_render(html_content: str) -> bytes:
@@ -153,9 +255,6 @@ async def _pillow_fallback_render(html_content: str) -> bytes:
     """
     if not PIL_AVAILABLE:
         return _minimal_error_png()
-
-    import re
-    import io
 
     # Extract visible text (very naive — for fallback only)
     text = re.sub(r"<[^>]+>", " ", html_content)
@@ -179,7 +278,6 @@ async def _pillow_fallback_render(html_content: str) -> bytes:
 
 def _minimal_error_png() -> bytes:
     """Return a minimal 1×1 white PNG as last-resort fallback."""
-    # Minimal valid PNG: 1×1 white pixel
     return (
         b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01"
         b"\x00\x00\x00\x01\x08\x02\x00\x00\x00\x90wS\xde\x00\x00"

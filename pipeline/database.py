@@ -70,6 +70,8 @@ CREATE TABLE IF NOT EXISTS documents (
     num_line_items      INTEGER,
     layout_variant      INTEGER,
     degradation_profile TEXT,
+    has_discrepancy     INTEGER DEFAULT 0,
+    discrepancy_kind    TEXT,
     created_at          TEXT    NOT NULL
 );
 
@@ -241,7 +243,12 @@ def get_pair_count(db_path: Path) -> int:
             return cur.fetchone()[0]
         finally:
             conn.close()
-    except Exception:
+    except Exception as e:
+        # Was a bare `except Exception: return 0` — indistinguishable from
+        # "DB genuinely has 0 rows". Logging means a real failure (locked
+        # file, permissions, corruption) is visible instead of silently
+        # masquerading as an empty database.
+        log.warning(f"get_pair_count failed for {db_path}: {e} — returning 0")
         return 0
 
 
@@ -256,5 +263,44 @@ def get_tier_counts(db_path: Path) -> dict:
             return {row[0]: row[1] for row in cur.fetchall()}
         finally:
             conn.close()
-    except Exception:
+    except Exception as e:
+        log.warning(f"get_tier_counts failed for {db_path}: {e} — returning {{}}")
         return {}
+
+
+def get_max_doc_index(db_path: Path) -> int:
+    """
+    Return the highest doc_index already logged, or -1 if the DB is empty/
+    missing. Use this to compute the correct --start-index for an append
+    run: start_index = get_max_doc_index(db_path) + 1.
+
+    Without this, --append only skips wiping the output folder — it does
+    NOT skip past existing doc_index values, so re-running with the same
+    index range silently overwrites existing files.
+
+    NOTE: a real failure here (locked DB, permissions, corruption) used to
+    be silently treated the same as "DB is empty", returning -1 — which
+    main.py would then treat as "start fresh at 0", silently overwriting
+    doc_index 0 even though the existing DB was fine and just temporarily
+    unreadable. Now logged loudly so a real I/O error doesn't masquerade
+    as an empty database on an --append run.
+    """
+    db_path = Path(db_path)
+    if not db_path.exists():
+        return -1
+    try:
+        conn = sqlite3.connect(str(db_path), timeout=10)
+        try:
+            cur = conn.execute("SELECT MAX(doc_index) FROM document_pairs")
+            result = cur.fetchone()[0]
+            return -1 if result is None else int(result)
+        finally:
+            conn.close()
+    except Exception as e:
+        log.error(
+            f"get_max_doc_index FAILED for {db_path}: {e} — returning -1, which "
+            f"main.py's --append logic will treat as 'no existing documents' and "
+            f"start at doc_index 0. If the DB actually has data, this WILL "
+            f"overwrite it. Investigate before re-running --append."
+        )
+        return -1

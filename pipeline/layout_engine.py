@@ -151,6 +151,28 @@ table.items-table tbody td.num {{ text-align: right; font-variant-numeric: tabul
 .sig-line {{ border-top: 1px solid #333; width: 180px; margin: 40px 0 4px {"0 auto" if direction == "rtl" else "auto"}; }}
 .handwritten {{ font-family: '{hand_font}', cursive; }}
 .stamp-container {{ position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; }}
+
+/* ── PDF / print pagination ────────────────────────────────────────────────
+   When Playwright renders to PDF (page.pdf()), the browser applies these
+   rules and flows content across as many A4 pages as needed.
+   - .document loses its fixed 794px width and fills the A4 page width.
+   - The doc-header is "position:relative" in print so it stays in flow and
+     is repeated if the browser decides to break before it (unlikely but safe).
+   - Items table rows don't break mid-row.
+   - Summary and footer blocks are kept together (avoid-break-inside). */
+@media print {{
+    body {{ background: #fff; padding: 0; }}
+    .document {{
+        width: 100%; min-height: unset; box-shadow: none;
+        padding: 20px 28px; margin: 0;
+    }}
+    .doc-header {{ margin: -20px -28px 20px -28px; position: relative; }}
+    table.items-table tbody tr {{ page-break-inside: avoid; }}
+    .summary-block {{ page-break-inside: avoid; }}
+    .footer-block {{ page-break-inside: avoid; page-break-before: auto; }}
+    .stamp-container {{ display: none; }}
+    @page {{ size: A4; margin: 12mm 14mm; }}
+}}
 """
 
 
@@ -169,6 +191,27 @@ def _LP(lang_cfg, key: str, default: list) -> list:
         return default
     val = lang_cfg.labels.get(key, default)
     return val if isinstance(val, list) else [val]
+
+
+def _term(lang_cfg, pool_key: str, idx: int, english_value: str) -> str:
+    """
+    Resolve a "floating terminology" choice (buyer_term, sign_off, etc.) to
+    its translated equivalent for the active language.
+
+    `english_value` is the ground-truth English string already stored on
+    the PurchaseOrder/TaxInvoice dataclass (data_models.py) — used as the
+    fallback if lang_cfg is None, the pool key is missing, or the pool is
+    shorter than `idx` (e.g. an older doc generated before a pool was
+    extended). This is what actually fixes documents that were "partly"
+    translated: previously these fields were rendered directly with no
+    lang_cfg lookup at all, no matter what language was requested.
+    """
+    if lang_cfg is None:
+        return english_value
+    pool = lang_cfg.labels.get(pool_key)
+    if not isinstance(pool, list) or idx >= len(pool) or idx < 0:
+        return english_value
+    return pool[idx]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -202,6 +245,12 @@ def render_purchase_order_html(po: PurchaseOrder, lang_cfg=None) -> str:
     col_total   = _L(lang_cfg, "col_total", "Total")
     lbl_subtotal = _L(lang_cfg, "subtotal", "Sub-Total")
     lbl_grand   = _L(lang_cfg, "grand_total", "GRAND TOTAL")
+    lbl_meta_title   = _L(lang_cfg, "meta_title_po", "Order Details")
+    lbl_payment_terms = _L(lang_cfg, "payment_terms", "Payment Terms")
+    lbl_po_value     = _L(lang_cfg, "po_value_excl_gst", "PO Value (excl. GST)")
+    lbl_gst_note     = _L(lang_cfg, "gst_note", "GST applicable as per Tax Invoice")
+    lbl_footer_notice    = _L(lang_cfg, "footer_po_notice", "This is a computer-generated Purchase Order.")
+    lbl_footer_subject_to = _L(lang_cfg, "footer_po_subject_to", "Subject to terms and conditions of")
 
     def _m(v): return _money(v, currency)
     def _c(s): return _ltr(s, is_rtl)
@@ -210,7 +259,7 @@ def render_purchase_order_html(po: PurchaseOrder, lang_cfg=None) -> str:
         addr = po.seller_address
         return f"""
 <div class="block">
-  <div class="block-title">{_esc(po.seller_term)}</div>
+  <div class="block-title">{_esc(_term(lang_cfg, "seller_terms", po.seller_term_idx, po.seller_term))}</div>
   <div class="block-val">
     <div class="company">{_esc(po.seller_name)}</div>
     <div>{_esc(addr["line1"])}</div>
@@ -224,7 +273,7 @@ def render_purchase_order_html(po: PurchaseOrder, lang_cfg=None) -> str:
         addr = po.buyer_address
         return f"""
 <div class="block">
-  <div class="block-title">{_esc(po.buyer_term)}</div>
+  <div class="block-title">{_esc(_term(lang_cfg, "buyer_terms", po.buyer_term_idx, po.buyer_term))}</div>
   <div class="block-val">
     <div class="company">{_esc(po.buyer_name)}</div>
     <div>{_esc(addr["line1"])}</div>
@@ -238,7 +287,7 @@ def render_purchase_order_html(po: PurchaseOrder, lang_cfg=None) -> str:
         addr = po.shipping_address
         return f"""
 <div class="block">
-  <div class="block-title">{_esc(po.ship_term)}</div>
+  <div class="block-title">{_esc(_term(lang_cfg, "ship_terms", po.ship_term_idx, po.ship_term))}</div>
   <div class="block-val">
     <div>{_esc(addr["line1"])}</div>
     <div>{_esc(addr["city"])}, {_esc(addr["state"])} — {_c(addr["pin"])}</div>
@@ -249,16 +298,16 @@ def render_purchase_order_html(po: PurchaseOrder, lang_cfg=None) -> str:
     def meta_block():
         return f"""
 <div class="block" style="flex: 0 1 200px;">
-  <div class="block-title">Order Details</div>
+  <div class="block-title">{_esc(lbl_meta_title)}</div>
   <div class="block-val">
-    <div><b>{_esc(po.po_num_term)}:</b></div>
+    <div><b>{_esc(_term(lang_cfg, "po_num_terms", po.po_num_term_idx, po.po_num_term))}:</b></div>
     <div class="handwritten" style="font-size:1.1em; color:#1a3c5e; margin:2px 0 8px;">
       {_c(po.po_number)}
     </div>
-    <div><b>{_esc(po.date_term)}:</b></div>
+    <div><b>{_esc(_term(lang_cfg, "date_terms", po.date_term_idx, po.date_term))}:</b></div>
     <div class="handwritten">{_c(po.po_date)}</div>
-    <div style="margin-top:8px;"><b>Payment Terms:</b></div>
-    <div>{_esc(po.payment_terms)}</div>
+    <div style="margin-top:8px;"><b>{_esc(lbl_payment_terms)}:</b></div>
+    <div>{_esc(_term(lang_cfg, "payment_terms_pool", po.payment_terms_idx, po.payment_terms))}</div>
   </div>
 </div>"""
 
@@ -299,10 +348,10 @@ def render_purchase_order_html(po: PurchaseOrder, lang_cfg=None) -> str:
     <span>{lbl_subtotal}</span><span>{_c(_m(po.subtotal))}</span>
   </div>
   <div class="summary-row">
-    <span style="color:#888; font-size:11px;">GST applicable as per Tax Invoice</span>
+    <span style="color:#888; font-size:11px;">{_esc(lbl_gst_note)}</span>
   </div>
   <div class="summary-row total">
-    <span>PO Value (excl. GST)</span><span>{_c(_m(po.subtotal))}</span>
+    <span>{lbl_po_value}</span><span>{_c(_m(po.subtotal))}</span>
   </div>
 </div>"""
 
@@ -311,16 +360,16 @@ def render_purchase_order_html(po: PurchaseOrder, lang_cfg=None) -> str:
         return f"""
 <div class="footer-block">
   <div class="payment-terms">
-    <b>Payment Terms:</b> {_esc(po.payment_terms)}<br/>
-    <span style="color:#777;">This is a computer-generated Purchase Order.
-    Subject to terms and conditions of {_esc(po.buyer_name)}.</span>
+    <b>{_esc(lbl_payment_terms)}:</b> {_esc(_term(lang_cfg, "payment_terms_pool", po.payment_terms_idx, po.payment_terms))}<br/>
+    <span style="color:#777;">{_esc(lbl_footer_notice)}
+    {_esc(lbl_footer_subject_to)} {_esc(po.buyer_name)}.</span>
   </div>
   <div class="signature-area">
     <div class="sig-line"></div>
     <div class="handwritten" style="font-size:1.3em; color:#1a3c5e;">
       {_esc(rng.choice(sig_names))}
     </div>
-    <div style="font-size:10px; color:#555;">{_esc(po.sign_off)}</div>
+    <div style="font-size:10px; color:#555;">{_esc(_term(lang_cfg, "sign_offs", po.sign_off_idx, po.sign_off))}</div>
     <div style="font-size:10px; color:#555;">{_esc(po.buyer_name)}</div>
     <div class="handwritten" style="font-size:0.95em; color:#666;">{_c(po.po_date)}</div>
   </div>
@@ -359,9 +408,9 @@ def render_purchase_order_html(po: PurchaseOrder, lang_cfg=None) -> str:
   <div class="doc-header">
     <div class="doc-title">{doc_title}</div>
     <div class="doc-id-block">
-      <div>{_esc(po.po_num_term)}</div>
+      <div>{_esc(_term(lang_cfg, "po_num_terms", po.po_num_term_idx, po.po_num_term))}</div>
       <div class="ref">{_c(po.po_number)}</div>
-      <div style="margin-top:4px;">{_esc(po.date_term)}: {_c(po.po_date)}</div>
+      <div style="margin-top:4px;">{_esc(_term(lang_cfg, "date_terms", po.date_term_idx, po.date_term))}: {_c(po.po_date)}</div>
     </div>
   </div>
   {rows_html}
@@ -409,6 +458,20 @@ def render_tax_invoice_html(inv: TaxInvoice, lang_cfg=None) -> str:
     lbl_sgst     = _L(lang_cfg, "sgst", "SGST")
     lbl_igst     = _L(lang_cfg, "igst", "IGST")
 
+    lbl_meta_title_inv = _L(lang_cfg, "meta_title_invoice", "Invoice Details")
+    lbl_payment_terms  = _L(lang_cfg, "payment_terms", "Payment Terms")
+    lbl_against_po     = _L(lang_cfg, "against_po", "Against PO")
+    lbl_due_date       = _L(lang_cfg, "due_date", "Due Date")
+    lbl_supply_type    = _L(lang_cfg, "supply_type", "Supply Type")
+    lbl_inter_state    = _L(lang_cfg, "inter_state", "Inter-State")
+    lbl_intra_state    = _L(lang_cfg, "intra_state", "Intra-State")
+    lbl_tax_header     = _L(lang_cfg, "col_tax_header", "Tax")
+    lbl_footer_inv_notice = _L(lang_cfg, "footer_inv_notice",
+                               "This is a computer-generated Tax Invoice under GST regulations.")
+    lbl_footer_inv_no_sig = _L(lang_cfg, "footer_inv_no_sig",
+                               "No signature required if generated electronically.")
+    lbl_po_ref         = _L(lang_cfg, "po_ref", "PO Ref")
+
     tax_mode = lbl_igst if inv.is_interstate else f"{lbl_cgst} + {lbl_sgst}"
 
     def _m(v): return _money(v, currency)
@@ -418,7 +481,7 @@ def render_tax_invoice_html(inv: TaxInvoice, lang_cfg=None) -> str:
         addr = inv.seller_address
         return f"""
 <div class="block">
-  <div class="block-title">{_esc(inv.seller_term)}</div>
+  <div class="block-title">{_esc(_term(lang_cfg, "seller_terms", inv.seller_term_idx, inv.seller_term))}</div>
   <div class="block-val">
     <div class="company">{_esc(inv.seller_name)}</div>
     <div>{_esc(addr["line1"])}</div>
@@ -432,7 +495,7 @@ def render_tax_invoice_html(inv: TaxInvoice, lang_cfg=None) -> str:
         addr = inv.buyer_address
         return f"""
 <div class="block">
-  <div class="block-title">{_esc(inv.buyer_term)}</div>
+  <div class="block-title">{_esc(_term(lang_cfg, "buyer_terms", inv.buyer_term_idx, inv.buyer_term))}</div>
   <div class="block-val">
     <div class="company">{_esc(inv.buyer_name)}</div>
     <div>{_esc(addr["line1"])}</div>
@@ -446,7 +509,7 @@ def render_tax_invoice_html(inv: TaxInvoice, lang_cfg=None) -> str:
         addr = inv.shipping_address
         return f"""
 <div class="block">
-  <div class="block-title">{_esc(inv.ship_term)}</div>
+  <div class="block-title">{_esc(_term(lang_cfg, "ship_terms", inv.ship_term_idx, inv.ship_term))}</div>
   <div class="block-val">
     <div>{_esc(addr["line1"])}</div>
     <div>{_esc(addr["city"])}, {_esc(addr["state"])} — {_c(addr["pin"])}</div>
@@ -457,20 +520,20 @@ def render_tax_invoice_html(inv: TaxInvoice, lang_cfg=None) -> str:
     def meta_block():
         return f"""
 <div class="block" style="flex: 0 1 220px;">
-  <div class="block-title">Invoice Details</div>
+  <div class="block-title">{_esc(lbl_meta_title_inv)}</div>
   <div class="block-val">
-    <div><b>{_esc(inv.inv_num_term)}:</b></div>
+    <div><b>{_esc(_term(lang_cfg, "inv_num_terms", inv.inv_num_term_idx, inv.inv_num_term))}:</b></div>
     <div class="handwritten" style="font-size:1.1em; color:#1a3c5e; margin:2px 0 6px;">
       {_c(inv.invoice_number)}
     </div>
-    <div><b>{_esc(inv.inv_date_term)}:</b></div>
+    <div><b>{_esc(_term(lang_cfg, "invdate_terms", inv.inv_date_term_idx, inv.inv_date_term))}:</b></div>
     <div class="handwritten">{_c(inv.invoice_date)}</div>
-    <div style="margin-top:6px;"><b>Against PO:</b></div>
+    <div style="margin-top:6px;"><b>{_esc(lbl_against_po)}:</b></div>
     <div style="font-size:10px; color:#555;">{_c(inv.po_number)}</div>
-    <div style="margin-top:6px;"><b>Due Date:</b></div>
+    <div style="margin-top:6px;"><b>{_esc(lbl_due_date)}:</b></div>
     <div class="handwritten" style="color:#cc0000;">{_c(inv.due_date)}</div>
     <div style="margin-top:6px; font-size:10px;">
-      <b>Supply Type:</b> {"Inter-State (" + lbl_igst + ")" if inv.is_interstate else "Intra-State (" + lbl_cgst + "+" + lbl_sgst + ")"}
+      <b>{_esc(lbl_supply_type)}:</b> {_esc(lbl_inter_state) + " (" + lbl_igst + ")" if inv.is_interstate else _esc(lbl_intra_state) + " (" + lbl_cgst + "+" + lbl_sgst + ")"}
     </div>
   </div>
 </div>"""
@@ -510,7 +573,7 @@ def render_tax_invoice_html(inv: TaxInvoice, lang_cfg=None) -> str:
       <th class="num" style="width:45px;">{col_qty}</th>
       <th class="num" style="width:85px;">{col_price}</th>
       <th class="num" style="width:85px;">{col_taxable}</th>
-      <th class="num" style="width:130px;">Tax ({tax_mode})</th>
+      <th class="num" style="width:130px;">{_esc(lbl_tax_header)} ({tax_mode})</th>
       <th class="num" style="width:90px;">{col_total}</th>
     </tr>
   </thead>
@@ -549,11 +612,11 @@ def render_tax_invoice_html(inv: TaxInvoice, lang_cfg=None) -> str:
         return f"""
 <div class="footer-block">
   <div class="payment-terms">
-    <b>Payment Terms:</b> {_esc(inv.payment_terms)}<br/>
-    <b>Due Date:</b> <span class="handwritten" style="color:#cc0000;">{_c(inv.due_date)}</span><br/>
+    <b>{_esc(lbl_payment_terms)}:</b> {_esc(_term(lang_cfg, "payment_terms_pool", inv.payment_terms_idx, inv.payment_terms))}<br/>
+    <b>{_esc(lbl_due_date)}:</b> <span class="handwritten" style="color:#cc0000;">{_c(inv.due_date)}</span><br/>
     <span style="color:#777; font-size:10px;">
-      This is a computer-generated Tax Invoice under GST regulations.
-      No signature required if generated electronically.
+      {_esc(lbl_footer_inv_notice)}
+      {_esc(lbl_footer_inv_no_sig)}
     </span>
   </div>
   <div class="signature-area">
@@ -561,7 +624,7 @@ def render_tax_invoice_html(inv: TaxInvoice, lang_cfg=None) -> str:
     <div class="handwritten" style="font-size:1.3em; color:#1a3c5e;">
       {_esc(rng.choice(sig_names))}
     </div>
-    <div style="font-size:10px; color:#555;">{_esc(inv.sign_off)}</div>
+    <div style="font-size:10px; color:#555;">{_esc(_term(lang_cfg, "sign_offs", inv.sign_off_idx, inv.sign_off))}</div>
     <div style="font-size:10px; color:#555;">{_esc(inv.seller_name)}</div>
     <div class="handwritten" style="font-size:0.95em; color:#666;">{_c(inv.invoice_date)}</div>
   </div>
@@ -600,10 +663,10 @@ def render_tax_invoice_html(inv: TaxInvoice, lang_cfg=None) -> str:
   <div class="doc-header">
     <div class="doc-title">{doc_title}</div>
     <div class="doc-id-block">
-      <div>{_esc(inv.inv_num_term)}</div>
+      <div>{_esc(_term(lang_cfg, "inv_num_terms", inv.inv_num_term_idx, inv.inv_num_term))}</div>
       <div class="ref">{_c(inv.invoice_number)}</div>
-      <div style="margin-top:4px;">{_esc(inv.inv_date_term)}: {_c(inv.invoice_date)}</div>
-      <div style="margin-top:2px; font-size:10px;">PO Ref: {_c(inv.po_number)}</div>
+      <div style="margin-top:4px;">{_esc(_term(lang_cfg, "invdate_terms", inv.inv_date_term_idx, inv.inv_date_term))}: {_c(inv.invoice_date)}</div>
+      <div style="margin-top:2px; font-size:10px;">{_esc(lbl_po_ref)}: {_c(inv.po_number)}</div>
     </div>
   </div>
   {rows_html}
