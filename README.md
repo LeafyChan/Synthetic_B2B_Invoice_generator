@@ -14,8 +14,7 @@ python pipeline/build_hsn_index.py --xlsx /path/to/HSN_SAC.xlsx
 # Smoke test (no Playwright needed, validates imports + math)
 python test_pipeline.py
 
-# Fresh run — 3 pairs, 1 worker, PDF+PNG, all tiers, no degradation flag off
-# (degradation is ON by default; --no-degradation disables it)
+# Fresh run — 3 pairs, 1 worker, PDF+PNG, all tiers, degradation ON by default
 python main.py --industry "Automotive Fasteners" --count 3 --workers 1 --output-format both
 
 # Full 20k run
@@ -37,21 +36,54 @@ python main.py \
 > this skips the LLM/TF-IDF catalog generation step and reuses it. Remove the flag on a
 > first run or when you want a fresh catalog.
 
-> **Why only 3 docs hit all 3 tiers?** `assign_tier()` is deterministic per doc_index.
-> doc_index 0 → clean, doc_index 1 → degraded, doc_index 2 → heavy (based on the
-> 50/30/20 weighted random with a fixed prime salt). With 3 docs you are likely to see
-> at least 2 tiers; with ~10 docs you will reliably see all 3. Use `--count 10` if you
-> want to guarantee one of each tier in the output.
+> **Why only 3 docs hit all 3 tiers?** By default `assign_tier()` is probabilistic per
+> doc_index (50/30/20 weighted, deterministic per index). With 3 docs you'll likely see
+> 2 tiers; with ~10 you'll reliably see all 3 — or use `--tier-counts` (below) to guarantee
+> an exact split regardless of count.
 
 ```bash
-# Guaranteed hit of all 3 tiers + multi-page PDFs
+# Guaranteed hit of all 3 tiers + multi-page PDFs, exact split
 python main.py \
   --industry "Industrial Equipment" \
   --count 10 \
   --workers 1 \
   --output-format pdf \
+  --tier-counts clean=3,degraded=3,heavy=4 \
   --skip-bootstrap
 ```
+
+---
+
+## Exact Tier Counts (`--tier-counts`)
+
+By default, tier assignment is **probabilistic**: `assign_tier(doc_index)` deterministically
+maps each index to clean/degraded/heavy via a seeded RNG, converging to a 50/30/20 split over
+a large run. This is unchanged from the original design and is still what happens if you don't
+pass `--tier-counts`.
+
+For small or exact-count runs — e.g. "generate exactly 10 docs: 3 clean, 3 degraded, 4 heavy" —
+pass `--tier-counts`:
+
+```bash
+python main.py --industry "Fasteners" --count 10 --workers 1 \
+    --tier-counts clean=3,degraded=3,heavy=4
+```
+
+Rules:
+- The counts **must sum exactly to `--count`** — if they don't, `main.py` exits immediately
+  with a clear error before any bootstrap/LLM work or output wiping happens.
+- Tier assignment within exact-count mode is still deterministic and reproducible: indices are
+  bucketed by their "natural" `assign_tier()` result first, and only reassigned where a tier's
+  natural count over/undershoots its requested quota — so re-running the same `--count` +
+  `--tier-counts` always produces the same plan.
+- Each tier still randomly picks its visual degradation **profile** (worn_laser, tea_stained,
+  etc.) the same way as before — `--tier-counts` only controls which tier each doc_index lands
+  in, not how that tier degrades.
+- Discrepancy (see below) is independent of tier and unaffected by this flag — a discrepant
+  doc still gets whatever tier the plan assigns it (so e.g. a discrepant+heavy doc gets both
+  the discrepancy mutation and heavy degradation).
+- `--no-degradation` + `--tier-counts` together logs a warning and ignores `--tier-counts`
+  (everything is `clean` when degradation is off).
 
 ---
 
@@ -93,7 +125,61 @@ print_background=True)` with zero margins, which activates those print rules and
 the browser's layout engine handle pagination automatically.
 
 The PDF bytes are written to `output/purchase_orders/<tier>/po_NNNNNN.pdf` and
-`output/tax_invoices/<tier>/inv_NNNNNN.pdf`.
+`output/tax_invoices/<tier>/inv_NNNNNN.pdf`, and are degraded the same as PNGs (see
+**PDF Degradation** below) — both formats reflect the assigned tier visually.
+
+---
+
+## PDF Degradation
+
+PDF output is **degraded with the same tiered pipeline as PNGs**, not left clean.
+
+`pdf_degradation.py` closes the gap between `degradation.py` (which is pixel-array/OpenCV
+and can't touch a vector PDF directly) and the PDF output path:
+
+1. **Rasterize** each PDF page to a PNG at 200 DPI via PyMuPDF.
+2. **Degrade** each page image using the exact same `degrade_image()` used for the PNG
+   output — same tier, same profile selection logic — so a "heavy" tier PDF and its PNG
+   counterpart look visually consistent.
+3. **Rebuild** a new PDF from the degraded page images, preserving A4 page dimensions.
+
+Multi-page documents get a distinct-but-derived seed per page (`doc_index * 1000 +
+page_number`) so page 2 of a degraded multi-page invoice doesn't look like a clone of
+page 1 — real multi-page scans vary stain/crumple per page.
+
+Requires `pymupdf` (already in `requirements.txt`). If unavailable, PDF degradation is
+skipped and a warning is logged — the PDF is still produced, just undegraded.
+
+---
+
+## Discrepancy Injection
+
+A configurable fraction of PO/Invoice pairs get a deliberate, labeled mismatch — useful
+for training "does this invoice match its PO" detection models.
+
+- **Rate:** 15% of pairs by default (`DISCREPANCY_RATE` in `data_models.py`), assigned
+  deterministically per `doc_index` via its own seeded RNG stream (separate from tier
+  assignment and from document content generation, so none of these interfere).
+- **Five discrepancy kinds**, one applied per discrepant pair: `quantity_mismatch`,
+  `price_mismatch`, `extra_line_item`, `missing_line_item`, `gst_rate_mismatch`.
+- The PO and invoice get **independent deep copies** of `line_items` before any mutation
+  — an earlier bug shared the same list object between PO and invoice, which meant
+  mutating one for a discrepancy silently mutated the other too (see `learning.md` §11
+  for the full story).
+- Discrepant pairs are written to both their assigned tier folder **and**
+  `discrepant/`, with matching visual degradation for that tier.
+- `has_discrepancy`, `discrepancy_kind` are real queryable columns on the `documents`
+  table (not buried in the JSON payload):
+  ```sql
+  SELECT COUNT(*) FROM documents WHERE has_discrepancy = 1;
+  SELECT discrepancy_kind, COUNT(*) FROM documents WHERE has_discrepancy = 1 GROUP BY discrepancy_kind;
+  ```
+
+Exact discrepant counts (e.g. "exactly 4 of 10 must be discrepant," mirroring
+`--tier-counts`) is not yet wired into the CLI — `tier_planner.plan_discrepancy_indices()`
+implements the same exact-count pattern and is ready to use, but `data_models.
+generate_document_pair()` needs a small change (accept an optional `force_discrepancy: bool`
+instead of always calling `_assign_discrepancy(idx)` internally) to plug it in.
 
 ---
 
@@ -106,12 +192,12 @@ output/
 │   ├── clean/      po_000000.png  po_000000.pdf  ...
 │   ├── degraded/   po_000001.png  po_000001.pdf  ...
 │   ├── heavy/      po_000002.png  po_000002.pdf  ...
-│   └── discrepant/ (future: pairs with deliberate PO↔invoice mismatches)
+│   └── discrepant/ po_000005.png  po_000005.pdf  ...  (deliberate PO↔invoice mismatches)
 └── tax_invoices/
     ├── clean/      inv_000000.png  inv_000000.pdf  ...
     ├── degraded/   inv_000001.png  inv_000001.pdf  ...
     ├── heavy/      inv_000002.png  inv_000002.pdf  ...
-    └── discrepant/
+    └── discrepant/ inv_000005.png  inv_000005.pdf  ...
 ```
 
 ---
@@ -151,14 +237,16 @@ python main.py --industry "Textile Machinery" --count 1000 --workers 4 --skip-bo
 | `--count` | `20000` | Number of PO/Invoice pairs to generate |
 | `--workers` | `4` | Parallel subprocess workers (one Chromium per worker) |
 | `--output-format` | `both` | `png` / `pdf` / `both` |
+| `--tier-counts` | off | Exact tier counts, e.g. `clean=3,degraded=3,heavy=4`. Must sum to `--count`. Default: probabilistic 50/30/20 split |
 | `--append` | off | Keep existing output; continue numbering from last doc_index |
 | `--skip-bootstrap` | off | Reuse `industry_catalog.json` if it exists |
-| `--no-degradation` | off | Skip OpenCV degradation; all docs go to `clean/` |
+| `--no-degradation` | off | Skip degradation; all docs go to `clean/` (PNG and PDF) |
 | `--language` | `en` | Language code: `en`, `hi`, `ur`, `fr`, or any LibreTranslate code |
 | `--handwriting` | off | `font` or `synthesis` (synthesis is a documented stub) |
 | `--llm-provider` | `ollama` | `ollama` / `openai` / `anthropic` |
 | `--llm-model` | `qwen2.5:7b` | Model string passed to the provider |
 | `--llm-api-key` | — | API key (OpenAI / Anthropic) |
+| `--llm-base-url` | — | Base URL override (e.g. OpenAI-compatible self-hosted endpoint) |
 | `--start-index` | auto | Override starting doc_index (auto-resolved on `--append`) |
 | `--list-languages` | — | Print all supported language codes and exit |
 
@@ -166,13 +254,45 @@ python main.py --industry "Textile Machinery" --count 1000 --workers 4 --skip-bo
 
 ## Degradation Tiers
 
-Assigned deterministically per `doc_index` (50 % clean / 30 % degraded / 20 % heavy):
+Assigned per `doc_index` — probabilistically by default (50% clean / 30% degraded / 20%
+heavy), or exactly via `--tier-counts`:
 
 | Tier | Profiles | Effects |
 |------|----------|---------|
 | `clean` | pristine, clean_laser, high_res_clean | Near-zero noise, no stains, no rotation |
 | `degraded` | worn_laser, inkjet_old, low_ink, archive_scan, office_copy, streaky_toner | Visible noise, light stains, mild crumple, low-ink streaking, slight rotation |
 | `heavy` | fax_quality, tea_stained, crumpled_scan, low_dpi_old, ink_bleed_worn, dying_cartridge | Heavy stains, strong crumple/warp, resolution loss, aggressive fading, rotation up to ±2.5° |
+
+Applies identically to PNG and PDF output (see **PDF Degradation** above).
+
+---
+
+## Per-Step Timing
+
+Every worker process times each major step (`generate_document_pair`, `render_html`,
+`handwriting_overlay`, `render_html_to_png`, `degrade_image`, `render_html_to_pdf`,
+`degrade_pdf`, `log_document_pair`) via `pipeline/timing.py`. A breakdown is logged to
+`logs/pipeline.log` every 100 docs per worker, and once more at the end of each worker's
+shard:
+
+```
+PID 48213 — Timing breakdown (total tracked time: 812.4s):
+    render_html_to_pdf            512.3s  ( 63.1%)    100 calls  avg 5123.0ms
+    degrade_pdf                   180.1s  ( 22.2%)    100 calls  avg 1801.0ms
+    render_html_to_png             68.2s  (  8.4%)    100 calls  avg  682.0ms
+    degrade_image                  31.5s  (  3.9%)    100 calls  avg  315.0ms
+    generate_document_pair         12.1s  (  1.5%)    100 calls  avg  121.0ms
+    log_document_pair               8.2s  (  1.0%)    100 calls  avg   82.0ms
+```
+
+`main.py` also logs the Pass 1 (bootstrap) vs Pass 2 (assembly) wall-clock split at the
+end of a run. Timing is per-process — each worker has independent counters, which tells
+you whether a slow step is systemic (every worker) or isolated (one worker, likely
+resource contention).
+
+In practice `render_html_to_pdf` (Playwright's print pipeline) is typically the single
+largest cost — if you don't need PDFs for a given run, `--output-format png` skips it
+entirely.
 
 ---
 
@@ -186,13 +306,16 @@ Pass 1 — bootstrap.py (run once per industry)
 
 Pass 2 — assembler.py (parallel workers, one per CPU)
   for each doc_index:
-    data_models.py          → PurchaseOrder + TaxInvoice dataclasses
-    layout_engine.py        → HTML strings (8 layout variants × 8 themes)
-    [handwriting.py]        → optional font-based handwriting overlay
-    renderer.py             → PNG bytes (Playwright/Chromium screenshot)
-                            → PDF bytes (Playwright page.pdf(), multi-page)
-    degradation.py          → tiered OpenCV degradation (PNG only)
-    database.py             → SQLite insert (documents + document_pairs)
+    tier_planner.py         → resolves tier (probabilistic default, or exact --tier-counts plan)
+    data_models.py           → PurchaseOrder + TaxInvoice dataclasses (+ discrepancy injection)
+    layout_engine.py         → HTML strings (8 layout variants × 8 themes)
+    [handwriting.py]         → optional font-based handwriting overlay
+    renderer.py               → PNG bytes (Playwright/Chromium screenshot)
+                              → PDF bytes (Playwright page.pdf(), multi-page)
+    degradation.py            → tiered OpenCV degradation (PNG)
+    pdf_degradation.py        → tiered degradation for PDF (rasterize → degrade → rebuild)
+    database.py                → SQLite insert (documents + document_pairs)
+    timing.py                  → per-step duration tracking, logged periodically
 ```
 
 ---
@@ -201,10 +324,13 @@ Pass 2 — assembler.py (parallel workers, one per CPU)
 
 | File | What it does |
 |------|-------------|
-| `data_models.py` | Dataclasses + deterministic field generators (Faker, seeded RNG) |
+| `data_models.py` | Dataclasses + deterministic field generators (Faker, seeded RNG); discrepancy injection |
 | `layout_engine.py` | HTML template rendering; 8 layout variants, 8 colour themes, RTL support |
 | `renderer.py` | Playwright pool; `render_html_to_png()` + `render_html_to_pdf()` |
 | `degradation.py` | OpenCV pipeline; 15 profiles across 3 tiers; `assign_tier()` |
+| `pdf_degradation.py` | Rasterize → degrade → rebuild pipeline so PDF output matches PNG degradation |
+| `tier_planner.py` | Resolves probabilistic default or exact `--tier-counts` tier assignment per doc_index |
+| `timing.py` | Lightweight per-step timing accumulator + periodic log breakdown |
 | `database.py` | SQLite schema + insert helpers; WAL mode for parallel writes |
 | `bootstrap.py` | Pass 1 orchestration; LLM path + TF-IDF fallback |
 | `assembler.py` | Pass 2 orchestration; `ProcessPoolExecutor` sharding |
@@ -223,6 +349,7 @@ Pass 2 — assembler.py (parallel workers, one per CPU)
 ```
 playwright        # HTML → PNG/PDF rendering
 opencv-python     # Image degradation
+pymupdf           # PDF rasterize/rebuild for pdf_degradation.py
 Pillow            # Fallback renderer + degradation helpers
 numpy             # Array ops in degradation
 faker             # Synthetic names/addresses (en_IN locale)
@@ -241,23 +368,20 @@ playwright install chromium
 
 ## Known Limitations / Planned Extensions
 
-- **Discrepancy injection** — `has_discrepancy` flag exists on `TaxInvoice` and the
-  `discrepant/` output folders are created, but intentional PO↔invoice mismatches are
-  not yet generated. Planned: randomly patch a line-item quantity or unit price on the
-  invoice side after copying from the PO.
+- **Exact discrepant counts** — `--tier-counts` gives exact control over tier
+  distribution, but discrepancy rate is still probabilistic only (`DISCREPANCY_RATE =
+  0.15` in `data_models.py`). `tier_planner.plan_discrepancy_indices()` implements the
+  same exact-count pattern and is ready; wiring it in requires a small change to
+  `generate_document_pair()` to accept an optional `force_discrepancy: bool`.
 
 - **Handwriting synthesis mode** — `handwriting.py`'s `mode="synthesis"` raises
   `NotImplementedError`. Font mode (`mode="font"`) is fully working. A real synthesis
   backend would need an IAM-trained stroke-sequence model; see the stub's docstring for
   the exact integration contract.
 
-- **PDF degradation** — degradation (`degradation.py`) is applied to PNG output only.
-  PDF files are stored as clean Playwright output regardless of tier. Degrading PDFs
-  would require rasterising each page then re-encoding, which is a separate step.
-
-- **Non-Latin handwriting synthesis** — `handwriting.py` font mode works for any Google
-  Font (including Devanagari/Nastaliq via `languages.py`), but synthesis mode is Latin
-  only pending an IAM-equivalent model for those scripts.
+- **Non-Latin handwriting synthesis** — font mode works for any Google Font (including
+  Devanagari/Nastaliq via `languages.py`), but synthesis mode is Latin-only pending an
+  IAM-equivalent model for those scripts.
 
 ---
 
@@ -288,6 +412,28 @@ concurrency concern (multiple worker processes writing simultaneously).
 `bootstrap.py`. The refactor defines a `complete()` / `healthcheck()` interface so
 switching to OpenAI or Anthropic is a config change, not a code change.
 
+**PDF degradation as a parallel pipeline (`pdf_degradation.py`)** — `degradation.py` is
+pixel-array/OpenCV-based and can't act on a vector PDF directly. Rather than building a
+second, separate degradation system for PDFs, `pdf_degradation.py` rasterizes each PDF
+page, runs the exact same `degrade_image()` used for PNGs, then rebuilds the PDF —
+reusing all 15 existing profiles instead of duplicating logic, and keeping PNG/PDF
+output visually consistent for the same doc_index/tier.
+
+**Discrepancy injection (`data_models.py`)** — built once the shared-list-object bug
+(see Bugs Fixed below) was identified and fixed; five discrepancy kinds, deterministic
+15% rate, independent of tier assignment.
+
+**`tier_planner.py` — exact tier counts without disturbing default behaviour** — added
+so small/demo runs (`--count 10`) can guarantee an exact tier split instead of relying
+on probability to "probably" hit all three tiers. Designed so omitting `--tier-counts`
+is byte-for-byte identical to the original probabilistic behaviour — no new code path
+activates unless explicitly opted into.
+
+**`timing.py` — per-step duration logging** — added because there was previously zero
+visibility into *which* pipeline stage was the bottleneck, only an aggregate docs/s
+rate. In practice this surfaced `render_html_to_pdf` (Playwright's print pipeline) as
+the dominant cost in PDF-emitting runs.
+
 ### Bugs fixed during development
 
 - `_PRICE_BY_RATE` was being imported from `gst_rate_schedule` (where it doesn't exist)
@@ -317,3 +463,23 @@ switching to OpenAI or Anthropic is a config change, not a code change.
   codes starting with `"99"` — a landmine because Indian customs chapters 98/99 also
   cover physical goods. Fixed by requiring callers to pass `is_service` explicitly and
   never inferring it from the code string.
+
+- **PDF output had zero degradation** — `degradation.py`'s pixel-array pipeline was
+  never called for PDFs (they're vector content, not pixels), so `degraded/` and
+  `heavy/` tier PDFs looked identical to `clean/`. Fixed by `pdf_degradation.py`
+  (rasterize → degrade_image() → rebuild). See `learning.md` §10 for the full story.
+
+- **PO and invoice shared the same `line_items` list object** — mutating one for
+  discrepancy injection silently mutated the other too, making "discrepant" pairs
+  actually identical. Fixed by deep-copying `line_items` for the invoice before any
+  discrepancy mutation. See `learning.md` §11.
+
+- **`.gitignore` didn't retroactively untrack already-committed files** — `__pycache__`,
+  `output/`, and several local-only scripts kept showing up in `git status` and on
+  GitHub despite being listed in `.gitignore`, because `.gitignore` only prevents
+  *future* additions, not files already in git's index from earlier commits. Fixed in
+  two stages: (1) `git rm -r --cached <path>` to untrack without deleting from disk,
+  committed and pushed normally; (2) `git filter-repo --path-glob '...' --invert-paths
+  --force` to strip those paths from every commit in history (not just HEAD), followed
+  by a force-push. Order mattered: normal sync to GitHub had to land *before* the
+  history rewrite, or the rewrite would purge a stale snapshot and orphan newer work.
